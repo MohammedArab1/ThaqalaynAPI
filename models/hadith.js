@@ -31,9 +31,5 @@ mongoose.connect(url)
         delete returnedObject._id
     }
   })
-//   const books = mongoose.model('AllBooks', hadithSchema, 'AllBooks')
-//   books.find({id:1}).then(result => {
-//     console.log(result.length);
-//   })
 
   module.exports = mongoose.model('AllBooks', hadithSchema, 'AllBooks')

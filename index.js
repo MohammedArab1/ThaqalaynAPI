@@ -99,3 +99,4 @@ app.listen(PORT,() => {`Server running on port ${PORT}`})
 //add range of ID's in /api/books. Also make sure to know how to remove _id. 
 //Will also need to delete utils.js if not used
 //Add to github, check querty if returns the same restuls as on the thaqalayn website
+//change web scraper to account for the two kitab al ghayba. 

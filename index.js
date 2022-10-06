@@ -5,14 +5,11 @@ const app = express()
 const HadithModel = require('./models/hadith')
 const BookNamesModel = require('./models/bookName')
 const utils = require("./utils.js")
-const { model } = require('mongoose')
 
-const invalidId = "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/books for min and max id range for any given book"
-const invalidBook = "The book you have provided does not exist. Please use endpoint /api/books for a list of all books."
-const lengthOfAllHadith = 22449
+const invalidId = "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/allbooks for min and max id range for any given book"
+const invalidBook = "The book you have provided does not exist. Please use endpoint /api/allbooks for a list of all books."
 const listOfBooks = []
 BookNamesModel.find({}).then(books => {
-    // console.log(books);
     for (var i = 0;i<books.length;i++) {
         listOfBooks.push(books[i]["BookName"])
     }})
@@ -44,7 +41,7 @@ app.get('/api/random', async (request, response) => {
 app.get('/api/query', async (request, response)=> {
     const query = request.query.q
     if (!query) {
-        const error = {error:"No query was passed in. Please use this endpoint with a query. (ex. /api/query?q=this is a query or /api/query?q=اً نَفَعَكَ عِلْمُكَ وَإِنْ تَكُنْ جَاهِلاً عَلَّمُوكَ ",
+        const error = {error:"No query was passed in. Please use this endpoint with a query (q). (ex. /api/query?q=this is a query or /api/query?q=اً نَفَعَكَ عِلْمُكَ وَإِنْ تَكُنْ جَاهِلاً عَلَّمُوكَ ",
         reminder:"Do not put quotation marks around the query."}
         response.status(400).json(error)
     }
@@ -129,26 +126,28 @@ app.get('/api/:book/random', async (request, response) => {
 
 // returns a specific hadith (not very useful in my opinion but needs refining)
 app.get('/api/:book/:id', async (request, response) => {
-    const hadith = await HadithModel.find({book:request.params.book, id:request.params.id},{_id:0})
-    if (!listOfBooks.includes(request.params.book)) {
-        response.status(400).json({error:invalidBook})
-    }
-    else if (hadith.length ===0) {
-        response.status(400).json({error:invalidId})
+    if (isNaN(request.params.id)) {
+        response.status(400).json({error:"Invalid Id"})
     }
     else {
-        response.json(hadith)
+        const hadith = await HadithModel.find({book:request.params.book, id:request.params.id},{_id:0})
+        if (!listOfBooks.includes(request.params.book)) {
+            response.status(400).json({error:invalidBook})
+        }
+        else if (hadith.length ===0) {
+            response.status(400).json({error:invalidId})
+        }
+        else {
+            response.json(hadith)
+        }
     }
+
 })
-
-
-
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT,() => {`Server running on port ${PORT}`})
 
-//Also make sure to know how to remove _id. 
-//Will also need to delete utils.js if not used
 //change web scraper to account for the two kitab al ghayba. 
-//remove escape string regexp library if not used
-//make sure the endpoints are in correct order
+//have to delete cors from frontend
+//have to change URL in readme to proper url
+//remove font dependancies in the frontend

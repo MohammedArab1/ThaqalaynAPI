@@ -17,7 +17,7 @@ BookNamesModel.find({}).then(books => {
 
 app.use(express.json())
 app.use(cors())
-
+app.use(express.static('build'))
 
 //Returns the list of books
 app.get('/api/allbooks', async (request, response) => {
@@ -146,8 +146,3 @@ app.get('/api/:book/:id', async (request, response) => {
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT,() => {`Server running on port ${PORT}`})
-
-//change web scraper to account for the two kitab al ghayba. 
-//have to delete cors from frontend
-//have to change URL in readme to proper url
-//remove font dependancies in the frontend

@@ -21,7 +21,7 @@ request = axios.get(url).then(res => {
 In this github repository you'll also find 3 python files, 2 of them web scrapers:
 1. WebScraper/WebScraperComplete.py -> This scrapes the entire thaqalayn.net website and creates a JSON for every book.
 2. WebScraper/WebScraperPerBook.py -> This scrapes only a single book given the URL of the book. The code is mostly a simple copy/paste from WebScraperComplete.py
-3. changeJSON.py -> If you're unhappy with the json's you got from the previous web scrapers, can use this to modify them as you like.
+3. WebScraper/changeJSON.py -> If you're unhappy with the json's you got from the previous web scrapers, can use this to modify them as you like.
 <br>
 
 I also included all the scraped JSONs, in case anyone would like to use them directly. Keep in mind the chapter names are not the same as appears on the Thaqalayn website. This data includes each book separately, all books combined, and a list of all books present with the maximum query id.

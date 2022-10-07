@@ -20,7 +20,7 @@ app.use(cors())
 app.use(express.static('build'))
 
 app.get('/', async (request, response) => {
-    response.send('<h1>Welcome to my API! Please fetch one of the endpoints as found on https://github.com/MohammedArab1/ThaqalaynAPI</h1>')
+    return response.send('<h1>Welcome to my API! Please fetch one of the endpoints as found on https://github.com/MohammedArab1/ThaqalaynAPI</h1>')
 })
 
 //Returns the list of books
@@ -29,7 +29,7 @@ app.get('/api/allbooks', async (request, response) => {
     bookNames.sort((a,b) => {
         return a['id']-b['id']
     })
-    response.json(bookNames)
+    return response.json(bookNames)
 })
 
 //Returns a random hadith from any book
@@ -37,7 +37,7 @@ app.get('/api/random', async (request, response) => {
     HadithModel.findOneRandom((error, result) => {
         if (!error) {
             // delete result["_id"]
-            response.json(result);
+            return response.json(result);
         }
     })
 })
@@ -47,7 +47,7 @@ app.get('/api/query', async (request, response)=> {
     if (!query) {
         const error = {error:"No query was passed in. Please use this endpoint with a query (q). (ex. /api/query?q=this is a query or /api/query?q=اً نَفَعَكَ عِلْمُكَ وَإِنْ تَكُنْ جَاهِلاً عَلَّمُوكَ ",
         reminder:"Do not put quotation marks around the query."}
-        response.status(400).json(error)
+        return response.status(400).json(error)
     }
     else {
     const escapedQuery = utils.escapeRegExp(query)
@@ -59,13 +59,13 @@ app.get('/api/query', async (request, response)=> {
         arabicQueryResults
     }
     if (hadiths["englishQueryResults"].length === 0 && hadiths["arabicQueryResults"].length === 0) {
-        response.json({error:"No matches found"})
+        return response.json({error:"No matches found"})
     }
     else if (hadiths["englishQueryResults"].length > 0) {
-        response.json(hadiths["englishQueryResults"])
+        return response.json(hadiths["englishQueryResults"])
     }
     else if (hadiths["arabicQueryResults"].length > 0) {
-        response.json(hadiths["arabicQueryResults"])
+        return response.json(hadiths["arabicQueryResults"])
     }
     }
 })
@@ -75,10 +75,10 @@ app.get('/api/query/:book', async (request, response)=> {
     if (!query) {
         const error = {error:"No query was passed in. Please use this endpoint with a query. (ex. /api/query/Al-Amali?q=this is a query or /api/query/Al-Amali?q=اً نَفَعَكَ عِلْمُكَ وَإِنْ تَكُنْ جَاهِلاً عَلَّمُوكَ ",
         reminder:"Do not put quotation marks around the query."}
-        response.status(400).json(error)
+        return response.status(400).json(error)
     }
     else if (!listOfBooks.includes(request.params.book)) {
-        response.status(400).json({error:invalidBook})
+        return response.status(400).json({error:invalidBook})
     }
     else{
         const escapedQuery = utils.escapeRegExp(query)
@@ -90,13 +90,13 @@ app.get('/api/query/:book', async (request, response)=> {
             arabicQueryResults
         }
         if (hadiths["englishQueryResults"].length === 0 && hadiths["arabicQueryResults"].length === 0) {
-            response.json({error:"No matches found"})
+            return response.json({error:"No matches found"})
         }
         else if (hadiths["englishQueryResults"].length > 0) {
-            response.json(hadiths["englishQueryResults"])
+            return response.json(hadiths["englishQueryResults"])
         }
         else if (hadiths["arabicQueryResults"].length > 0) {
-            response.json(hadiths["arabicQueryResults"])
+            return response.json(hadiths["arabicQueryResults"])
         }
     }
 })
@@ -104,14 +104,14 @@ app.get('/api/query/:book', async (request, response)=> {
 //Returns all the hadiths from a specific book
 app.get('/api/:book', async (request, response) => {
     if (!listOfBooks.includes(request.params.book)) {
-        response.status(400).json({error:invalidBook})
+        return response.status(400).json({error:invalidBook})
     }
     else {
         const hadiths = await HadithModel.find({book:request.params.book},{_id:0})
         hadiths.sort((a,b) => {
             return a['id']-b['id']
         })
-        response.json(hadiths)
+        return response.json(hadiths)
     }
 })
 
@@ -119,11 +119,11 @@ app.get('/api/:book', async (request, response) => {
 app.get('/api/:book/random', async (request, response) => {
     const filter = {book:request.params.book}
     if (!listOfBooks.includes(request.params.book)) {
-        response.status(400).json({error:invalidBook})
+        return response.status(400).json({error:invalidBook})
     }
     HadithModel.findRandom(filter,{},{},(error, result) => {
         if (!error) {
-            response.json(result)
+            return response.json(result)
         }
     })
 })
@@ -131,18 +131,18 @@ app.get('/api/:book/random', async (request, response) => {
 // returns a specific hadith (not very useful in my opinion but needs refining)
 app.get('/api/:book/:id', async (request, response) => {
     if (isNaN(request.params.id)) {
-        response.status(400).json({error:"Invalid Id"})
+        return response.status(400).json({error:"Invalid Id"})
     }
     else {
         const hadith = await HadithModel.find({book:request.params.book, id:request.params.id},{_id:0})
         if (!listOfBooks.includes(request.params.book)) {
-            response.status(400).json({error:invalidBook})
+            return response.status(400).json({error:invalidBook})
         }
         else if (hadith.length ===0) {
-            response.status(400).json({error:invalidId})
+            return response.status(400).json({error:invalidId})
         }
         else {
-            response.json(hadith)
+            return response.json(hadith)
         }
     }
 

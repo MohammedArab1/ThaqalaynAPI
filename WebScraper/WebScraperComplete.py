@@ -4,22 +4,8 @@ import json
 from pathlib import Path
 import os
 
-#*to fix issue with kitab al ghayba
-
-# the following lines of code check if the file exists in the directory
-# absolute_path = os.path.dirname(__file__)
-# relative_path = "changeJson" + ".py"
-# full_path = os.path.join(absolute_path, relative_path)
-# my_file = Path(full_path)
-
-# # print(full_path)
-# # print(my_file.is_file())
-# print(full_path)
 
 # The following code scrapes all the ahadith on the Thaqalayn.net website and creates a JSON file for every book.
-#*KEEP IN MIND, ON THE THAQALAYN WEBSITE THERE ARE TWO BOOK CALLED KITAB-AL-GHAYBA, ONE BY TUSI AND ANOTHER BY NUMANI.
-#*THIS CODE WILL ONLY CREATE THE LATTER, WHICH WILL OVERWRITE THE FORMER.
-
 
 URL = "https://thaqalayn.net/"
 mainPage = requests.get(URL)
@@ -31,8 +17,7 @@ for bookLink in mainPageResults.find_all('a'):
     bookSoup = BeautifulSoup(bookPage.content, "html.parser")
     bookPageResults = bookSoup.find(id="content")
     bookPageTitle = bookSoup.find("h1").get_text() #this will store the title of the book
-    if bookPageTitle != "Kitāb al-Ghayba":
-        continue
+    bookPageAuthor = bookSoup.find("h6").get_text()
     hadithsArray=[]
     counter = 1
     chapterName=""
@@ -72,21 +57,18 @@ for bookLink in mainPageResults.find_all('a'):
             }
             counter += 1
             hadithsArray.append(hadithObject)
-    #the following code checks if the title already exists, if so, create file with name: <title>2.json. This is necessary to overcome the fact
-    #that there are two books with the same name ("kitab al ghayba")
-    # relative_path = bookPageTitle + ".json"
-    # full_path = os.path.join(absolute_path, relative_path)
-    # my_file = Path(full_path)
-    # if(my_file.is_file()):
-    #     savePath = os.path.join(absolute_path,bookPageTitle+"2.json")
-    #     print(savePath)
-    #     with open(savePath, 'w', encoding='utf8') as json_file:
-    #         json.dump(hadithsArray, json_file, ensure_ascii=False)
-    # else:
-    #     with open(bookPageTitle+".json", 'w', encoding='utf8') as json_file:
-    #         json.dump(hadithsArray, json_file, ensure_ascii=False)
-    with open(bookPageTitle+".json", 'w', encoding='utf8') as json_file:
-        json.dump(hadithsArray, json_file, ensure_ascii=False)
+    if "Ṭūsī" in bookPageAuthor:
+        savePath = os.path.join(absolute_path,bookPageTitle+"-Ṭūsī.json")
+        with open(savePath, 'w', encoding='utf8') as json_file:
+            json.dump(hadithsArray, json_file, ensure_ascii=False)
+    elif "Nuʿmānī" in bookPageAuthor:
+        savePath = os.path.join(absolute_path,bookPageTitle+"-Nuʿmānī.json")
+        with open(savePath, 'w', encoding='utf8') as json_file:
+            json.dump(hadithsArray, json_file, ensure_ascii=False)
+    else:
+        with open(bookPageTitle+".json", 'w', encoding='utf8') as json_file:
+            json.dump(hadithsArray, json_file, ensure_ascii=False)
+
 
 
 

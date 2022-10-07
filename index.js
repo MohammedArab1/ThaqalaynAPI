@@ -17,12 +17,10 @@ BookNamesModel.find({}).then(books => {
 
 app.use(express.json())
 app.use(cors())
-// app.use(express.static('build'))
+app.use(express.static('build'))
 
 app.get('/', async (request, response) => {
-    response.json({
-        Welcome:"Welcome to my API! Please fetch one of the endpoints as found on https://github.com/MohammedArab1/ThaqalaynAPI"
-    })
+    response.send('<h1>Welcome to my API! Please fetch one of the endpoints as found on https://github.com/MohammedArab1/ThaqalaynAPI</h1>')
 })
 
 //Returns the list of books

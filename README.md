@@ -20,7 +20,7 @@ request = axios.get(url).then(res => {
     - `` https://thaqalayn-api.adaptable.app/api/random`` 
 3. Retrieve a random hadith from a given book: 
     - `` https://thaqalayn-api.adaptable.app/api/[book]/random`` 
-4. Make a query throughout the entire database. This is a very simplistic saerch mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`:
+4. Make a query throughout the entire database. This is a very simplistic search mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`:
     - `` https://thaqalayn-api.adaptable.app/api/query?q=[query]`` 
 5. Make a query for a specific book. Same rules as above apply here:
     - `` https://thaqalayn-api.adaptable.app/api/query/[book]?q=[query]`` 

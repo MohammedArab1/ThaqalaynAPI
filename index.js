@@ -8,12 +8,6 @@ const utils = require("./utils.js")
 
 const invalidId = "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/allbooks for min and max id range for any given book"
 const invalidBook = "The book you have provided does not exist. Please use endpoint /api/allbooks for a list of all books."
-const listOfBooks = []
-BookNamesModel.find({}).then(books => {
-    for (var i = 0;i<books.length;i++) {
-        listOfBooks.push(books[i]["BookName"])
-    }})
-
 
 app.use(express.json())
 app.use(cors())
@@ -32,7 +26,6 @@ app.get('/api/allbooks', async (request, response) => {
 app.get('/api/random', async (request, response) => {
     HadithModel.findOneRandom((error, result) => {
         if (!error) {
-            // delete result["_id"]
             return response.json(result);
         }
     })
@@ -67,6 +60,7 @@ app.get('/api/query', async (request, response)=> {
 })
 //The following endpoint takes a query and fetches from a particular book. Can handle both english and arabic queries
 app.get('/api/query/:book', async (request, response)=> {
+    const listOfBooks = await utils.returnBookNames()
     const query = request.query.q
     if (!query) {
         const error = {error:"No query was passed in. Please use this endpoint with a query. (ex. /api/query/Al-Amali?q=this is a query or /api/query/Al-Amali?q=اً نَفَعَكَ عِلْمُكَ وَإِنْ تَكُنْ جَاهِلاً عَلَّمُوكَ ",
@@ -99,6 +93,8 @@ app.get('/api/query/:book', async (request, response)=> {
 
 //Returns all the hadiths from a specific book
 app.get('/api/:book', async (request, response) => {
+    const listOfBooks = await utils.returnBookNames()
+    console.log(listOfBooks);
     if (!listOfBooks.includes(request.params.book)) {
         return response.status(400).json({error:invalidBook})
     }
@@ -113,6 +109,7 @@ app.get('/api/:book', async (request, response) => {
 
 //Returns a random hadith from a given book
 app.get('/api/:book/random', async (request, response) => {
+    const listOfBooks = await utils.returnBookNames()
     const filter = {book:request.params.book}
     if (!listOfBooks.includes(request.params.book)) {
         return response.status(400).json({error:invalidBook})
@@ -126,6 +123,7 @@ app.get('/api/:book/random', async (request, response) => {
 
 // returns a specific hadith (not very useful in my opinion but needs refining)
 app.get('/api/:book/:id', async (request, response) => {
+    const listOfBooks = await utils.returnBookNames()
     if (isNaN(request.params.id)) {
         return response.status(400).json({error:"Invalid Id"})
     }

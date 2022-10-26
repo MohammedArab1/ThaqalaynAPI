@@ -3,9 +3,28 @@ from bs4 import BeautifulSoup
 import json
 from pathlib import Path
 import os
-
-
-# The following code scrapes all the ahadith on the Thaqalayn.net website and creates a JSON file for every book.
+bookNameTranslations = [
+    {"arabicName":"Al-Amālī","englishName":"Al-Amali"},
+    {"arabicName":"Al-Khiṣāl","englishName":"Al-Khisal"},
+    {"arabicName":"Al-Kāfi - Volume 1","englishName":"Al-Kafi-Volume1"},
+    {"arabicName":"Al-Kāfi - Volume 2","englishName":"Al-Kafi-Volume2"},
+    {"arabicName":"Al-Kāfi - Volume 3","englishName":"Al-Kafi-Volume3"},
+    {"arabicName":"Al-Kāfi - Volume 4","englishName":"Al-Kafi-Volume4"},
+    {"arabicName":"Al-Kāfi - Volume 5","englishName":"Al-Kafi-Volume5"},
+    {"arabicName":"Al-Kāfi - Volume 6","englishName":"Al-Kafi-Volume6"},
+    {"arabicName":"Al-Kāfi - Volume 7","englishName":"Al-Kafi-Volume7"},
+    {"arabicName":"Al-Kāfi - Volume 8","englishName":"Al-Kafi-Volume8"},
+    {"arabicName":"Al-Tawḥīd","englishName":"Al-Tawhid"},
+    {"arabicName":"Faḍaʾil al-Shīʿa","englishName":"Fadail-al-Shia"},
+    {"arabicName":"Kitāb al-Ghayba","englishName":"Kitab-Al-Ghayba"},
+    {"arabicName":"Kāmil al-Ziyārāt","englishName":"Kamil-Al-Ziyarat"},
+    {"arabicName":"Muʿjam al-Aḥādīth al-Muʿtabara","englishName":"Mujam-al-Ahadith-al-Mutabara"},
+    {"arabicName":"Rijāl Ibn al-Ghaḍā'irī","englishName":"Rijal-Ibn-al-Ghadairi"},
+    {"arabicName":"Thawāb al-Aʿmāl wa ʿiqāb al-Aʿmāl","englishName":"Thawab-al-Amal-waiqab-al-Amal"},
+    {"arabicName":"ʿUyūn akhbār al-Riḍā - Volume 1","englishName":"Uyun-akhbar-al-Rida-Volume1"},
+    {"arabicName":"ʿUyūn akhbār al-Riḍā - Volume 2","englishName":"Uyun-akhbar-al-Rida-Volume2"},
+    {"arabicName":"Ṣifāt al-Shīʿa","englishName":"Sifat-Al-Shia"}
+]
 
 URL = "https://thaqalayn.net/"
 mainPage = requests.get(URL)
@@ -44,6 +63,9 @@ for bookLink in mainPageResults.find_all('a'):
                 if "Shaykh Asif al-Mohseni:" in element.get_text(): #if a mohseni grading is found, store it in a variable.
                     mohseniGrading = element.get_text()
             hadithPageUrl = hadith.find_all('a', class_="btn btn-primary")[0].get('href')
+            for element in bookNameTranslations:
+                if element['arabicName'] == bookPageTitle:
+                    bookPageTitle = element['englishName']
             hadithObject = {
                 "id" : counter,
                 "book" : bookPageTitle,
@@ -58,11 +80,11 @@ for bookLink in mainPageResults.find_all('a'):
             counter += 1
             hadithsArray.append(hadithObject)
     if "Ṭūsī" in bookPageAuthor:
-        savePath = os.path.join(absolute_path,bookPageTitle+"-Ṭūsī.json")
+        savePath = os.path.join(absolute_path,bookPageTitle+"-Tusi.json")
         with open(savePath, 'w', encoding='utf8') as json_file:
             json.dump(hadithsArray, json_file, ensure_ascii=False)
     elif "Nuʿmānī" in bookPageAuthor:
-        savePath = os.path.join(absolute_path,bookPageTitle+"-Nuʿmānī.json")
+        savePath = os.path.join(absolute_path,bookPageTitle+"-numani.json")
         with open(savePath, 'w', encoding='utf8') as json_file:
             json.dump(hadithsArray, json_file, ensure_ascii=False)
     else:

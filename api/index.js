@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('build'))
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.setHeader('Content-Type', 'text/html');
     res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
     res.end(`Hello!, visit https://github.com/MohammedArab1/ThaqalaynAPI for a list of endpoints`);

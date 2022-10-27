@@ -2,9 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
-const HadithModel = require('./models/hadith')
-const BookNamesModel = require('./models/bookName')
-const utils = require("./utils.js")
+const HadithModel = require('../models/hadith')
+const BookNamesModel = require('../models/bookName')
+const utils = require("../utils.js")
 
 const invalidId = "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/allbooks for min and max id range for any given book"
 const invalidBook = "The book you have provided does not exist. Please use endpoint /api/allbooks for a list of all books."

@@ -13,9 +13,11 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('build'))
 
-app.get('/', async (request, response) => {
-    return response.json({"Welcome":"Begin by using endpoint /api/allbooks"})
-})
+app.get('/api', (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+    res.end(`Hello!`);
+});
 
 
 //Returns the list of books

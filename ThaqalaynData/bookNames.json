@@ -7,49 +7,49 @@
 	},
 	{
 		"id":2,
-		"BookName":"Al-Kafi-Volume1",
+		"BookName":"Al-Kafi-Volume-1",
 		"idRangeMin":1,
 		"idRangeMax":1445
 	},
 	{
 		"id":3,
-		"BookName":"Al-Kafi-Volume2",
+		"BookName":"Al-Kafi-Volume-2",
 		"idRangeMin":1,
 		"idRangeMax":2342
 	},
 	{
 		"id":4,
-		"BookName":"Al-Kafi-Volume3",
+		"BookName":"Al-Kafi-Volume-3",
 		"idRangeMin":1,
 		"idRangeMax":2178
 	},
 	{
 		"id":5,
-		"BookName":"Al-Kafi-Volume4",
+		"BookName":"Al-Kafi-Volume-4",
 		"idRangeMin":1,
 		"idRangeMax":2190
 	},
 	{
 		"id":6,
-		"BookName":"Al-Kafi-Volume5",
+		"BookName":"Al-Kafi-Volume-5",
 		"idRangeMin":1,
 		"idRangeMax":2088
 	},
 	{
 		"id":7,
-		"BookName":"Al-Kafi-Volume6",
+		"BookName":"Al-Kafi-Volume-6",
 		"idRangeMin":1,
 		"idRangeMax":2510
 	},
 	{
 		"id":8,
-		"BookName":"Al-Kafi-Volume7",
+		"BookName":"Al-Kafi-Volume-7",
 		"idRangeMin":1,
 		"idRangeMax":892
 	},
 	{
 		"id":9,
-		"BookName":"Al-Kafi-Volume8",
+		"BookName":"Al-Kafi-Volume-8",
 		"idRangeMin":1,
 		"idRangeMax":596
 	},

@@ -13,6 +13,11 @@ app.use(express.json())
 app.use(cors())
 app.use(express.static('build'))
 
+app.get('/', async (request, response) => {
+    return response.json({"Welcome":"Begin by using endpoint /api/allbooks"})
+})
+
+
 //Returns the list of books
 app.get('/api/allbooks', async (request, response) => {
     const bookNames = await BookNamesModel.find({},{_id:0})
@@ -94,7 +99,6 @@ app.get('/api/query/:book', async (request, response)=> {
 //Returns all the hadiths from a specific book
 app.get('/api/:book', async (request, response) => {
     const listOfBooks = await utils.returnBookNames()
-    console.log(listOfBooks);
     if (!listOfBooks.includes(request.params.book)) {
         return response.status(400).json({error:invalidBook})
     }

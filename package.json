@@ -13,12 +13,14 @@
   "author": "Mohammed Arab",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongoose": "^6.6.2",
-    "mongoose-simple-random": "^0.4.1"
+    "mongoose-simple-random": "^0.4.1",
+    "serverless-http": "^3.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

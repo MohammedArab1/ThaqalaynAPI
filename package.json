@@ -1,7 +1,7 @@
 {
-  "name": "random-hadith-generator",
+  "name": "thaqalayn-api",
   "version": "1.0.0",
-  "description": "Load a random hadith from the Shia Library (sourced from the thaqalayn website)",
+  "description": "API for hadiths found on the thaqalayn.net website",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

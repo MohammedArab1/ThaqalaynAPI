@@ -5,6 +5,7 @@ provider:
   name: aws
   runtime: nodejs16.x
 
+
 functions:
   thaqalayn-api:
     handler: handler.handler

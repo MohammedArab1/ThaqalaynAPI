@@ -11,7 +11,7 @@ const invalidBook = "The book you have provided does not exist. Please use endpo
 
 app.use(express.json())
 app.use(cors())
-app.use(express.static('build'))
+// app.use(express.static('build'))
 
 app.get('/', (req, res) => {
     // res.setHeader('Content-Type', 'text/html');

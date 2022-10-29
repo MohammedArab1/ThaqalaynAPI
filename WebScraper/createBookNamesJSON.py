@@ -27,17 +27,17 @@ for bookLink in mainPageResults.find_all('a'):
     bookPageTitle=bookPageTitle.replace("--","")
     bookPageTitle=bookPageTitle.replace("`","")
     bookPageTitle=bookPageTitle.replace("'","")
-    if bookPageTitle == "Kitab-Al-Ghayba":
-        r =requests.get('https://thaqalayn-ciqwid0uu-mohammedarab1.vercel.app/api/Kitab-al-Ghayba-numani')
-        array = json.loads(r.text)
-        newBookObject = {"id":count,"BookName":bookPageTitle+"-Numani","idRangeMin":1,"idRangeMax":len(array)}
-        allBooksJson.append(newBookObject)
-        count+=1
-        r =requests.get('https://thaqalayn-ciqwid0uu-mohammedarab1.vercel.app/api/Kitab-al-Ghayba-Tusi')
+    bookPageAuthor = bookSoup.find("h6").get_text()
+    if "Ṭūsī" in bookPageAuthor:
+        r =requests.get('https://9pq0cudihi.execute-api.us-east-1.amazonaws.com/dev/api/Kitab-al-Ghayba-Tusi')
         array = json.loads(r.text)
         newBookObject = {"id":count,"BookName":bookPageTitle+"-Tusi","idRangeMin":1,"idRangeMax":len(array)}
+    elif "Nuʿmānī" in bookPageAuthor:
+        r =requests.get('https://9pq0cudihi.execute-api.us-east-1.amazonaws.com/dev/api/Kitab-al-Ghayba-Numani')
+        array = json.loads(r.text)
+        newBookObject = {"id":count,"BookName":bookPageTitle+"-Numani","idRangeMin":1,"idRangeMax":len(array)}
     else:
-        r =requests.get('https://thaqalayn-ciqwid0uu-mohammedarab1.vercel.app/api/'+bookPageTitle)
+        r =requests.get('https://9pq0cudihi.execute-api.us-east-1.amazonaws.com/dev/api/'+bookPageTitle)
         array = json.loads(r.text)
         newBookObject = {"id":count,"BookName":bookPageTitle,"idRangeMin":1,"idRangeMax":len(array)}
     allBooksJson.append(newBookObject)

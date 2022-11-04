@@ -11,14 +11,9 @@ const invalidBook = "The book you have provided does not exist. Please use endpo
 
 app.use(express.json())
 app.use(cors())
-// app.use(express.static('build'))
 
 app.get('/', (req, res) => {
-    // res.setHeader('Content-Type', 'text/html');
-    // res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-    // res.end(`Hello!, visit https://github.com/MohammedArab1/ThaqalaynAPI for a list of endpoints`);
-    // return res.json({"welcome":"Welcome to my thaqalayn API! try using any of the endpoints specified in https://github.com/MohammedArab1/ThaqalaynAPI"})
-    res.status(200).json({welcome:"welcome!"})
+    res.status(200).json({welcome:"welcome! Please visit https://github.com/MohammedArab1/ThaqalaynAPI for instructions on how the API works."})
 });
 
 
@@ -150,7 +145,4 @@ app.get('/api/:book/:id', async (request, response) => {
 
 })
 
-// const PORT = process.env.PORT || 3001
-// app.listen(PORT,() => {`Server running on port ${PORT}`})
-// module.exports.app = serverless(app);
 module.exports = app;

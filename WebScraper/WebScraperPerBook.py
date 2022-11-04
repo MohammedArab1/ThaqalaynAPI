@@ -8,7 +8,7 @@ from unidecode import unidecode
 
 # the following code is used to scrape data from a single book in Thaqalayn.net. Simply change the URL on line 7 to that of the book you're trying to scrape.
 # example URL: https://thaqalayn.net/book/13
-bookPage = requests.get("https://thaqalayn.net/book/23")
+bookPage = requests.get("https://thaqalayn.net/book/13")
 bookSoup = BeautifulSoup(bookPage.content, "html.parser")
 bookPageResults = bookSoup.find(id="content")
 bookPageTitle = bookSoup.find("h1").get_text() #this will store the title of the book
@@ -18,6 +18,9 @@ bookPageTitle=bookPageTitle.replace("--","")
 bookPageTitle=bookPageTitle.replace("`","")
 bookPageTitle=bookPageTitle.replace("'","")
 bookPageAuthor = bookSoup.find("h6").get_text()
+authorAndTranslator = bookPageAuthor.split("\n")
+author = authorAndTranslator[0].replace("Author: ","")
+translator = authorAndTranslator[1].strip().replace("Translator: ","")
 if "Ṭūsī" in bookPageAuthor:
         bookPageTitle = bookPageTitle+"-Tusi"
 elif "Nuʿmānī" in bookPageAuthor:
@@ -52,6 +55,8 @@ for hadithlink in bookPageResults.find_all('a'):
             "id" : counter,
             "book" : bookPageTitle,
             "chapter" : chapterName,
+            "author": author,
+            "translator": translator,
             "englishText" : englishText,
             "arabicText" : arabicText,
             "majlisiGrading" : majlisiGrading,

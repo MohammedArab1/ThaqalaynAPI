@@ -23,6 +23,9 @@ for bookLink in mainPageResults.find_all('a'):
     bookPageTitle=bookPageTitle.replace("`","")
     bookPageTitle=bookPageTitle.replace("'","")        
     bookPageAuthor = bookSoup.find("h6").get_text()
+    authorAndTranslator = bookPageAuthor.split("\n")
+    author = authorAndTranslator[0].replace("Author: ","")
+    translator = authorAndTranslator[1].strip().replace("Translator: ","")
     if "Ṭūsī" in bookPageAuthor:
         bookPageTitle = bookPageTitle+"-Tusi"
     elif "Nuʿmānī" in bookPageAuthor:
@@ -57,6 +60,8 @@ for bookLink in mainPageResults.find_all('a'):
                 "id" : counter,
                 "book" : bookPageTitle,
                 "chapter" : chapterName,
+                "author": author,
+                "translator": translator,
                 "englishText" : englishText,
                 "arabicText" : arabicText,
                 "majlisiGrading" : majlisiGrading,

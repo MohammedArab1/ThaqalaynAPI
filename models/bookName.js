@@ -11,8 +11,11 @@ mongoose.connect(url)
   })
 
   const bookName = new mongoose.Schema({
-    id: Number,
-    BookName: String
+    bookId: String,
+    BookName: String,
+    author:String,
+    idRangeMin:Number,
+    idRangeMax:Number
   })
 
   bookName.set('toJson', {

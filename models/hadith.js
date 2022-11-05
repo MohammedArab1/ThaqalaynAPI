@@ -13,7 +13,7 @@ mongoose.connect(url)
 
   const hadithSchema = new mongoose.Schema({
     id: Number,
-    book: String,
+    bookId: String,
     chapter: String,
     englishText: String,
     arabicText: String,

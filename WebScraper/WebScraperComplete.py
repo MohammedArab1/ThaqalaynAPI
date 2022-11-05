@@ -5,7 +5,34 @@ from pathlib import Path
 import os
 import requests
 from unidecode import unidecode
+import re
 
+def formatTitle(title):
+    bookPageTitle = unidecode(title)
+    bookPageTitle=bookPageTitle.replace(" ", "-")
+    bookPageTitle=bookPageTitle.replace("--","")
+    bookPageTitle=bookPageTitle.replace("`","")
+    bookPageTitle=bookPageTitle.replace("'","")
+    return bookPageTitle  
+
+def getFullAuthorAndTranslator(bookPageAuthor):
+    authorAndTranslator = bookPageAuthor.split("\n")
+    author = authorAndTranslator[0].replace("Author: ","")
+    translator = authorAndTranslator[1].strip().replace("Translator: ","")
+    return[author,translator]
+
+def getAuthorLastName(author):
+    authorLastNameFinal = ''
+    authorNameDecoded = ''
+    authorNameSplit = author.split("(")[0]
+    authorLastNameArray=authorNameSplit.split(" ")
+    if not authorLastNameArray[-1]:
+        authorNameDecoded = unidecode(authorLastNameArray[-2])
+    else:
+        authorNameDecoded =unidecode(authorLastNameArray[-1])
+    authorNameDecoded = authorNameDecoded.replace("al-",'')
+    authorLastNameFinal= re.sub('[^A-Za-z0-9]+', '', authorNameDecoded)
+    return authorLastNameFinal
 
 URL = "https://thaqalayn.net/"
 mainPage = requests.get(URL)
@@ -16,20 +43,14 @@ for bookLink in mainPageResults.find_all('a'):
     bookPage = requests.get(bookLink.get('href'))
     bookSoup = BeautifulSoup(bookPage.content, "html.parser")
     bookPageResults = bookSoup.find(id="content")
-    bookPageTitle = bookSoup.find("h1").get_text() #this will store the title of the book
-    bookPageTitle = unidecode(bookPageTitle)
-    bookPageTitle=bookPageTitle.replace(" ", "-")
-    bookPageTitle=bookPageTitle.replace("--","")
-    bookPageTitle=bookPageTitle.replace("`","")
-    bookPageTitle=bookPageTitle.replace("'","")        
+    bookPageTitleArabic = bookSoup.find("h1").get_text() #this will store the title of the book
+    bookPageTitle = formatTitle(bookPageTitleArabic)    
     bookPageAuthor = bookSoup.find("h6").get_text()
-    authorAndTranslator = bookPageAuthor.split("\n")
-    author = authorAndTranslator[0].replace("Author: ","")
-    translator = authorAndTranslator[1].strip().replace("Translator: ","")
-    if "Ṭūsī" in bookPageAuthor:
-        bookPageTitle = bookPageTitle+"-Tusi"
-    elif "Nuʿmānī" in bookPageAuthor:
-        bookPageTitle = bookPageTitle+"-Numani"
+    authorAndTranslator = getFullAuthorAndTranslator(bookPageAuthor)
+    author = authorAndTranslator[0]
+    translator = authorAndTranslator[1]
+    authorLastName = getAuthorLastName(author)
+    bookPageId = bookPageTitle + "-" + authorLastName
     hadithsArray=[]
     counter = 1
     chapterName=""
@@ -58,7 +79,8 @@ for bookLink in mainPageResults.find_all('a'):
             hadithPageUrl = hadith.find_all('a', class_="btn btn-primary")[0].get('href')
             hadithObject = {
                 "id" : counter,
-                "book" : bookPageTitle,
+                "bookId":bookPageId,
+                "book" : bookPageTitleArabic,
                 "chapter" : chapterName,
                 "author": author,
                 "translator": translator,
@@ -71,7 +93,7 @@ for bookLink in mainPageResults.find_all('a'):
             }
             counter += 1
             hadithsArray.append(hadithObject)
-    with open(bookPageTitle+".json", 'w', encoding='utf8') as json_file:
+    with open(bookPageId+".json", 'w', encoding='utf8') as json_file:
         json.dump(hadithsArray, json_file, ensure_ascii=False)
 
 

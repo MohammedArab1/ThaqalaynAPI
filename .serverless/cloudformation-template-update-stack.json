@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/thaqalaynAPI/dev/1667059801950-2022-10-29T16:10:01.950Z/thaqalaynAPI.zip"
+          "S3Key": "serverless/thaqalaynAPI/dev/1667680067210-2022-11-05T20:27:47.210Z/thaqalaynAPI.zip"
         },
         "Handler": "handler.handler",
         "Runtime": "nodejs16.x",
@@ -179,14 +179,14 @@
         "ThaqalaynDashapiLogGroup"
       ]
     },
-    "ThaqalaynDashapiLambdaVersionbCwxlC5vrhhuCgcxYIW1JPQGNjJzSCfiBTLwaxCzVk": {
+    "ThaqalaynDashapiLambdaVersionm6VWFq7b8HWmpSB0lK1rQvXdmCthrix6DliIb0E": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ThaqalaynDashapiLambdaFunction"
         },
-        "CodeSha256": "o9c0zWToZSRZYFHlsrLjhT/uTs5wLV9u3AZ9iNRwd20="
+        "CodeSha256": "BmLTy58+7+hcTG9kuIIFHmVp64waJnsK8pRnnTwN4lo="
       }
     },
     "ApiGatewayRestApi": {
@@ -404,7 +404,7 @@
         "ThaqalaynDashapiLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1667059797657": {
+    "ApiGatewayDeployment1667680062803": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -469,7 +469,7 @@
     "ThaqalaynDashapiLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ThaqalaynDashapiLambdaVersionbCwxlC5vrhhuCgcxYIW1JPQGNjJzSCfiBTLwaxCzVk"
+        "Ref": "ThaqalaynDashapiLambdaVersionm6VWFq7b8HWmpSB0lK1rQvXdmCthrix6DliIb0E"
       },
       "Export": {
         "Name": "sls-thaqalaynAPI-dev-ThaqalaynDashapiLambdaFunctionQualifiedArn"

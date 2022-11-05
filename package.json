@@ -4,9 +4,9 @@
   "description": "API for hadiths found on the thaqalayn.net website",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1\"",
-    "dev": "nodemon index.js",
+    "dev": "nodemon src/index.js",
     "build:ui": "rm -rf build && cd ../thaqalayn-api-frontend && npm run build && cp -r build ../Thaqalayn-API",
     "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push"
   },

@@ -3,10 +3,10 @@ const BookNamesModel = require('./models/bookName')
 const escapeRegExp = (string) =>  {
     return string.toString().replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
-const returnBookNames = async () => {
+const returnBookIds = async () => {
   const bookNames = await BookNamesModel.find({})
   return bookNames.map(book =>{
-    return book['BookName']
+    return book['bookId']
   })}
 
-  module.exports = {escapeRegExp, returnBookNames}
+  module.exports = {escapeRegExp, returnBookIds}

@@ -8,7 +8,10 @@
     "test": "echo \\\"Error: no test specified\\\" && exit 1\"",
     "dev": "nodemon src/index.js",
     "build:ui": "rm -rf build && cd ../thaqalayn-api-frontend && npm run build && cp -r build ../Thaqalayn-API",
-    "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push",
+    "serverlessDeploy": "dotenv cross-var set AWS_ACCESS_KEY_ID=%AWS_ACCESS_KEY_ID% && set AWS_SECRET_ACCESS_KEY=%AWS_SECRET_ACCESS_KEY% && serverless deploy ",
+    "modifyAllBooks:full":"modifyDbScript.sh",
+    "modifyOneBook":"modifyDbPerBookScript.sh"
   },
   "author": "Mohammed Arab",
   "license": "ISC",
@@ -16,7 +19,9 @@
     "aws-serverless-express": "^3.4.0",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "cross-var": "^1.1.0",
     "dotenv": "^16.0.3",
+    "dotenv-cli": "^6.0.0",
     "express": "^4.18.1",
     "mongoose": "^6.6.2",
     "mongoose-simple-random": "^0.4.1",

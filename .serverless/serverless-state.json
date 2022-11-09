@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/thaqalaynAPI/dev/1667680067210-2022-11-05T20:27:47.210Z/thaqalaynAPI.zip"
+                "S3Key": "serverless/thaqalaynAPI/dev/1667958715541-2022-11-09T01:51:55.541Z/thaqalaynAPI.zip"
               },
               "Handler": "handler.handler",
               "Runtime": "nodejs16.x",
@@ -191,14 +191,14 @@
               "ThaqalaynDashapiLogGroup"
             ]
           },
-          "ThaqalaynDashapiLambdaVersionm6VWFq7b8HWmpSB0lK1rQvXdmCthrix6DliIb0E": {
+          "ThaqalaynDashapiLambdaVersionRYePnBernDEwIw1d4JcGulqF4WPBBgP6Qf0hfY65v3A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ThaqalaynDashapiLambdaFunction"
               },
-              "CodeSha256": "BmLTy58+7+hcTG9kuIIFHmVp64waJnsK8pRnnTwN4lo="
+              "CodeSha256": "CGpbqgUFwSRmxXswM8KMPkzswAqHZjvAI9MQUrVzEaQ="
             }
           },
           "ApiGatewayRestApi": {
@@ -416,7 +416,7 @@
               "ThaqalaynDashapiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1667680062803": {
+          "ApiGatewayDeployment1667958709931": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -481,7 +481,7 @@
           "ThaqalaynDashapiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ThaqalaynDashapiLambdaVersionm6VWFq7b8HWmpSB0lK1rQvXdmCthrix6DliIb0E"
+              "Ref": "ThaqalaynDashapiLambdaVersionRYePnBernDEwIw1d4JcGulqF4WPBBgP6Qf0hfY65v3A"
             },
             "Export": {
               "Name": "sls-thaqalaynAPI-dev-ThaqalaynDashapiLambdaFunctionQualifiedArn"
@@ -659,7 +659,7 @@
         "timeout": 6,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "ThaqalaynDashapiLambdaVersionm6VWFq7b8HWmpSB0lK1rQvXdmCthrix6DliIb0E"
+        "versionLogicalId": "ThaqalaynDashapiLambdaVersionRYePnBernDEwIw1d4JcGulqF4WPBBgP6Qf0hfY65v3A"
       }
     },
     "configValidationMode": "warn",
@@ -679,7 +679,7 @@
     "artifact": "C:\\Users\\moham\\Desktop\\Programming\\WebProgramming\\Thaqalayn-API\\.serverless\\thaqalaynAPI.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/thaqalaynAPI/dev/1667680067210-2022-11-05T20:27:47.210Z",
+    "artifactDirectoryName": "serverless/thaqalaynAPI/dev/1667958715541-2022-11-09T01:51:55.541Z",
     "artifact": "thaqalaynAPI.zip"
   }
 }

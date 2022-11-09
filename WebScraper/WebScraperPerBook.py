@@ -4,6 +4,7 @@ import json
 import os
 from unidecode import unidecode
 import re
+import sys
 
 def formatTitle(title):
     bookPageTitle = unidecode(title)
@@ -34,7 +35,9 @@ def getAuthorLastName(author):
 
 # the following code is used to scrape data from a single book in Thaqalayn.net. Simply change the URL on line 7 to that of the book you're trying to scrape.
 # example URL: https://thaqalayn.net/book/13
-bookPage = requests.get("https://thaqalayn.net/book/13")
+# bookURL = https://thaqalayn.net/book/13
+bookURL = sys.argv[1]
+bookPage = requests.get(bookURL)
 bookSoup = BeautifulSoup(bookPage.content, "html.parser")
 bookPageResults = bookSoup.find(id="content")
 bookPageTitleArabic = bookSoup.find("h1").get_text() #this will store the title of the book

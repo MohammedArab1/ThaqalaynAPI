@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 //Returns the list of books
 app.get('/api/allbooks', async (request, response) => {
-    const bookNames = await BookNamesModel.find({},{_id:0})
+    const bookNames = await BookNamesModel.find({},{_id:0,__v:0})
     bookNames.sort((a,b) => {
         return a['id']-b['id']
     })
@@ -45,8 +45,8 @@ app.get('/api/query', async (request, response)=> {
     else {
     const escapedQuery = utils.escapeRegExp(query)
     const $regex = new RegExp(escapedQuery)
-    const englishQueryResults = await HadithModel.find({englishText:{$regex}})
-    const arabicQueryResults = await HadithModel.find({arabicText:{$regex}})
+    const englishQueryResults = await HadithModel.find({englishText:{$regex}},{_id:0,__v:0})
+    const arabicQueryResults = await HadithModel.find({arabicText:{$regex}},{_id:0,__v:0})
     hadiths = {
         englishQueryResults,
         arabicQueryResults
@@ -77,8 +77,8 @@ app.get('/api/query/:bookId', async (request, response)=> {
     else{
         const escapedQuery = utils.escapeRegExp(query)
         const $regex = new RegExp(escapedQuery)
-        const englishQueryResults = await HadithModel.find({englishText:{$regex}, bookId:request.params.bookId})
-        const arabicQueryResults = await HadithModel.find({arabicText:{$regex}, bookId:request.params.bookId})
+        const englishQueryResults = await HadithModel.find({englishText:{$regex}, bookId:request.params.bookId},{_id:0,__v:0})
+        const arabicQueryResults = await HadithModel.find({arabicText:{$regex}, bookId:request.params.bookId},{_id:0,__v:0})
         hadiths = {
             englishQueryResults,
             arabicQueryResults
@@ -94,7 +94,15 @@ app.get('/api/query/:bookId', async (request, response)=> {
         }
     }
 })
-
+//Returns all the hadiths from a specific book
+app.get('/api/booksNoValidation/:bookId', async (request, response) => {
+    const hadiths = await HadithModel.find({bookId:request.params.bookId},{_id:0,__v:0})
+    hadiths.sort((a,b) => {
+        return a['id']-b['id']
+    })
+    return response.json(hadiths)
+    
+})
 //Returns all the hadiths from a specific book
 app.get('/api/:bookId', async (request, response) => {
     const listOfBooks = await utils.returnBookIds()
@@ -102,7 +110,7 @@ app.get('/api/:bookId', async (request, response) => {
         return response.status(400).json({error:invalidBook})
     }
     else {
-        const hadiths = await HadithModel.find({bookId:request.params.bookId},{_id:0})
+        const hadiths = await HadithModel.find({bookId:request.params.bookId},{_id:0,__v:0})
         hadiths.sort((a,b) => {
             return a['id']-b['id']
         })
@@ -131,7 +139,7 @@ app.get('/api/:bookId/:id', async (request, response) => {
         return response.status(400).json({error:"Invalid Id"})
     }
     else {
-        const hadith = await HadithModel.find({bookId:request.params.bookId, id:request.params.id},{_id:0})
+        const hadith = await HadithModel.find({bookId:request.params.bookId, id:request.params.id},{_id:0,__v:0})
         if (!listOfBooks.includes(request.params.bookId)) {
             return response.status(400).json({error:invalidBook})
         }

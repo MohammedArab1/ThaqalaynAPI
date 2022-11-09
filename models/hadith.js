@@ -20,7 +20,7 @@ mongoose.connect(url)
     majlisiGrading: String,
     BehdudiGrading: String,
     MohseniGrading: String,
-    URL: String
+    URL: String,
   })
 
   hadithSchema.plugin(random)
@@ -29,6 +29,7 @@ mongoose.connect(url)
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()
         delete returnedObject._id
+        delete returnedObject.__v
     }
   })
 

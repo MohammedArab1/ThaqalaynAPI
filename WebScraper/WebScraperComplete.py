@@ -39,6 +39,7 @@ mainPage = requests.get(URL)
 mainPageSoup = BeautifulSoup(mainPage.content, "html.parser")
 mainPageResults = mainPageSoup.find(id="library")
 absolute_path = os.path.dirname(__file__)
+allHadithsArray=[]
 for bookLink in mainPageResults.find_all('a'):
     bookPage = requests.get(bookLink.get('href'))
     bookSoup = BeautifulSoup(bookPage.content, "html.parser")
@@ -95,11 +96,18 @@ for bookLink in mainPageResults.find_all('a'):
             hadithsArray.append(hadithObject)
     with open(bookPageId+".json", 'w', encoding='utf8') as json_file:
         json.dump(hadithsArray, json_file, ensure_ascii=False)
+    allHadithsArray+=hadithsArray
+with open("allBooks"+".json", 'w', encoding='utf8') as json_file:
+    json.dump(allHadithsArray, json_file, ensure_ascii=False)
 
 
 
-
-
+# list1=[]
+# list2=[{"array":"of hadiths"},{"arary2":"of hadiths2"}]
+# list3=[{"array3":"of hadiths3"}]
+# list1 += list2
+# list1 += list3
+# print(list1)
 
 
 

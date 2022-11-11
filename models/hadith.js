@@ -14,7 +14,10 @@ mongoose.connect(url)
   const hadithSchema = new mongoose.Schema({
     id: Number,
     bookId: String,
+    book:String,
     chapter: String,
+    author: String,
+    translator: String,
     englishText: String,
     arabicText: String,
     majlisiGrading: String,

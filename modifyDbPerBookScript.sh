@@ -14,6 +14,7 @@ echo "creating all books json"&&
 python createBookNamesJSON.py &&
 cd .. &&
 npx run-func modifyDB.js modifyHadiths './tempBookStorage/BookNames.json' 'BookNamesModel' &&
+cp tempBookStorage/*.json ThaqalaynData/ &&
 rm -r tempBookStorage &&
 
 echo "Finished updating single book."

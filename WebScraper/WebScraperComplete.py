@@ -102,14 +102,6 @@ with open("allBooks"+".json", 'w', encoding='utf8') as json_file:
 
 
 
-# list1=[]
-# list2=[{"array":"of hadiths"},{"arary2":"of hadiths2"}]
-# list3=[{"array3":"of hadiths3"}]
-# list1 += list2
-# list1 += list3
-# print(list1)
-
-
 
 
 

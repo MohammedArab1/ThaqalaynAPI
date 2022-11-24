@@ -18,3 +18,20 @@ functions:
           path: /{proxy+}
           method: ANY
           cors: true
+
+	
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomains:
+    - rest:
+        domainName: www.thaqalayn-api.net
+        basePath: ''
+        certificateName: 'www.thaqalayn-api.net'
+        createRoute53Record: true
+    - rest:
+        domainName: thaqalayn-api.net
+        basePath: ''
+        certificateName: 'thaqalayn-api.net'
+        createRoute53Record: true

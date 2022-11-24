@@ -52,7 +52,7 @@ for bookLink in mainPageResults.find_all('a'):
     translator = authorAndTranslator[1]
     authorLastName = getAuthorLastName(author)
     bookPageId = bookPageTitle + "-" + authorLastName
-    r =requests.get('https://9pq0cudihi.execute-api.us-east-1.amazonaws.com/dev/api/booksNoValidation/'+bookPageId)
+    r =requests.get('https://thaqalayn-api.net/api/booksNoValidation/'+bookPageId)
     array = json.loads(r.text)
     newBookObject = {"bookId":bookPageId,"BookName":bookPageTitleArabic,"author":author,"idRangeMin":1,"idRangeMax":len(array)}
     allBooksJson.append(newBookObject)

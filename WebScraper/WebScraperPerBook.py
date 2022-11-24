@@ -35,7 +35,7 @@ def getAuthorLastName(author):
 
 # the following code is used to scrape data from a single book in Thaqalayn.net. Simply change the URL on line 7 to that of the book you're trying to scrape.
 # example URL: https://thaqalayn.net/book/13
-# bookURL = https://thaqalayn.net/book/13
+# bookURL = "https://thaqalayn.net/book/13"
 bookURL = sys.argv[1]
 bookPage = requests.get(bookURL)
 bookSoup = BeautifulSoup(bookPage.content, "html.parser")

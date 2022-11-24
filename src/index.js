@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.status(200).json({welcome:"welcome! Please visit https://github.com/MohammedArab1/ThaqalaynAPI for instructions on how the API works."})
+    // res.status(200).json({welcome:"welcome! Please visit https://github.com/MohammedArab1/ThaqalaynAPI for instructions on how the API works."})
+    res.send("<h1>Welcome to my REST API for thaqalayn.net</h1><h3>Please visit <a href='https://github.com/MohammedArab1/ThaqalaynAPI'>my github page</a> for instructions on how the API works.</h3>")
 });
 
 

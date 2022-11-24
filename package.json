@@ -10,8 +10,8 @@
     "build:ui": "rm -rf build && cd ../thaqalayn-api-frontend && npm run build && cp -r build ../Thaqalayn-API",
     "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push",
     "serverlessDeploy": "dotenv cross-var set AWS_ACCESS_KEY_ID=%AWS_ACCESS_KEY_ID% && set AWS_SECRET_ACCESS_KEY=%AWS_SECRET_ACCESS_KEY% && serverless deploy ",
-    "modifyAllBooks:full":"modifyDbScript.sh",
-    "modifyOneBook":"modifyDbPerBookScript.sh"
+    "modifyAllBooks:full": "modifyDbScript.sh",
+    "modifyOneBook": "modifyDbPerBookScript.sh"
   },
   "author": "Mohammed Arab",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "serverless-http": "^3.1.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "serverless-domain-manager": "^6.2.0"
   }
 }

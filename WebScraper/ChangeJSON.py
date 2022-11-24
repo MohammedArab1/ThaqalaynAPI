@@ -9,16 +9,15 @@ import json
 with open('<absolute path to json file here>',encoding="utf8") as f:
     data = json.load(f)
 
-# make the changes you want. In this case, change the 'book' property of every hadith to 'Al-Amali'.
+# make the changes you want. In this case, I'm changing the 'book' property of every hadith to 'Al-Amali'.
 for hadith in data:
     hadith["book"] = "Al-Amali"
 
 # save the changes.
 with open('<absolute path to json file here', 'w',encoding="utf8") as f:
     json.dump(data, f, ensure_ascii=False)
-  
-# Closing file
-f.close()
+
+
 
 
 

@@ -24,6 +24,8 @@ mongoose.connect(url)
     BehdudiGrading: String,
     MohseniGrading: String,
     URL: String,
+  }, {
+    strict:false
   })
 
   hadithSchema.plugin(random)

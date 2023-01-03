@@ -16,6 +16,8 @@ mongoose.connect(url)
     author:String,
     idRangeMin:Number,
     idRangeMax:Number
+  }, {
+    strict:false
   })
 
   bookName.set('toJson', {

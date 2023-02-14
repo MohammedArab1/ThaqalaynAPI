@@ -3,10 +3,14 @@ from bs4 import BeautifulSoup
 import json
 from pathlib import Path
 import os
-import requests
 from unidecode import unidecode
 import re
+from dotenv import load_dotenv
 
+load_dotenv()
+
+headerRequired = os.getenv('BOOKSNOVALIDATIONPASSWORD')
+headers = {'password': headerRequired}
 def formatTitle(title):
     bookPageTitle = unidecode(title)
     bookPageTitle=bookPageTitle.replace(" ", "-")
@@ -52,7 +56,7 @@ for bookLink in mainPageResults.find_all('a'):
     translator = authorAndTranslator[1]
     authorLastName = getAuthorLastName(author)
     bookPageId = bookPageTitle + "-" + authorLastName
-    r =requests.get('https://thaqalayn-api.net/api/booksNoValidation/'+bookPageId)
+    r =requests.get('https://thaqalayn-api.net/api/booksNoValidation/'+bookPageId, headers=headers)
     array = json.loads(r.text)
     newBookObject = {"bookId":bookPageId,"BookName":bookPageTitleArabic,"author":author,"idRangeMin":1,"idRangeMax":len(array)}
     allBooksJson.append(newBookObject)

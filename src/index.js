@@ -44,7 +44,7 @@ app.get('/api/query', async (request, response)=> {
     }
     else {
     const escapedQuery = utils.escapeRegExp(query)
-    const $regex = new RegExp(escapedQuery)
+    const $regex = new RegExp(escapedQuery,"i")
     const englishQueryResults = await HadithModel.find({englishText:{$regex}},{_id:0,__v:0})
     const arabicQueryResults = await HadithModel.find({arabicText:{$regex}},{_id:0,__v:0})
     hadiths = {
@@ -96,6 +96,10 @@ app.get('/api/query/:bookId', async (request, response)=> {
 })
 //Returns all the hadiths from a specific book
 app.get('/api/booksNoValidation/:bookId', async (request, response) => {
+    const header = request.header("password")
+    if(header !== process.env.BOOKSNOVALIDATIONPASSWORD){
+      return response.status(400).json({error:"invalid endpoint"})
+    }
     const hadiths = await HadithModel.find({bookId:request.params.bookId},{_id:0,__v:0})
     hadiths.sort((a,b) => {
         return a['id']-b['id']
@@ -152,6 +156,6 @@ app.get('/api/:bookId/:id', async (request, response) => {
     }
 
 })
-// const PORT = process.env.PORT || 3001
-// app.listen(PORT,() => {`Server running on port ${PORT}`})
-module.exports = app;
+const PORT = process.env.PORT || 3001
+app.listen(PORT,() => {`Server running on port ${PORT}`})
+// module.exports = app;

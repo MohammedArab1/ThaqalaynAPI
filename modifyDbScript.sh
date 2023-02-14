@@ -16,6 +16,6 @@ cd ThaqalaynData/ &&
 rm CreateBookNamesJSON.py WebScraperComplete.py &&
 cd .. &&
 git add . && 
-git commit -m "book update" && 
+git commit -m "all books updated" && 
 git push &&
 echo "ended shell script"

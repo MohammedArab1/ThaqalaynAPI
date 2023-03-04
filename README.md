@@ -20,7 +20,7 @@ request = axios.get(url).then(res => {
     - `` https://www.thaqalayn-api.net/dev/api/random `` 
 3. Retrieve a random hadith from a given book: 
     - `` https://www.thaqalayn-api.net/dev/api/[bookId]/random `` 
-4. Make a query throughout the entire database. This is a very simplistic search mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`:
+4. Make a query throughout the entire database. This is a very simplistic case-insensitive search mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`:
     - `` https://www.thaqalayn-api.net/dev/api/query?q=[query] `` 
 5. Make a query for a specific book. Same rules as above apply here:
     - `` https://www.thaqalayn-api.net/api/query/[bookId]?q=[query] `` 
@@ -35,7 +35,7 @@ request = axios.get(url).then(res => {
 2. Make a query throughout all books:
     - https://www.thaqalayn-api.net/api/query?q=misery%20and%20wretchedness
 3. Make a query for a specific book:
-    - https://www.thaqalayn-api.net/api/query/Al-Kafi-Volume-6?q=misery%20and%20wretchedness
+    - https://www.thaqalayn-api.net/api/query/Al-Kafi-Volume-6-Kulayni?q=misery%20and%20wretchedness
 4. Get all the hadiths for a particular book:
     - https://www.thaqalayn-api.net/api/Al-Amali-Mufid
 5. Get a specific hadith based on id:

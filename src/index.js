@@ -20,8 +20,9 @@ app.get('/', (req, res) => {
 //Returns the list of books
 app.get('/api/allbooks', async (request, response) => {
     const bookNames = await BookNamesModel.find({},{_id:0,__v:0})
+    console.log(bookNames)
     bookNames.sort((a,b) => {
-        return a['id']-b['id']
+      return utils.compareAlphabetically(a.bookId,b.bookId)
     })
     return response.json(bookNames)
 })
@@ -102,7 +103,7 @@ app.get('/api/booksNoValidation/:bookId', async (request, response) => {
     }
     const hadiths = await HadithModel.find({bookId:request.params.bookId},{_id:0,__v:0})
     hadiths.sort((a,b) => {
-        return a['id']-b['id']
+      return utils.compareAlphabetically(a.bookId,b.bookId)
     })
     return response.json(hadiths)
     
@@ -156,6 +157,6 @@ app.get('/api/:bookId/:id', async (request, response) => {
     }
 
 })
-// const PORT = process.env.PORT || 3001
-// app.listen(PORT,() => {`Server running on port ${PORT}`})
-module.exports = app;
+const PORT = process.env.PORT || 3001
+app.listen(PORT,() => {`Server running on port ${PORT}`})
+// module.exports = app;

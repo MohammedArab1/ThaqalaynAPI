@@ -9,4 +9,10 @@ const returnBookIds = async () => {
     return book['bookId']
   })}
 
-  module.exports = {escapeRegExp, returnBookIds}
+const compareAlphabetically = (a,b) => {
+  a = a.toLowerCase()
+  b = b.toLowerCase()
+  return (a < b) ? -1 : (a > b) ? 1 : 0;
+}
+  
+  module.exports = {escapeRegExp, returnBookIds, compareAlphabetically}

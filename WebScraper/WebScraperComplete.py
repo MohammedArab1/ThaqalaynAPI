@@ -55,6 +55,10 @@ for bookLink in mainPageResults.find_all('a'):
     hadithsArray=[]
     counter = 1
     chapterName=""
+    categoryNames = []
+    categoryCounter = -1
+    for category in bookPageResults.find_all('strong'):
+        categoryNames.append(category.get_text())
     for hadithlink in bookPageResults.find_all('a'):
         hadithPage = requests.get(hadithlink.get('href'))
         if hadithlink.find('span') != None:
@@ -63,6 +67,9 @@ for bookLink in mainPageResults.find_all('a'):
             chapterName = hadithlink.find('strong').get_text().strip() #retrieves the chapter name if stored in <strong>
         hadithPageSoup = BeautifulSoup(hadithPage.content, "html.parser")
         hadithPageResults = hadithPageSoup.find_all("div",class_="card text-center") #returns an array containing all the hadiths of this particular chapter. Could be 1 hadith, or many.
+        chapterInCategoryId = chapterName[:chapterName.find(".")]
+        if chapterInCategoryId == '1':
+            categoryCounter += 1
         for hadith in hadithPageResults: 
             englishText = hadith.find_all("p", class_="card-texts text-start")[0].get_text() #this takes a hadith, finds all elements 'p' with particular class (english text), and gets the text for that element
             arabicText = hadith.find_all("p", class_="card-texts text-end libAr")[0].get_text()
@@ -82,7 +89,10 @@ for bookLink in mainPageResults.find_all('a'):
                 "id" : counter,
                 "bookId":bookPageId,
                 "book" : bookPageTitleArabic,
+                "category" : categoryNames[categoryCounter],
+                "categoryId" : categoryCounter+1,
                 "chapter" : chapterName,
+                "chapterInCategoryId" : chapterInCategoryId,
                 "author": author,
                 "translator": translator,
                 "englishText" : englishText,

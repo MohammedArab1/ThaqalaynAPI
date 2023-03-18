@@ -15,6 +15,8 @@ mongoose.connect(url)
     id: Number,
     bookId: String,
     book:String,
+    category:String,
+    categoryId:String,
     chapter: String,
     author: String,
     translator: String,

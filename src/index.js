@@ -157,6 +157,6 @@ app.get('/api/:bookId/:id', async (request, response) => {
     }
 
 })
-const PORT = process.env.PORT || 3001
-app.listen(PORT,() => {`Server running on port ${PORT}`})
-// module.exports = app;
+// const PORT = process.env.PORT || 3001
+// app.listen(PORT,() => {`Server running on port ${PORT}`})
+module.exports = app;

@@ -1,4 +1,7 @@
 # Thaqalayn.net API 
+
+https://www.thaqalayn-api.net/
+
 A Rest API that allows for the retrieval of hadiths from thaqalayn.net in JSON format. To create it, I first built a web scraper (python) to get all the hadiths on thaqalayn.net. Afterwards I stored the data in an online database and created an API using node.js + express. I also created a simple front-end with react to showcase one of the endpoints (api/random). The front-end can be reached at https://thaqalayn-api.web.app/ <br>
 
 ## How to use
@@ -17,15 +20,15 @@ request = axios.get(url).then(res => {
 1. Retrieve all the available books, with minimum and maximum Id's:
     - `` https://www.thaqalayn-api.net/api/allbooks `` 
 2. Retrieve a random hadith from any book:
-    - `` https://www.thaqalayn-api.net/dev/api/random `` 
+    - `` https://www.thaqalayn-api.net/api/random `` 
 3. Retrieve a random hadith from a given book: 
-    - `` https://www.thaqalayn-api.net/dev/api/[bookId]/random `` 
+    - `` https://www.thaqalayn-api.net/api/[bookId]/random `` 
 4. Make a query throughout the entire database. This is a very simplistic case-insensitive search mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`:
-    - `` https://www.thaqalayn-api.net/dev/api/query?q=[query] `` 
+    - `` https://www.thaqalayn-api.net/api/query?q=[query] `` 
 5. Make a query for a specific book. Same rules as above apply here:
     - `` https://www.thaqalayn-api.net/api/query/[bookId]?q=[query] `` 
 6. Get all the hadiths for a particular book:
-    - `` https://www.thaqalayn-api.net/dev/api/[bookId] `` 
+    - `` https://www.thaqalayn-api.net/api/[bookId] `` 
 7. Return a specific hadith based on id:
     - `` https://www.thaqalayn-api.net/api/[bookId]/[id] `` 
 

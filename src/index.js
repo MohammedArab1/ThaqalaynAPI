@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 //Returns the list of books
 app.get('/api/allbooks', async (request, response) => {
     const bookNames = await BookNamesModel.find({},{_id:0,__v:0})
-    console.log(bookNames)
     bookNames.sort((a,b) => {
       return utils.compareAlphabetically(a.bookId,b.bookId)
     })

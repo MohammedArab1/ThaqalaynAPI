@@ -65,4 +65,4 @@ Feel free to use any part of this project and modify as you'd like.
 1. Made a webscraper "./WebScraper/Scraping Data.ipynb" that uses selenium to scrape the latest website (8/4/2024)
 2. Put all the csv data in "./csvData/"
 3. Made a notebook "./total_hadith_count.ipynb" that counts the total number hadith collected from the scraper
-4. Total Count is **10,251 !!**
+4. Total Count is **26,975 !!**

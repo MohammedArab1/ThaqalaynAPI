@@ -4,14 +4,14 @@
   "description": "API for hadiths found on the thaqalayn.net website",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node API/src/index.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1\"",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon API/src/index.js",
     "build:ui": "rm -rf build && cd ../thaqalayn-api-frontend && npm run build && cp -r build ../Thaqalayn-API",
     "deploy:full": "npm run build:ui && git add . && git commit -m 'uibuild' && git push",
     "serverlessDeploy": "dotenv cross-var set AWS_ACCESS_KEY_ID=%AWS_ACCESS_KEY_ID% && set AWS_SECRET_ACCESS_KEY=%AWS_SECRET_ACCESS_KEY% && serverless deploy ",
-    "modifyAllBooks:full": "modifyDbScript.sh",
-    "modifyOneBook": "modifyDbPerBookScript.sh"
+    "modifyAllBooks:full": "./Deploy/V1/modifyDbScript.sh",
+    "modifyOneBook": "./Deploy/V1/modifyDbPerBookScript.sh"
   },
   "author": "Mohammed Arab",
   "license": "ISC",

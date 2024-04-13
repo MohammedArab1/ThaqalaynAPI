@@ -1,25 +1,23 @@
 service: thaqalaynAPI
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs16.x
-
+  runtime: nodejs20.x
 
 functions:
   thaqalayn-api:
     handler: handler.handler
-    events: 
-      - http: 
+    events:
+      - http:
           path: /
           method: ANY
           cors: true
-      - http: 
+      - http:
           path: /{proxy+}
           method: ANY
           cors: true
 
-	
 plugins:
   - serverless-domain-manager
 
@@ -27,11 +25,11 @@ custom:
   customDomains:
     - rest:
         domainName: www.thaqalayn-api.net
-        basePath: ''
-        certificateName: 'www.thaqalayn-api.net'
+        basePath: ""
+        certificateName: "www.thaqalayn-api.net"
         createRoute53Record: true
     - rest:
         domainName: thaqalayn-api.net
-        basePath: ''
-        certificateName: 'thaqalayn-api.net'
+        basePath: ""
+        certificateName: "thaqalayn-api.net"
         createRoute53Record: true

@@ -1,12 +1,20 @@
 package webappAPI
 
+type ThaqalaynTopLevel struct {
+	Data Data `json:"data"`
+}
+
+type Data struct {
+	Book Book `json:"book"`
+}
+
 type Book struct {
 	AuthorName   string        `json:"authorName"`
 	Translator   string        `json:"translator"`
 	EnglishName  string        `json:"englishName"`
 	Id           int           `json:"id"`
 	BookSections []BookSection `json:"bookSections"`
-	Name         string           `json:"name"`
+	Name         string        `json:"name"`
 	Volume       int           `json:"volume"`
 }
 
@@ -28,7 +36,8 @@ type Chapter struct {
 type Hadith struct {
 	Content               string `json:"content"`
 	Id                    int    `json:"id"`
-	Language              int    `json:"language"`
+	Language              string `json:"language"`
 	Number                int    `json:"number"`
+	JsonChains            string `json:"jsonChains"`
 	GradingWithReferences string `json:gradingWithReferences`
 }

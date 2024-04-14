@@ -3,6 +3,7 @@ package API
 type APIV1Hadiths []APIV1
 
 type APIV1 struct {
+	Id                  int    `json:"id"`
 	BookId              int    `json:"bookId"`
 	Book                string `json:"book"`
 	Category            string `json:"category"`
@@ -14,7 +15,7 @@ type APIV1 struct {
 	ArabicText          string `json:"arabicText"`
 	URL                 string `json:"URL"`
 	MohseniGrading      string `json:"mohseniGrading"`
-	BehdudiGrading      string `json:"behdudiGrading"`
+	BehbudiGrading      string `json:"behbudiGrading"`
 	MajlisiGrading      string `json:"majlisiGrading"`
 	ChapterInCategoryId int    `json:"chapterInCategoryId"`
 }

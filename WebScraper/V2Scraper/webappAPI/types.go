@@ -2,43 +2,49 @@
 package webappAPI
 
 import (
-	"strings"
-	"regexp"
 	stringsLocal "github.com/mohammedarab1/thaqalaynapi/webscraper/V2Scraper/strings"
+	"regexp"
+	"strings"
 )
+
 // ThaqalaynTopLevel is the top level field returned from the webapp API
 type ThaqalaynTopLevel struct {
 	Data Data `json:"data"`
 }
+
 // Data is the field storing the book
 type Data struct {
 	Book Book `json:"book"`
 }
+
 // Book represents a single Book returned from the webapp API
 type Book struct {
-	AuthorName   *string        `json:"authorName"`
-	Translator   *string        `json:"translator"`
-	EnglishName  *string        `json:"englishName"`
-	Id           *int           `json:"id"`
+	AuthorName   *string       `json:"authorName"`
+	Translator   *string       `json:"translator"`
+	EnglishName  *string       `json:"englishName"`
+	Id           *int          `json:"id"`
 	BookSections []BookSection `json:"bookSections"`
-	Name         *string        `json:"name"`
-	Volume       *int           `json:"volume"`
+	Name         *string       `json:"name"`
+	Volume       *int          `json:"volume"`
 }
+
 // BookSection represents a single BookSection returned from the webapp API
 type BookSection struct {
-	Id            *int       `json:"id"`
-	Name          *string    `json:"name"`
-	SectionNumber *int       `json:"sectionNumber"`
+	Id            *int      `json:"id"`
+	Name          *string   `json:"name"`
+	SectionNumber *int      `json:"sectionNumber"`
 	Chapters      []Chapter `json:"chapters"`
 }
+
 // Chapter represents a single chapter returned from the webapp API
 type Chapter struct {
-	Id         *int      `json:"id"`
-	Name       *string   `json:"name"`
-	NumHadiths *int      `json:"numHadiths"`
-	Number     *int      `json:"number"`
+	Id         *int     `json:"id"`
+	Name       *string  `json:"name"`
+	NumHadiths *int     `json:"numHadiths"`
+	Number     *int     `json:"number"`
 	Hadiths    []Hadith `json:"hadiths"`
 }
+
 // Hadith represents a single hadith returned from the webapp API
 type Hadith struct {
 	Content               *string `json:"content"`
@@ -48,7 +54,6 @@ type Hadith struct {
 	JsonChains            *string `json:"jsonChains"`
 	GradingWithReferences *string `json:"gradingWithReferences"`
 }
-
 
 // GetAuthorLastName gets the Author last name from the full Author string
 // ex. Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH) -> Kulayni
@@ -68,8 +73,8 @@ func (b *Book) GetAuthorLastName() string {
 	return authorLastNameFinal
 }
 
-// GetGradings uses special logic to fetch the gradings from a hadith object. 
-// gradings come as one string separated by "<>" from the webapp api. 
+// GetGradings uses special logic to fetch the gradings from a hadith object.
+// gradings come as one string separated by "<>" from the webapp api.
 // Split the string then return each appropriate one.
 func (h *Hadith) GetGradings() (behbudiGrading string, majlisiGrading string, mohseniGrading string) {
 	if h.GradingWithReferences != nil {

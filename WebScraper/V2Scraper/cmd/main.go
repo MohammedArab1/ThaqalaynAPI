@@ -4,18 +4,50 @@ import (
 	_ "embed"
 	"encoding/json"
 	"fmt"
+	"github.com/joho/godotenv"
 	API "github.com/mohammedarab1/thaqalaynapi/webscraper/V2Scraper/API"
 	webappAPI "github.com/mohammedarab1/thaqalaynapi/webscraper/V2Scraper/webappAPI"
 	"os"
 )
 
-//go:embed testKhisal.json
+//go:embed testKafi.json
 var testKhisal string
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		panic("Error loading .env file")
+	}
+	// APIV1Hadiths := fetchHadiths(testKhisal)
+
+	// //Write output to file.
+	// file, err := json.MarshalIndent(APIV1Hadiths, "", "	")
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// err = os.WriteFile("test.json", file, 0644)
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// type BookQueryData struct {
+	// 	Data struct {
+	// 		AllBookIds []string `json:"allBookIds"`
+	// 	} `json:"data"`
+	// }
+
+	for _, bookSection := range webappAPI.FetchBookSections(3).Book.BookSections {
+		fmt.Println("book section id: ", *bookSection.Id)
+		for _, chapter := range webappAPI.FetchChapters(*bookSection.Id).BookSection.Chapters {
+			fmt.Println("chapter id: ", *chapter.Id)
+		}
+	}
+}
+
+func fetchHadiths(bookText string) []API.APIV2 {
 	var APIV1Hadiths []API.APIV2
 	var data webappAPI.ThaqalaynTopLevel
-	if err := json.Unmarshal([]byte(testKhisal), &data); err != nil {
+	if err := json.Unmarshal([]byte(bookText), &data); err != nil {
 		panic(err)
 	}
 	//fetch data from embedded json
@@ -66,13 +98,16 @@ func main() {
 			}
 		}
 	}
+	return APIV1Hadiths
 
-	//Write output to file.
-	file, err := json.MarshalIndent(APIV1Hadiths, "", "	")
+}
+
+func WriteStructToFile(structure any, filename string) {
+	file, err := json.MarshalIndent(structure, "", "	")
 	if err != nil {
 		panic(err)
 	}
-	err = os.WriteFile("test.json", file, 0644)
+	err = os.WriteFile(filename, file, 0644)
 	if err != nil {
 		panic(err)
 	}

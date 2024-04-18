@@ -8,51 +8,26 @@ import (
 	API "github.com/mohammedarab1/thaqalaynapi/webscraper/V2Scraper/API"
 	webappAPI "github.com/mohammedarab1/thaqalaynapi/webscraper/V2Scraper/webappAPI"
 	"os"
+	"time"
 )
 
-//go:embed testKafi.json
-var testKhisal string
+////go:embed testKafi.json
+// var testKhisal string
 
 func main() {
+	start := time.Now()
+	fmt.Println("Starting fetching Thaqalayn Hadiths. This will take time.")
 	err := godotenv.Load()
 	if err != nil {
 		panic("Error loading .env file")
 	}
-	// APIV1Hadiths := fetchHadiths(testKhisal)
-
-	// //Write output to file.
-	// file, err := json.MarshalIndent(APIV1Hadiths, "", "	")
-	// if err != nil {
-	// 	panic(err)
-	// }
-	// err = os.WriteFile("test.json", file, 0644)
-	// if err != nil {
-	// 	panic(err)
-	// }
-
-	// type BookQueryData struct {
-	// 	Data struct {
-	// 		AllBookIds []string `json:"allBookIds"`
-	// 	} `json:"data"`
-	// }
-
-	for _, bookSection := range webappAPI.FetchBookSections(3).Book.BookSections {
-		fmt.Println("book section id: ", *bookSection.Id)
-		for _, chapter := range webappAPI.FetchChapters(*bookSection.Id).BookSection.Chapters {
-			fmt.Println("chapter id: ", *chapter.Id)
-		}
-	}
+	APIV1Hadiths := fetchHadiths()
+	WriteStructToFile(APIV1Hadiths, "testBook3.json")
+	fmt.Println("Finished fetching Thaqalayn hadiths, time taken: ", time.Since(start))
 }
 
-func fetchHadiths(bookText string) []API.APIV2 {
+func fetchHadiths() []API.APIV2 {
 	var APIV1Hadiths []API.APIV2
-	var data webappAPI.ThaqalaynTopLevel
-	if err := json.Unmarshal([]byte(bookText), &data); err != nil {
-		panic(err)
-	}
-	//fetch data from embedded json
-	Book := data.Data.Book
-	//hadithCount variable serves as counter for Id.
 	hadithCount := 1
 
 	/*
@@ -63,9 +38,10 @@ func fetchHadiths(bookText string) []API.APIV2 {
 			For every hadith, create an APIV2 object and set the appropriate fields.
 		Essentially we are translating data given from webapp API to API in the V2 format.
 	*/
-	for _, bookSection := range Book.BookSections {
-		for _, chapter := range bookSection.Chapters {
-			for _, hadith := range chapter.Hadiths {
+	book := webappAPI.FetchBookSections(3).Book
+	for _, bookSection := range book.BookSections {
+		for _, chapter := range webappAPI.FetchChapters(*bookSection.Id).BookSection.Chapters {
+			for _, hadith := range webappAPI.FetchHadiths(*chapter.Id).Chapter.Hadiths {
 				/*
 					custom logic for getting the content of the hadith
 					logic: if hadith lang is english, find most recent hadith in our list of hadiths and modify the englishText
@@ -81,14 +57,14 @@ func fetchHadiths(bookText string) []API.APIV2 {
 				//create the APIV1 object based on what was unmarshalled
 				var h API.APIV2 = API.APIV2{
 					Id:                  hadithCount,
-					BookId:              API.GetBookId(Book),
-					Book:                *Book.Name,
+					BookId:              API.GetBookId(book),
+					Book:                *book.Name,
 					Category:            *bookSection.Name,
 					CategoryId:          *bookSection.SectionNumber,
 					Chapter:             *chapter.Name,
-					Author:              *Book.AuthorName,
-					Translator:          *Book.Translator,
-					URL:                 fmt.Sprintf(`https://thaqalayn.net/hadith/%d/%d/%d/%d`, *Book.Id, *bookSection.SectionNumber, *chapter.Number, *hadith.Number),
+					Author:              *book.AuthorName,
+					Translator:          *book.Translator,
+					URL:                 fmt.Sprintf(`https://thaqalayn.net/hadith/%d/%d/%d/%d`, *book.Id, *bookSection.SectionNumber, *chapter.Number, *hadith.Number),
 					ArabicText:          *hadith.Content,
 					ChapterInCategoryId: *chapter.Number,
 				}

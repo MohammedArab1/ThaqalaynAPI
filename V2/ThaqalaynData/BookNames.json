@@ -1,0 +1,191 @@
+[
+	{
+		"bookId": "Al-Kafi-Volume-1-Kulayni",
+		"BookName": "Al-Kāfi - Volume 1",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 1449
+	},
+	{
+		"bookId": "Al-Khisal-Saduq",
+		"BookName": "Al-Khiṣāl",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 1282
+	},
+	{
+		"bookId": "Uyun-akhbar-al-Rida-Volume-1-Saduq",
+		"BookName": "ʿUyūn akhbār al-Riḍā - Volume 1",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 347
+	},
+	{
+		"bookId": "Uyun-akhbar-al-Rida-Volume-2-Saduq",
+		"BookName": "ʿUyūn akhbār al-Riḍā - Volume 2",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 607
+	},
+	{
+		"bookId": "Al-Amali-Mufid",
+		"BookName": "Al-Amālī",
+		"author": "Shaykh Muḥammad b. Muḥammad al-Mufīd (d. 413 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 387
+	},
+	{
+		"bookId": "Al-Tawhid-Saduq",
+		"BookName": "Al-Tawḥīd",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 575
+	},
+	{
+		"bookId": "Kitab-al-Duafa-Ghadairi",
+		"BookName": "Kitāb al-Ḍuʿafāʾ",
+		"author": "Abū al-Ḥusayn Aḥmad b. al-Ḥusayn al-Ghaḍā'irī (d. 450 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 226
+	},
+	{
+		"bookId": "Al-Kafi-Volume-2-Kulayni",
+		"BookName": "Al-Kāfi - Volume 2",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 2343
+	},
+	{
+		"bookId": "Kitab-al-Ghayba-Numani",
+		"BookName": "Kitāb al-Ghayba",
+		"author": "Abū ʿAbd Allah Muḥammad b. Ibrāhīm al-Nuʿmānī (d. 360 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 468
+	},
+	{
+		"bookId": "Thawab-al-Amal-wa-iqab-al-Amal-Saduq",
+		"BookName": "Thawāb al-Aʿmāl wa ʿiqāb al-Aʿmāl",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 1106
+	},
+	{
+		"bookId": "Kamil-al-Ziyarat-Qummi",
+		"BookName": "Kāmil al-Ziyārāt",
+		"author": "Shaykh Jaʿfar b. Muḥammad al-Qummī (d. 367 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 750
+	},
+	{
+		"bookId": "Fadail-al-Shia-Saduq",
+		"BookName": "Faḍaʾil al-Shīʿa",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 45
+	},
+	{
+		"bookId": "Sifat-al-Shia-Saduq",
+		"BookName": "Ṣifāt al-Shīʿa",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 71
+	},
+	{
+		"bookId": "Kitab-al-Ghayba-Tusi",
+		"BookName": "Kitāb al-Ghayba",
+		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī (d. 460 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 774
+	},
+	{
+		"bookId": "Maani-al-Akhbar-Saduq",
+		"BookName": "Maʿānī al-ʾAkhbār",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 832
+	},
+	{
+		"bookId": "Al-Amali-Saduq",
+		"BookName": "Al-Amālī",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 1082
+	},
+	{
+		"bookId": "Al-Kafi-Volume-3-Kulayni",
+		"BookName": "Al-Kāfi - Volume 3",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 2178
+	},
+	{
+		"bookId": "Kitab-al-Mumin-Ahwazi",
+		"BookName": "Kitāb al-Muʾmin",
+		"author": "Ḥusayn b. Saʿīd al-Ahwāzī (d. after 254 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 201
+	},
+	{
+		"bookId": "Kitab-al-Zuhd-Ahwazi",
+		"BookName": "Kitāb al-Zuhd",
+		"author": "Ḥusayn b. Saʿīd al-Ahwāzī (d. after 254 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 290
+	},
+	{
+		"bookId": "Nahj-al-Balagha-Radi",
+		"BookName": "Nahj al-Balāgha",
+		"author": "al-Sharīf al-Raḍī (d. 406 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 4239
+	},
+	{
+		"bookId": "Risalat-al-Huquq-Abidin",
+		"BookName": "Risālat al-Ḥuqūq",
+		"author": "attributed to Imam Zayn al-ʿĀbidīn (a.s) (d. 95 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 52
+	},
+	{
+		"bookId": "Al-Kafi-Volume-4-Kulayni",
+		"BookName": "Al-Kāfi - Volume 4",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 2190
+	},
+	{
+		"bookId": "Al-Kafi-Volume-5-Kulayni",
+		"BookName": "Al-Kāfi - Volume 5",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 2088
+	},
+	{
+		"bookId": "Al-Kafi-Volume-6-Kulayni",
+		"BookName": "Al-Kāfi - Volume 6",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 2509
+	},
+	{
+		"bookId": "Al-Kafi-Volume-7-Kulayni",
+		"BookName": "Al-Kāfi - Volume 7",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 891
+	},
+	{
+		"bookId": "Al-Kafi-Volume-8-Kulayni",
+		"BookName": "Al-Kāfi - Volume 8",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
+		"idRangeMin": 1,
+		"idRangeMax": 597
+	},
+	{
+		"bookId": "Mujam-al-Ahadith-al-Mutabara-Muhsini",
+		"BookName": "Muʿjam al-Aḥādīth al-Muʿtabara",
+		"author": "Shaykh Muḥammad Āṣif al-Muḥsinī",
+		"idRangeMin": 1,
+		"idRangeMax": 555
+	}
+]

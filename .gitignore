@@ -3,3 +3,4 @@ node_modules
 .serverless
 developerNotes.txt
 .DS_Store
+.vscode

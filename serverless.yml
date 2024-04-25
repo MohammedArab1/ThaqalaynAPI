@@ -33,3 +33,8 @@ custom:
         basePath: ""
         certificateName: "thaqalayn-api.net"
         createRoute53Record: true
+
+package:
+  exclude:
+    - V1/ThaqalaynData/**
+    - V2/ThaqalaynData/**

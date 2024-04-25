@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const HadithModel = require("../../DB/models/hadith");
-const BookNamesModel = require("../../DB/models/bookName");
+const HadithModel = require("../../V1/DB/models/hadith");
+const BookNamesModel = require("../../V1/DB/models/bookName");
 const HadithModelV2 = require("../../V2/DB/models/hadithV2.js")
 const BookNamesModelV2 = require("../../V2/DB/models/bookNameV2.js")
 const utils = require("./utils.js");

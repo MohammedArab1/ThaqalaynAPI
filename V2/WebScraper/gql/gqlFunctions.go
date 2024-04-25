@@ -7,16 +7,19 @@ import (
 	"os"
 )
 
+// client stores gql client
 var client *graphql.Client
 
+// init constructor creates a new client with WEBAPP_URL env variable
 func init() {
-	err := godotenv.Load()
-	if err != nil {
-		panic("Error loading .env file")
+	godotenv.Load()
+	if os.Getenv("WEBAPP_URL") == "" {
+		panic("WEBAPP_URL DOES NOT  EXIST. NEEDS TO BE SET.")
 	}
 	client = graphql.NewClient(os.Getenv("WEBAPP_URL"))
 }
 
+// MakeGQLRequest takes a query and any variables required and makes the gql request
 func MakeGQLRequest[T any](query string, variables ...[]string) T {
 	req := graphql.NewRequest(query)
 	req.Header.Set("apiKey", os.Getenv("WEBAPP_API_KEY"))

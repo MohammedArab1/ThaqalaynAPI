@@ -1,4 +1,4 @@
-const BookNamesModel = require("../../DB/models/bookName")
+const BookNamesModel = require("../../V1/DB/models/bookName")
 
 const escapeRegExp = (string) => {
   return string.toString().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // $& means the whole matched string

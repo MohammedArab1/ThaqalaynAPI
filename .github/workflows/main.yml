@@ -1,0 +1,43 @@
+name: Weekly Data Update
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # This will run the job every Sunday at 00:00
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env: # Define environment variables here
+      WEBAPP_URL: ${{ secrets.WEBAPP_URL }}
+      WEBAPP_API_KEY: ${{ secrets.WEBAPP_API_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18' # Specify the Node.js version
+
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.22' # Specify the Go version
+
+      - name: Run Make Command
+        run: |
+          cd ${{github.workspace}}/V2/Deploy/
+          make scrape_all datapath=../ThaqalaynData
+
+    #   - name: Commit and push if it changed
+    #     run: |
+    #       git config --global user.email "actions@github.com"
+    #       git config --global user.name "GitHub Action"
+    #       git add -A
+    #       git diff --quiet && git diff --staged --quiet || git commit -m "Update data"
+    #       git push

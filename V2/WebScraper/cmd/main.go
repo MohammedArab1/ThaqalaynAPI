@@ -109,8 +109,8 @@ func main() {
 
 	}
 
-	//todo: update dependencies, update readme
-	//Clean up old unused files and package.json commands
+	//todo:move makefile to root instead of in deploy folder ?,
+	//todo handle lack of env variables elegantly
 
 }
 
@@ -136,6 +136,7 @@ var singleBookString = `Flag represents whether only a single book should be fet
 Flag accepts int representing book ID (based on webapp API) to fetch.
 ex: "-singlebook=17".`
 
+// ParseFlags adds flags to the config object
 func (c *Config) ParseFlags() {
 	flag.StringVar(&c.Flags.BookNamesOnly, "booknamesonly", "", bookNamesOnlyString)
 	flag.StringVar(&c.Flags.DataPath, "datapath", "", dataPathString)

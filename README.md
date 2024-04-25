@@ -1,5 +1,7 @@
 # Thaqalayn.net API 
 
+![Weekly Data Update](https://github.com/mohammedarab1/ThaqalaynAPI/actions/workflows/main.yml/badge.svg)
+
 ## UPDATE AS OF 2024-04
 the API now has V2 endpoints. The old endpoints are still available but will no longer be updated. All new Thaqalayn hadiths will be reflected in the V2 endpoints. All examples below use the V2 endpoints. The old endpoints can be accessed by replacing `.../api/v2/...` in the URL with `.../api/...` in the URL.
 

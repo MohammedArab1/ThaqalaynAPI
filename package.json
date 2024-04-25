@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node API/src/index.js",
     "dev": "nodemon API/src/index.js",
-    "serverlessDeploy": "make deploy_api"
+    "serverlessDeploy": "make deploy_api",
+    "serverlessOffline": "make test_api_offline"
   },
   "author": "Mohammed Arab",
   "license": "GNU GPLv3",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
-    "serverless-domain-manager": "^6.2.0"
+    "serverless-domain-manager": "^6.2.0",
+    "serverless-offline": "^13.4.0"
   }
 }

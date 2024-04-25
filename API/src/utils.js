@@ -10,6 +10,7 @@ const returnBookIds = async () => {
   });
 };
 
+
 const compareAlphabetically = (a, b) => {
   a = a.toLowerCase();
   b = b.toLowerCase();

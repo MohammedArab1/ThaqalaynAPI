@@ -17,10 +17,13 @@ functions:
           path: /{proxy+}
           method: ANY
           cors: true
+    environment:
+      MONGODB_URI: ${env:MONGODB_URI}
+      PORT: ${env:PORT}
 
 plugins:
   - serverless-domain-manager
-
+  - serverless-offline
 custom:
   customDomains:
     - rest:

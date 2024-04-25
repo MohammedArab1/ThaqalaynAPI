@@ -17,8 +17,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '18'
+    - run: npm ci
     - name: Deploy
-      uses: serverless/github-action@v2
+      uses: serverless/github-action@v3.2
       with:
         args: deploy
       env:

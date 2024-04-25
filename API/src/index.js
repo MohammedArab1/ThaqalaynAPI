@@ -158,7 +158,6 @@ app.get("/api/v2/query/:bookId", queryPerBookHandler(HadithModelV2))
 //   return response.json(hadiths);
 // });
 
-
 //Returns all the hadiths from a specific book
 var bookHandler = (model) => {
   return async (request, response) => {

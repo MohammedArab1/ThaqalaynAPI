@@ -2,11 +2,14 @@ package webappAPI
 
 import (
 	"fmt"
-	gql "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/gql"
+	// gql "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/gql"
+	"context"
+	graphql "github.com/machinebox/graphql"
+	// "os"
 )
 
 // FetchChapters returns all the chapters for a particular booksection id
-func FetchChapters(bookSectionId int) struct{ BookSection BookSection } {
+func FetchChapters(webAppGqlClient WebAppGqlClient, bookSectionId int) struct{ BookSection BookSection } {
 	allChaptersQuery := `
 	query Book($bookSectionId: String) {
 		bookSection(id: $bookSectionId) {
@@ -22,12 +25,12 @@ func FetchChapters(bookSectionId int) struct{ BookSection BookSection } {
 		}
 	}
 	`
-	chapter := gql.MakeGQLRequest[struct{ BookSection BookSection }](allChaptersQuery, []string{"bookSectionId", fmt.Sprint(bookSectionId)})
+	chapter := makeGQLRequest[struct{ BookSection BookSection }](webAppGqlClient, allChaptersQuery, []string{"bookSectionId", fmt.Sprint(bookSectionId)})
 	return chapter
 }
 
 // FetchBookSections returns all book section ids for a particular book id
-func FetchBookSections(bookId int) Data {
+func FetchBookSections(webAppGqlClient WebAppGqlClient, bookId int) Data {
 	allSubSectionQuery := `
 	query Book($bookId: String) {
 		book(id: $bookId) {
@@ -44,12 +47,12 @@ func FetchBookSections(bookId int) Data {
 		}
 	}
 	`
-	subSections := gql.MakeGQLRequest[Data](allSubSectionQuery, []string{"bookId", fmt.Sprint(bookId)})
+	subSections := makeGQLRequest[Data](webAppGqlClient, allSubSectionQuery, []string{"bookId", fmt.Sprint(bookId)})
 	return subSections
 }
 
 // FetchHadiths returns all hadiths for a particular chapterId
-func FetchHadiths(chapterId int) struct{ Chapter Chapter } {
+func FetchHadiths(webAppGqlClient WebAppGqlClient, chapterId int) struct{ Chapter Chapter } {
 	allHadithsQuery := `
 	query Book($chapterId: String) {
 		chapter(id: $chapterId) {
@@ -67,17 +70,33 @@ func FetchHadiths(chapterId int) struct{ Chapter Chapter } {
 		}
 	}
 	`
-	hadiths := gql.MakeGQLRequest[struct{ Chapter Chapter }](allHadithsQuery, []string{"chapterId", fmt.Sprint(chapterId)})
+	hadiths := makeGQLRequest[struct{ Chapter Chapter }](webAppGqlClient, allHadithsQuery, []string{"chapterId", fmt.Sprint(chapterId)})
 	return hadiths
 }
 
 // FetchAllBookIds fetches all the book ids
-func FetchAllBookIds() AllBookIds {
+func FetchAllBookIds(webAppGqlClient WebAppGqlClient) AllBookIds {
 	allBookIdsQuery := `
 		query Query {
 			allBookIds
 		}
 	`
-	bookIds := gql.MakeGQLRequest[AllBookIds](allBookIdsQuery)
+	bookIds := makeGQLRequest[AllBookIds](webAppGqlClient, allBookIdsQuery)
 	return bookIds
+}
+
+func makeGQLRequest[T any](webAppGqlClient WebAppGqlClient, query string, variables ...[]string) T {
+	req := graphql.NewRequest(query)
+	req.Header.Set("apiKey", webAppGqlClient.WebAppApiKey)
+	if len(variables) > 0 {
+		for _, v := range variables {
+			req.Var(v[0], v[1])
+		}
+	}
+	ctx := context.Background()
+	var respData T
+	if err := webAppGqlClient.client.Run(ctx, req, &respData); err != nil {
+		panic(err)
+	}
+	return respData
 }

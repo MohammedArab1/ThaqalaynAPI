@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"strings"
 
+	graphql "github.com/machinebox/graphql"
 	stringsLocal "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/strings"
 )
 
@@ -79,6 +80,18 @@ func (b *Book) GetAuthorLastName() string {
 	reg, _ := regexp.Compile("[^A-Za-z0-9]+")
 	authorLastNameFinal = reg.ReplaceAllString(authorNameDecoded, "")
 	return authorLastNameFinal
+}
+
+type WebAppGqlClient struct {
+	WebAppApiKey string
+	client       *graphql.Client
+}
+
+func NewWebAppGqlClient(webAppUrl string, webAppApiKey string) WebAppGqlClient {
+	return WebAppGqlClient{
+		WebAppApiKey: webAppApiKey,
+		client:       graphql.NewClient(webAppUrl),
+	}
 }
 
 // GetGradings uses special logic to fetch the gradings from a hadith object.

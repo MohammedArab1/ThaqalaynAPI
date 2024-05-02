@@ -222,6 +222,10 @@ var oneHadithHandler = (model) => {
 app.get("/api/:bookId/:id",oneHadithHandler(HadithModel))
 app.get("/api/v2/:bookId/:id",oneHadithHandler(HadithModelV2))
 
-// const PORT = process.env.PORT || 3001
-// app.listen(PORT,() => {`Server running on port ${PORT}`})
-module.exports = app;
+const dev = process.argv.indexOf('--dev');
+if (dev > -1){
+  const PORT = process.env.PORT || 3001
+  app.listen(PORT,() => {`Server running on port ${PORT}`})
+} else {
+  module.exports = app;
+}

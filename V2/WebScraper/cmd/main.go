@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"encoding/json"
 	"errors"
-	"flag"
+	// "flag"
 	"fmt"
 	"os"
 	"slices"
@@ -12,6 +12,7 @@ import (
 	"time"
 
 	API "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/API"
+	config "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/config"
 	files "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/files"
 	webappAPI "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI"
 )
@@ -55,14 +56,17 @@ func onlyBooksAndBookNames(bookNamesOnly string) error {
 }
 
 // scrapeAll fetches books from the webapi
-func scrapeAll(config *Config) error {
+func scrapeAll(config *config.Config) error {
 	start := time.Now()
 	fmt.Println("Starting fetching Thaqalayn Hadiths. This will take a while.")
 
 	var allHadithsArray []API.APIV2
 	var allBookNamesArray []API.BookInfo
-
-	webAppAPIBookIds := webappAPI.FetchAllBookIds()
+	if config.WEBAPP_URL == "" || config.WEBAPP_API_KEY == "" {
+		panic("WEBAPP_URL and WEBAPP_API_KEY need to be set. Either through env variables or flags. See Readme")
+	}
+	gqlClient := webappAPI.NewWebAppGqlClient(config.WEBAPP_URL, config.WEBAPP_API_KEY)
+	webAppAPIBookIds := webappAPI.FetchAllBookIds(gqlClient)
 
 	//check if singleBookId is given, if so, only scrape that book
 	if config.Flags.SingleBook != 0 {
@@ -83,7 +87,7 @@ func scrapeAll(config *Config) error {
 		// 	continue
 		// }
 		fmt.Println("on book: ", v)
-		APIV1Hadiths := API.FetchHadiths(v)
+		APIV1Hadiths := API.FetchHadiths(v, gqlClient)
 		files.WriteStructToFile(APIV1Hadiths, config.Flags.DataPath+"/"+v+".json")
 		allHadithsArray = append(allHadithsArray, APIV1Hadiths...)
 		allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths))
@@ -96,7 +100,7 @@ func scrapeAll(config *Config) error {
 }
 
 func main() {
-	var config Config
+	var config config.Config
 	config.ParseFlags()
 	if config.Flags.BookNamesOnly != "" {
 		if e := onlyBooksAndBookNames(config.Flags.BookNamesOnly); e != nil {
@@ -116,30 +120,40 @@ func main() {
 
 // Config represents configuration object for the application.
 // to add env variables later on.
-type Config struct {
-	Flags struct {
-		BookNamesOnly string
-		DataPath      string
-		SingleBook    int
-	}
-}
+// type Config struct {
+// 	Flags struct {
+// 		BookNamesOnly string
+// 		DataPath      string
+// 		SingleBook    int
+// 	}
+// 	WEBAPP_URL string
+// 	WEBAPP_API_KEY string
+// }
 
-var bookNamesOnlyString = `Flag represents whether only to create and deploy book names.
-Flag accepts string representing directory where all data is already stored.
-ex: "-booknamesonly=../../ThaqalaynData" DO NOT PUT a slash at the end.`
+// var bookNamesOnlyString = `Flag represents whether only to create and deploy book names.
+// Flag accepts string representing directory where all data is already stored.
+// ex: "-booknamesonly=../../ThaqalaynData" DO NOT PUT a slash at the end.`
 
-var dataPathString = `Flag represents where to publish the data files if scraper is running
-Flag accepts string representing directory where all data will be stored when scraped.
-ex: "-datapath=../../ThaqalaynData" DO NOT PUT a slash at the end.`
+// var dataPathString = `Flag represents where to publish the data files if scraper is running
+// Flag accepts string representing directory where all data will be stored when scraped.
+// ex: "-datapath=../../ThaqalaynData" DO NOT PUT a slash at the end.`
 
-var singleBookString = `Flag represents whether only a single book should be fetched and deployed.
-Flag accepts int representing book ID (based on webapp API) to fetch.
-ex: "-singlebook=17".`
+// var singleBookString = `Flag represents whether only a single book should be fetched and deployed.
+// Flag accepts int representing book ID (based on webapp API) to fetch.
+// ex: "-singlebook=17".`
+// var webAppUrlString = `Flag represents webapp API url. Needed for scraping if WEBAPP_URL env is not set.`
+// var webAppApiKeyString = `Flag represents webapp API key. Needed for scraping if WEBAPP_API_KEY env is not set.`
 
 // ParseFlags adds flags to the config object
-func (c *Config) ParseFlags() {
-	flag.StringVar(&c.Flags.BookNamesOnly, "booknamesonly", "", bookNamesOnlyString)
-	flag.StringVar(&c.Flags.DataPath, "datapath", "", dataPathString)
-	flag.IntVar(&c.Flags.SingleBook, "singlebook", 0, singleBookString)
-	flag.Parse()
-}
+// func (c *config.Config) ParseFlags() {
+// 	flag.StringVar(&c.Flags.BookNamesOnly, "booknamesonly", "", bookNamesOnlyString)
+// 	flag.StringVar(&c.Flags.DataPath, "datapath", "", dataPathString)
+// 	flag.IntVar(&c.Flags.SingleBook, "singlebook", 0, singleBookString)
+// 	if os.Getenv("WEBAPP_URL") == "" {
+// 		flag.StringVar(&c.WEBAPP_URL, "webapp-url", "", webAppUrlString)
+// 	}
+// 	if os.Getenv("WEBAPP_API_KEY") == "" {
+// 		flag.StringVar(&c.WEBAPP_API_KEY, "webapp-api-key", "", webAppApiKeyString)
+// 	}
+// 	flag.Parse()
+// }

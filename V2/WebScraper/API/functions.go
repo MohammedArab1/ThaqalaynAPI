@@ -35,7 +35,7 @@ func GetBookInfo(hadiths []APIV2) BookInfo {
 	}
 }
 
-func FetchHadiths(bookId string) []APIV2 {
+func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 	var APIV1Hadiths []APIV2
 	hadithCount := 1
 
@@ -51,10 +51,10 @@ func FetchHadiths(bookId string) []APIV2 {
 	if err != nil {
 		panic(err)
 	}
-	book := webappAPI.FetchBookSections(bookIdString).Book
+	book := webappAPI.FetchBookSections(gqlClient, bookIdString).Book
 	for _, bookSection := range book.BookSections {
-		for _, chapter := range webappAPI.FetchChapters(*bookSection.Id).BookSection.Chapters {
-			for _, hadith := range webappAPI.FetchHadiths(*chapter.Id).Chapter.Hadiths {
+		for _, chapter := range webappAPI.FetchChapters(gqlClient, *bookSection.Id).BookSection.Chapters {
+			for _, hadith := range webappAPI.FetchHadiths(gqlClient, *chapter.Id).Chapter.Hadiths {
 				if hadith.Content == nil {
 					continue
 				}

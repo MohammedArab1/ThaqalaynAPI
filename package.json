@@ -4,10 +4,8 @@
   "description": "API for hadiths found on the thaqalayn.net website",
   "main": "index.js",
   "scripts": {
-    "start": "node API/src/index.js",
-    "dev": "nodemon API/src/index.js",
-    "serverlessDeploy": "make deploy_api",
-    "serverlessOffline": "make test_api_offline"
+    "start": "node API/src/index.js --dev",
+    "dev": "nodemon API/src/index.js --dev"
   },
   "author": "Mohammed Arab",
   "license": "GNU GPLv3",

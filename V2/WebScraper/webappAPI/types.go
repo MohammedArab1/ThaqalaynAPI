@@ -40,13 +40,19 @@ type BookSection struct {
 	Chapters      []Chapter `json:"chapters"`
 }
 
+type Sections struct {
+	Sections []BookSection `json:"sections"`
+}
+
 // Chapter represents a single chapter returned from the webapp API
 type Chapter struct {
-	Id         *int     `json:"id"`
-	Name       *string  `json:"name"`
-	NumHadiths *int     `json:"numHadiths"`
-	Number     *int     `json:"number"`
-	Hadiths    []Hadith `json:"hadiths"`
+	Id   *int    `json:"id"`
+	Name *string `json:"name"`
+	// NumHadiths *int     `json:"numHadiths"`
+	BookSection *int     `json: "bookSection"`
+	BookNumber  *int     `json: "bookNumber"`
+	Number      *int     `json:"number"`
+	Hadiths     []Hadith `json:"hadiths"`
 }
 
 // Hadith represents a single hadith returned from the webapp API
@@ -57,6 +63,8 @@ type Hadith struct {
 	Number                *int    `json:"number"`
 	JsonChains            *string `json:"jsonChains"`
 	GradingWithReferences *string `json:"gradingWithReferences"`
+	CreatedAt             *string `json: "createdAt"`
+	UpdatedAt             *string `json: "updatedAt"`
 }
 
 // AllBookIds stores results from fetching all book Ids

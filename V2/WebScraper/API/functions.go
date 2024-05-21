@@ -51,10 +51,10 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 	if err != nil {
 		panic(err)
 	}
-	book := webappAPI.FetchBookSections(gqlClient, bookIdString).Book
-	for _, bookSection := range book.BookSections {
-		for _, chapter := range webappAPI.FetchChapters(gqlClient, *bookSection.Id).BookSection.Chapters {
-			for _, hadith := range webappAPI.FetchHadiths(gqlClient, *chapter.Id).Chapter.Hadiths {
+	book, sections := webappAPI.FetchBook(gqlClient,bookIdString,"https://api.thaqalayn.net/book/")
+	for _, bookSection := range sections.Sections {
+		for _, chapter := range bookSection.Chapters {
+			for _, hadith := range chapter.Hadiths {
 				if hadith.Content == nil {
 					continue
 				}

@@ -1,11 +1,16 @@
 package webappAPI
 
 import (
-	"fmt"
-	// gql "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/gql"
 	"context"
+	"errors"
+	"fmt"
+
 	graphql "github.com/machinebox/graphql"
-	// "os"
+
+	"encoding/json"
+	"net/http"
+	"strconv"
+	"time"
 )
 
 // FetchChapters returns all the chapters for a particular booksection id
@@ -49,6 +54,54 @@ func FetchBookSections(webAppGqlClient WebAppGqlClient, bookId int) Data {
 	`
 	subSections := makeGQLRequest[Data](webAppGqlClient, allSubSectionQuery, []string{"bookId", fmt.Sprint(bookId)})
 	return subSections
+}
+
+func FetchBook(webAppGqlClient WebAppGqlClient, bookId int, webAppRestApiUrl string) (Book, Sections) {
+	bookQuery := `
+	query Book($bookId: String) {
+		book(id: $bookId) {
+			authorName
+			englishName
+			translator
+			id
+			name
+		}
+	}
+	`
+	book := makeGQLRequest[Data](webAppGqlClient, bookQuery, []string{"bookId", fmt.Sprint(bookId)})
+	res, err := retry(func() (*http.Response, error) { return http.Get(webAppRestApiUrl + strconv.Itoa(bookId)) })
+	if err != nil {
+		panic(err)
+	}
+	defer res.Body.Close()
+
+	var data Sections
+	err = json.NewDecoder(res.Body).Decode(&data)
+
+	if err != nil {
+		panic(err)
+	}
+	return book.Book, data
+}
+
+func retry[T func() (*http.Response, error)](function T) (*http.Response, error) {
+	maxRetries := 3
+	for i := 0; i < maxRetries; i++ {
+		res, err := function()
+		if err != nil {
+			fmt.Println(err)
+			time.Sleep(10 * time.Second)
+			continue
+		}
+
+		if res.StatusCode != http.StatusOK {
+			fmt.Println("Received bad status code:", res.StatusCode, " will retry")
+			time.Sleep(10 * time.Second)
+			continue
+		}
+		return res, nil
+	}
+	return nil, errors.New("max retries reached. HTTP Request failed")
 }
 
 // FetchHadiths returns all hadiths for a particular chapterId

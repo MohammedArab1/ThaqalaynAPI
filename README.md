@@ -30,6 +30,9 @@ request = axios.get(url).then(res => {
 
 ## Endpoints
 ### All endpoints
+
+A list of endpoints can be found on the Swagger UI page: https://www.thaqalayn-api.net/api-docs/
+
 1. Retrieve all the available books, with minimum and maximum Id's:
     - `` https://www.thaqalayn-api.net/api/v2/allbooks `` 
 2. Retrieve a random hadith from any book:

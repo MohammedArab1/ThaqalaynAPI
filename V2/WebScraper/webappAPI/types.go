@@ -49,8 +49,8 @@ type Chapter struct {
 	Id   *int    `json:"id"`
 	Name *string `json:"name"`
 	// NumHadiths *int     `json:"numHadiths"`
-	BookSection *int     `json: "bookSection"`
-	BookNumber  *int     `json: "bookNumber"`
+	BookSection *int     `json:"bookSection"`
+	BookNumber  *int     `json:"bookNumber"`
 	Number      *int     `json:"number"`
 	Hadiths     []Hadith `json:"hadiths"`
 }
@@ -63,8 +63,8 @@ type Hadith struct {
 	Number                *int    `json:"number"`
 	JsonChains            *string `json:"jsonChains"`
 	GradingWithReferences *string `json:"gradingWithReferences"`
-	CreatedAt             *string `json: "createdAt"`
-	UpdatedAt             *string `json: "updatedAt"`
+	CreatedAt             *string `json:"createdAt"`
+	UpdatedAt             *string `json:"updatedAt"`
 }
 
 // AllBookIds stores results from fetching all book Ids

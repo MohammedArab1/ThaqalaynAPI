@@ -7,6 +7,8 @@ const BookNamesModel = require("../../V1/DB/models/bookName");
 const HadithModelV2 = require("../../V2/DB/models/hadithV2.js")
 const BookNamesModelV2 = require("../../V2/DB/models/bookNameV2.js")
 const utils = require("./utils.js");
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 
 const invalidId =
   "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/allbooks for min and max id range for any given book";
@@ -35,7 +37,31 @@ var allBooksHandler= (model) => {
     return response.json(bookNames);
   }
 }
+/**
+ * @openapi
+ * /api/allbooks:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch all book IDs
+ *     description: Fetches all book IDs.
+ *     responses:
+ *       200:
+ *         description: Returns all book IDs. bookId field is used to query specific books
+ */
 app.get("/api/allbooks", allBooksHandler(BookNamesModel))
+/**
+ * @openapi
+ * /api/v2/allbooks:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch all book IDs
+ *     description: Fetches all book IDs.
+ *     responses:
+ *       200:
+ *         description: Returns all book IDs. bookId field is used to query specific books
+ */
 app.get("/api/v2/allbooks", allBooksHandler(BookNamesModelV2))
 
 
@@ -49,7 +75,31 @@ var randomHadithHandler = (model) => {
     });
   }
 }
+/**
+ * @openapi
+ * /api/random:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch a random hadith from any books
+ *     description: Fetches a random hadith from any book.
+ *     responses:
+ *       200:
+ *         description: Random Hadith.
+ */
 app.get("/api/random", randomHadithHandler(HadithModel));
+/**
+ * @openapi
+ * /api/v2/random:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch a random hadith from any books
+ *     description: Fetches a random hadith from any book.
+ *     responses:
+ *       200:
+ *         description: Random Hadith.
+ */
 app.get("/api/v2/random", randomHadithHandler(HadithModelV2));
 
 
@@ -92,7 +142,45 @@ var queryHandler = (model) => {
     }
   }
 }
+/**
+ * @openapi
+ * /api/query:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch hadith(s) based on a query. 
+ *     description: Fetches hadith(s) based on a query. Use the pipe character ('|') to separate queries in an OR fashion.
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: q
+ *         in: query
+ *         description: "The query you're searching against "
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/query", queryHandler(HadithModel))
+/**
+ * @openapi
+ * /api/v2/query:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch hadith(s) based on a query. 
+ *     description: Fetches hadith(s) based on a query. Use the pipe character ('|') to separate queries in an OR fashion.
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: q
+ *         in: query
+ *         description: "The query you're searching against "
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/v2/query", queryHandler(HadithModelV2))
 
 //The following endpoint takes a query and fetches from a particular book. Can handle both english and arabic queries
@@ -137,7 +225,58 @@ var queryPerBookHandler = (model) =>{
     }
   }
 }
+/**
+ * @openapi
+ * /api/query/{bookId}:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch hadith(s) in a specific book based on a query. 
+ *     description: Fetches hadith(s) in a specific book based on a query. Use the pipe character ('|') to separate queries in an OR fashion.
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: q
+ *         in: query
+ *         description: "The query you're searching against"
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/query/:bookId", queryPerBookHandler(HadithModel))
+
+/**
+ * @openapi
+ * /api/v2/query/{bookId}:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch hadith(s) in a specific book based on a query. 
+ *     description: Fetches hadith(s) in a specific book based on a query. Use the pipe character ('|') to separate queries in an OR fashion.
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: q
+ *         in: query
+ *         description: "The query you're searching against"
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/v2/query/:bookId", queryPerBookHandler(HadithModelV2))
 
 
@@ -177,7 +316,45 @@ var bookHandler = (model) => {
   }
 }
 
+/**
+ * @openapi
+ * /api/{bookId}:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch all hadiths in a specific book
+ *     description: Fetches all hadith(s) in a specific book
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/:bookId",bookHandler(HadithModel))
+/**
+ * @openapi
+ * /api/v2/{bookId}:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch all hadiths in a specific book
+ *     description: Fetches all hadith(s) in a specific book
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/v2/:bookId",bookHandler(HadithModelV2))
 
 // Returns a random hadith from a given book
@@ -195,7 +372,46 @@ var randomBookHadithHandler = (model) => {
     });
   }
 }
+
+/**
+ * @openapi
+ * /api/{bookId}/random:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch a random hadith from a specific book
+ *     description: Fetches a random hadith from a specific book
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/:bookId/random",randomBookHadithHandler(HadithModel))
+/**
+ * @openapi
+ * /api/v2/{bookId}/random:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch a random hadith from a specific book
+ *     description: Fetches a random hadith from a specific book
+ *     responses:
+ *       200:
+ *         description: Hadith(s)
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/v2/:bookId/random",randomBookHadithHandler(HadithModelV2))
 
 // returns a specific hadith (not very useful in my opinion but needs refining)
@@ -219,8 +435,76 @@ var oneHadithHandler = (model) => {
     }
   }
 }
+
+/**
+ * @openapi
+ * /api/{bookId}/{id}:
+ *   get:
+ *     tags:
+ *       - V1
+ *     summary: Fetch a hadith from a book based on a specific id 
+ *     description: Fetch a hadith from a book based on a specific id
+ *     responses:
+ *       200:
+ *         description: Hadith
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: id
+ *         in: path
+ *         description: "the hadith id you're searching for"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/:bookId/:id",oneHadithHandler(HadithModel))
+
+/**
+ * @openapi
+ * /api/v2/{bookId}/{id}:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch a hadith from a book based on a specific id 
+ *     description: Fetch a hadith from a book based on a specific id
+ *     responses:
+ *       200:
+ *         description: Hadith
+ *     parameters:
+ *       - name: bookId
+ *         in: path
+ *         description: "The Book Id representing the book you're searching in"
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: id
+ *         in: path
+ *         description: "the hadith id you're searching for"
+ *         required: true
+ *         schema:
+ *           type: string
+ */
 app.get("/api/v2/:bookId/:id",oneHadithHandler(HadithModelV2))
+
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Thaqalayn API',
+      version: '1.0.0',
+    },
+    // servers:{
+    //   url: 'https://www.thaqalayn-api.net/'
+    // }
+  },
+  apis: ['./API/src/index*.js'], // files containing annotations as above
+};
+const openapiSpecification = swaggerJsdoc(options);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 
 const dev = process.argv.indexOf('--dev');
 if (dev > -1){

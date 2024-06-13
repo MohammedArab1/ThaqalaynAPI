@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    container_name: thaqalayn-api
+    build: ./
+    restart: always
+    networks:
+      - apinetwork
+  caddy:
+    container_name: caddy
+    image: caddy
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+    - ./API/deploy/Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - apinetwork
+
+networks:
+  apinetwork:

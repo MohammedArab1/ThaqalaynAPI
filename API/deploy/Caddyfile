@@ -1,0 +1,9 @@
+{
+    auto_https off
+}
+:80 {
+    reverse_proxy http://thaqalayn-api:3001
+}
+
+
+

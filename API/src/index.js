@@ -9,11 +9,19 @@ const BookNamesModelV2 = require("../../V2/DB/models/bookNameV2.js")
 const utils = require("./utils.js");
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const {server} = require("./graphql.js")
+const {expressMiddleware} = require("@apollo/server/express4")
 
 const invalidId =
   "no hadith with given id. Please make sure you have an ID within the appropriate range. Use endpoint /api/allbooks for min and max id range for any given book";
 const invalidBook =
   "The book you have provided does not exist. Please use endpoint /api/allbooks for a list of all books.";
+
+const startGqlServer = async () => {
+  await server.start()
+  app.use('/graphql', expressMiddleware(server));
+  console.log("Graphql server started")
+}
 
 app.use(express.json());
 app.use(cors());
@@ -511,6 +519,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 const dev = process.argv.indexOf('--dev');
 if (dev > -1){
   const PORT = process.env.PORT || 3001
+  startGqlServer()
   app.listen(PORT,() => {`Server running on port ${PORT}`})
 } else {
   module.exports = app;

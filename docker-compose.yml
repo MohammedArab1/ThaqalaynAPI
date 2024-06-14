@@ -3,7 +3,7 @@ version: '3'
 services:
   api:
     container_name: thaqalayn-api
-    build: ./
+    image: lovemonge3r3/thaqalayn-api:latest
     restart: always
     networks:
       - apinetwork

@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
     </br> <h2>Visit the <a href='https://www.thaqalayn-api.net/api-docs'>SwaggerUI interface</a> to see all the API endpoints. </h2>
     </br> <h3>view all books to query from (v1 - old): <a href='https://www.thaqalayn-api.net/api/allbooks'>https://www.thaqalayn-api.net/api/allbooks</a></h3>   
     </br> <h3>view all books to query from (v2): <a href='https://www.thaqalayn-api.net/api/v2/allbooks'>https://www.thaqalayn-api.net/api/v2/allbooks</a></h3>  
-    </br> <h3>GraphQL API: <a href='https://www.thaqalayn-api.net/graphql'>https://www.thaqalayn-api.net/graphql</a></h3>
+    </br> <h3>GraphQL API: <a href='https://www.thaqalayn-api.net/graphql'>https://www.thaqalayn-api.net/graphql</a></h3> 
     `,
   );
 });

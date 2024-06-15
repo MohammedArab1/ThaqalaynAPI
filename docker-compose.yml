@@ -7,6 +7,9 @@ services:
     restart: always
     networks:
       - apinetwork
+    environment:
+      MONGODB_URI: ${MONGODB_URI}
+      PORT: ${PORT}
   caddy:
     container_name: caddy
     image: caddy

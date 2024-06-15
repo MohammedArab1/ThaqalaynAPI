@@ -18,6 +18,12 @@ services:
     - ./API/deploy/Caddyfile:/etc/caddy/Caddyfile
     networks:
       - apinetwork
+  watchtower:
+    container_name: watchtower
+    image: watchtower
+    restart: always
+    volumes:
+    - /root/.docker/config.json:/config.json
 
 networks:
   apinetwork:

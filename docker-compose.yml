@@ -19,6 +19,7 @@ services:
       - 443:443
     volumes:
     - ./API/deploy/Caddyfile:/etc/caddy/Caddyfile
+    - ./API/deploy/caddy_data:/data
     networks:
       - apinetwork
     labels:

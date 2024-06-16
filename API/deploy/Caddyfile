@@ -1,6 +1,3 @@
-https://standalone2.thaqalayn-api.net:443 {
-    reverse_proxy http://thaqalayn-api:3001
-}
 https://thaqalayn-api.net:443 {
     reverse_proxy http://thaqalayn-api:3001
 }

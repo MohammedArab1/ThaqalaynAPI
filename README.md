@@ -13,7 +13,7 @@ Developers are encouraged to migrate to the V2 endpoints to fetch all the latest
 
 https://www.thaqalayn-api.net/
 
-A Rest API that allows for the retrieval of hadiths from thaqalayn.net in JSON format. To create it, I first built a web scraper (python) to get all the hadiths on thaqalayn.net. Afterwards I stored the data in an online database and created an API using node.js + express. I also created a simple front-end with react to showcase one of the endpoints (api/random). The front-end can be reached at https://thaqalayn-api.web.app/ <br>
+A Rest + GQL API that allows for the retrieval of hadiths from thaqalayn.net in JSON format. To create it, I first built a web scraper (python) to get all the hadiths on thaqalayn.net. Afterwards I stored the data in an online database and created an API using node.js + express. I also created a simple front-end with react to showcase one of the endpoints (api/random). The front-end can be reached at https://thaqalayn-api-423621.web.app <br>
 
 Update as of 2024-04: The API now relies on a Go script as opposed to a python script to fetch all the data. All relevant code is found in the V2 directory.
 
@@ -30,6 +30,8 @@ request = axios.get(url).then(res => {
 
 ## Endpoints
 ### All endpoints
+
+The GraphQl endpoint can be found at: https://www.thaqalayn-api.net/graphql
 
 A list of endpoints can be found on the Swagger UI page: https://www.thaqalayn-api.net/api-docs/
 

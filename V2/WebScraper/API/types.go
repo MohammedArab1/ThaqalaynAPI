@@ -16,6 +16,7 @@ type APIV2 struct {
 	Translator          string `json:"translator"`
 	EnglishText         string `json:"englishText"`
 	ArabicText          string `json:"arabicText"`
+	FrenchText          string `json:"frenchText"`
 	URL                 string `json:"URL"`
 	MohseniGrading      string `json:"mohseniGrading"`
 	BehbudiGrading      string `json:"behbudiGrading"`

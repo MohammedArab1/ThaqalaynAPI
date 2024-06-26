@@ -60,7 +60,7 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 				}
 				/*
 					custom logic for getting the content of the hadith
-					logic: if hadith lang is english, find most recent hadith in our list of hadiths and modify the englishText
+					logic: if hadith lang is english or french, find most recent hadith in our list of hadiths and modify the englishText / frenchText
 					Assumptions: our hadiths file will always start with Arabic lang hadiths and end with english.
 					alternative: instead of using the most recent hadith in our list of hadiths, can do:
 					if hadith lang is english, find hadith in our list of hadiths where hadith number is same as current hadith number and change the EnglishText, then continue.
@@ -68,8 +68,11 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 				if *hadith.Language == "EN" {
 					APIV1Hadiths[len(APIV1Hadiths)-1].EnglishText = *hadith.Content
 					continue
+				} else if *hadith.Language == "FR" {
+					APIV1Hadiths[len(APIV1Hadiths)-1].FrenchText = *hadith.Content
+					continue
 				}
-
+				
 				//create the APIV1 object based on what was unmarshalled
 				var h APIV2 = APIV2{
 					Id:                  hadithCount,

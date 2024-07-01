@@ -1,10 +1,11 @@
 const BookNamesModel = require("../../V1/DB/models/bookName")
+const BookNamesModelV2 = require("../../V2/DB/models/bookNameV2")
 
 const escapeRegExp = (string) => {
   return string.toString().replace(/[.*+?^${}|()[\]\\]/g, "\\$&"); // $& means the whole matched string
 };
-const returnBookIds = async () => {
-  const bookNames = await BookNamesModel.find({});
+const returnBookIds = async (model) => {
+  const bookNames = await model.find({});
   return bookNames.map((book) => {
     return book["bookId"];
   });

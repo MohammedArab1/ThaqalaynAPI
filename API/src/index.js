@@ -195,9 +195,9 @@ app.get("/api/query", queryHandler(HadithModel))
 app.get("/api/v2/query", queryHandler(HadithModelV2))
 
 //The following endpoint takes a query and fetches from a particular book. Can handle both english and arabic queries
-var queryPerBookHandler = (model) =>{
+var queryPerBookHandler = (model, bookModel) =>{
   return async (request, response) => {
-    const listOfBooks = await utils.returnBookIds();
+    const listOfBooks = await utils.returnBookIds(bookModel);
     const query = request.query.q;
     if (!query) {
       const error = {
@@ -261,7 +261,7 @@ var queryPerBookHandler = (model) =>{
  *         schema:
  *           type: string
  */
-app.get("/api/query/:bookId", queryPerBookHandler(HadithModel))
+app.get("/api/query/:bookId", queryPerBookHandler(HadithModel,BookNamesModel))
 
 /**
  * @openapi
@@ -288,7 +288,7 @@ app.get("/api/query/:bookId", queryPerBookHandler(HadithModel))
  *         schema:
  *           type: string
  */
-app.get("/api/v2/query/:bookId", queryPerBookHandler(HadithModelV2))
+app.get("/api/v2/query/:bookId", queryPerBookHandler(HadithModelV2, BookNamesModelV2))
 
 
 //Returns all the hadiths from a specific book (NOT SURE THIS IS NEEDED ANYMORE FOR V2.)
@@ -309,9 +309,9 @@ app.get("/api/v2/query/:bookId", queryPerBookHandler(HadithModelV2))
 // });
 
 //Returns all the hadiths from a specific book
-var bookHandler = (model) => {
+var bookHandler = (model, bookModel) => {
   return async (request, response) => {
-    const listOfBooks = await utils.returnBookIds();
+    const listOfBooks = await utils.returnBookIds(bookModel);
     if (!listOfBooks.includes(request.params.bookId)) {
       return response.status(400).json({ error: invalidBook });
     } else {
@@ -346,7 +346,7 @@ var bookHandler = (model) => {
  *         schema:
  *           type: string
  */
-app.get("/api/:bookId",bookHandler(HadithModel))
+app.get("/api/:bookId",bookHandler(HadithModel, BookNamesModel))
 /**
  * @openapi
  * /api/v2/{bookId}:
@@ -366,12 +366,12 @@ app.get("/api/:bookId",bookHandler(HadithModel))
  *         schema:
  *           type: string
  */
-app.get("/api/v2/:bookId",bookHandler(HadithModelV2))
+app.get("/api/v2/:bookId",bookHandler(HadithModelV2, BookNamesModelV2))
 
 // Returns a random hadith from a given book
-var randomBookHadithHandler = (model) => {
+var randomBookHadithHandler = (model, bookModel) => {
   return async (request, response) => {
-    const listOfBooks = await utils.returnBookIds();
+    const listOfBooks = await utils.returnBookIds(bookModel);
     const filter = { bookId: request.params.bookId };
     if (!listOfBooks.includes(request.params.bookId)) {
       return response.status(400).json({ error: invalidBook });
@@ -403,7 +403,7 @@ var randomBookHadithHandler = (model) => {
  *         schema:
  *           type: string
  */
-app.get("/api/:bookId/random",randomBookHadithHandler(HadithModel))
+app.get("/api/:bookId/random",randomBookHadithHandler(HadithModel, BookNamesModel))
 /**
  * @openapi
  * /api/v2/{bookId}/random:
@@ -423,12 +423,12 @@ app.get("/api/:bookId/random",randomBookHadithHandler(HadithModel))
  *         schema:
  *           type: string
  */
-app.get("/api/v2/:bookId/random",randomBookHadithHandler(HadithModelV2))
+app.get("/api/v2/:bookId/random",randomBookHadithHandler(HadithModelV2, BookNamesModelV2))
 
 // returns a specific hadith (not very useful in my opinion but needs refining)
-var oneHadithHandler = (model) => {
+var oneHadithHandler = (model, bookModel) => {
   return async (request, response) => {
-    const listOfBooks = await utils.returnBookIds();
+    const listOfBooks = await utils.returnBookIds(bookModel);
     if (isNaN(request.params.id)) {
       return response.status(400).json({ error: "Invalid Id" });
     } else {
@@ -472,7 +472,7 @@ var oneHadithHandler = (model) => {
  *         schema:
  *           type: string
  */
-app.get("/api/:bookId/:id",oneHadithHandler(HadithModel))
+app.get("/api/:bookId/:id",oneHadithHandler(HadithModel, BookNamesModel))
 
 /**
  * @openapi
@@ -499,7 +499,7 @@ app.get("/api/:bookId/:id",oneHadithHandler(HadithModel))
  *         schema:
  *           type: string
  */
-app.get("/api/v2/:bookId/:id",oneHadithHandler(HadithModelV2))
+app.get("/api/v2/:bookId/:id",oneHadithHandler(HadithModelV2, BookNamesModelV2))
 
 const options = {
   definition: {

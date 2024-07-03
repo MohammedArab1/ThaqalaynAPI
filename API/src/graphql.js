@@ -1,10 +1,13 @@
 const { ApolloServer } = require('@apollo/server');
-const HadithModel = require('../../V1/DB/models/hadith');
-const BookNamesModel = require('../../V1/DB/models/bookName');
 const HadithModelV2 = require('../../V2/DB/models/hadithV2.js');
 const BookNamesModelV2 = require('../../V2/DB/models/bookNameV2.js');
 const utils = require('./utils.js');
-
+const { KeyvAdapter } = require('@apollo/utils.keyvadapter');
+const Keyv = require('keyv');
+const responseCachePlugin = require('@apollo/server-plugin-response-cache');
+const {
+	ApolloServerPluginCacheControl,
+} = require('@apollo/server/plugin/cacheControl');
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
 // your data.
@@ -135,18 +138,17 @@ const randomHandler = async (_, { bookId }) => {
 const hadithHandler = async (_, { bookId, hadithId }) => {
 	if (isNaN(hadithId)) {
 		throw new Error('Invalid hadith id');
-	} 
-    const hadith = await HadithModelV2.find(
-        { bookId, id: hadithId },
-        { _id: 0, __v: 0 }
-    );
-    await handleBookDoesntExist(bookId);
-    if (hadith.length === 0) {
-        throw new Error('Invalid hadith id')
-    } else {
-        return hadith[0];
-    }
-	
+	}
+	const hadith = await HadithModelV2.find(
+		{ bookId, id: hadithId },
+		{ _id: 0, __v: 0 }
+	);
+	await handleBookDoesntExist(bookId);
+	if (hadith.length === 0) {
+		throw new Error('Invalid hadith id');
+	} else {
+		return hadith[0];
+	}
 };
 
 const bookHandler = async (_, { bookId }) => {
@@ -170,13 +172,17 @@ const resolvers = {
 		random: randomHandler,
 		query: queryHandler,
 		book: bookHandler,
-        hadith: hadithHandler
+		hadith: hadithHandler,
 	},
 };
 
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
+	cache: new KeyvAdapter(new Keyv('redis://localhost:6379')),
+	plugins: [
+		ApolloServerPluginCacheControl({ defaultMaxAge: 3600 }),
+	],
 	formatError: (err) => {
 		return err.message;
 	},

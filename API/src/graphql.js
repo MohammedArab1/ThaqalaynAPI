@@ -52,7 +52,7 @@ const typeDefs = `#graphql
 `;
 
 const handleBookDoesntExist = async (bookId) => {
-	const listOfBooks = await utils.returnBookIds();
+	const listOfBooks = await utils.returnBookIds(BookNamesModelV2);
 	if (!listOfBooks.includes(bookId)) {
 		throw new Error('Invalid book');
 	}

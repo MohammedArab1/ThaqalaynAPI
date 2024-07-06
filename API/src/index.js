@@ -15,7 +15,7 @@ const startGqlServer = async () => {
   console.log("Graphql server started")
 }
 
-//todo: add gql query caching, handle redis disconnection gracefully, add redis to docker compose, remove need for redis when in dev
+//todo:handle redis disconnection gracefully, add redis to docker compose, remove need for redis when in dev
 const redisMiddleware = async function (req, res, next) {
   cache = await client.get(req.originalUrl)
   if (cache) {

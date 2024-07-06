@@ -14,6 +14,15 @@ const {
 const typeDefs = `#graphql
     # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
+	enum CacheControlScope {
+		PUBLIC
+		PRIVATE
+	}
+	directive @cacheControl(
+		maxAge: Int
+		inheritMaxAge: Boolean
+	) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
+	
     # This "Book" type defines the queryable fields for every book in our data source.
     type Book {
         bookId: String
@@ -47,7 +56,7 @@ const typeDefs = `#graphql
     # case, the "books" query returns an array of zero or more Books (defined above).
     type Query {
         allBooks: [Book]
-        random(bookId: String): Hadith
+        random(bookId: String): Hadith  @cacheControl(maxAge: 0)
         query(query:String!, bookId: String): [Hadith] 
         book(bookId: String!): [Hadith]
         hadith(bookId: String!, hadithId: Int! ): Hadith
@@ -114,10 +123,6 @@ const randomHandler = async (_, { bookId }) => {
 				}
 			});
 		});
-		console.log(
-			'fetching random without book is, random hadit is: ',
-			randomHadith
-		);
 		return randomHadith;
 	}
 	await handleBookDoesntExist(bookId);
@@ -182,6 +187,7 @@ const server = new ApolloServer({
 	cache: new KeyvAdapter(new Keyv('redis://localhost:6379')),
 	plugins: [
 		ApolloServerPluginCacheControl({ defaultMaxAge: 3600 }),
+		responseCachePlugin.default(),
 	],
 	formatError: (err) => {
 		return err.message;

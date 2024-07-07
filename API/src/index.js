@@ -1,21 +1,31 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const app = express();
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-const {server} = require("./graphql.js")
+const {server, serverNoCaching} = require("./graphql.js")
 const {expressMiddleware} = require("@apollo/server/express4")
 const {addRestRoutes} = require("./rest.js")
 const {createClient} = require("redis")
 
-const startGqlServer = async () => {
-  await server.start()
-  app.use('/graphql', expressMiddleware(server));
-  console.log("Graphql server started")
+var expressServer = null
+var gqlRedisServerStarted = false
+var redisClientReady = true
+
+const startGqlServer = async (app,client) => {
+  if (client) {
+    await server.start()
+    gqlRedisServerStarted = true
+    app.use('/graphql', expressMiddleware(server));
+    console.log("Graphql server with redis started")
+  }
+  else {
+    await serverNoCaching.start()
+    app.use('/graphql', expressMiddleware(serverNoCaching));
+    console.log("Graphql server without redis started")
+  }
 }
 
-//todo:handle redis disconnection gracefully, add redis to docker compose, remove need for redis when in dev
 const redisMiddleware = async function (req, res, next) {
   cache = await client.get(req.originalUrl)
   if (cache) {
@@ -26,15 +36,15 @@ const redisMiddleware = async function (req, res, next) {
   }
 }
 
-const startApp = async () => {
-  client = await createClient()
-  .on('error', err => console.log('Redis Client Error', err))
-  .connect()
+
+const startApp = async (client=null) => {
+  const app = express();
   app.use(express.json());
   app.use(cors());
-  app.use(redisMiddleware)
+  if (client) {
+    app.use(redisMiddleware)
+  }
   addRestRoutes(app, client)
-
   const options = {
     definition: {
       openapi: '3.0.0',
@@ -48,19 +58,43 @@ const startApp = async () => {
   const openapiSpecification = swaggerJsdoc(options);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
   const PORT = process.env.PORT || 3001
-  await startGqlServer()
-  app.listen(PORT,() => {`Server running on port ${PORT}`})
-  
+  await startGqlServer(app,client)
+  var server = app.listen(PORT,() => {`Server running on port ${PORT}`})
+  return server
 }
 
-startApp()
+const startRedis = async () => {
+  client = await createClient({
+    url: process.env.REDIS_URL,
+    socket: {
+      reconnectStrategy: false
+    }
+  })
+  .on('error', async (err) => {
+    console.log("error connecting to redis")
+    if (expressServer) {
+      expressServer.close()
+      console.log("express server stopped")
+    }
+    if (server && gqlRedisServerStarted) {
+      await server.stop()
+      gqlRedisServerStarted = false
+      console.log("Graphql server stopped")
+    }
+    expressServer = await startApp()
+  })
+  .on('ready', async ()=>{
+    redisClientReady = true
+  })
+  .connect()
+  if (redisClientReady){
+    expressServer = await startApp(client)
+  }
+}
 
-
-// const dev = process.argv.indexOf('--dev');
-// if (dev > -1){
-//   const PORT = process.env.PORT || 3001
-//   startGqlServer()
-//   app.listen(PORT,() => {`Server running on port ${PORT}`})
-// } else {
-//   module.exports = app;
-// }
+if (process.env.CACHE.toLowerCase() == "true"){
+  startRedis()
+}
+else {
+  expressServer = startApp()
+}

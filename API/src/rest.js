@@ -32,9 +32,11 @@ const addRestRoutes = (app, redisClient) => {
 			bookNames.sort((a, b) => {
 				return utils.compareAlphabetically(a.bookId, b.bookId);
 			});
-            await redisClient.set(request.originalUrl,JSON.stringify(bookNames),{
-                EX: 600,
-            })
+			if (redisClient) {
+				await redisClient.set(request.originalUrl,JSON.stringify(bookNames),{
+					EX: 600,
+				})
+			}
 			return response.json(bookNames);
 		};
 	};
@@ -132,17 +134,23 @@ const addRestRoutes = (app, redisClient) => {
 					hadiths['englishQueryResults'].length === 0 &&
 					hadiths['arabicQueryResults'].length === 0
 				) {
-                    await redisClient.set(request.path,express.json.stringify({ error: 'No matches found' }))
+					if (redisClient) {
+						await redisClient.set(request.path,express.json.stringify({ error: 'No matches found' }))
+					}
 					return response.json({ error: 'No matches found' });
 				} else if (hadiths['englishQueryResults'].length > 0) {
-                    await redisClient.set(request.originalUrl,JSON.stringify(hadiths['englishQueryResults']),{
-                        EX: 60,
-                    })
+                    if (redisClient) {
+						await redisClient.set(request.originalUrl,JSON.stringify(hadiths['englishQueryResults']),{
+							EX: 60,
+						})
+					}
 					return response.json(hadiths['englishQueryResults']);
 				} else if (hadiths['arabicQueryResults'].length > 0) {
-                    await redisClient.set(request.originalUrl,JSON.stringify(hadiths['arabicQueryResults']),{
-                        EX: 60,
-                    })
+					if (redisClient) {
+						await redisClient.set(request.originalUrl,JSON.stringify(hadiths['arabicQueryResults']),{
+							EX: 60,
+						})
+					}
 					return response.json(hadiths['arabicQueryResults']);
 				}
 			}
@@ -225,14 +233,18 @@ const addRestRoutes = (app, redisClient) => {
 				) {
 					return response.json({ error: 'No matches found' });
 				} else if (hadiths['englishQueryResults'].length > 0) {
-                    await redisClient.set(request.originalUrl,JSON.stringify(hadiths['englishQueryResults']),{
-                        EX: 60,
-                    })
+					if (redisClient) {
+						await redisClient.set(request.originalUrl,JSON.stringify(hadiths['englishQueryResults']),{
+							EX: 60,
+						})
+					}
 					return response.json(hadiths['englishQueryResults']);
 				} else if (hadiths['arabicQueryResults'].length > 0) {
-                    await redisClient.set(request.originalUrl,JSON.stringify(hadiths['arabicQueryResults']),{
-                        EX: 60,
-                    })
+					if (redisClient) {
+						await redisClient.set(request.originalUrl,JSON.stringify(hadiths['arabicQueryResults']),{
+							EX: 60,
+						})
+					}
 					return response.json(hadiths['arabicQueryResults']);
 				}
 			}
@@ -329,9 +341,11 @@ const addRestRoutes = (app, redisClient) => {
 				hadiths.sort((a, b) => {
 					return a['id'] - b['id'];
 				});
-                await redisClient.set(request.originalUrl,JSON.stringify(hadiths),{
-                    EX: 3600,
-                })
+				if (redisClient) {
+					await redisClient.set(request.originalUrl,JSON.stringify(hadiths),{
+						EX: 3600,
+					})
+				}
 				return response.json(hadiths);
 			}
 		};
@@ -457,9 +471,11 @@ const addRestRoutes = (app, redisClient) => {
 				} else if (hadith.length === 0) {
 					return response.status(400).json({ error: invalidId });
 				} else {
-                    await redisClient.set(request.originalUrl,JSON.stringify(hadith),{
-                        EX: 600,
-                    })
+					if (redisClient) {
+						await redisClient.set(request.originalUrl,JSON.stringify(hadith),{
+							EX: 600,
+						})
+					}
 					return response.json(hadith);
 				}
 			}

@@ -184,7 +184,15 @@ const resolvers = {
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
-	cache: new KeyvAdapter(new Keyv('redis://localhost:6379')),
+	cache: new KeyvAdapter(
+		new Keyv(process.env.REDIS_URL, {
+			retryStrategy(times) {
+				return false;
+			},
+		}).on('error', (err) => {
+			console.log('error on keyv connection ');
+		})
+	),
 	plugins: [
 		ApolloServerPluginCacheControl({ defaultMaxAge: 3600 }),
 		responseCachePlugin.default(),
@@ -194,4 +202,12 @@ const server = new ApolloServer({
 	},
 });
 
-module.exports = { server };
+const serverNoCaching = new ApolloServer({
+	typeDefs,
+	resolvers,
+	formatError: (err) => {
+		return err.message;
+	},
+});
+
+module.exports = { server, serverNoCaching };

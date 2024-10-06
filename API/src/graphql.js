@@ -1,6 +1,7 @@
 const { ApolloServer } = require('@apollo/server');
 const HadithModelV2 = require('../../V2/DB/models/hadithV2.js');
 const BookNamesModelV2 = require('../../V2/DB/models/bookNameV2.js');
+const IngredientModel = require('../../V2/DB/models/ingredientsV2.js');
 const utils = require('./utils.js');
 const { KeyvAdapter } = require('@apollo/utils.keyvadapter');
 const Keyv = require('keyv');
@@ -32,6 +33,14 @@ const typeDefs = `#graphql
         idRangeMax: Int
     }
 
+	type Ingredient {
+        ingredient: String
+        statuses: [String]
+        info: [String]
+        otherNames: [String]
+        unknown: [String]
+    }
+
     type Hadith {
         id: Int,
         bookId: String
@@ -56,6 +65,7 @@ const typeDefs = `#graphql
     # case, the "books" query returns an array of zero or more Books (defined above).
     type Query {
         allBooks: [Book]
+		ingredients: [Ingredient]
         random(bookId: String): Hadith  @cacheControl(maxAge: 0)
         query(query:String!, bookId: String): [Hadith] 
         book(bookId: String!): [Hadith]
@@ -173,6 +183,13 @@ const resolvers = {
 				return utils.compareAlphabetically(a.bookId, b.bookId);
 			});
 			return bookNames;
+		},
+		ingredients: async () => {
+			let ingredients = await IngredientModel.find({}, { _id: 0, __v: 0 });
+			ingredients.sort((a, b) => {
+				return utils.compareAlphabetically(a.ingredient, b.ingredient);
+			});
+			return ingredients;
 		},
 		random: randomHandler,
 		query: queryHandler,

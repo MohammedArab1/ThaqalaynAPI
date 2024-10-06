@@ -7,12 +7,12 @@ cd ThaqalaynData/ &&
 echo "running python script to create books. This will take a while (over an hour)" &&
 python WebScraperComplete.py &&
 # cd .. &&
-npx run-func ./Deploy/V1/modifyDB.js modifyHadiths './ThaqalaynData/allBooks.json' 'HadithModel' &&
+npx run-func ./Deploy/V1/modifyDB.js modifyCollection './ThaqalaynData/allBooks.json' 'HadithModel' &&
 echo "running python script to generate book names" &&
 # cd ThaqalaynData/ &&
 python CreateBookNamesJSON.py &&
 # cd .. &&
-npx run-func ./Deploy/V1/modifyDB.js modifyHadiths './ThaqalaynData/BookNames.json' 'BookNamesModel'  &&
+npx run-func ./Deploy/V1/modifyDB.js modifyCollection './ThaqalaynData/BookNames.json' 'BookNamesModel'  &&
 # cd ThaqalaynData/ &&
 rm CreateBookNamesJSON.py WebScraperComplete.py &&
 cd .. &&

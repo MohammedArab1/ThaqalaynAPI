@@ -4,7 +4,7 @@ const url = process.env.MONGODB_URI;
 const HadithModel = require("../DB/models/hadith")
 const BookNamesModel = require("../DB/models/bookName");
 
-const modifyHadiths = async (pathToData, model) => {
+const modifyCollection = async (pathToData, model) => {
   data = require(pathToData);
   if (model == "HadithModel") {
     model = HadithModel;
@@ -38,4 +38,4 @@ const modifyBook = async (pathToData, model) => {
   mongoose.connection.close();
 };
 
-module.exports = { modifyHadiths, modifyBook };
+module.exports = { modifyCollection, modifyBook };

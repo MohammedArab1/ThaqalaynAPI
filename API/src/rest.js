@@ -5,6 +5,7 @@ const HadithModel = require('../../V1/DB/models/hadith');
 const BookNamesModel = require('../../V1/DB/models/bookName');
 const HadithModelV2 = require('../../V2/DB/models/hadithV2.js');
 const BookNamesModelV2 = require('../../V2/DB/models/bookNameV2.js');
+const IngredientModel = require('../../V2/DB/models/ingredientsV2.js')
 const utils = require('./utils.js');
 
 const invalidId =
@@ -21,7 +22,8 @@ const addRestRoutes = (app, redisClient) => {
             </br> <h2>GraphQL API: <a href='https://www.thaqalayn-api.net/graphql'>https://www.thaqalayn-api.net/graphql</a></h2> 
             </br> <h3>view all books to query from (v1 - old): <a href='https://www.thaqalayn-api.net/api/allbooks'>https://www.thaqalayn-api.net/api/allbooks</a></h3>   
             </br> <h3>view all books to query from (v2): <a href='https://www.thaqalayn-api.net/api/v2/allbooks'>https://www.thaqalayn-api.net/api/v2/allbooks</a></h3>  
-            `
+            </br> <h3>view halal/haram ingredients fetched from <a href='https://al-m.ca/halalguide/'>Al-maarif.com</a> (v2): <a href='https://www.thaqalayn-api.net/api/v2/ingredients'>https://www.thaqalayn-api.net/api/v2/ingredients</a></h3>  
+			`
 		);
 	});
 
@@ -66,6 +68,35 @@ const addRestRoutes = (app, redisClient) => {
 	 *         description: Returns all book IDs. bookId field is used to query specific books
 	 */
 	app.get('/api/v2/allbooks', allBooksHandler(BookNamesModelV2));
+
+	// Returns the list of books
+	var ingredientsHandler = (model) => {
+		return async (request, response) => {
+			const ingredients = await model.find({}, { _id: 0, __v: 0 });
+			ingredients.sort((a, b) => {
+				return utils.compareAlphabetically(a.ingredient, b.ingredient);
+			});
+			if (redisClient) {
+				await redisClient.set(request.originalUrl,JSON.stringify(bookNames),{
+					EX: 600,
+				})
+			}
+			return response.json(ingredients);
+		};
+	};
+	/**
+	 * @openapi
+	 * /api/v2/ingredients:
+	 *   get:
+	 *     tags:
+	 *       - V2
+	 *     summary: Fetch haram / halal ingredients
+	 *     description: Fetches haram / halal ingredients as retrieved from Al Maarif (al-m.ca).
+	 *     responses:
+	 *       200:
+	 *         description: Returns haram / halal ingredients. 
+	 */
+	app.get('/api/v2/ingredients', ingredientsHandler(IngredientModel));
 
 	//Returns a random hadith from any book
 	var randomHadithHandler = (model) => {

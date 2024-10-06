@@ -13,7 +13,7 @@ npx run-func ./Deploy/V1/modifyDB.js modifyBook './'tempBookStorage/*.json 'Hadi
 echo "creating all books json"&&
 python createBookNamesJSON.py &&
 # cd .. &&
-npx run-func ./Deploy/V1/modifyDB.js modifyHadiths './tempBookStorage/BookNames.json' 'BookNamesModel' &&
+npx run-func ./Deploy/V1/modifyDB.js modifyCollection './tempBookStorage/BookNames.json' 'BookNamesModel' &&
 cp tempBookStorage/*.json ThaqalaynData/ &&
 rm -r tempBookStorage &&
 

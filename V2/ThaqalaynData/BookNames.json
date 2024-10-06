@@ -1,6 +1,8 @@
 [
 	{
 		"bookId": "Al-Kafi-Volume-2-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/2-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 2",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -8,6 +10,8 @@
 	},
 	{
 		"bookId": "Al-Amali-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/29-round.jpeg",
+		"translator": "Bilal Muhammad",
 		"BookName": "Al-Amālī",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -15,6 +19,8 @@
 	},
 	{
 		"bookId": "Al-Amali-Mufid",
+		"bookCover": "https://thaqalayn.net/css/images/13-round.jpeg",
+		"translator": "Mulla Asgharali M M Jaffer",
 		"BookName": "Al-Amālī",
 		"author": "Shaykh Muḥammad b. Muḥammad al-Mufīd (d. 413 AH)",
 		"idRangeMin": 1,
@@ -22,6 +28,8 @@
 	},
 	{
 		"bookId": "Uyun-akhbar-al-Rida-Volume-2-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/12-round.jpeg",
+		"translator": "Dr. Ali Peiravi",
 		"BookName": "ʿUyūn akhbār al-Riḍā - Volume 2",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -29,6 +37,8 @@
 	},
 	{
 		"bookId": "Uyun-akhbar-al-Rida-Volume-1-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/11-round.jpeg",
+		"translator": "Dr. Ali Peiravi",
 		"BookName": "ʿUyūn akhbār al-Riḍā - Volume 1",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -36,6 +46,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-1-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 1",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -43,6 +55,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-6-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/6-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 6",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -50,6 +64,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-7-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/7-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 7",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -57,6 +73,8 @@
 	},
 	{
 		"bookId": "Fadail-al-Shia-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/25-round.jpeg",
+		"translator": "Badr Shahin",
 		"BookName": "Faḍaʾil al-Shīʿa",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -64,6 +82,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-8-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/8-round.jpeg",
+		"translator": "hubeali",
 		"BookName": "Al-Kāfi - Volume 8",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -71,6 +91,8 @@
 	},
 	{
 		"bookId": "Al-Khisal-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/10-round.jpeg",
+		"translator": "Dr. Ali Peiravi",
 		"BookName": "Al-Khiṣāl",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -78,6 +100,8 @@
 	},
 	{
 		"bookId": "Risalat-al-Huquq-Abidin",
+		"bookCover": "https://thaqalayn.net/css/images/33-round.jpeg",
+		"translator": "William C. Chittick",
 		"BookName": "Risālat al-Ḥuqūq",
 		"author": "attributed to Imam Zayn al-ʿĀbidīn (a.s) (d. 95 AH)",
 		"idRangeMin": 1,
@@ -85,13 +109,17 @@
 	},
 	{
 		"bookId": "Nahj-al-Balagha-Radi",
+		"bookCover": "https://thaqalayn.net/css/images/32-round.jpeg",
+		"translator": "Sayed Ali Raza",
 		"BookName": "Nahj al-Balāgha",
 		"author": "al-Sharīf al-Raḍī (d. 406 AH)",
 		"idRangeMin": 1,
-		"idRangeMax": 4247
+		"idRangeMax": 2263
 	},
 	{
 		"bookId": "Kitab-al-Zuhd-Ahwazi",
+		"bookCover": "https://thaqalayn.net/css/images/31-round.jpeg",
+		"translator": "Shaykh Tahir Ridha Jaffer",
 		"BookName": "Kitāb al-Zuhd",
 		"author": "Ḥusayn b. Saʿīd al-Ahwāzī (d. after 254 AH)",
 		"idRangeMin": 1,
@@ -99,6 +127,8 @@
 	},
 	{
 		"bookId": "Al-Tawhid-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/14-round.jpeg",
+		"translator": "Sayed Ali Raza Rizvi",
 		"BookName": "Al-Tawḥīd",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -106,6 +136,8 @@
 	},
 	{
 		"bookId": "Kitab-al-Ghayba-Numani",
+		"bookCover": "https://thaqalayn.net/css/images/22-round.jpeg",
+		"translator": "Abdullah al-Shahin",
 		"BookName": "Kitāb al-Ghayba",
 		"author": "Abū ʿAbd Allah Muḥammad b. Ibrāhīm al-Nuʿmānī (d. 360 AH)",
 		"idRangeMin": 1,
@@ -113,6 +145,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-3-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/3-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 3",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -120,6 +154,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-4-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/4-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 4",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -127,6 +163,8 @@
 	},
 	{
 		"bookId": "Al-Kafi-Volume-5-Kulayni",
+		"bookCover": "https://thaqalayn.net/css/images/5-round.jpeg",
+		"translator": "Shaykh Muhammad Sarwar",
 		"BookName": "Al-Kāfi - Volume 5",
 		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH)",
 		"idRangeMin": 1,
@@ -134,6 +172,8 @@
 	},
 	{
 		"bookId": "Mujam-al-Ahadith-al-Mutabara-Muhsini",
+		"bookCover": "https://thaqalayn.net/css/images/9-round.jpeg",
+		"translator": "Ammaar Muslim",
 		"BookName": "Muʿjam al-Aḥādīth al-Muʿtabara",
 		"author": "Shaykh Muḥammad Āṣif al-Muḥsinī",
 		"idRangeMin": 1,
@@ -141,6 +181,8 @@
 	},
 	{
 		"bookId": "Kitab-al-Mumin-Ahwazi",
+		"bookCover": "https://thaqalayn.net/css/images/30-round.jpeg",
+		"translator": "Muhajir b. Ali",
 		"BookName": "Kitāb al-Muʾmin",
 		"author": "Ḥusayn b. Saʿīd al-Ahwāzī (d. after 254 AH)",
 		"idRangeMin": 1,
@@ -148,6 +190,8 @@
 	},
 	{
 		"bookId": "Kitab-al-Duafa-Ghadairi",
+		"bookCover": "https://thaqalayn.net/css/images/17-round.jpeg",
+		"translator": "tashayyu",
 		"BookName": "Kitāb al-Ḍuʿafāʾ",
 		"author": "Abū al-Ḥusayn Aḥmad b. al-Ḥusayn al-Ghaḍā'irī (d. 450 AH)",
 		"idRangeMin": 1,
@@ -155,6 +199,8 @@
 	},
 	{
 		"bookId": "Maani-al-Akhbar-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/28-round.jpeg",
+		"translator": "Basel Kadem",
 		"BookName": "Maʿānī al-ʾAkhbār",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -162,6 +208,8 @@
 	},
 	{
 		"bookId": "Kitab-al-Ghayba-Tusi",
+		"bookCover": "https://thaqalayn.net/css/images/27-round.jpeg",
+		"translator": "Sayyid Athar Husain S. H. Rizvi",
 		"BookName": "Kitāb al-Ghayba",
 		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī (d. 460 AH)",
 		"idRangeMin": 1,
@@ -169,6 +217,8 @@
 	},
 	{
 		"bookId": "Sifat-al-Shia-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/26-round.jpeg",
+		"translator": "Badr Shahin",
 		"BookName": "Ṣifāt al-Shīʿa",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,
@@ -176,6 +226,8 @@
 	},
 	{
 		"bookId": "Kamil-al-Ziyarat-Qummi",
+		"bookCover": "https://thaqalayn.net/css/images/24-round.jpeg",
+		"translator": "Sayyid Mohsen Al-Husayni Al-Milani",
 		"BookName": "Kāmil al-Ziyārāt",
 		"author": "Shaykh Jaʿfar b. Muḥammad al-Qummī (d. 367 AH)",
 		"idRangeMin": 1,
@@ -183,6 +235,8 @@
 	},
 	{
 		"bookId": "Thawab-al-Amal-wa-iqab-al-Amal-Saduq",
+		"bookCover": "https://thaqalayn.net/css/images/23-round.jpeg",
+		"translator": "Sayed Athar Husain Rizvi \u0026 Sayed Maqsood Athar",
 		"BookName": "Thawāb al-Aʿmāl wa ʿiqāb al-Aʿmāl",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq (d. 381 AH)",
 		"idRangeMin": 1,

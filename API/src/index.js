@@ -53,7 +53,7 @@ const startApp = async (client=null) => {
         version: '1.0.0',
       },
     },
-    apis: ['./API/src/index*.js'], // files containing annotations as above
+    apis: ['./API/src/rest*.js'], // files containing annotations as above
   };
   const openapiSpecification = swaggerJsdoc(options);
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));

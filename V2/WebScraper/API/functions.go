@@ -3,10 +3,11 @@ package API
 
 import (
 	"fmt"
-	stringsLocal "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/strings"
-	webappAPI "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI"
 	"strconv"
 	"strings"
+
+	stringsLocal "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/strings"
+	webappAPI "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI"
 )
 
 // GetBookId takes a [github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI.Book] and returns the BookID used by this API
@@ -25,10 +26,12 @@ func GetBookId(book webappAPI.Book) string {
 }
 
 // GetBookInfo takes a list of hadiths for a particular object and returns a BookInfo object
-func GetBookInfo(hadiths []APIV2) BookInfo {
+func GetBookInfo(hadiths []APIV2, thaqalaynBookId string) BookInfo {
 	return BookInfo{
-		BookId:     hadiths[0].BookId,
-		BookName:   hadiths[0].Book,
+		BookId:   hadiths[0].BookId,
+		BookName: hadiths[0].Book,
+		BookCover:  "https://thaqalayn.net/css/images/"+thaqalaynBookId+"-round.jpeg",
+		Translator: hadiths[0].Translator,
 		Author:     hadiths[0].Author,
 		IdRangeMin: 1,
 		IdRangeMax: len(hadiths),
@@ -51,7 +54,7 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 	if err != nil {
 		panic(err)
 	}
-	book, sections := webappAPI.FetchBook(gqlClient,bookIdString,"https://api.thaqalayn.net/book/")
+	book, sections := webappAPI.FetchBook(gqlClient, bookIdString, "https://api.thaqalayn.net/book/")
 	for _, bookSection := range sections.Sections {
 		for _, chapter := range bookSection.Chapters {
 			for _, hadith := range chapter.Hadiths {
@@ -72,7 +75,7 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 					APIV1Hadiths[len(APIV1Hadiths)-1].FrenchText = *hadith.Content
 					continue
 				}
-				
+
 				//create the APIV1 object based on what was unmarshalled
 				var h APIV2 = APIV2{
 					Id:                  hadithCount,

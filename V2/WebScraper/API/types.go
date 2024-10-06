@@ -6,8 +6,8 @@ package API
 // Gradings are better formatted now. Some of the texts no longer contain numbers at the front now.
 // perhaps other issues small changes that might have gone unnoticed.
 type APIV2 struct {
-	Id                  int    `json:"id"`
-	BookId              string `json:"bookId"`
+	Id     int    `json:"id"`
+	BookId string `json:"bookId"`
 	Book                string `json:"book"`
 	Category            string `json:"category"`
 	CategoryId          int    `json:"categoryId"`
@@ -26,7 +26,9 @@ type APIV2 struct {
 
 // BookInfo holds an object providing book Ids and min and max ranges for query hadiths.
 type BookInfo struct {
-	BookId     string `json:"bookId"`
+	BookId string `json:"bookId"`
+	BookCover  string `json:"bookCover"`
+	Translator string `json:"translator"`
 	BookName   string `json:"BookName"`
 	Author     string `json:"author"`
 	IdRangeMin int    `json:"idRangeMin"`

@@ -4,16 +4,20 @@ import (
 	_ "embed"
 	"encoding/json"
 	"errors"
-
+	"strings"
+	"log"
 	"fmt"
 	"os"
 	"slices"
 
 	"time"
 
+	"github.com/joho/godotenv"
 	API "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/API"
 	config "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/config"
 	files "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/files"
+
+	"github.com/mohammedarab1/thaqalaynapi/v2/webscraper/ingredients"
 	webappAPI "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI"
 )
 
@@ -41,7 +45,10 @@ func onlyBooksAndBookNames(bookNamesOnly string) error {
 		if err := json.Unmarshal(dat, &currentBook); err != nil {
 			return err
 		}
-		currentBookName = API.GetBookInfo(currentBook)
+		parts := strings.Split(s, "\\")
+		filename := parts[len(parts)-1]
+		thaqalaynBookId := strings.TrimSuffix(filename, ".json")
+		currentBookName = API.GetBookInfo(currentBook, thaqalaynBookId)
 		allBooks = append(allBooks, currentBook...)
 		allBookNames = append(allBookNames, currentBookName)
 	}
@@ -70,12 +77,7 @@ func scrapeAll(config *config.Config) error {
 			return errors.New("book id provided does not exist in available book ids. program exiting")
 		}
 		webAppAPIBookIds = webappAPI.AllBookIds{AllBookIds: &[]string{fmt.Sprint(config.Flags.SingleBook)}}
-	} else if config.Flags.DataPath == "" {
-		return errors.New("when scraping, a path must be provided for where to store the created data. This is in the form of the -datapath flag")
-	} else if v, _ := files.Exists(config.Flags.DataPath); !v {
-		fmt.Println("given datapath directory does not exist. Defaulting to ../../ThaqalaynData")
-		config.Flags.DataPath = "../../ThaqalaynData"
-	}
+	} 
 	for _, v := range *webAppAPIBookIds.AllBookIds {
 		// switch v {
 		// case "1", "2", "11", "12", "13", "29", "6", "7", "25", "8", "10", "33":
@@ -85,30 +87,38 @@ func scrapeAll(config *config.Config) error {
 		APIV1Hadiths := API.FetchHadiths(v, gqlClient)
 		files.WriteStructToFile(APIV1Hadiths, config.Flags.DataPath+"/"+v+".json")
 		allHadithsArray = append(allHadithsArray, APIV1Hadiths...)
-		allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths))
+		allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths, v))
 		time.Sleep(10 * time.Second)
 	}
-	files.WriteStructToFile(allHadithsArray, config.Flags.DataPath+"/"+"allBooks.json")
-	files.WriteStructToFile(allBookNamesArray, config.Flags.DataPath+"/"+"BookNames.json")
+	files.WriteStructToFile(allHadithsArray, config.Flags.DataPath+"/allBooks.json")
+	files.WriteStructToFile(allBookNamesArray, config.Flags.DataPath+"/BookNames.json")
 	fmt.Println("Finished fetching Thaqalayn hadiths, time taken: ", time.Since(start))
 	return nil
 }
 
 func main() {
+	godotenv.Load()
 	var config config.Config
 	config.ParseFlags()
+	if config.Flags.DataPath == "" {
+		log.Fatal("when scraping, a path must be provided for where to store the created data. This is in the form of the -datapath flag")
+	} else if v, _ := files.Exists(config.Flags.DataPath); !v {
+		fmt.Println("given datapath directory does not exist. Defaulting to ../../ThaqalaynData")
+		config.Flags.DataPath = "../../ThaqalaynData"
+	}
 	if config.Flags.BookNamesOnly != "" {
 		if e := onlyBooksAndBookNames(config.Flags.BookNamesOnly); e != nil {
 			panic(e)
 		}
 	} else {
+		go ingredients.FetchIngredientsAlMaarif(&config)
 		if e := scrapeAll(&config); e != nil {
 			panic(e)
 		}
 
 	}
 
-	//todo:move makefile to root instead of in deploy folder ?,
-	//todo handle lack of env variables elegantly
+	// //todo:move makefile to root instead of in deploy folder ?,
+	// //todo handle lack of env variables elegantly
 
 }

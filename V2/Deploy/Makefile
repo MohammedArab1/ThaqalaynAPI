@@ -7,12 +7,15 @@ build_and_install:
 	npm install
 
 push_hadiths:
-	npx run-func ./modifyDB.js modifyHadiths '../ThaqalaynData/allBooks.json' 'HadithModel'
+	npx run-func ./modifyDB.js modifyCollection '../ThaqalaynData/allBooks.json' 'HadithModel'
 
 push_books:
-	npx run-func ./modifyDB.js modifyHadiths '../ThaqalaynData/BookNames.json' 'BookNamesModel'
+	npx run-func ./modifyDB.js modifyCollection '../ThaqalaynData/BookNames.json' 'BookNamesModel'
 
-push_all: push_books push_hadiths
+push_ingredients:
+	npx run-func ./modifyDB.js modifyCollection '../ThaqalaynData/ingredients.json' 'IngredientModel'
+
+push_all: push_books push_hadiths push_ingredients
 
 run_scraper_full: build_and_install
 	./main -datapath=$(datapath)

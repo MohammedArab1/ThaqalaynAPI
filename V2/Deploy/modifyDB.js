@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const url = process.env.MONGODB_URI;
 const HadithModel = require("../DB/models/hadithV2");
 const BookNamesModel = require("../DB/models/bookNameV2");
+const IngredientModel = require("../DB/models/ingredientsV2");
 
-const modifyHadiths = async (pathToData, model) => {
+const modifyCollection = async (pathToData, model) => {
   data = require(pathToData);
   if (model == "HadithModel") {
     model = HadithModel;
+  } else if (model == "IngredientModel") {
+    model = IngredientModel
   } else {
     model = BookNamesModel;
   }
@@ -38,4 +41,4 @@ const modifyBook = async (pathToData, model) => {
   mongoose.connection.close();
 };
 
-module.exports = { modifyHadiths, modifyBook };
+module.exports = { modifyCollection, modifyBook };

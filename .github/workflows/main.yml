@@ -3,6 +3,7 @@ name: Weekly Data Update
 on:
   schedule:
     - cron: '0 0 * * 0' # This will run the job every Sunday at 00:00
+  workflow_dispatch: # This allows manual triggering of the workflow
 
 jobs:
   build:

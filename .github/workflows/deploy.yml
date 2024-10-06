@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'API/**'
+  workflow_dispatch: # This allows manual triggering of the workflow
 
 jobs:
   docker:

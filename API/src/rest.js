@@ -69,7 +69,7 @@ const addRestRoutes = (app, redisClient) => {
 	 */
 	app.get('/api/v2/allbooks', allBooksHandler(BookNamesModelV2));
 
-	// Returns the list of books
+	// Returns the list of ingredients
 	var ingredientsHandler = (model) => {
 		return async (request, response) => {
 			const ingredients = await model.find({}, { _id: 0, __v: 0 });
@@ -77,7 +77,7 @@ const addRestRoutes = (app, redisClient) => {
 				return utils.compareAlphabetically(a.ingredient, b.ingredient);
 			});
 			if (redisClient) {
-				await redisClient.set(request.originalUrl,JSON.stringify(bookNames),{
+				await redisClient.set(request.originalUrl,JSON.stringify(ingredients),{
 					EX: 600,
 				})
 			}

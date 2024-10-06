@@ -74,7 +74,7 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) ([]APIV2, 
 		book.Blurb = &ptrEmptyString
 	}
 	bookInfo := BookInfo{
-		BookId: bookId,
+		BookId: GetBookId(book),
 		BookCover:  "https://thaqalayn.net/css/images/"+bookId+"-round.jpeg",
 		BookDescription: *book.Blurb,
 		BookName: *book.Name,

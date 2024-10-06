@@ -30,6 +30,7 @@ type Book struct {
 	BookSections []BookSection `json:"bookSections"`
 	Name         *string       `json:"name"`
 	Volume       *int          `json:"volume"`
+	Blurb        *string       `json:"blurb"`
 }
 
 // BookSection represents a single BookSection returned from the webapp API

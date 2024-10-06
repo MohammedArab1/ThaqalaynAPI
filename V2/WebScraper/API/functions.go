@@ -26,19 +26,33 @@ func GetBookId(book webappAPI.Book) string {
 }
 
 // GetBookInfo takes a list of hadiths for a particular object and returns a BookInfo object
-func GetBookInfo(hadiths []APIV2, thaqalaynBookId string) BookInfo {
+func GetBookInfo(gqlClient webappAPI.WebAppGqlClient, thaqalaynBookId string, hadiths []APIV2) BookInfo {
+	// return BookInfo{
+	// 	BookId:   hadiths[0].BookId,
+	// 	BookName: hadiths[0].Book,
+	// 	BookCover:  "https://thaqalayn.net/css/images/"+thaqalaynBookId+"-round.jpeg",
+	// 	Translator: hadiths[0].Translator,
+	// 	Author:     hadiths[0].Author,
+	// 	IdRangeMin: 1,
+	// 	IdRangeMax: len(hadiths),
+	// }
+	bookIdInt, err := strconv.Atoi(thaqalaynBookId)
+	if err != nil {
+		panic(err)
+	}
+	book, _ := webappAPI.FetchBook(gqlClient, bookIdInt, "https://api.thaqalayn.net/book/")
 	return BookInfo{
-		BookId:   hadiths[0].BookId,
-		BookName: hadiths[0].Book,
+		BookId:   thaqalaynBookId,
+		BookName: *book.Name,
 		BookCover:  "https://thaqalayn.net/css/images/"+thaqalaynBookId+"-round.jpeg",
-		Translator: hadiths[0].Translator,
-		Author:     hadiths[0].Author,
+		Translator: *book.Translator,
+		Author:     *book.AuthorName,
 		IdRangeMin: 1,
 		IdRangeMax: len(hadiths),
 	}
 }
 
-func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
+func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) ([]APIV2, BookInfo) {
 	var APIV1Hadiths []APIV2
 	hadithCount := 1
 
@@ -55,6 +69,19 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 		panic(err)
 	}
 	book, sections := webappAPI.FetchBook(gqlClient, bookIdString, "https://api.thaqalayn.net/book/")
+	if book.Blurb == nil {
+		ptrEmptyString := ""
+		book.Blurb = &ptrEmptyString
+	}
+	bookInfo := BookInfo{
+		BookId: bookId,
+		BookCover:  "https://thaqalayn.net/css/images/"+bookId+"-round.jpeg",
+		BookDescription: *book.Blurb,
+		BookName: *book.Name,
+		Translator: *book.Translator,
+		Author: *book.AuthorName,
+		IdRangeMin: 1,
+	}
 	for _, bookSection := range sections.Sections {
 		for _, chapter := range bookSection.Chapters {
 			for _, hadith := range chapter.Hadiths {
@@ -96,5 +123,6 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) []APIV2 {
 			}
 		}
 	}
-	return APIV1Hadiths
+	bookInfo.IdRangeMax = len(APIV1Hadiths)
+	return APIV1Hadiths, bookInfo
 }

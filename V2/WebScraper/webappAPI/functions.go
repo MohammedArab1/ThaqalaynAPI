@@ -65,6 +65,7 @@ func FetchBook(webAppGqlClient WebAppGqlClient, bookId int, webAppRestApiUrl str
 			translator
 			id
 			name
+			blurb
 		}
 	}
 	`

@@ -4,11 +4,13 @@ import (
 	_ "embed"
 	"encoding/json"
 	"errors"
-	"strings"
-	"log"
 	"fmt"
+	"log"
 	"os"
 	"slices"
+	"sort"
+	"strconv"
+	"strings"
 
 	"time"
 
@@ -24,12 +26,12 @@ import (
 // onlyBooksAndBookNames runs through all the .json files in a directory and creates allBooks and BookNames from there.
 // Can be used if we don't want to run the scraper to generate these file (i.e files already exist)
 // ex parameter: ../../ThaqalaynData
-func onlyBooksAndBookNames(bookNamesOnly string) error {
+func onlyBooksAndBookNames(config *config.Config) error {
 	var allBooks []API.APIV2
 	var currentBook []API.APIV2
 	var allBookNames []API.BookInfo
 	var currentBookName API.BookInfo
-
+	bookNamesOnly := config.Flags.BookNamesOnly
 	//if given directory does not exist, default to ../../ThaqalaynData
 	if v, _ := files.Exists(bookNamesOnly); !v {
 		fmt.Println("given bookNamesOnly directory does not exist. Defaulting to ../../ThaqalaynData")
@@ -48,7 +50,8 @@ func onlyBooksAndBookNames(bookNamesOnly string) error {
 		parts := strings.Split(s, "\\")
 		filename := parts[len(parts)-1]
 		thaqalaynBookId := strings.TrimSuffix(filename, ".json")
-		currentBookName = API.GetBookInfo(currentBook, thaqalaynBookId)
+		gqlClient := webappAPI.NewWebAppGqlClient(config.WEBAPP_URL, config.WEBAPP_API_KEY)
+		currentBookName = API.GetBookInfo(gqlClient, thaqalaynBookId, currentBook)
 		allBooks = append(allBooks, currentBook...)
 		allBookNames = append(allBookNames, currentBookName)
 	}
@@ -70,6 +73,14 @@ func scrapeAll(config *config.Config) error {
 	gqlClient := webappAPI.NewWebAppGqlClient(config.WEBAPP_URL, config.WEBAPP_API_KEY)
 	webAppAPIBookIds := webappAPI.FetchAllBookIds(gqlClient)
 
+	//Have to sort the slice for the al kafi workaround below
+	allBookIdsStrings := *webAppAPIBookIds.AllBookIds
+	sort.Slice(allBookIdsStrings, func(i, j int) bool {
+		i, _ = strconv.Atoi(allBookIdsStrings[i])
+		j, _ = strconv.Atoi(allBookIdsStrings[j])
+		return i < j
+	})
+
 	//check if singleBookId is given, if so, only scrape that book
 	if config.Flags.SingleBook != 0 {
 		//only scrape the given singleBookId if it is part of the list of Ids that can be scraped.
@@ -77,17 +88,22 @@ func scrapeAll(config *config.Config) error {
 			return errors.New("book id provided does not exist in available book ids. program exiting")
 		}
 		webAppAPIBookIds = webappAPI.AllBookIds{AllBookIds: &[]string{fmt.Sprint(config.Flags.SingleBook)}}
-	} 
+	}
+	//below is workaround because thaqalayn API does not return book descriptions for all Kafi volumes, only for the first
+	var alKafiDescription string
 	for _, v := range *webAppAPIBookIds.AllBookIds {
-		// switch v {
-		// case "1", "2", "11", "12", "13", "29", "6", "7", "25", "8", "10", "33":
-		// 	continue
-		// }
 		fmt.Println("on book: ", v)
-		APIV1Hadiths := API.FetchHadiths(v, gqlClient)
+		APIV1Hadiths, bookInfo := API.FetchHadiths(v, gqlClient)
+		switch v {
+		case "1":
+			alKafiDescription = bookInfo.BookDescription
+		case "2", "3", "4", "5", "6", "7", "8":
+			bookInfo.BookDescription = alKafiDescription
+		}
 		files.WriteStructToFile(APIV1Hadiths, config.Flags.DataPath+"/"+v+".json")
 		allHadithsArray = append(allHadithsArray, APIV1Hadiths...)
-		allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths, v))
+		// allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths, v))
+		allBookNamesArray = append(allBookNamesArray, bookInfo)
 		time.Sleep(10 * time.Second)
 	}
 	files.WriteStructToFile(allHadithsArray, config.Flags.DataPath+"/allBooks.json")
@@ -107,7 +123,7 @@ func main() {
 		config.Flags.DataPath = "../../ThaqalaynData"
 	}
 	if config.Flags.BookNamesOnly != "" {
-		if e := onlyBooksAndBookNames(config.Flags.BookNamesOnly); e != nil {
+		if e := onlyBooksAndBookNames(&config); e != nil {
 			panic(e)
 		}
 	} else {

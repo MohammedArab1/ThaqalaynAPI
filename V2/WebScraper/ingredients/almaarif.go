@@ -3,10 +3,12 @@ package ingredients
 import (
 	"context"
 	"errors"
+	"os"
 	"strings"
-	stringsLocal "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/strings"
+
 	"github.com/gocolly/colly/v2"
 	"github.com/google/generative-ai-go/genai"
+	stringsLocal "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/strings"
 	"google.golang.org/api/option"
 )
 
@@ -98,7 +100,7 @@ func fetchAlmaarif() []IngredientStatus {
 
 func gemAi(prompt string) (genai.Text, error) {
 	ctx := context.Background()
-	client, err := genai.NewClient(ctx, option.WithAPIKey("AIzaSyA3oOFQi0oSrMlwhLKyKei_OaKTp8Rl6G8"))
+	client, err := genai.NewClient(ctx, option.WithAPIKey(os.Getenv("GEMINI_API_KEY")))
 	if err != nil {
 		return "", err
 	}

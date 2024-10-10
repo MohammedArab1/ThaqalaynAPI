@@ -15,7 +15,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 2,
@@ -33,7 +35,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "The honored Sayyid said: F",
+		"thaqalaynMatn": "rom the book of Abū al-Ḥusayn Aḥmad b. al-Ḥusayn b. ʿUbaydullāh al-Ghaḍā’irī, restricted to the mention of the weak (narrators), and he whose ḥadīth has been rejected from our companions, in alphabetical order."
 	},
 	{
 		"id": 3,
@@ -51,7 +55,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Abān b. Abī ʿAyyāsh, Abī ʿAyyāsh’s name is Fayrūz.  A tābiʿī, he narrated from Anas b. Mālik.  And he narrated from ʿAlī b. al-Ḥusay",
+		"thaqalaynMatn": "n  عليهما السلام .  Weak, he is not to be turned to.  Our companions ascribe to him the fabrication of the book of Sulaym b. Qays."
 	},
 	{
 		"id": 4,
@@ -69,7 +75,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Ibrāhīm b. ʿUmar, al-Ṣanʿānī, al-Yamānī, known by the kunya Abū Isḥā",
+		"thaqalaynMatn": "q.  Very weak.  He narrated from Abū Jaʿfar  عليه السلام and Abū ʿAbdillāh  عليه السلام .  He has a book."
 	},
 	{
 		"id": 5,
@@ -87,7 +95,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Isḥāq b. ʿAbd al-ʿAzīz, al-Bazzāz (the drapper), Kufan, known by the kunya Abū Yaʿqūb, and by the laqab Abū ",
+		"thaqalaynMatn": "al-Safātij.  He narrated from Abū ʿAbdillāh  عليه السلام . His ḥadīth are sometimes recognized, and other times rejected.  It is permissible to bring him out as a witness."
 	},
 	{
 		"id": 6,
@@ -105,7 +115,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – Aḥmad b. Rashad b. Khuthaym, al-ʿĀmirī, al-Hilālī.  Zaydī, his ḥadīth are included amongst the ḥadīth of o",
+		"thaqalaynMatn": "ur companions.  Weak, corrupt."
 	},
 	{
 		"id": 7,
@@ -123,7 +135,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 8,
@@ -141,7 +155,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "6 – Umayya b. ʿAlī, al-Qaysī, known by the kunya Abū Muḥammad.  Amongst a number of the Q",
+		"thaqalaynMatn": "ummis.  Weak narrations.  In his madhhab there is irtifāʿ."
 	},
 	{
 		"id": 9,
@@ -159,7 +175,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – Ismāʿīl b. Mihrān b. Muḥammad b. Abī Naṣr, al-Sakūnī, known by the kunya Abū Muḥammad.  His ḥadīths are not pure, sometimes they are disturbed, and others are upright.  He narrates from weak",
+		"thaqalaynMatn": " narrators a lot.  It is permissible to bring his (ḥadīth) out as a witness."
 	},
 	{
 		"id": 10,
@@ -177,7 +195,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 11,
@@ -195,7 +215,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – Ibrāhīm b. Isḥāq, al-Aḥmarī, known by the kunya Abū Isḥāq.  a",
+		"thaqalaynMatn": "l-Nahāwandī.  In his ḥadīths there is weakness, and in his madhhab there is irtifāʿ. He narrates both the authentic and the weak, and his matter is mixed. "
 	},
 	{
 		"id": 12,
@@ -213,7 +235,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "10 – Aḥmad b. Muḥammad b. Khālid b. Muḥammad b. ʿAlī,  al-Barqī, known by the kunya of Abū Jaʿfar.  The Qummis spoke against him, but the defamation is no",
+		"thaqalaynMatn": "t about him.  The defamation was only with regards to whom he narrated from, for he was not mindful of whom he took from, upon the manner of the people of reports (ahl al-akhbār).  Aḥmad b. Muḥammad b. ʿĪsā banished him from Qum, but he brought him back later and apologized to him."
 	},
 	{
 		"id": 13,
@@ -231,7 +255,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "11 – Aḥmad b. Muḥammad b. Sayyār, known by the kunya Abū ʿAbdillāh.  al-Qummī.  Known as al",
+		"thaqalaynMatn": "-Sayyāri.  Weak.  Careless.  Ghālī.  Deviated.  The Shaykhs of Qum excluded his narrations in the book “Nawādir al-Ḥikma”.  In the book which was compiled, “al-Nawādir”, ʿAlī b. Muḥammad b. Maḥbūb spoke about him and said that he was a proponent of reincarnation."
 	},
 	{
 		"id": 14,
@@ -249,7 +275,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "12 – Aḥmad b. al-Ḥusayn b. Saʿīd b. Ḥammād b. Saʿīd b. Mihrān, known by the kunya Abū Jaʿfar.  Narrated from most of the rijāl of his father.  They said: All of them except for Ḥammād b. ʿĪsā.  The Qummis",
+		"thaqalaynMatn": " said he was a ghālī.  What I have seen of his ḥadīths is sound, and God knows best.  He has the laqab of Dandān."
 	},
 	{
 		"id": 15,
@@ -267,7 +295,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "13 – Ibrāhīm b. Sulaymān b. ʿAbdullāh b. Hayyan, al-Hamdānī, al-Khazzāz, al-Nihmī, known by the kunya A",
+		"thaqalaynMatn": "bū Isḥāq.  He narrates from weak narrators a lot, and in his madhhab there is weakness."
 	},
 	{
 		"id": 16,
@@ -285,7 +315,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 14
+		"chapterInCategoryId": 14,
+		"thaqalaynSanad": "14 – Isḥāq b. Muḥammad b. Aḥmad b. Abān b. Marrār, known by the kunya Abū Yaʿqū",
+		"thaqalaynMatn": "b, al-Aḥmar.  Corrupt in madhhab.  Liar in narration.  Fabricator of ḥadīths.  What he narrates is not regarded, and his ḥadīth are not to be given importance. Al-ʿAyyāshī has an incident with him regarding his fabrication of ḥadīths that is famous."
 	},
 	{
 		"id": 17,
@@ -303,7 +335,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 15
+		"chapterInCategoryId": 15,
+		"thaqalaynSanad": "15 – Aḥmad b. Mihrān. al-Kulaynī narrated from him in the book “Al-",
+		"thaqalaynMatn": "Kāfī”.  Weak."
 	},
 	{
 		"id": 18,
@@ -321,7 +355,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 16
+		"chapterInCategoryId": 16,
+		"thaqalaynSanad": "16 – Aḥmad b. Muḥammad, al-Ṭabarī, Abū ʿAbdillāh, al-Khalīlī, [of whom it is said: Ghulām Khali",
+		"thaqalaynMatn": "l, al-Āmulī].  Liar,  fabricator of ḥadīth.  Corrupt (in madhhab).  He is not turned to."
 	},
 	{
 		"id": 19,
@@ -339,7 +375,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 17
+		"chapterInCategoryId": 17,
+		"thaqalaynSanad": "17 – Ismāʿīl b. ʿAlī b. ʿAlī, al-Diʿbilī [ibn Akhī Diʿbil].  He resided in Wāsiṭ, and was responsible for",
+		"thaqalaynMatn": " its treasury.  He was a liar, fabricator of ḥadīths.  What he narrates from his father from al-Riḍā عليه السلام is not regarded, nor is other than that (to be regarded), nor what he authored."
 	},
 	{
 		"id": 20,
@@ -357,7 +395,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 18
+		"chapterInCategoryId": 18,
+		"thaqalaynSanad": "18 – Aḥmad b. ʿAlī, Abū al-ʿAbbās, al-Rāzī.  Author of the book “al-Shifā ",
+		"thaqalaynMatn": "wa al-Jalā”.  He was weak.  My father رحمه الله informed me that in his madhhab was irtifāʿ.  His ḥadīth is sometimes recognized, and other times rejected."
 	},
 	{
 		"id": 21,
@@ -375,7 +415,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 22,
@@ -393,7 +435,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Bakr b. Aḥmad b. Muḥammad b. Mūsā, al-ʿAṣarī.  He claimed that he was of the children of Ashjj of the Banū ʿAṣarī of whom the Prophet صلى الله عليه وآله spoke.  Kn",
+		"thaqalaynMatn": "own by the kunya Abū Muḥammad.  Narrates strange reports.  Relies on unknown (narrators).  And his affair is obscure."
 	},
 	{
 		"id": 23,
@@ -411,7 +455,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Tamīm b. ʿAbdullāh b. Tamīm, al-Qara",
+		"thaqalaynMatn": "shī.  Abū Jaʿfar Muḥammad b. Bābawayh narrated from him.  Weak."
 	},
 	{
 		"id": 24,
@@ -429,7 +475,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Jaḥdar b. al-Mughayra, al-Ṭā’ī.  Kufan.  Narrated from Abū ʿAbdillāh  عليه السلام [and he ",
+		"thaqalaynMatn": "has a book from him].  He was a Khaṭṭābī in his madhhab.  Weak in his ḥadīth.  His book is not narrated except from a single route."
 	},
 	{
 		"id": 25,
@@ -447,7 +495,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Jamāʿa b. Saʿd,  al-Juʿfī.  al-Ṣā’igh (the jeweler).  Narrated from Abū ʿAbdillāh   . عليه السلام Went out with Abū al",
+		"thaqalaynMatn": "-Khaṭṭāb and was killed.  He is weak in his ḥadīth.  His madhhab is what I have mentioned."
 	},
 	{
 		"id": 26,
@@ -465,7 +515,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Jaʿfar b. Muḥammad b. Mufaḍḍal.  Kufan.  The ghulāt narrate from him excl",
+		"thaqalaynMatn": "usively.  I have never seen a single sound (ṣaḥīḥ) narration for him.  He was accused in all his aspects."
 	},
 	{
 		"id": 27,
@@ -483,7 +535,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – Jaʿfar b. Ismāʿīl, al-Munqirī.  Kufan.  Ḥumayd b. Ziyād and Ibn Ribāḥ narrate",
+		"thaqalaynMatn": "d from him.  He was a ghālī.  Liar."
 	},
 	{
 		"id": 28,
@@ -501,7 +555,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 – Jaʿfar b. Maʿrūf, Abū al-Faḍl, al-Samarqandī.  al-ʿAyyāshī narrated from him a lot.  There was irtifāʿ in ",
+		"thaqalaynMatn": "his madhhab.  His ḥadīth is recognized sometimes, and other times rejected."
 	},
 	{
 		"id": 29,
@@ -519,7 +575,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "6 – Jaʿfar b. Muḥammad b. Mālik b. ʿĪsā b. Sābūr, client of Mālik b. Asmā b. Khārija, al-Fazārī, Abū ʿAbdillāh.  Liar.  His ḥadīths are ",
+		"thaqalaynMatn": "rejected completely.  In his madhhab there was irtifāʿ.  He narrates from weak and unknown narrators.  And all of the defects of the weak (narrators) are gathered together in him."
 	},
 	{
 		"id": 30,
@@ -537,7 +595,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 31,
@@ -555,7 +615,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Ḥumayd b. Shuʿayb, al-Shuʿaybī, al-Hamdānī. ",
+		"thaqalaynMatn": " Kufan.  His ḥadīth is recognized sometimes, and other times rejected.  Most of [his hadiths] are takhlit (i.e., confused; dependent upon weak sources) from what was narrated from Jābir.  His affair is obscure."
 	},
 	{
 		"id": 32,
@@ -573,7 +635,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Ḥudhayfa b. Manṣūr b. Kathīr b. Salama, al-Khuzāʿī, Abū Muḥammad.  Narrated from Abū ʿAbdillāh  عليه السلام and Abū al-\ufffd",
+		"thaqalaynMatn": "\ufffd\ufffdasan [Mūsā]  عليه السلام .  His ḥadīth is not pure, he narrates the authentic and the weak. His affair is ambiguous.  He may be used as a witness."
 	},
 	{
 		"id": 33,
@@ -591,7 +655,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – al-Ḥasan b. Ḥudhayfa b. Manṣūr.  Kufan.  From Hamdān.  The Sābirī vendor (bayyā\ufffd",
+		"thaqalaynMatn": "\ufffd alsābirī).  Very weak.  No benefit can be taken from him."
 	},
 	{
 		"id": 34,
@@ -609,7 +675,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 – al-Ḥusayn b. Mihrān b. Muḥammad b. Abī Naṣr, Abū ʿAbdillā",
+		"thaqalaynMatn": "h.  Wāqifī.  Weak.  He has a book about (or from) Mūsā. "
 	},
 	{
 		"id": 35,
@@ -627,7 +695,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "6 – al-Ḥasan b. ʿAlī b. Abī Ḥamza, client of the Anṣār, Abū Muḥammad.  Wāqifī s",
+		"thaqalaynMatn": "on of a Wāqifī.  He is weak himself, and his father is more trustworthy than him.  Al-Ḥasan b. ʿAlī b. Faḍḍāl said: I fear God that I should narrate from al-Ḥasan b. ʿAlī.  And the ḥadīth of al-Riḍā عليه السلام regarding him is famous."
 	},
 	{
 		"id": 36,
@@ -645,7 +715,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – al-Ḥasan b. al-ʿAbbās b. al-Ḥarīsh, al-Rāzī, Abū Muḥammad.  Weak.  Narrated from Abū Jaʿfar al-Thānī  عليه السلام “The Virtue of ‘Verily We have made it descend on the Night of Power’” a compiled book of corrupt expressions.  (Its characteristic ",
+		"thaqalaynMatn": "bear witness to its being forged.)  This man is not to be regarded, and his ḥadīth is not to be written."
 	},
 	{
 		"id": 37,
@@ -663,7 +735,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "8 – al-Ḥasan b. ʿAlī b. Abī ʿUthmān, Abū Muḥammad, called al-Sajjāda",
+		"thaqalaynMatn": ", al-Qummī.  Weak.  In his madhhab there is irtifāʿ."
 	},
 	{
 		"id": 38,
@@ -681,7 +755,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – al-Ḥasan b. Asad, al-Ṭafāwī, al-Baṣrī, Abū Muḥammad.  Narrated from weak narrators, and they narrate from him.  His is of a corr",
+		"thaqalaynMatn": "upt madhhab.  I do not know anything in which is settled except for his narration of the book of ʿAlī b. Ismāʿīl b. Shuʿayb b. Mītham, and people other than him have narrated it."
 	},
 	{
 		"id": 39,
@@ -699,7 +775,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "10 – al-Ḥusayn b. Muskān. I do not recognize him except that Jaʿfar b. Muḥammad b. Mālik narrated (corrupt) ḥadīths",
+		"thaqalaynMatn": " from him.  There is no knowledge about this man amongst our companions."
 	},
 	{
 		"id": 40,
@@ -717,7 +795,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "11 – al-Ḥusayn b. Shādhawayh, Abū ʿAbdillāh, al-Ṣaffār, al-Qummī.  The Qummis alleged that he wa",
+		"thaqalaynMatn": "s a ghālī.  I saw a book from him about prayer that was correct.  God knows best."
 	},
 	{
 		"id": 41,
@@ -735,7 +815,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "12 – al-Ḥusayn b. ʿAlī b. Zakariyya b. Ṣāliḥ b. Zufar, al-ʿAdawī, Abū Saʿ",
+		"thaqalaynMatn": "īd, al-Baṣrī.  Very weak.  A Liar."
 	},
 	{
 		"id": 42,
@@ -753,7 +835,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "13 – al-Ḥusayn b. Ḥamdān, al-Ḥuṣaynī, al-Junbulā’ī, ",
+		"thaqalaynMatn": "Abū ʿAbdillāh.  A liar.  Corrupt in madhhab.  The possessor of an accursed doctrine.  He is not is to be regarded."
 	},
 	{
 		"id": 43,
@@ -771,7 +855,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 14
+		"chapterInCategoryId": 14,
+		"thaqalaynSanad": "14 – al-Ḥusayn b. Muḥammad b. Yaḥyā b. al-Ḥasan, Abū Muḥammad, al-ʿAlāwī, al-Ḥusaynī, known",
+		"thaqalaynMatn": " as Ibn Abī Ṭāhir.  He was a liar.  He openly fabricated ḥadīths.  He claimed strange rijāl who are not recognized.  He depended on unknown narrators who are not mentioned.  None of his narrations are good except for what he narrated from the books of his grandfather, which others apart than him have narrated, and from ʿAlī b. Aḥmad b. ʿAlī al-ʿAqīqī, from his famous written books."
 	},
 	{
 		"id": 44,
@@ -789,7 +875,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 15
+		"chapterInCategoryId": 15,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 45,
@@ -807,7 +895,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 46,
@@ -825,7 +915,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Khalaf b. Ḥammād b. Nāshir b. al-Layth, al-Asadī.  Kufan.  His affair is confused.  Sometimes his ḥadīth are recognized, othertimes they are",
+		"thaqalaynMatn": " denied.  It is permissible to bring him forth as a witness."
 	},
 	{
 		"id": 47,
@@ -843,7 +935,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 48,
@@ -861,7 +955,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Dāwud b. Kathīr b. Abī Khālid al-Raqqī, client of the Banū ",
+		"thaqalaynMatn": "Asad.  Narrates from Abū ʿAbillah  عليه السلام .  He was corrupt in madhhab.  Weak in narration. He is not regarded."
 	},
 	{
 		"id": 49,
@@ -879,7 +975,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Dārim b. Qubayṣa b. Nahshal, Abū al-Ḥasan, al-S",
+		"thaqalaynMatn": "āyiḥ.  Narrated from al-Riḍā  عليه السلام .  His ḥadīths are not familiar and are not relied upon."
 	},
 	{
 		"id": 50,
@@ -897,7 +995,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Dhibyān (b. Ḥukaym b. al-Awdī, Abū \ufffd",
+		"thaqalaynMatn": "\ufffdAmr).  His affair is confused."
 	},
 	{
 		"id": 51,
@@ -915,7 +1015,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Dhurayḥ al-Muḥāribī.  Abū Saʿīd Sahl b. Ziyād – and he is weak – narrated a weak ḥadīth, that he asked Abū ʿAbdillāh  عليه السلام about the reports of Jābir.  So he said ‘Beware of the ḥadīths of Jābir, for should they fall to ",
+		"thaqalaynMatn": "the vile folk, they would spread it.’  And this is not praise or condemnation at any rate, along with that its route is weak.  For the author of the book said ‘Muḥammad b. Sinān from ʿAbdullāh b. Jabala, from Dharayḥ al-Muḥāribī. From Abū ʿAbdillāh  عليه السلام …."
 	},
 	{
 		"id": 52,
@@ -933,7 +1035,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – al-Rabīʿ b. Sulaymān b. ʿUmar.  Kufan.  Narrated from Ismāʿīl b. Abī Ziyād al-Sakūnī his book from Jaʿfar b. Muḥammad ",
+		"thaqalaynMatn": " عليه السلام .  His affair is near.  He has been calumniated.  It is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 53,
@@ -951,7 +1055,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Ziyād b. al-Mundhir, al-Hamdānī, Abū al-Jārūd, al-Kh\ufffd",
+		"thaqalaynMatn": "\ufffdrifī.  Narrated from Abū Jaʿfar عليه السلام and Abū ʿAbdillāh  عليه السلام .  Ziyād, he is the possessor of the station (ṣāḥib al-maqām, likely corruption of ṣāḥib al-maqāla, possessor of the doctrine (i.e. of the Jārūdī Zaydīs).  His ḥadīth are in the ḥadīths of our companions more than amongst the Zaydīs.  Our companions dislike what Muḥammad b. Sinān narrated from him, and they rely on what Muḥammad b. Bakr al-Arjanī narrated from him."
 	},
 	{
 		"id": 54,
@@ -969,7 +1075,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2,3 – Zayd al-Narsī, and Zayd al-Zarrād.  Kuf",
+		"thaqalaynMatn": "an. They narrated from Abū ʿAbdillāh  عليه السلام .  Abū Jaʿfar b. Bābawayh said:  Their book is a forgery.  Muḥammad b. Mūsā al-Sammān forged it.  Abū Jaʿfar made a mistake in this saying, for I have seen their books heard from Muḥammad b. Abī ʿUmayr."
 	},
 	{
 		"id": 55,
@@ -987,7 +1095,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "4 – Zakariyya, Abū Yaḥyā, Kawkab al-Dam.  Kufan.  We",
+		"thaqalaynMatn": "ak.  Narrated from Abū ʿAbdillāh عليه السلام. The author said"
 	},
 	{
 		"id": 56,
@@ -1005,7 +1115,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Sulaym b. Qays, al-Hilālī, al-ʿĀmi",
+		"thaqalaynMatn": "rī.  Narrated from the Commander of the Believers عليه السلام, al-Ḥasan  عليه السلام , al-Ḥusayn  عليه السلام and ʿAlī b. al-Ḥusayn  عليه السلام .  This famous book is attributed to him.  Our companions would say that Sulaym is not known, and not mentioned in (any) report.  I have found mention of him in places other than from the direction of his book, and not from the narration of Abān b. Abī ʿAyyash from him.  Ibn ʿUqda has made mentioned ḥadīths from him in ‘Rijāl Amīr al-Mu’minīn.’  The book (attributed to Sulaym) is a forgery, no doubt about it.  There is evidence showing what we have mentioned about it.  From it:  what it mentions about Muḥammad b. Abū Bakr exhorted his father at his death.  And for it:  that the Imams are thirteen.  And other than that.  The isnads of this book vary.  Sometimes by the narration of ʿUmar b. Udhayna from Ibrāhīm b. ʿUmar al-Ṣanʿānī from Abān b. Abī ʿAyyāsh from Sulaym.  And sometimes it is narrated from ʿUmar from Abān without an intermediary."
 	},
 	{
 		"id": 57,
@@ -1023,7 +1135,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Saʿd b. Ṭarīf, al-Ḥanẓalī, al-Khaffāf (the boo",
+		"thaqalaynMatn": "t maker).  Narrated from al-Asbagh b. Nubāta.  Weak."
 	},
 	{
 		"id": 58,
@@ -1041,7 +1155,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Saʿīd b. Khuthaym, Abū MuʿAmmār al-Hilālī.  His brother was Muʿammar.  Saʿīd was a Zaydī.  His ḥadīth are amongst the ḥadīths of our companions.  He was a tabiʿī – upon what is claimed – narrating from his maternal grandfather ʿUbayda b. ʿUmar al-Kilābī from the P",
+		"thaqalaynMatn": "rophet صلى الله عليه وآله .  He narrated from Abū Jaʿfar  عليه السلام and Abū ʿAbdillāh  عليه السلام .  He is very weak, and one does not ascend by him."
 	},
 	{
 		"id": 59,
@@ -1059,7 +1175,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 60,
@@ -1077,7 +1195,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 – Sulaymān b. Hārūn, al-Nakhʿī, Abū Dāwud, it is said about him:  the liar of al",
+		"thaqalaynMatn": "-Nakhʿ.  He narrated from Abū ʿAbdillāh  عليه السلام .  Very weak."
 	},
 	{
 		"id": 61,
@@ -1095,7 +1215,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 62,
@@ -1113,7 +1235,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – Sālim b. Abī Salama, al-Kindī, al-Sijistānī.  His son Muḥammad narrated from him, he is not recognized, and other (people) than him narrated fr",
+		"thaqalaynMatn": "om him.  He is weak, and his narrations are confused."
 	},
 	{
 		"id": 63,
@@ -1131,7 +1255,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "8 – Saʿd b. Muslim",
+		"thaqalaynMatn": ".  The one who narrated the book ‘Verily We have caused it to descend’ from ʿUmar b. Tawba.   He is not recognized."
 	},
 	{
 		"id": 64,
@@ -1149,7 +1275,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – Suhayl b. Ziyād, Abū Yaḥyā, al-Wāsiṭī.  His mother was the daughter of Muḥammad b. alNuʿmān, Abū Jaʿfar al-Aḥwal, Mu’min al-Ṭāq.  Sometimes his ḥadīths are recognized, ",
+		"thaqalaynMatn": "and other times rejected.  It is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 65,
@@ -1167,7 +1295,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 66,
@@ -1185,7 +1315,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "11 – Sahl b. Ziyād, Abū Saʿīd, al-Ādamī, al",
+		"thaqalaynMatn": "-Rāzī.  He was very weak, corrupt in narration and religion.   Aḥmad b. Muḥammad b. ʿĪsā al-Ashʿarī exiled him from Qum, declared barā’a from him, and forbade the people from listening to him and narrating from him.  He narrates mursal narrations and depends on unknown people."
 	},
 	{
 		"id": 67,
@@ -1203,7 +1335,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "12 – Sahl b. Aḥmad b. ʿAbdullāh (b. Aḥmad) b. Sahl, al-Dībājī, Abū",
+		"thaqalaynMatn": " Muḥammad.  He was weak, fabricating ḥadīths.  He narrated from unknown narrators.  There is no harm in what he narrated from al-Ashʿathiyyāt and what is of that type, and from what (people) other than him narrated of it."
 	},
 	{
 		"id": 68,
@@ -1221,7 +1355,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "13 – Sulaymān b. Zakariyya al-Daylamī. He narrated from Abū ʿAbdillāh  عليه",
+		"thaqalaynMatn": " السلام .  A liar, a ghālī."
 	},
 	{
 		"id": 69,
@@ -1239,7 +1375,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "14 – Sharīf b. Sābiq, al-Taflīsī, Abū Mu\ufffd\ufffd",
+		"thaqalaynMatn": "\ufffdammad.  He narrated from al-Faḍl b. Abī Qurra alSahandī, from Abū ʿAbdillāh  عليه السلام .  He is weak, confused in the affair."
 	},
 	{
 		"id": 70,
@@ -1257,7 +1395,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Ṣāliḥ b. Sahl, al-Hamdānī.  Kufan.  A Ghālī, a liar, a fabricator of ḥadīth.  He narrated from Abū ʿAbdillāh",
+		"thaqalaynMatn": "  عليه السلام .  There is no good in him, and nor in the rest of what he narrated."
 	},
 	{
 		"id": 71,
@@ -1275,7 +1415,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Ṣāliḥ b. ʿUqba b. Qays b. Samʿān b. Abī Dhabīḥa, client of the Messenger of God ى اP عليه ّ صل وآله.  He narrated from Ab\ufffd",
+		"thaqalaynMatn": "\ufffd ʿAbdillāh  عليه السلام .  A ghālī, a liar, he is not turned to."
 	},
 	{
 		"id": 72,
@@ -1293,7 +1435,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Ṣabbāḥ b. Yaḥyā, al-Muzannī, Abū Muḥammad.  Kufan.  His ḥadīth is (found) in the ḥadīth of our ",
+		"thaqalaynMatn": "companions.  Weak.  It is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 73,
@@ -1311,7 +1455,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 74,
@@ -1329,7 +1475,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 75,
@@ -1347,7 +1495,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 76,
@@ -1365,7 +1515,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Ẓafar b. Ḥamdūn b. Shaddād, al-Bādirā’ī, Abū Manṣūr.  He narrated from Ibr",
+		"thaqalaynMatn": "āhīm al-Aḥmarī.  There was weakness in his madhhab."
 	},
 	{
 		"id": 77,
@@ -1383,7 +1535,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – ʿAmr b. Thābit b. Hurmuz, Abū al-Miqdām, al-Ḥaddād (the ironsmith), client of the Banū ʿIj",
+		"thaqalaynMatn": "l, Kufan.  He narrated from ʿAlī b. al-Ḥusayn  عليه السلام , Abū Jaʿfar  عليه السلام , and Abū ʿAbdillāh عليه السلام.  Very weak."
 	},
 	{
 		"id": 78,
@@ -1401,7 +1555,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – ʿAlī b. Maymūn, Abū al-Ḥasan, his laqab is Abū al-Akrād, al-Ṣā’igh (the jeweler).  Kufan.  His ḥadīth are recognized and denied.  It is permissible to bring him o",
+		"thaqalaynMatn": "ut as a witness.  He narrated from Abū ʿAbdillāh  عليه السلام and Abū al-Ḥasan Mūsā . عليه السلام"
 	},
 	{
 		"id": 79,
@@ -1419,7 +1575,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – ʿAmr b. Shimr, Abū ʿAbdillāh, al-Ju",
+		"thaqalaynMatn": "ʿfī.  He narrated from Abū ʿAbdillāh  عليه السلام and Jābir.  Weak."
 	},
 	{
 		"id": 80,
@@ -1437,7 +1595,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – ʿAbd al-Raḥmān b. Sālim b. ʿAbd al-Raḥmān, al-Ashall (the paralytic).  Kufan, a client (or",
+		"thaqalaynMatn": ": slave).  He narrated from Abū Baṣīr.  Weak.  His father was thiqa, he narrated from Abū Jaʿfar  عليه السلام and Abū ʿAbdillāh . عليه السلام"
 	},
 	{
 		"id": 81,
@@ -1455,7 +1615,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 82,
@@ -1473,7 +1635,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "6 – ʿAbdullāh b. Ibrāhīm b. Abī ʿUmar, al-Ghifārī, Abū Muḥammad.  (Medinan).  Much corruption is cas",
+		"thaqalaynMatn": "t upon him.  He narrated from Abū ʿAbdillāh  عليه السلام .  It is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 83,
@@ -1491,7 +1655,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – ʿUmar b. Tawba, Abū Yaḥyā, al-Ṣ",
+		"thaqalaynMatn": "anʿānī.  He narrates from Abū ʿAbdillāh  عليه السلام .  In the rijāl he is very weak, he is not turned to."
 	},
 	{
 		"id": 84,
@@ -1509,7 +1675,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "8 – ʿAbdullāh b. Bakr, al-Arjā",
+		"thaqalaynMatn": "nī.  He narrated from Abū ʿAbdillāh  عليه السلام .  A proponent of irtifāʿ in doctrine, weak."
 	},
 	{
 		"id": 85,
@@ -1527,7 +1695,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – ʿAbdullāh b. al-Ḥakam, al-Armanī.  Weak, a proponent of irtifāʿ in do",
+		"thaqalaynMatn": "ctrine.  It is said: he narrated from Abū ʿAbdillāh . عليه السلام"
 	},
 	{
 		"id": 86,
@@ -1545,7 +1715,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "10 – ʿAbdullāh b. Sālim, al-Ṣayrafī (the money cha",
+		"thaqalaynMatn": "nger).  He narrates from Abū ʿAbdillāh عليه السلام.  Weak, a proponent of irtifāʿ in doctrine, he is insignificant."
 	},
 	{
 		"id": 87,
@@ -1563,7 +1735,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "11 – ʿAbdullāh b. Baḥr.  Ku",
+		"thaqalaynMatn": "fan.  Narrated from Abū Baṣīr, and the rijāl.  Weak, a proponent of irtifāʿ in doctrine."
 	},
 	{
 		"id": 88,
@@ -1581,7 +1755,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 89,
@@ -1599,7 +1775,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "13 – ʿAlī b. Ḥassān b. Kathīr, client of Abū Jaʿfar al-Baqir  عليه السلام , Abū al-Ḥasan.  He narrated from his uncle, ʿAbd al-R",
+		"thaqalaynMatn": "aḥmān.  A ghālī, weak.  I saw that he has a book he called Tafsīr alBāṭin that has no connection to Islam by (any) means.  He does not narrate except from his uncle.  And from our companions: ʿAlī b. Ḥassān al-Wāsiṭī: thiqa thiqa."
 	},
 	{
 		"id": 90,
@@ -1617,7 +1795,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 14
+		"chapterInCategoryId": 14,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 91,
@@ -1635,7 +1815,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 15
+		"chapterInCategoryId": 15,
+		"thaqalaynSanad": "15 – ʿAbdullāh b. al-Qāsim b. al-Baṭal, al-Ḥārithi,",
+		"thaqalaynMatn": " Basran.  A liar, a ghālī, weak, (whose) ḥadīth are abandoned, his (or: its) mention is refrained from."
 	},
 	{
 		"id": 92,
@@ -1653,7 +1835,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 16
+		"chapterInCategoryId": 16,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 93,
@@ -1671,7 +1855,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 17
+		"chapterInCategoryId": 17,
+		"thaqalaynSanad": "17 – ʿAbdullāh b. Ḥammād, al-Anṣāri.  Settled",
+		"thaqalaynMatn": " in Qum.  He does not narrate from any of the Imams (a.s).  His ḥadīth is sometimes recognized and otherwise denied, and he is brought out as a witness."
 	},
 	{
 		"id": 94,
@@ -1689,7 +1875,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 18
+		"chapterInCategoryId": 18,
+		"thaqalaynSanad": "18 – ʿAbdullāh b. Ayyūb, al-Qummī.  The ghulāt mentioned him and narrated from",
+		"thaqalaynMatn": " him.  He is not recognized. "
 	},
 	{
 		"id": 95,
@@ -1707,7 +1895,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 19
+		"chapterInCategoryId": 19,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 96,
@@ -1725,7 +1915,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 20
+		"chapterInCategoryId": 20,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 97,
@@ -1743,7 +1935,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 21
+		"chapterInCategoryId": 21,
+		"thaqalaynSanad": "21 – ʿUbayd b. Kathīr b. ʿAbd al-Wāḥid b. ʿAbdullāh b. Sharīk al-ʿĀmirī, al-Waḥīdī, al-Ki",
+		"thaqalaynMatn": "lābī, Abū Saʿīd.  He would publicly fabricate ḥadīths and not be shy about his open lying, and his affair is famous."
 	},
 	{
 		"id": 98,
@@ -1761,7 +1955,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 22
+		"chapterInCategoryId": 22,
+		"thaqalaynSanad": "22 – ʿAbdullāh b. Muḥammad b. ʿUmayr b. Maḥfūẓ al-Balawī, Abū Muḥam",
+		"thaqalaynMatn": "mad, al-Miṣrī.  A liar, a fabricator of ḥadīths, his ḥadīths are not turned to, and he is (or: they are) insignificant."
 	},
 	{
 		"id": 99,
@@ -1779,7 +1975,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 23
+		"chapterInCategoryId": 23,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 100,
@@ -1797,7 +1995,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 24
+		"chapterInCategoryId": 24,
+		"thaqalaynSanad": "24 – ʿUmar b. al-Mukhtār, al-Khuzā",
+		"thaqalaynMatn": "ʿī.  The ghulāt mentioned him.  He is not known."
 	},
 	{
 		"id": 101,
@@ -1815,7 +2015,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 25
+		"chapterInCategoryId": 25,
+		"thaqalaynSanad": "25 – ʿĪsā b. al-Mustafād, al-Bajalī, Abū Mūsā al-Ḍarīr.  Narrations of his from Mūsā b. Jaʿfar عليه السلام are mentioned for him.  He has a book “al-Waṣiyya” w",
+		"thaqalaynMatn": "hose sanad is not established.  In himself he is weak."
 	},
 	{
 		"id": 102,
@@ -1833,7 +2035,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 26
+		"chapterInCategoryId": 26,
+		"thaqalaynSanad": "26 – ʿAlī b. Muḥammad b. Jaʿfar b. ʿAnbasa, al-Ḥaddād (the ironsmith), Abū al-Ḥasan al-ʿA",
+		"thaqalaynMatn": "skarī.  Weak.  He narrated from the weak narrators.  He is not turned to."
 	},
 	{
 		"id": 103,
@@ -1851,7 +2055,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 27
+		"chapterInCategoryId": 27,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 104,
@@ -1869,7 +2075,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 28
+		"chapterInCategoryId": 28,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 105,
@@ -1887,7 +2095,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 29
+		"chapterInCategoryId": 29,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 106,
@@ -1905,7 +2115,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 30
+		"chapterInCategoryId": 30,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 107,
@@ -1923,7 +2135,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 31
+		"chapterInCategoryId": 31,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 108,
@@ -1941,7 +2155,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 32
+		"chapterInCategoryId": 32,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 109,
@@ -1959,7 +2175,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Furāt b. Aḥnaf, Kuf",
+		"thaqalaynMatn": "an.  He narrates from ʿAlī b. al-Ḥusayn  عليه السلام , Abū Jaʿfar  عليه السلام , and Abū ʿAbdillāh  عليه السلام [as they claim he is not ascended by (?), and not by his mention (?), ghālī, a liar]."
 	},
 	{
 		"id": 110,
@@ -1977,7 +2195,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – al-Faḍl b. Abū Qurra, al-Tamīmi, al-Sahandī, Abū Muḥammad, Azerbaijani.  His origin was Kufan, and he settled",
+		"thaqalaynMatn": " in it.  Weak, and what (?) he narrates from Abū ʿAbdillāh . عليه السلام"
 	},
 	{
 		"id": 111,
@@ -1995,7 +2215,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – al-Fatḥ b. Yazīd, al-Jurjānī.  Possessor of “al-Masā’il li-Abī al-Ḥasan  عليه السلام ”, and they differ as to whether he is al-Riḍā  عليه ا",
+		"thaqalaynMatn": "لسلام or the Third  عليه السلام .  The man is unknown, and the isnād to him is unsound."
 	},
 	{
 		"id": 112,
@@ -2013,7 +2235,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – Fāris b. Ḥātim b. Māhawayh, al-Qazwīnī.  His madhhab was corrupt [and barā’a was done from him].  One of the companions of Abū Muḥammad al-Ḥasan bil-ʿAskar  عليه",
+		"thaqalaynMatn": " السلام killed him.   His ḥadīth are not turned to.  He has a book, all of it is insane."
 	},
 	{
 		"id": 113,
@@ -2031,7 +2255,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 114,
@@ -2049,7 +2275,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – al-Qāsim b. Muḥammad, al-Isbihānī, Kasulan, Abū Mu\ufffd",
+		"thaqalaynMatn": "\ufffd\ufffdammad.  His ḥadīth is sometimes recognized, and other times denied.  It is permissible to bring him out as a witness."
 	},
 	{
 		"id": 115,
@@ -2067,7 +2295,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 116,
@@ -2085,7 +2315,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – al-Qāsim b. al-Ḥasan b. ʿAlī b. Yaqṭīn, Abū Muḥammad.  Settled in Qum.  We recognize his ḥadīth and",
+		"thaqalaynMatn": " we deny them.  The Qummis mentioned: indeed in his madhhab there is irtifāʿ.  Most of what is upon him is good."
 	},
 	{
 		"id": 117,
@@ -2103,7 +2335,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Muʿallā b. Khunays, client of Abū ʿAbdillāh  عليه",
+		"thaqalaynMatn": " السلام .  The beginning of his affair was variable, then he called towards Muahmmad b. ʿAbdullāh b. al-Ḥasan, and in this supposition Dāwud b. ʿAlī took him and killed him.  The ghulāt attached much to him.  I do not regard anything of his ḥadīth to be credible."
 	},
 	{
 		"id": 118,
@@ -2121,7 +2355,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – al-Mufaḍḍal b. ʿUmar, al-Juʿfī, Abū ʿAbdillāh.  Weak, collapsed, a proponent of irtifāʿ in doctrine, a Khaṭṭābī.  Many things have been added (i.e. attributed) upon him, and his ḥadīth carry a great amount of we",
+		"thaqalaynMatn": "ight with the ghulāt.  It is not permissible to write his ḥadīth.  He narrated from Abū ʿAbdillāh  عليه السلام and Abū al-Ḥasan . عليه السلام"
 	},
 	{
 		"id": 119,
@@ -2139,7 +2375,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – al-Mufaḍḍal b. Ṣāliḥ, Abū Jamīla, al-Asadī, their client, al-Nakhkhās (the slave trader, or: cattle dealer).  Weak, a liar, he fabricates ḥadīth.  Aḥmad b. ʿAbd al-Wāḥid narrated to us, he said: ʿAlī b. Muḥammad b. Zubayr narrated to us, he said: ʿAlī b. al-Ḥasan b. Faḍḍāl narrated to us, he said:",
+		"thaqalaynMatn": " [I heard Muʿawiya b. Ḥakīm saying:] I heard Abū Jamīla saying: I forged the epistle of Muʿawiya to Muḥammad b. Abū Bakr.  And Mufaḍḍal had narrated from Abū ʿAbdillāh عليه السلام and Abū al-Ḥasan . عليه السلام"
 	},
 	{
 		"id": 120,
@@ -2157,7 +2395,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – Muḥammad b. Abū Zaynab, Abū al-Khaṭṭāb, the maimed, al-Zarrād (the maker of mail), the client of the Banū Asad, may God curse him.  His affair is famous.  And I regard (that one must) abandon what our com",
+		"thaqalaynMatn": "panions say: Abū al-Khaṭṭāb narrated to us during the state of his being upright."
 	},
 	{
 		"id": 121,
@@ -2175,7 +2415,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 – Muḥammad b. ʿAbdullāh, al-Jaʿ",
+		"thaqalaynMatn": "farī.  We do not recognize him except from the direction of ʿAlī b. Muḥammad the Ṣāḥib of the Zanj, and from the direction of ʿAbdullāh b. Muḥammad alBalawī.  And that which is he is charged with, then the rest of it is corrupt."
 	},
 	{
 		"id": 122,
@@ -2193,7 +2435,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "6 – Munakhkhal b. Jamīl, the seller of slave girls",
+		"thaqalaynMatn": ".  He narrated from Abū ʿAbdillāh  عليه السلام and Abū al-Ḥasan  عليه السلام .  Kufan, weak, in his madhhab there is ghulw."
 	},
 	{
 		"id": 123,
@@ -2211,7 +2455,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – Mayyāḥ, al-Madā\ufffd",
+		"thaqalaynMatn": "\ufffd\ufffdinī.  He narrated from Abū ʿAbillah  عليه السلام and Mufaḍḍal b. ʿUmar.  Very weak, a ghālī in madhhab."
 	},
 	{
 		"id": 124,
@@ -2229,7 +2475,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "8 – Mūsā b. Suʿdan, al-Ḥannāṭ (the wheat dealer)",
+		"thaqalaynMatn": ", Kufan.  He narrated from Abū al-Ḥasan عليه السلام.  Weak, in his madhhab there is ghulw."
 	},
 	{
 		"id": 125,
@@ -2247,7 +2495,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – Muṣādif, client of Abū ʿAbdillāh  علي\ufffd",
+		"thaqalaynMatn": "\ufffd السلام .  He narrated from him. Weak."
 	},
 	{
 		"id": 126,
@@ -2265,7 +2515,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "10 – Maḥbūb b. Ḥukaym.  He narrated the book “Innā anzalnāhu” from ʿUm",
+		"thaqalaynMatn": "ar b. Tawba.  We do not recognize him."
 	},
 	{
 		"id": 127,
@@ -2283,7 +2535,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 128,
@@ -2301,7 +2555,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 129,
@@ -2319,7 +2575,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "13 – Muḥammad b. Muṣādif, client of Abū ʿAbdillāh  عل\ufffd",
+		"thaqalaynMatn": "\ufffdه السلام .  He narrated from his father, weak."
 	},
 	{
 		"id": 130,
@@ -2337,7 +2595,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 14
+		"chapterInCategoryId": 14,
+		"thaqalaynSanad": "14 – Muḥammad b. Furāt b. Aḥnaf.  He narrated from his father, from Abū Jaʿfar  عليه السلام and Abū ʿAbdi",
+		"thaqalaynMatn": "llāh  عليه السلام .  Weak son of a weak.  His ḥadīth are not to be written."
 	},
 	{
 		"id": 131,
@@ -2355,7 +2615,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 15
+		"chapterInCategoryId": 15,
+		"thaqalaynSanad": "15 – Muḥammad b. Sinān, Abū Jaʿfar, al-Hamdānī, their client – this is the most correct of what he is rel",
+		"thaqalaynMatn": "ated to.  Weak, a ghālī, he fabricates (ḥadīth).  He is not turned to."
 	},
 	{
 		"id": 132,
@@ -2373,7 +2635,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 16
+		"chapterInCategoryId": 16,
+		"thaqalaynSanad": "16 – Muḥammad b. Jumhūr, Abū ʿAbdillāh, the blind.  A ghālī, corrupt in ḥadīth, his ḥadīth are not ",
+		"thaqalaynMatn": "to be written.  I saw that he has a poem wherein he deems lawful the prohibitions of God O .عزO وجل"
 	},
 	{
 		"id": 133,
@@ -2391,7 +2655,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 17
+		"chapterInCategoryId": 17,
+		"thaqalaynSanad": "17 – Muḥammad b. Khālid al-Barqī b. ʿAbd al-Raḥmān b. Muḥammad b. ʿAlī, Abū ʿAbdillāh, client of Jarīr b. ʿAbdullāh.  His ḥadīth are r",
+		"thaqalaynMatn": "ecognized and denied.  He narrates a lot from the weak (narrators) and relies on the mursal traditions."
 	},
 	{
 		"id": 134,
@@ -2409,7 +2675,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 18
+		"chapterInCategoryId": 18,
+		"thaqalaynSanad": "18 – Muḥammad b. Awrama, Abū Jaʿfar, al-Qummī.  The Qummis accused him of ghulw, but his ḥadīth are pure, there is no corruption in them.  I have not seen anything attributed to him that confounds the soul, except for pages in Tafsīr al-Bāṭin and what befits its ḥadīth, and I suspect it is a for",
+		"thaqalaynMatn": "gery upon him.   I saw a writing that came out from Abū al-Ḥasan ʿAlī b. Muḥammad  عليه السلام to the Qummis regarding his disassociation (barā’a) from what they defamed him by [and deemed good his beliefs and the nearness] of his station.  Al-Ḥasan b. Muḥammad b. Bundar al-Qummī رضي اP عنه has narrated to me, he said: I heard my elders sayings: When (the accusation of) ghulw was lunged against Muḥammad b. Awrma, the Ashāʿira agreed upon killing him, but they found him praying at night from its beginning to its end, numerous nights, so they halted from their belief."
 	},
 	{
 		"id": 135,
@@ -2427,7 +2695,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 19
+		"chapterInCategoryId": 19,
+		"thaqalaynSanad": "19 – Muḥammad b. ʿAlī b. Ibrāhīm b. Muḥammad al-Ṣayrafī – the son of the siste",
+		"thaqalaynMatn": "r of Khallād – Abū Jaʿfar, who had the laqab of Abū Samīna.  Kufan.  A liar, a ghālī.  He entered Qum and his affair became famous in it, and Aḥmad b. Muḥammad b. ʿĪsā al-Ashʿarī رضي اP عنه expelled him from it.  He was renowned in irtifāʿ, he is not turned to, and his ḥadīth are not to be written."
 	},
 	{
 		"id": 136,
@@ -2445,7 +2715,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 20
+		"chapterInCategoryId": 20,
+		"thaqalaynSanad": "20 – Muḥammad b. ʿAlī b. Ibrāhīm, al-Hamdānī, Abū Jaʿfar. His father had a connection to Abū al-Ḥasan  عليه السلام . His ḥadīth",
+		"thaqalaynMatn": " are recognized and denied. He narrates from the weak narrators a lot, and relies on the mursal narrations. "
 	},
 	{
 		"id": 137,
@@ -2463,7 +2735,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 21
+		"chapterInCategoryId": 21,
+		"thaqalaynSanad": "21 – Muḥammad b. Mūsā b. ʿĪsā, al-Sammān (the butter merchant), Abū Jaʿfar, al",
+		"thaqalaynMatn": "-Hamdānī.  Weak, he narrates from the weak narrators, and it is permissible for him to be brought out as a witness.  The Qummis spoke of him with reprobation, doing so for much (?), and they excluded what he narrated from the book “Nawādir al-Ḥikma”."
 	},
 	{
 		"id": 138,
@@ -2481,7 +2755,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 22
+		"chapterInCategoryId": 22,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 139,
@@ -2499,7 +2775,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 23
+		"chapterInCategoryId": 23,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 140,
@@ -2517,7 +2795,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 24
+		"chapterInCategoryId": 24,
+		"thaqalaynSanad": "24 – Muḥammad b. ʿAbdullāh b. Mihrān, al-Karkhī, Abū Jaʿfar.  A ghālī, we",
+		"thaqalaynMatn": "ak, a liar. He has a book regarding the notables and the defamed that gives evidence upon his filth and his lying. "
 	},
 	{
 		"id": 141,
@@ -2535,7 +2815,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 25
+		"chapterInCategoryId": 25,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 142,
@@ -2553,7 +2835,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 26
+		"chapterInCategoryId": 26,
+		"thaqalaynSanad": "26 – al-Muʿallā b. Muḥammad, al-Baṣrī, Abū Muḥammad.  His ḥadīth are recognized and denied.  He narrates from the w",
+		"thaqalaynMatn": "eak narrators. It is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 143,
@@ -2571,7 +2855,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 27
+		"chapterInCategoryId": 27,
+		"thaqalaynSanad": "27 – Muḥammad b. Sālim b. Abū Salama, al-Kindī, al-Sijis",
+		"thaqalaynMatn": "tānī.  He narrates from his father, in his ḥadīth there is weakness."
 	},
 	{
 		"id": 144,
@@ -2589,7 +2875,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 28
+		"chapterInCategoryId": 28,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 145,
@@ -2607,7 +2895,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 29
+		"chapterInCategoryId": 29,
+		"thaqalaynSanad": "29 – Muḥammad b. Aḥmad, al-Jāmūrānī, Abū ʿAbdillā",
+		"thaqalaynMatn": "h, al-Rāzī.  The Qummis weakened him, and they excluded what he narrated from the book “Nawādir al-Ḥikma”.  In his madhhab there is irtifāʿ."
 	},
 	{
 		"id": 146,
@@ -2625,7 +2915,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 30
+		"chapterInCategoryId": 30,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 147,
@@ -2643,7 +2935,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 31
+		"chapterInCategoryId": 31,
+		"thaqalaynSanad": "31 – Muḥammad b. Ismāʿīl b. Aḥmad b. Bashīr, al-Barmakī, Abū Jaʿfar, the one who is known as the possessor of the ",
+		"thaqalaynMatn": "hermitage.  Weak."
 	},
 	{
 		"id": 148,
@@ -2661,7 +2955,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 32
+		"chapterInCategoryId": 32,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 149,
@@ -2679,7 +2975,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 33
+		"chapterInCategoryId": 33,
+		"thaqalaynSanad": "33 – Muḥammad b. al-Qāsim, al-Mufassir, al-Astarābādī.  Abū Jaʿfar b. Bābawayh narrated f",
+		"thaqalaynMatn": "rom him.  Weak, a liar.  He narrated a tafsīr from him that he narrated from two unknown men: one of them known as Yūsuf b. Muḥammad b. Ziyād, and the other: ʿAlī b. Muḥammad b. Yasār, from their father from Abū al-Ḥasan the Third  عليه السلام .  The tafsīr is fabricated from Sahl alDībājī from his father with ḥadīths from these reprobates."
 	},
 	{
 		"id": 150,
@@ -2697,7 +2995,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 34
+		"chapterInCategoryId": 34,
+		"thaqalaynSanad": "34 – Muḥammad b. ʿAbdullāh b. Muḥammad b. al-Muṭṭalib, al-Shaybānī, A",
+		"thaqalaynMatn": "bū Mufaḍḍal.  A fabricator, (he narrated) much that is denied.  I saw his books and in them are isnads without texts and texts without isnads.  I regard (that one must) abandon what he exclusively (narrates)."
 	},
 	{
 		"id": 151,
@@ -2715,7 +3015,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 35
+		"chapterInCategoryId": 35,
+		"thaqalaynSanad": "35 – Muḥammad b. Nuṣayr.  Abū Muḥammad b. Ṭalḥa b. ʿAlī b. ʿAbdullāh b. ʿAlālah said to me: Abū Bakr al",
+		"thaqalaynMatn": "-Jaʿābī said to us: Muḥammad b. Nuṣayr was from the virtuous folks of Basra in knowledge.  And he was weak.  He started the Nusayriyya, and to him they are attributed – the end (of this section), and this is from the speech of the sayyid رضي اP عنه .  And maybe he dropped from its aforementioned number first of all, then there is no mistake that what is found here is thirty four."
 	},
 	{
 		"id": 152,
@@ -2733,7 +3035,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Wahb b. Wahb b. ʿAbdullāh b. Zamaʿa b. al-Aswad b. al-Muṭṭalib b. ʿAbd al-ʿUzā, Abū alBakhtarī",
+		"thaqalaynMatn": ", the judge.  A liar, an ʿāmī, except that he has ḥadīth from Jaʿfar b. Muḥammad عليه السلام none of them are to be relied upon."
 	},
 	{
 		"id": 153,
@@ -2751,7 +3055,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 154,
@@ -2769,7 +3075,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – Yūnus b. Bahman. A ghālī, a Khaṭṭābī.  Kufan.  He fabricate",
+		"thaqalaynMatn": "s ḥadīth.  He narrated from Abū ʿAbdillāh . عليه السلام"
 	},
 	{
 		"id": 155,
@@ -2787,7 +3095,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Yaʿqūb b. al-Sarrāj.  Kuf",
+		"thaqalaynMatn": "an.  He has a narration from Abū ʿAbdillāh  عليه السلام .  Weak."
 	},
 	{
 		"id": 156,
@@ -2805,7 +3115,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "4 – Yaḥyā b. Muḥammad b. ʿAlīm, al-",
+		"thaqalaynMatn": "Ḥalabī.  He narrated from Abū ʿAbdillāh  عليه السلام .  Weak."
 	},
 	{
 		"id": 157,
@@ -2823,7 +3135,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 – Yūsuf b. Yaʿqūb, al-Ju\ufffd",
+		"thaqalaynMatn": "\ufffdfī.  He narrated from Abū ʿAbdillāh  عليه السلام and Jābir.  Weak, a proponent of irtifāʿ in doctrine."
 	},
 	{
 		"id": 158,
@@ -2841,7 +3155,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 159,
@@ -2859,7 +3175,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – Yaḥyā b. Zakariyya, al-Tarmāshīrī, Abū al-",
+		"thaqalaynMatn": "Ḥusayn.  A fabricator."
 	},
 	{
 		"id": 160,
@@ -2877,7 +3195,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "1 – Abū Talib, al-Azdī, al-Baṣrī, al-Shaʿrānī.  He has a book that Muḥammad b. Khālid al-Barq",
+		"thaqalaynMatn": "ī narrates.  Our companions said: This man is not known except from his direction."
 	},
 	{
 		"id": 161,
@@ -2895,7 +3215,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 1
+		"chapterInCategoryId": 1,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 162,
@@ -2913,7 +3235,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 2
+		"chapterInCategoryId": 2,
+		"thaqalaynSanad": "2 – al-Ḥusayn b. al-Qāsim b. Muḥammad b. Ayyūb b. Sh",
+		"thaqalaynMatn": "ammūn.  They have weakened him, but according to me he is thiqa.  However there is discussion in regards to those who narrate from him.  And his father, al-Qāsim, was from the noteworthy of the Shīʿa, however nothing has been narrated from him."
 	},
 	{
 		"id": 163,
@@ -2931,7 +3255,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 3
+		"chapterInCategoryId": 3,
+		"thaqalaynSanad": "3 – Ḥabīb b. Aws, Abū Tammām, al-",
+		"thaqalaynMatn": "Ṭā’ī.  I have seen an ancient manuscript that might have been written for him in his time or close to it.  In it, there is an poem (qaṣīda) mentioning the Imams عليهم السbم in it until it reaches Abū Jaʿfar the Second  عليه السلام , since he died during his time."
 	},
 	{
 		"id": 164,
@@ -2949,7 +3275,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 4
+		"chapterInCategoryId": 4,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 165,
@@ -2967,7 +3295,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 5
+		"chapterInCategoryId": 5,
+		"thaqalaynSanad": "5 - ʿUmar b. Abī al-Miqdām, Thābit al-ʿIjlī, their client, al-Kūfī.  He narrated from ʿAlī b. alḤusayn [and Abū Jaʿfar and Abū ʿAbdillāh ",
+		"thaqalaynMatn": "عليهم السbم ].  (Scholars) have accused him on the one hand, but according to me he is not as they have claimed, and according to me he is thiqa."
 	},
 	{
 		"id": 166,
@@ -2985,7 +3315,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 6
+		"chapterInCategoryId": 6,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 167,
@@ -3003,7 +3335,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 7
+		"chapterInCategoryId": 7,
+		"thaqalaynSanad": "7 – Aḥmad b. Hilāl, al-ʿAbartā’ī, Ab\ufffd",
+		"thaqalaynMatn": "\ufffd Jaʿfar.  I regard halting (to be appropriate) in regards to his ḥadīth, except for what he narrates from al-Ḥasan b. Maḥbūb from the book al-Mashīkha and Muḥammad b. Abī ʿUmayr from his Nawādir.  The venerable of the Aṣḥāb al-Ḥadīth have heard these two books and relied upon what is in them.  He was born in the year 180, and died in the year 267."
 	},
 	{
 		"id": 168,
@@ -3021,7 +3355,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 8
+		"chapterInCategoryId": 8,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 169,
@@ -3039,7 +3375,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 9
+		"chapterInCategoryId": 9,
+		"thaqalaynSanad": "9 – al-Ḥusayn b. Mayyāḥ, al-Madā",
+		"thaqalaynMatn": "’inī.  Narrated from his father.  A ghālī, weak."
 	},
 	{
 		"id": 170,
@@ -3057,7 +3395,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 10
+		"chapterInCategoryId": 10,
+		"thaqalaynSanad": "10 – al-Ḥusayn b. al-Mukhāriq b. ʿAbd al-Raḥmān b. Warqā b. Ḥabash, Abū Junāda,",
+		"thaqalaynMatn": " al-Salūlī.  Weak.  And Ibn ʿUqda said he used to fabricate ḥadīth.  He was from the Zaydīs, however his ḥadīth come in the ḥadīth of our companions."
 	},
 	{
 		"id": 171,
@@ -3075,7 +3415,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 11
+		"chapterInCategoryId": 11,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 172,
@@ -3093,7 +3435,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 12
+		"chapterInCategoryId": 12,
+		"thaqalaynSanad": "12 – Sulaymān b. ʿUmar, Abū Dāwud, al-Nakhaʿī.  Narrated from Abū ʿAbdillāh   . عليه السلام Aḥmad b. Muḥammad b. Mūsā narrated to me, he said: Aḥmad b. Muḥammad b. ",
+		"thaqalaynMatn": "Saʿīd narrated to me, he said: The muḥaddiths used to nickname Abū Dāwud “the liar of al-Nakhaʿ”"
 	},
 	{
 		"id": 173,
@@ -3111,7 +3455,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 13
+		"chapterInCategoryId": 13,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 174,
@@ -3129,7 +3475,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 14
+		"chapterInCategoryId": 14,
+		"thaqalaynSanad": "14 - ʿAlī b. Ḥassān, al-Wās",
+		"thaqalaynMatn": "iṭī.  From our companions, thiqa thiqa."
 	},
 	{
 		"id": 175,
@@ -3147,7 +3495,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 15
+		"chapterInCategoryId": 15,
+		"thaqalaynSanad": "15 – Sālim b. ʿAbd al-Raḥmān, Abū ʿAbd al-Raḥmān, the lame",
+		"thaqalaynMatn": ".  Thiqa.  Narrated from Abū Jaʿfar and Abū ʿAbdillāh .عليهما السbم"
 	},
 	{
 		"id": 176,
@@ -3165,7 +3515,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 16
+		"chapterInCategoryId": 16,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 177,
@@ -3183,7 +3535,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 17
+		"chapterInCategoryId": 17,
+		"thaqalaynSanad": "17 - ʿAbd al-Ḥamīd b. Abī al-Daylam – and he is the son of the uncle of Muʿallā b. Kh",
+		"thaqalaynMatn": "unays.  Weak."
 	},
 	{
 		"id": 178,
@@ -3201,7 +3555,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 18
+		"chapterInCategoryId": 18,
+		"thaqalaynSanad": "18 – Muḥammad b. Aslam, al-Ṭabarī, al-Ḥalabī, Abū Jaʿfar.  His origin was Kufan.  He used to do commerce to Tabaristan.  A ghālī, corrup",
+		"thaqalaynMatn": "t in ḥadīth.  He narrated from al-Riḍā . عليه السلام"
 	},
 	{
 		"id": 179,
@@ -3219,7 +3575,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 19
+		"chapterInCategoryId": 19,
+		"thaqalaynSanad": "19 – Muḥammad b. al-Ḥasan b. ʿAbdullāh, al-Ja\ufffd",
+		"thaqalaynMatn": "\ufffdfarī.  Narrated from ʿAlī b. Muḥammad alʿUbaydī, the Ṣāḥib of the Zanj in Basra.  ʿUmāra b. Zayd narrated from him – also – and he is one whose ḥadīth is denied."
 	},
 	{
 		"id": 180,
@@ -3237,7 +3595,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 20
+		"chapterInCategoryId": 20,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 181,
@@ -3255,7 +3615,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 21
+		"chapterInCategoryId": 21,
+		"thaqalaynSanad": "21 – Nuqayʿ b. al-Ḥārith, Abū Dāwud, al-Sabīʿī, al-",
+		"thaqalaynMatn": "Hamdānī.  Narrated from Abū Barza Naḍla b. Abī ʿAbdillāh al-Aslamī, and narrated from Abū Jaʿfar  عليه السلام .  In his ḥadīth there is (material that is) not recognized, and what I regard (to be appropriate) is to halt with his ḥadīth.  And it is permissible for him to be brought out as a witness."
 	},
 	{
 		"id": 182,
@@ -3273,7 +3635,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 22
+		"chapterInCategoryId": 22,
+		"thaqalaynSanad": "22 – Hishām b. Ibrāhīm, al-ʿAbbāsī.  Companion of ",
+		"thaqalaynMatn": "Yūnus.  He has been accused, and the accusation – according to me – is regarding his madhhab, not regarding himself."
 	},
 	{
 		"id": 183,
@@ -3291,7 +3655,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 23
+		"chapterInCategoryId": 23,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 184,
@@ -3309,7 +3675,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 24
+		"chapterInCategoryId": 24,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 185,
@@ -3327,7 +3695,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 25
+		"chapterInCategoryId": 25,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 186,
@@ -3345,7 +3715,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 26
+		"chapterInCategoryId": 26,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 187,
@@ -3363,7 +3735,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 27
+		"chapterInCategoryId": 27,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 188,
@@ -3381,7 +3755,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 28
+		"chapterInCategoryId": 28,
+		"thaqalaynSanad": "28 – Ḥudhayfa b. al-Khuzāʿī, their cli",
+		"thaqalaynMatn": "ent.  Narrated from Abū ʿAbdillāh  عليه السلام and Abū alḤasan Mūsā  عليه السلام .  The sound and the unsound are narrated from him."
 	},
 	{
 		"id": 189,
@@ -3399,7 +3775,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 29
+		"chapterInCategoryId": 29,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 190,
@@ -3417,7 +3795,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 30
+		"chapterInCategoryId": 30,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 191,
@@ -3435,7 +3815,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 31
+		"chapterInCategoryId": 31,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 192,
@@ -3453,7 +3835,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 32
+		"chapterInCategoryId": 32,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 193,
@@ -3471,7 +3855,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 33
+		"chapterInCategoryId": 33,
+		"thaqalaynSanad": "33 – Sulaymān b. ʿAbdullāh, al-Daylam",
+		"thaqalaynMatn": "ī.  Narrated from Abū ʿAbdillāh  عليه السلام .  He is nothing."
 	},
 	{
 		"id": 194,
@@ -3489,7 +3875,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 34
+		"chapterInCategoryId": 34,
+		"thaqalaynSanad": "34 – Sulaym b. Qays al-Hilālī.  No one but Abān b. Abī ʿAyyash has narrated from",
+		"thaqalaynMatn": " him.  And in his book there are notorious unrecognized (things).  And I do not deem it to be but fabricated."
 	},
 	{
 		"id": 195,
@@ -3507,7 +3895,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 35
+		"chapterInCategoryId": 35,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 196,
@@ -3525,7 +3915,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 36
+		"chapterInCategoryId": 36,
+		"thaqalaynSanad": "36 – Sabāḥ b. Bashīr b. Yaḥyā, al-Muqri’, Abū ",
+		"thaqalaynMatn": "Muḥammad.  Narrated from Abū Jaʿfar عليه السلام and Abū ʿAbdillāh  عليه السلام .  Zaydī."
 	},
 	{
 		"id": 197,
@@ -3543,7 +3935,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 37
+		"chapterInCategoryId": 37,
+		"thaqalaynSanad": "37 - ʿAbd al-Mālik b. al-Mundhir, al-Qummī.",
+		"thaqalaynMatn": "  The Wāqifīs claim him, and narrate much from him."
 	},
 	{
 		"id": 198,
@@ -3561,7 +3955,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 38
+		"chapterInCategoryId": 38,
+		"thaqalaynSanad": "38 – Muḥammad b. Aḥmad b. Muḥammad b. Sinān, Ab",
+		"thaqalaynMatn": "ū ʿĪsā.  His lineage and his ḥadīth are confused."
 	},
 	{
 		"id": 199,
@@ -3579,7 +3975,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 39
+		"chapterInCategoryId": 39,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 200,
@@ -3597,7 +3995,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 40
+		"chapterInCategoryId": 40,
+		"thaqalaynSanad": "40 – al-Muʿtaqal (likely an error for al-Mufaḍḍal) b. ʿUmar, al-Juʿfī, Abū ʿ",
+		"thaqalaynMatn": "Abdillāh.  According to me he is thiqa in himself, however his ḥadīths – all of them – are unrecognized, and nothing is cleared from his ḥadīth that is permissible to rely upon."
 	},
 	{
 		"id": 201,
@@ -3615,7 +4015,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 41
+		"chapterInCategoryId": 41,
+		"thaqalaynSanad": "41 – al-Mughīra b. Saʿ\ufffd",
+		"thaqalaynMatn": "\ufffdd.  Abū Jaʿfar  عليه السلام came out and said: Indeed he used to lie against us.  And he used to call to Muḥammad b. ʿAbdullāh b. al-Ḥasan, in the beginning of his affair."
 	},
 	{
 		"id": 202,
@@ -3633,7 +4035,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 42
+		"chapterInCategoryId": 42,
+		"thaqalaynSanad": "42 – Naṣr b. al-Ṣabbāḥ, Abū a",
+		"thaqalaynMatn": "l-Qāsim.  From the people of Balkh.  A ghālī."
 	},
 	{
 		"id": 203,
@@ -3651,7 +4055,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 43
+		"chapterInCategoryId": 43,
+		"thaqalaynSanad": "43 – Yaḥyā b. Abī al-Qāsim, Abū Baṣīr, al-Asadī – and it is said: Abū Muḥammad – al-Ḥadhdhā.  [And ʿAlī b. al-Ḥasan b. Faḍḍāl was asked about this Abū Baṣīr, was he",
+		"thaqalaynMatn": " charged with ghulw?  So he said:] As to ghulw then no, however he was mixed up.  And the name of Abū al-Qāsim is Isḥāq."
 	},
 	{
 		"id": 204,
@@ -3669,7 +4075,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 44
+		"chapterInCategoryId": 44,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 205,
@@ -3687,7 +4095,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 45
+		"chapterInCategoryId": 45,
+		"thaqalaynSanad": "45 – Jaʿfar b. ʿUbaydullāh b. al-Ḥusayn b. ʿAlī b. al-Ḥusayn b. ʿAlī b. Abī Talib   .عليهم السbم P",
+		"thaqalaynMatn": "ossessor of ancestry.  He fabricates ḥadīth."
 	},
 	{
 		"id": 206,
@@ -3705,7 +4115,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 46
+		"chapterInCategoryId": 46,
+		"thaqalaynSanad": "46 – al-Ḥasan b. Abī Qutāda ʿAlī b. Muḥammad b. Ḥafṣ b. Ubayd b. Ḥumayd, client of al-Sā’ib b. Mālik al-Ashʿarī, known by the k",
+		"thaqalaynMatn": "unya of Abū Muḥammad. The “poems of ʿAmr b. Maʿdi Karab and his reports” has arrived to me, (it is) his production."
 	},
 	{
 		"id": 207,
@@ -3723,7 +4135,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 47
+		"chapterInCategoryId": 47,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 208,
@@ -3741,7 +4155,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 48
+		"chapterInCategoryId": 48,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 209,
@@ -3759,7 +4175,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 49
+		"chapterInCategoryId": 49,
+		"thaqalaynSanad": "49 – Aḥmad b. al-Ḥusayn b. ʿUmar b. Yazīd, al-Ṣayqal, Ab\ufffd",
+		"thaqalaynMatn": "\ufffd Jaʿfar.  He has a book regarding the Imamate, my father reported it to us from al-ʿAṭṭār from his father from Aḥmad b. Abī Zāhir from Aḥmad b. al-Ḥusayn (reporting) by it."
 	},
 	{
 		"id": 210,
@@ -3777,7 +4195,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 50
+		"chapterInCategoryId": 50,
+		"thaqalaynSanad": "50 – Aḥmad b. Isḥāq b. ʿAbdullāh b. Saʿd b. Mālik  b. al-Aḥwaṣ, al-Ashʿarī, Abū",
+		"thaqalaynMatn": " ʿAlī, al-Qummī.  I have seen books from him: the book of the reasons for the fast, a large (book), the questions of have seen books from him: the book of the reasons for the fast, a large (book), the questions of the men (masa’il al-Rijāl) to Abū al-Ḥasan the Third  عليه السلام that he compiled."
 	},
 	{
 		"id": 211,
@@ -3795,7 +4215,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 51
+		"chapterInCategoryId": 51,
+		"thaqalaynSanad": "51 – Jaʿfar b. ʿAbdullāh, head of al-Midharī, Abū ʿAbdillāh.  I saw a book of his, al-Mutʿa, that Aḥmad b. Muḥammad b. Saʿīd b. ʿAbd al-Raḥmān al-Hamdān\ufffd",
+		"thaqalaynMatn": "\ufffd narrates from him.  And a group has reported to us from him (or: it)."
 	},
 	{
 		"id": 212,
@@ -3813,7 +4235,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 52
+		"chapterInCategoryId": 52,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 213,
@@ -3831,7 +4255,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 53
+		"chapterInCategoryId": 53,
+		"thaqalaynSanad": "53 – Ḥammād b. ʿĪsā, Abū Muḥammad, al-Juhannī.  His origin was Kufan, he resided",
+		"thaqalaynMatn": " in Basra.  I saw a book in which there was lessons, preachments, and instructions about the benefits of the limbs of man and animals, and sections of kalām regarding tawḥīd, and its title was: Questions of the student and its composition (or: categorization) (masā’il al-talmīdh wa taṣnīfih) from Jaʿfar b. Muḥammad b. ʿAlī عليهم السbم .  And beneath its title in the handwriting of al-Ḥusayn b. Aḥmad b. Shaybān al-Qazwīnī: The student is Ḥammād b. ʿĪsā, and this book is his, he asked Jaʿfar  عليه السلام about these questions and he answered him."
 	},
 	{
 		"id": 214,
@@ -3849,7 +4275,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 54
+		"chapterInCategoryId": 54,
+		"thaqalaynSanad": "54 – Samāʿa b. Mihrān b. ʿAbd al-Raḥmān, al-Haḍramī, their client, he has the kunya of Abū Nāshira, and it is said: A",
+		"thaqalaynMatn": "bū Muḥammad.  I have found in some (or: one) of the books that he died in the year 145, during the lifetime of Abū ʿAbdillāh  عليه السلام that is that Abū ʿAbdillāh عليه السلام said to him “If you return, you will not return to us”, so he stayed with him and died in that year, and his lifespan was around sixty years."
 	},
 	{
 		"id": 215,
@@ -3867,7 +4295,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 55
+		"chapterInCategoryId": 55,
+		"thaqalaynSanad": "55 – Ṣāliḥ b. Muqātil, al-Da",
+		"thaqalaynMatn": "ylamī.  He wrote a large book regarding the Imamate, (using) ḥadīth and kalām, and he named it the book of argumentation (kitāb al-iḥtijāj)."
 	},
 	{
 		"id": 216,
@@ -3885,7 +4315,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 56
+		"chapterInCategoryId": 56,
+		"thaqalaynSanad": "56 - ʿAlī b. al-Ḥasan b. Faḍḍāl, Abū a",
+		"thaqalaynMatn": "l-Ḥasan.  I saw a manuscript which Abū Jaʿfar b. Bābawayh brought out.  He said: Muḥammad b. Ibrāhīm b. Isḥāq al-Ṭāliqānī narrated to us, he said: Aḥmad b. Muḥammad b. Saʿīd narrated to us, he said: ʿAlī b. al-Ḥasan b. Faḍḍāl narrated to us from his father from al-Riḍā . عليه السلام"
 	},
 	{
 		"id": 217,
@@ -3903,7 +4335,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 57
+		"chapterInCategoryId": 57,
+		"thaqalaynSanad": "57 – Abān b. Taghlab b. Rabāḥ, Abū Saʿīd, al-Bakrī, al-Jarīrī, their client.  He has the book of Ṣiffīn, it has arrived to me in the handwriting of Abū al-ʿ",
+		"thaqalaynMatn": "Abbās b. Saʿīd.  He said: Aḥmad b. Yūsuf b. Yaʿqūb al-Juʿfī narrated to us from his book in the Shawwāl of the year 271.  He said: Muḥammad b. Yazīd al-Nakhaʿī narrated to us, he said: Sayf b. ʿAmīra narrated to us from Abān."
 	},
 	{
 		"id": 218,
@@ -3921,7 +4355,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 58
+		"chapterInCategoryId": 58,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 219,
@@ -3939,7 +4375,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 59
+		"chapterInCategoryId": 59,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 220,
@@ -3957,7 +4395,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 60
+		"chapterInCategoryId": 60,
+		"thaqalaynSanad": "60 – Abū al-Shadāk",
+		"thaqalaynMatn": "h.  A book has come to me regarding the Imamate, signed with the original handwriting “The book of Abū al-Shadākh regarding the Imamate”.  It is around fifty pages.  I showed it to my father but he did not recognize the man."
 	},
 	{
 		"id": 221,
@@ -3975,7 +4415,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 61
+		"chapterInCategoryId": 61,
+		"thaqalaynSanad": "61 – Khālid b. Yaḥyā b. Kh\ufffd",
+		"thaqalaynMatn": "\ufffdlid.  I saw a large book of his regarding the Imamate.  He named it “book of the method” (kitāb al-manhaj)"
 	},
 	{
 		"id": 222,
@@ -3993,7 +4435,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 62
+		"chapterInCategoryId": 62,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 223,
@@ -4011,7 +4455,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 63
+		"chapterInCategoryId": 63,
+		"thaqalaynSanad": "63 – Sahl b. Ziyād, Abū Saʿīd al-Ādamī, al-Rāzī.  He was weak in ḥadīth, not relied upon in it.  Aḥmad b. Muḥammad b. ʿĪsā attested to ghulw and lying against him, and exiled him from Qum to Rayy, and he use",
+		"thaqalaynMatn": "d to reside in it.  He had corresponded with Abū Muḥammad al-ʿAskarī upon the hand of Muḥammad b. ʿAbd al-Ḥamīd al-ʿAṭṭār, for the middle of Rabīʿ al-Ākhir in the year 255."
 	},
 	{
 		"id": 224,
@@ -4029,7 +4475,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 64
+		"chapterInCategoryId": 64,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 225,
@@ -4047,7 +4495,9 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 65
+		"chapterInCategoryId": 65,
+		"thaqalaynSanad": "",
+		"thaqalaynMatn": ""
 	},
 	{
 		"id": 226,
@@ -4065,6 +4515,8 @@
 		"mohseniGrading": "",
 		"behbudiGrading": "",
 		"majlisiGrading": "",
-		"chapterInCategoryId": 66
+		"chapterInCategoryId": 66,
+		"thaqalaynSanad": "66 – Muḥammad b. Aḥmad b. Quḍāʿa b. Ṣafwān b. Mihrān, Abū ʿAbdill\ufffd",
+		"thaqalaynMatn": "\ufffdh, al-Ṣafwāni.  I have not disclaimed anything from him except for what he narrates from his father from his grandfather from al-Sadiq  عليه السلام , for it is something unknown and I have seen unrecognized (matters) in it, untrue against/upon him.  And I suspect that the lying was by his father."
 	}
 ]

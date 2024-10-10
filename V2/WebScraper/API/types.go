@@ -22,6 +22,8 @@ type APIV2 struct {
 	BehbudiGrading      string `json:"behbudiGrading"`
 	MajlisiGrading      string `json:"majlisiGrading"`
 	ChapterInCategoryId int    `json:"chapterInCategoryId"`
+	ThaqalaynSanad      string `json:"thaqalaynSanad"`
+	ThaqalaynMatn       string `json:"thaqalaynMatn"`
 }
 
 // BookInfo holds an object providing book Ids and min and max ranges for query hadiths.
@@ -29,6 +31,7 @@ type BookInfo struct {
 	BookId          string `json:"bookId"`
 	BookDescription string `json:"bookDescription"`
 	BookCover       string `json:"bookCover"`
+	EnglishName     string `json:"englishName"`
 	Translator      string `json:"translator"`
 	BookName        string `json:"BookName"`
 	Author          string `json:"author"`

@@ -42,9 +42,9 @@ func GetBookInfo(gqlClient webappAPI.WebAppGqlClient, thaqalaynBookId string, ha
 	}
 	book, _ := webappAPI.FetchBook(gqlClient, bookIdInt, "https://api.thaqalayn.net/book/")
 	return BookInfo{
-		BookId:   thaqalaynBookId,
-		BookName: *book.Name,
-		BookCover:  "https://thaqalayn.net/css/images/"+thaqalaynBookId+"-round.jpeg",
+		BookId:     thaqalaynBookId,
+		BookName:   *book.Name,
+		BookCover:  "https://thaqalayn.net/css/images/" + thaqalaynBookId + "-round.jpeg",
 		Translator: *book.Translator,
 		Author:     *book.AuthorName,
 		IdRangeMin: 1,
@@ -64,23 +64,43 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) ([]APIV2, 
 			For every hadith, create an APIV2 object and set the appropriate fields.
 		Essentially we are translating data given from webapp API to API in the V2 format.
 	*/
-	bookIdString, err := strconv.Atoi(bookId)
+	bookIdInt, err := strconv.Atoi(bookId)
 	if err != nil {
 		panic(err)
 	}
-	book, sections := webappAPI.FetchBook(gqlClient, bookIdString, "https://api.thaqalayn.net/book/")
+	book, sections := webappAPI.FetchBook(gqlClient, bookIdInt, "https://api.thaqalayn.net/book/")
 	if book.Blurb == nil {
 		ptrEmptyString := ""
 		book.Blurb = &ptrEmptyString
 	}
 	bookInfo := BookInfo{
-		BookId: GetBookId(book),
-		BookCover:  "https://thaqalayn.net/css/images/"+bookId+"-round.jpeg",
+		BookId:          GetBookId(book),
+		BookCover:       "https://thaqalayn.net/css/images/" + bookId + "-round.jpeg",
 		BookDescription: *book.Blurb,
-		BookName: *book.Name,
-		Translator: *book.Translator,
-		Author: *book.AuthorName,
-		IdRangeMin: 1,
+		BookName:        *book.Name,
+		EnglishName:     *book.EnglishName,
+		Translator:      *book.Translator,
+		Author:          *book.AuthorName,
+		IdRangeMin:      1,
+	}
+
+
+
+	/*
+	Custom logic for fetching the sanad and content: fetch the hadith index from the GQL API,
+	compare to all hadiths you're fetching from the REST API, match indices to hadiths. Then calculate
+	narrators and narrations based on this index.
+	*/
+	hadithIndicesMap := make(map[int]webappAPI.Hadith)
+	indices := webappAPI.FetchStartingIndices(gqlClient,bookIdInt) //create array of just hadiths, go through each chapter and
+	for _, bookSection := range indices.Book.BookSections {
+		for _, chapter := range bookSection.Chapters {
+			for _,hadith := range chapter.Hadiths {
+				if hadith.Id != nil {
+					hadithIndicesMap[*hadith.Id] = hadith
+				}
+			}
+		}
 	}
 	for _, bookSection := range sections.Sections {
 		for _, chapter := range bookSection.Chapters {
@@ -88,6 +108,34 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) ([]APIV2, 
 				if hadith.Content == nil {
 					continue
 				}
+
+				// Continuation of custom logic for sanad and matn calculation
+				if hadith.Id != nil {
+					if indexHadith, found := hadithIndicesMap[*hadith.Id]; found {
+						val := 0
+						if indexHadith.StartingIndex != nil {
+							val = *indexHadith.StartingIndex
+						}
+						hadith.StartingIndex = &val
+					}
+				}
+				text := *hadith.Content
+				var startingIndex int
+				if (hadith.StartingIndex != nil) {
+					startingIndex = *hadith.StartingIndex
+				}
+				var narrators string
+				var narration string
+				if text != "" && startingIndex > 5 && len(text)>5  && startingIndex <= len(text)  {
+					if strings.ContainsAny(string(text[startingIndex-1:startingIndex]), "\"'“") {
+						startingIndex--
+					}
+
+					narrators = text[0:startingIndex]
+					narration = text[startingIndex:]
+				}
+
+
 				/*
 					custom logic for getting the content of the hadith
 					logic: if hadith lang is english or french, find most recent hadith in our list of hadiths and modify the englishText / frenchText
@@ -97,6 +145,8 @@ func FetchHadiths(bookId string, gqlClient webappAPI.WebAppGqlClient) ([]APIV2, 
 				*/
 				if *hadith.Language == "EN" {
 					APIV1Hadiths[len(APIV1Hadiths)-1].EnglishText = *hadith.Content
+					APIV1Hadiths[len(APIV1Hadiths)-1].ThaqalaynSanad = narrators
+					APIV1Hadiths[len(APIV1Hadiths)-1].ThaqalaynMatn = narration
 					continue
 				} else if *hadith.Language == "FR" {
 					APIV1Hadiths[len(APIV1Hadiths)-1].FrenchText = *hadith.Content

@@ -56,6 +56,28 @@ func FetchBookSections(webAppGqlClient WebAppGqlClient, bookId int) Data {
 	return subSections
 }
 
+// FetchBookSections returns all book section ids for a particular book id
+func FetchStartingIndices(webAppGqlClient WebAppGqlClient, bookId int) Data {
+	allIndicesQuery := `
+	query Book($bookId: String) {
+		book(id: $bookId) {
+			bookSections {
+			id
+			sectionNumber
+			chapters {
+				hadiths {
+				startingIndex
+				id
+				}
+			}
+			}
+		}
+	}
+	`
+	indices := makeGQLRequest[Data](webAppGqlClient, allIndicesQuery, []string{"bookId", fmt.Sprint(bookId)})
+	return indices
+}
+
 func FetchBook(webAppGqlClient WebAppGqlClient, bookId int, webAppRestApiUrl string) (Book, Sections) {
 	bookQuery := `
 	query Book($bookId: String) {
@@ -120,6 +142,7 @@ func FetchHadiths(webAppGqlClient WebAppGqlClient, chapterId int) struct{ Chapte
 				language
 				number
 				gradingWithReferences
+				startingIndex
 			}	
 		}
 	}

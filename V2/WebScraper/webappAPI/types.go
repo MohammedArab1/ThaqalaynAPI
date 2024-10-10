@@ -66,6 +66,7 @@ type Hadith struct {
 	GradingWithReferences *string `json:"gradingWithReferences"`
 	CreatedAt             *string `json:"createdAt"`
 	UpdatedAt             *string `json:"updatedAt"`
+	StartingIndex         *int    `json:"startingIndex"`
 }
 
 // AllBookIds stores results from fetching all book Ids

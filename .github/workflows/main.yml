@@ -15,6 +15,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
+      GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
 
     steps:
       - name: Checkout code
@@ -34,4 +35,3 @@ jobs:
         run: |
           cd ${{github.workspace}}/V2/Deploy/
           make scrape_all datapath=../ThaqalaynData
-

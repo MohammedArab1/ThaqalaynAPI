@@ -1,0 +1,22 @@
+- name: Deploy to Hetzner VPS
+  hosts: hetzner-vps
+  become: true
+
+  tasks:
+    - name: Pull latest changes from Git
+      ansible.builtin.git:
+        repo: 'https://github.com/MohammedArab1/ThaqalaynAPI.git'
+        dest: /root/ThaqalaynAPI
+        update: yes
+
+    - name: Bring down Docker Compose application and remove images
+      community.docker.docker_compose_v2:
+        project_src: /root/ThaqalaynAPI
+        state: absent
+        remove_images: local
+
+    - name: Bring up Docker Compose application
+      community.docker.docker_compose_v2:
+        project_src: /root/ThaqalaynAPI
+        state: present
+        build: always

@@ -1,0 +1,6 @@
+webservers:
+  hosts:
+    hetzner-vps:
+      ansible_host: 5.78.120.71
+  vars:
+    ansible_user: root

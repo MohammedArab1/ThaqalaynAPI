@@ -101,3 +101,12 @@ Feel free to use any part of this project and modify as you'd like.
 3. Using the .env.example file, create a .env file at the root of the directory. You will need a value for `MONGODB_URI`. This is the URI of your mongoDB atlas instance that stores the data. This uses models found in /v1/models and /v2/models.
 4. run `npm start`
 
+## Deployment
+
+The application runs on a VPS hosted on Hetzner. Deployment is made through Ansible. Ansible deployments must be made from a machine that has ansible installed and can access, via SSH, the VPS. to deploy, run the following command from such machine, in the root project directory: `ansible-playbook -i inventory.yaml playbook.yaml`
+
+Ansible logs into the VPS server on your behalf and completes the following steps (playbook.yaml):
+1. Pulls changes from git
+    - Changes are pulled via HTTPS. If the git pull step does not work, the git credential cache has expired and you'd need to ssh into the server and re-establish the cache or establish SSH connection to github
+2. `Docker compose down` to remove the current container running the application
+3. `Docker compose up` to rebuild the container and run it

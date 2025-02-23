@@ -3,7 +3,8 @@ version: '3'
 services:
   api:
     container_name: thaqalayn-api
-    image: lovemonge3r3/thaqalayn-api:latest
+    # image: lovemonge3r3/thaqalayn-api:latest
+    build: .
     restart: always
     networks:
       - apinetwork
@@ -26,24 +27,24 @@ services:
     - ./API/deploy/caddy_data:/data
     networks:
       - apinetwork
-    labels:
-      - "com.centurylinklabs.watchtower.enable=false"
-  watchtower:
-    container_name: watchtower
-    image: containrrr/watchtower
-    restart: always
-    volumes:
-    - /root/.docker/config.json:/config.json
-    - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 30
+    # labels:
+    #   - "com.centurylinklabs.watchtower.enable=false"
+  # watchtower:
+  #   container_name: watchtower
+  #   image: containrrr/watchtower
+  #   restart: always
+  #   volumes:
+  #   - /root/.docker/config.json:/config.json
+  #   - /var/run/docker.sock:/var/run/docker.sock
+  #   command: --interval 30
   redis:
     container_name: redis
     image: redis/redis-stack-server
     restart: no
     networks:
       - apinetwork
-    labels:
-    - "com.centurylinklabs.watchtower.enable=false"
+    # labels:
+    # - "com.centurylinklabs.watchtower.enable=false"
 
 networks:
   apinetwork:

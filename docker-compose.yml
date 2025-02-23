@@ -6,6 +6,8 @@ services:
     # image: lovemonge3r3/thaqalayn-api:latest
     build: .
     restart: always
+    ports:
+      -3001:3001
     networks:
       - apinetwork
     environment:

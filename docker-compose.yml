@@ -7,7 +7,7 @@ services:
     build: .
     restart: always
     ports:
-      -3001:3001
+      - 3001:3001
     networks:
       - apinetwork
     environment:

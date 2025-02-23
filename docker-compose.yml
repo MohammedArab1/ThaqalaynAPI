@@ -15,18 +15,18 @@ services:
       REDIS_URL: ${REDIS_URL}
     depends_on:
       - redis
-  caddy:
-    container_name: caddy
-    image: caddy
-    restart: always
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-    - ./API/deploy/Caddyfile:/etc/caddy/Caddyfile
-    - ./API/deploy/caddy_data:/data
-    networks:
-      - apinetwork
+  # caddy:
+  #   container_name: caddy
+  #   image: caddy
+  #   restart: always
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #   volumes:
+  #   - ./API/deploy/Caddyfile:/etc/caddy/Caddyfile
+  #   - ./API/deploy/caddy_data:/data
+  #   networks:
+  #     - apinetwork
     # labels:
     #   - "com.centurylinklabs.watchtower.enable=false"
   # watchtower:

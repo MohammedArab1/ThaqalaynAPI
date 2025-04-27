@@ -15,7 +15,11 @@ mongoose.connect(url)
     BookName: String,
     author:String,
     idRangeMin:Number,
-    idRangeMax:Number
+    idRangeMax:Number,
+    bookDescription:String,
+    bookCover:String,
+    englishName:String,
+    translator:String
   }, {
     strict:false
   })

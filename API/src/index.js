@@ -1,100 +1,55 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const swaggerJsdoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
-const {server, serverNoCaching} = require("./graphql.js")
-const {expressMiddleware} = require("@apollo/server/express4")
-const {addRestRoutes} = require("./rest.js")
-const {createClient} = require("redis")
+import config from './config/index.js';
+import initializeExpress from './loaders/express.js';
+import createApolloServer from './loaders/apollo.js';
+import express from 'express';
+import { expressMiddleware } from '@apollo/server/express4';
+import { connectRedis, getRedisClient } from './loaders/redis.js';
+import { createContext } from './api/graphql/resolvers/index.js';
+import hadithModelV2 from '../../V2/DB/models/hadithV2.js';
+import bookNameModelV2 from '../../V2/DB/models/bookNameV2.js';
+import ingredientsModelV2 from '../../V2/DB/models/ingredientsV2.js';
 
-var expressServer = null
-var gqlRedisServerStarted = false
-var redisClientReady = true
+const startServer = async () => {
+  const app = initializeExpress(express());
+  const redisClient = await connectRedis();
 
-const startGqlServer = async (app,client) => {
-  if (client) {
-    await server.start()
-    gqlRedisServerStarted = true
-    app.use('/graphql', expressMiddleware(server));
-    console.log("Graphql server with redis started")
-  }
-  else {
-    await serverNoCaching.start()
-    app.use('/graphql', expressMiddleware(serverNoCaching));
-    console.log("Graphql server without redis started")
-  }
-}
+  // Initialize Apollo Server
+  const apolloServer = await createApolloServer(getRedisClient());
+  
+  // Apply Apollo middleware
+  const models = {
+		Hadith: hadithModelV2,
+		Book: bookNameModelV2,
+		Ingredient: ingredientsModelV2,
+	};
+  app.use(
+    '/graphql',
+    expressMiddleware(apolloServer, {
+      context: async ({ req }) => createContext(models)
+    })
+  );
 
-const redisMiddleware = async function (req, res, next) {
-  cache = await client.get(req.originalUrl)
-  if (cache) {
-    res.status(200).json(JSON.parse(cache))
-  }
-  else{
-    next()
-  }
-}
+  app.get("*", function (req, res) {
+      res.redirect("/");   
+  });
 
+  // Start server
+  app.listen(config.app.port, () => {
+    console.log(`Server running on port ${config.app.port}`);
+  });
 
-const startApp = async (client=null) => {
-  const app = express();
-  app.use(express.json());
-  app.use(cors());
-  if (client) {
-    app.use(redisMiddleware)
-  }
-  addRestRoutes(app, client)
-  const options = {
-    definition: {
-      openapi: '3.0.0',
-      info: {
-        title: 'Thaqalayn API',
-        version: '1.0.0',
-      },
-    },
-    apis: ['./API/src/rest*.js'], // files containing annotations as above
+  // Handle shutdown
+  const shutdown = async () => {
+    await apolloServer.stop();
+    if (redisClient) await redisClient.quit();
+    process.exit(0);
   };
-  const openapiSpecification = swaggerJsdoc(options);
-  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
-  const PORT = process.env.PORT || 3001
-  await startGqlServer(app,client)
-  var server = app.listen(PORT,() => {`Server running on port ${PORT}`})
-  return server
-}
 
-const startRedis = async () => {
-  client = await createClient({
-    url: process.env.REDIS_URL,
-    socket: {
-      reconnectStrategy: false
-    }
-  })
-  .on('error', async (err) => {
-    console.log("error connecting to redis")
-    if (expressServer) {
-      expressServer.close()
-      console.log("express server stopped")
-    }
-    if (server && gqlRedisServerStarted) {
-      await server.stop()
-      gqlRedisServerStarted = false
-      console.log("Graphql server stopped")
-    }
-    expressServer = await startApp()
-  })
-  .on('ready', async ()=>{
-    redisClientReady = true
-  })
-  .connect()
-  if (redisClientReady){
-    expressServer = await startApp(client)
-  }
-}
+  process.on('SIGINT', shutdown);
+  process.on('SIGTERM', shutdown);
+};
 
-if (process.env.CACHE.toLowerCase() == "true"){
-  startRedis()
-}
-else {
-  expressServer = startApp()
-}
+startServer().catch((error) => {
+  console.error('Failed to start server:', error);
+  process.exit(1);
+});

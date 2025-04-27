@@ -42,7 +42,7 @@ services:
   redis:
     container_name: redis
     image: redis/redis-stack-server
-    restart: no
+    restart: always
     networks:
       - apinetwork
     # labels:

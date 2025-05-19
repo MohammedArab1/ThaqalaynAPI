@@ -35,3 +35,11 @@ jobs:
         run: |
           cd ${{github.workspace}}/V2/Deploy/
           make scrape_all datapath=../ThaqalaynData
+
+      - name: Commit and Push new data
+        run: |
+          git config --global user.name 'Mohammed Arab'
+          git config --global user.email 'mohammed.arab.1881@gmail.com'
+          git add -A
+          git commit -am "Automated data update"
+          git push

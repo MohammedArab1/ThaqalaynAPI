@@ -240,16 +240,6 @@
 		"otherNames": null
 	},
 	{
-		"ingredient": "Bovine",
-		"statuses": [
-			"Term refers to ‘cow’",
-			"Zabiha Cow Source: Halal",
-			"Non-Zabiha Cow Source: Haram",
-			"Unknown Cow Source: Halal but advisable to avoid"
-		],
-		"otherNames": null
-	},
-	{
 		"ingredient": "Bream Fish",
 		"statuses": [
 			"Halal"
@@ -474,7 +464,8 @@
 		],
 		"otherNames": [
 			"beef",
-			"veal"
+			"veal",
+			"bovine"
 		]
 	},
 	{
@@ -680,7 +671,7 @@
 	{
 		"ingredient": "Food from those who don’t pay khums",
 		"statuses": [
-			"Not a valid judgement to make. A person’s food is not deemed impermissible solely upon this criteria, and you are not allowed to ask."
+			"Not a valid judgement to make.  A person’s food is not deemed impermissible solely upon this criteria, and you are not allowed to ask."
 		],
 		"otherNames": null
 	},
@@ -959,6 +950,21 @@
 		"otherNames": null
 	},
 	{
+		"ingredient": "L‑Cysteine",
+		"statuses": [
+			"Plant Source: Halal",
+			"Halal Animal Source: Halal",
+			"Haram Animal Source: Haram",
+			"Synthetic Source: Halal",
+			"Human Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"otherNames": [
+			"E920",
+			"Cysteine"
+		]
+	},
+	{
 		"ingredient": "Lactic Acid",
 		"statuses": [
 			"Halal"
@@ -1068,7 +1074,7 @@
 			"Prescription Use: Halal",
 			"Voluntary Non-prescription Use: Haram",
 			"Recreational use: Haram",
-			"External application (ointments, lotions, etc): Halal",
+			"External application (ointments, lotions, creams, etc): Halal",
 			"Visit \u003ca href=\"https://al-m.ca/marijuana/\" target=\"_blank\" rel=\"noreferrer noopener\"\u003eal-m.ca/marijuana\u003c/a\u003e for more info",
 			""
 		],
@@ -1769,6 +1775,26 @@
 			"Halal"
 		],
 		"otherNames": null
+	},
+	{
+		"ingredient": "Topical Cream",
+		"statuses": [
+			"Plant Source: Halal to apply",
+			"Synthetic Source: Halal to apply",
+			"Zabiha Halal Animal Source: Halal to apply",
+			"Non-Zabiha Halal Animal Source: Halal to apply, but najis and must be washed off for wudhu/ghusl",
+			"Non-Zabiha Haram Animal Source: Halal to apply, but najis and must be washed off for wudhu/ghusl",
+			"Insect or insect biproduct Source: Halal to apply, but najis and must be washed off for wudhu/ghusl",
+			""
+		],
+		"otherNames": [
+			"Lotion",
+			"Ointment",
+			"Gel",
+			"Oil",
+			"Balm",
+			"etc"
+		]
 	},
 	{
 		"ingredient": "Trout Fish",

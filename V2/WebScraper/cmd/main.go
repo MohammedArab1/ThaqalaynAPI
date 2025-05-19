@@ -11,6 +11,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 
 	"time"
 
@@ -127,11 +128,19 @@ func main() {
 			panic(e)
 		}
 	} else {
-		go ingredients.FetchIngredientsAlMaarif(&config)
-		if e := scrapeAll(&config); e != nil {
-			panic(e)
-		}
-
+		var wg sync.WaitGroup
+		wg.Add(2)
+		go func() {
+			defer wg.Done()
+			ingredients.FetchIngredientsAlMaarif(&config)
+		}()
+		go func() {
+			defer wg.Done()
+			if e := scrapeAll(&config); e != nil {
+				panic(e)
+			}
+		}()
+		wg.Wait()
 	}
 
 	// //todo:move makefile to root instead of in deploy folder ?,

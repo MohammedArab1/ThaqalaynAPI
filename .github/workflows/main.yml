@@ -2,7 +2,7 @@ name: Weekly Data Update
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # This will run the job every Sunday at 00:00
+    - cron: "0 0 * * 0" # This will run the job every Sunday at 00:00
   workflow_dispatch: # This allows manual triggering of the workflow
 
 jobs:
@@ -24,12 +24,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18' # Specify the Node.js version
+          node-version: "18" # Specify the Node.js version
 
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
-          go-version: '1.22' # Specify the Go version
+          go-version: "1.22" # Specify the Go version
 
       - name: Run Make Command
         run: |
@@ -41,5 +41,5 @@ jobs:
           git config --global user.name 'Mohammed Arab'
           git config --global user.email 'mohammed.arab.1881@gmail.com'
           git add -A
-          git commit -am "Automated data update"
+          git commit -m "Automated data update"
           git push

@@ -24,7 +24,7 @@ type HalalGuideItem struct {
 
 func FetchIngredientsAlMaarif(config *config.Config) {
 	fmt.Println("In fetch Ingredients goroutine, starting to fetch ingredients")
-	// first fetch the rawIngredients from Almaarif.com. rawIngredients is what's scraped from the website without much modification 
+	// first fetch the rawIngredients from Almaarif.com. rawIngredients is what's scraped from the website without much modification
 	// or categorization
 	rawIngredients := fetchAlmaarif()
 
@@ -63,6 +63,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 					return i.Ingredient == ingredientStatus.Ingredient
 				})
 				allItems = append(allItems, existingIngredients[halalGuideItemIndex])
+				fmt.Println("same al maarif for: ", ingredientStatus.Ingredient)
 				continue
 			}
 		}
@@ -76,7 +77,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 		// }
 
 		// if we don't have the ingredient in an existing file, go through each status we got from the website and categorize it
-		// (i.e either it's a status, extra info, unknown, etc.) using google gemini AI api. 
+		// (i.e either it's a status, extra info, unknown, etc.) using google gemini AI api.
 		for _, status := range ingredientStatus.Statuses {
 			time.Sleep(5 * time.Second)
 			newGemAiPrompt := gemAiPrompt + status

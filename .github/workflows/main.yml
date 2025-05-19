@@ -12,8 +12,6 @@ jobs:
     env: # Define environment variables here
       WEBAPP_URL: ${{ secrets.WEBAPP_URL }}
       WEBAPP_API_KEY: ${{ secrets.WEBAPP_API_KEY }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
       GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
 
@@ -38,6 +36,7 @@ jobs:
 
       - name: Commit and Push new data
         run: |
+          cd ${{github.workspace}}/V2/ThaqalaynData/
           git config --global user.name 'Mohammed Arab'
           git config --global user.email 'mohammed.arab.1881@gmail.com'
           git add -A

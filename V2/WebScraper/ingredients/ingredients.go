@@ -30,7 +30,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 
 	// Check if we have existing local files of ingredients. If so we might not need to use gem API if nothing's changed since last scrape
 	rawIngredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/rawIngredients.json")
-	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/Ingredients.json")
+	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/ingredients.json")
 	var existingRawIngredients []IngredientStatus
 	var existingIngredients []HalalGuideItem
 	if rawIngredientsFileExists {
@@ -40,7 +40,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 		}
 	}
 	if ingredientsFileExists {
-		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/Ingredients.json")
+		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/ingredients.json")
 		if err := json.Unmarshal(currentIngredientsFile, &existingIngredients); err != nil {
 			panic(err)
 		}

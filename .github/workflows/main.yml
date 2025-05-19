@@ -2,7 +2,7 @@ name: Weekly Data Update
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # This will run the job every Sunday at 00:00
+    - cron: "0 0 * * 0" # This will run the job every Sunday at 00:00
   workflow_dispatch: # This allows manual triggering of the workflow
 
 jobs:
@@ -12,8 +12,6 @@ jobs:
     env: # Define environment variables here
       WEBAPP_URL: ${{ secrets.WEBAPP_URL }}
       WEBAPP_API_KEY: ${{ secrets.WEBAPP_API_KEY }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
       GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
 
@@ -24,14 +22,23 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18' # Specify the Node.js version
+          node-version: "18" # Specify the Node.js version
 
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
-          go-version: '1.22' # Specify the Go version
+          go-version: "1.22" # Specify the Go version
 
       - name: Run Make Command
         run: |
           cd ${{github.workspace}}/V2/Deploy/
           make scrape_all datapath=../ThaqalaynData
+
+      - name: Commit and Push new data
+        run: |
+          cd ${{github.workspace}}/V2/ThaqalaynData/
+          git config --global user.name 'Mohammed Arab'
+          git config --global user.email 'mohammed.arab.1881@gmail.com'
+          git add -A
+          git commit -m "Automated data update"
+          git push

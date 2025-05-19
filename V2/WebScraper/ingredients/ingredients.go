@@ -24,13 +24,13 @@ type HalalGuideItem struct {
 
 func FetchIngredientsAlMaarif(config *config.Config) {
 	fmt.Println("In fetch Ingredients goroutine, starting to fetch ingredients")
-	// first fetch the rawIngredients from Almaarif.com. rawIngredients is what's scraped from the website without much modification 
+	// first fetch the rawIngredients from Almaarif.com. rawIngredients is what's scraped from the website without much modification
 	// or categorization
 	rawIngredients := fetchAlmaarif()
 
 	// Check if we have existing local files of ingredients. If so we might not need to use gem API if nothing's changed since last scrape
 	rawIngredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/rawIngredients.json")
-	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/Ingredients.json")
+	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/ingredients.json")
 	var existingRawIngredients []IngredientStatus
 	var existingIngredients []HalalGuideItem
 	if rawIngredientsFileExists {
@@ -40,7 +40,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 		}
 	}
 	if ingredientsFileExists {
-		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/Ingredients.json")
+		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/ingredients.json")
 		if err := json.Unmarshal(currentIngredientsFile, &existingIngredients); err != nil {
 			panic(err)
 		}
@@ -63,6 +63,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 					return i.Ingredient == ingredientStatus.Ingredient
 				})
 				allItems = append(allItems, existingIngredients[halalGuideItemIndex])
+				fmt.Println("same al maarif for: ", ingredientStatus.Ingredient)
 				continue
 			}
 		}
@@ -76,7 +77,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 		// }
 
 		// if we don't have the ingredient in an existing file, go through each status we got from the website and categorize it
-		// (i.e either it's a status, extra info, unknown, etc.) using google gemini AI api. 
+		// (i.e either it's a status, extra info, unknown, etc.) using google gemini AI api.
 		for _, status := range ingredientStatus.Statuses {
 			time.Sleep(5 * time.Second)
 			newGemAiPrompt := gemAiPrompt + status

@@ -42,10 +42,6 @@ export const connectRedis = async () => {
 		redisClient = createClient({
 			url: config.redis.url,
 			socket: {
-				// reconnectStrategy: (retries) => {
-				// 	console.log(`Redis reconnection attempt ${retries}`);
-				// 	return Math.min(retries * 100, 3000);
-				// },
 				reconnectStrategy: 5000
 			},
 		});

@@ -8,7 +8,6 @@ import (
 	"log"
 	"os"
 	"slices"
-	"sort"
 	"strconv"
 	"strings"
 	"sync"
@@ -19,6 +18,7 @@ import (
 	API "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/API"
 	config "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/config"
 	files "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/files"
+	"github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI/services"
 
 	"github.com/mohammedarab1/thaqalaynapi/v2/webscraper/ingredients"
 	webappAPI "github.com/mohammedarab1/thaqalaynapi/v2/webscraper/webappAPI"
@@ -69,38 +69,69 @@ func scrapeAll(config *config.Config) error {
 	var allHadithsArray []API.APIV2
 	var allBookNamesArray []API.BookInfo
 	if config.WEBAPP_URL == "" || config.WEBAPP_API_KEY == "" {
-		panic("WEBAPP_URL and WEBAPP_API_KEY need to be set. Either through env variables or flags. See Readme")
+		return errors.New("WEBAPP_URL and WEBAPP_API_KEY need to be set. Either through env variables or flags. See Readme")
 	}
-	gqlClient := webappAPI.NewWebAppGqlClient(config.WEBAPP_URL, config.WEBAPP_API_KEY)
-	webAppAPIBookIds := webappAPI.FetchAllBookIds(gqlClient)
+
+	service := services.NewTrpc(config.WEBAPP_URL)
+	apiClient := API.NewAPIClient(service)
+
+	webAppAPIBookIds, err := service.FetchAllBookIds()
+	if err != nil {
+		return fmt.Errorf("error fetching all book ids: %w", err)
+	}
 
 	//Have to sort the slice for the al kafi workaround below
-	allBookIdsStrings := *webAppAPIBookIds.AllBookIds
-	sort.Slice(allBookIdsStrings, func(i, j int) bool {
-		i, _ = strconv.Atoi(allBookIdsStrings[i])
-		j, _ = strconv.Atoi(allBookIdsStrings[j])
-		return i < j
-	})
+	// allBookIdsStrings := *webAppAPIBookIds.AllBookIds
+	// sort.Slice(allBookIdsStrings, func(i, j int) bool {
+	// 	i, _ = strconv.Atoi(allBookIdsStrings[i])
+	// 	j, _ = strconv.Atoi(allBookIdsStrings[j])
+	// 	return i < j
+	// })
 
 	//check if singleBookId is given, if so, only scrape that book
 	if config.Flags.SingleBook != 0 {
-		//only scrape the given singleBookId if it is part of the list of Ids that can be scraped.
-		if !slices.Contains(*webAppAPIBookIds.AllBookIds, fmt.Sprint(config.Flags.SingleBook)) {
-			return errors.New("book id provided does not exist in available book ids. program exiting")
+		bookIdsString := []string{}
+		for _, i := range webAppAPIBookIds.Books {
+			bookIdsString = append(bookIdsString, strconv.Itoa(*i.ID))
 		}
-		webAppAPIBookIds = webappAPI.AllBookIds{AllBookIds: &[]string{fmt.Sprint(config.Flags.SingleBook)}}
+		//only scrape the given singleBookId if it is part of the list of Ids that can be scraped.
+		if !slices.Contains(bookIdsString, fmt.Sprint(config.Flags.SingleBook)) {
+			return errors.New("book id provided does not exist in available book ids")
+		}
+		webAppAPIBookIds = &webappAPI.Books{Books: []webappAPI.BookId{
+			webappAPI.BookId{
+				ID: &config.Flags.SingleBook,
+			},
+		}}
 	}
 	//below is workaround because thaqalayn API does not return book descriptions for all Kafi volumes, only for the first
-	var alKafiDescription string
-	for _, v := range *webAppAPIBookIds.AllBookIds {
-		fmt.Println("on book: ", v)
-		APIV1Hadiths, bookInfo := API.FetchHadiths(v, gqlClient)
-		switch v {
-		case "1":
-			alKafiDescription = bookInfo.BookDescription
-		case "2", "3", "4", "5", "6", "7", "8":
-			bookInfo.BookDescription = alKafiDescription
+	// var alKafiDescription string
+	for i := 0; i < len(webAppAPIBookIds.Books); i++ {
+		v := webAppAPIBookIds.Books[i]
+		fmt.Println("on book: ", v.ID)
+		APIV1Hadiths, bookInfo, volumes, err := apiClient.FetchHadiths(*v.Number)
+
+		//volumes are not returned in the thaqalayn API allBooks endpoint but we need to treat them as separate books
+		// so we look to see if the Book endpoint returned any volumes, and we add their url_pointer to the allBooks.
+		for _, volume := range volumes {
+			bookIdsString := []string{}
+			for _, b := range webAppAPIBookIds.Books {
+				bookIdsString = append(bookIdsString, strconv.Itoa(*b.Number))
+			}
+			if !slices.Contains(bookIdsString, strconv.Itoa(*volume.Number)) {
+				webAppAPIBookIds.Books = append(webAppAPIBookIds.Books, webappAPI.BookId{Number: volume.Number})
+			}
 		}
+
+		if err != nil {
+			return fmt.Errorf("Error retrieving hadiths for book %s: %w", v.ID, err)
+		}
+		// switch v {
+		// case "1":
+		// 	alKafiDescription = bookInfo.BookDescription
+		// case "2", "3", "4", "5", "6", "7", "8":
+		// 	bookInfo.BookDescription = alKafiDescription
+		// }
 		files.WriteStructToFile(APIV1Hadiths, config.Flags.DataPath+"/"+v+".json")
 		allHadithsArray = append(allHadithsArray, APIV1Hadiths...)
 		// allBookNamesArray = append(allBookNamesArray, API.GetBookInfo(APIV1Hadiths, v))

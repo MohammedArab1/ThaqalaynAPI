@@ -1,0 +1,2408 @@
+[
+	{
+		"ingredient": "Acetic Acid",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"E260"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Adipic Acid",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Agar Agar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Ahlul Kitab Slaughtered Meat",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Allantoin",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Allis Shad Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Anchovy fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Anchovies"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Antelope",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Apes",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"monkey",
+			"gorilla",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Apocarotenal",
+		"statuses": [
+			"If lard is used: Haram",
+			"If haram gelatin is used: Haram",
+			"If halal gelatin is used: Halal",
+			"Unknown production: Halal"
+		],
+		"info": [
+			"Plant-derived but the production process involves gelatin or lard."
+		],
+		"otherNames": [
+			"C30",
+			"E160e"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Apple Cider",
+		"statuses": [
+			"Non-alcoholic: Halal – predominantly in North America. Simply pressed apples."
+		],
+		"info": [
+			"Alcoholic: Haram – predominantly outside North America. Fermented alcoholic drink."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Apple Cider Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Arugula",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Ballerus Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Balsamic Vinegar",
+		"statuses": [
+			"Contains natural alcohol due to fermentation process: Halal",
+			"Contains najis alcohol manually added during production: Haram",
+			"Unknown Alcohol Source: Halal but advisable to avoid"
+		],
+		"info": [
+			"Contains non-najis alcohol manually added during production: Halal if absorbed into the food during production"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Barbel Barbus FIsh",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Barley Malt Extract",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Barramundi Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Basa Fish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Bass Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Bat",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Bear",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Beer Batter Fish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Big Eye Catalufe Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Birds of Prey",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"eagle",
+			"hawk",
+			"buzzard",
+			"harrier",
+			"osprey",
+			"owl",
+			"falcon",
+			"vulture",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Bitterling Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Black Bass Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Bleak Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Boar",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Bream Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Brill Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Buffalo",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Butter Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Camel",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Carbon Black",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"E153"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Carmine",
+		"statuses": [
+			"Raw or unprocessed form: Haram"
+		],
+		"info": [
+			"Ingredient made from haram insects",
+			"Istihala (transformation) takes place during production, and it loses it’s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
+		],
+		"otherNames": [
+			"Cochineal",
+			"natural red 4",
+			"E120",
+			"crimson lake"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Carp Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Carrageenan",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Casein",
+		"statuses": [
+			"Plant Source: Halal",
+			"Halal Animal Source: Halal",
+			"Haram Animal Source: Haram",
+			"Unknown Source: Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Cat",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Catfish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Caviar",
+		"statuses": [
+			"Halal Fish Source: Halal",
+			"Haram Fish Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Cheese",
+		"statuses": null,
+		"info": [
+			"Cheese contains enzymes and/or rennet",
+			"Refer to ‘Rennet’ and ‘Enzymes’ sections for more details"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Chicken",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Chocolate Liqueur",
+		"statuses": [
+			"Haram"
+		],
+		"info": [
+			"(Different from ‘Chocolate Liquor’ which is Halal)"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Chocolate Liquor",
+		"statuses": [
+			"Halal"
+		],
+		"info": [
+			"(Different from ‘Chocolate Liquer’ which is Haram)"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Chub Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Clam",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Coal Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Cod Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Collagen",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Halal Fish Source: Halal",
+			"Haram Fish Source: Haram",
+			"Unknown Source: Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Common Nose Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Confectioner’s Glaze",
+		"statuses": [
+			"Plant or Vegetable Source: Halal",
+			"Shellac Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": [
+			"Confectioner’s Glaze is primarily produced from Shellac, which is haram.",
+			"Not necessarily the same as doughnut glaze"
+		],
+		"otherNames": [
+			"food grade glaze",
+			"pharmaceutical glaze",
+			"resinous glaze"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Corn Syrup",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Dextrose"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Cow",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"beef",
+			"veal",
+			"bovine"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Crab",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Crawfish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"Crayfish"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Cream of Tartar",
+		"statuses": [
+			"Haram – biproduct of wine-making barrels"
+		],
+		"info": [
+			"(Different from Tartar Sauce)"
+		],
+		"otherNames": [
+			"potassium bitartrate"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Crocodile",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Dace Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Danube Roach Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Deer",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Diazolidinyl Urea",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Diglyceride",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Disodium Inosinate",
+		"statuses": [
+			"Plant Source: Halal",
+			"Alcohol Source: Haram",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"Disodium 5-Inosinate",
+			"Sodium 5-Inosinate",
+			"IMP",
+			"E631"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Dog",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Dolphin",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Donkey",
+		"statuses": [
+			"Zabiha Animal Source: Makruh",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Duck",
+		"statuses": [
+			"Zabiha Source: Halal",
+			"Non-Zabiha Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Eel",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Elephant",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Enzymes",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"chymosin",
+			"chymotrypsin",
+			"trypsin",
+			"catalase"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Erythritol",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Ethyl Alcohol",
+		"statuses": [
+			"Ay. Sistani: Trace amounts as a product ingredient: Halal; Larger amounts: Haram; All other Maraja:; Najis and Haram (AKA Ethanol)"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Fish Oil",
+		"statuses": [
+			"Halal Fish Source: Halal",
+			"Non-Halal Fish Source: Haram",
+			"Unknown Fish Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Fish Sauce",
+		"statuses": [
+			"Halal Fish Source: Halal",
+			"Haram Fish Source: Haram",
+			"Unknown Fish Source: Haram"
+		],
+		"info": [
+			"Generally produced with anchovy"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Fish with Partial Scales",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Flounder Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Food from those who don’t pay khums",
+		"statuses": null,
+		"info": [
+			"Not a valid judgement to make.  A person’s food is not deemed impermissible solely upon this criteria, and you are not allowed to ask."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Fox",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Frog",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Gelatin",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Halal Fish Source: Halal",
+			"Chemical Transformation (Istihala): Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Haram Fish/Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid",
+			"Prescription Medicine with gelatin capsule: Halal if no alternative available",
+			"Non-prescription (vitamins, supplements etc) with gelatin capsule: Haram, find an alternative"
+		],
+		"info": [
+			"(Ay. Khoei considers all gelatin halal based on istihala)",
+			"(Ay. Sistani leaves the judgement whether or not the transformation was sufficient upon the individual.)"
+		],
+		"otherNames": [
+			"Gelatine"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Gilt Head Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Giraffe",
+		"statuses": [
+			"Haram (based on Ihtiyat)"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Glycerin",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal: Halal",
+			"Non-Zabiha Animal: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"Glycerine",
+			"E422",
+			"Glycerol"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Goat",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Gochujang",
+		"statuses": [
+			"Ay. Sistani: Trace amounts of alcohol: Halal; Larger amounts: Haram All other Maraja: Najis and Haram"
+		],
+		"info": [
+			"Alcohol is produced during fermentation."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Gold",
+		"statuses": [
+			"Gold Foil: Halal to consume in small amounts",
+			"Solid Gold Tableware: Haram to use to eat or drink. Includes spoons, forks, plates, cups, etc",
+			"Gold Plated Tableware: Halal to use to eat or drink."
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Grape Jam",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Grape Juice",
+		"statuses": [
+			"Unfermented Grape Juice: Halal",
+			"Fermented Grape Juice: Haram",
+			"Unknown Fermentation Status: Advisable to avoid. Suspect due to likely fermentation during production."
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Grasshoppers",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Gravy",
+		"statuses": [
+			"Plant or Vegetable Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Grayling Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Guar Gum",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Guaran"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Haddock Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Halibut Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Hemp Seed",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Hemp Seed Oil",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Herring Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Horse",
+		"statuses": [
+			"Zabiha Animal Source: Makruh",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Iguana",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Imidazolidinyl Urea",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Imitation Crab",
+		"statuses": [
+			"Halal Fish Source: Halal",
+			"Haram Fish Source: Haram",
+			"Unknown Source: Haram",
+			"Crab Extract is commonly used for flavor. If so: Haram"
+		],
+		"info": [
+			"Made from processed fish of various types"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Insects",
+		"statuses": [
+			"Raw or unprocessed form: Haram",
+			"Istihala (transformation) takes place during production, and it loses it’s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
+		],
+		"info": [
+			"Excludes Locusts, halal as an exception"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kangaroo",
+		"statuses": [
+			"Haram (based on Ihtiyat)"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kidney",
+		"statuses": [
+			"Makruh"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kingfish Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kombucha Tea",
+		"statuses": [
+			"Ay. Sistani: Trace amounts of alcohol: Halal; Larger amounts: Haram All other Maraja: Najis and Haram"
+		],
+		"info": [
+			"Alcohol is produced during fermentation."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kosher Ingredients",
+		"statuses": null,
+		"info": [
+			"Not equivalent to halal"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Kosher Meat",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Krill",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Krill Oil",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "L‑Cysteine",
+		"statuses": [
+			"Plant Source: Halal",
+			"Halal Animal Source: Halal",
+			"Haram Animal Source: Haram",
+			"Synthetic Source: Halal",
+			"Human Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"E920",
+			"Cysteine"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Lactic Acid",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Lanolin",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"wool fat",
+			"wool wax",
+			"wool grease"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Lard",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Lecithin",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"E322"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Lipase",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Liver",
+		"statuses": [
+			"Makruh"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Lizard",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Lobster",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Locust",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Machine Slaughtered Meat",
+		"statuses": [
+			"Halal"
+		],
+		"info": [
+			"(as long as Islamic guidelines are followed and/or certified)"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mackerel Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mahi Mahi Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Maquerel Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Marijuana",
+		"statuses": [
+			"Prescription Use: Halal",
+			"Voluntary Non-prescription Use: Haram",
+			"Recreational use: Haram",
+			"External application (ointments, lotions, creams, etc): Halal"
+		],
+		"info": [
+			"Visit \u003ca href=\"https://al-m.ca/marijuana/\" target=\"_blank\" rel=\"noreferrer noopener\"\u003eal-m.ca/marijuana\u003c/a\u003e for more info"
+		],
+		"otherNames": [
+			"weed"
+		],
+		"unknown": [
+			""
+		]
+	},
+	{
+		"ingredient": "Marsala Wine",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Marshmallow",
+		"statuses": null,
+		"info": [
+			"Usually contains gelatin. See ‘Gelatin’ section for guidelines on permissibility"
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Medicine with Haram Ingredients",
+		"statuses": [
+			"Voluntary Non-prescription (vitamins, supplements etc): Haram, find an alternative."
+		],
+		"info": [
+			"Prescription Medicine: Find an alternative product. If no alternatives are available, then it is permissible."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Methylparaben",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"E218"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Minnow Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mollusk",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Monoglyceride",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Monosodium glutamate",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"MSG",
+			"E621"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Mouthwash",
+		"statuses": [
+			"All other maraja: Haram and najis. Thoroughly rinse your mouth 3 times if used."
+		],
+		"info": [
+			"Most mouthwash contain alcohol.",
+			"Ay. Sistani: Considers it haram but not najis, therefore you may gargle and rinse with water afterwards, without any swallowing."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mule",
+		"statuses": [
+			"Zabiha Animal Source: Makruh",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mullet Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Mussels",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Nutmeg",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Octopus",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Ostrich",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Oxtail",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Oyster",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Oyster Sauce",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Parabens",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Peacock",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pectin",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pepsin",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Perch Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pigeon",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pikeperch Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pilchard Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pollock Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Polyglycerol esters of fatty acids",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"PGE",
+			"E475"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Polysorbate",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": [
+			"Polysorbate 20",
+			"Polysorbate 40",
+			"Polysorbate 60",
+			"Polysorbate 80"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Polyvinyl Alcohol",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pomfret Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pond Loach Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pope Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Porgy Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Pork",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"pig",
+			"ham",
+			"swine",
+			"hog",
+			"porcine",
+			"pancetta",
+			"sow"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Prawn",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Propylene Glycol",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Propylparaben",
+		"statuses": [
+			"Plant or Chemical Source: Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Quail",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rabbit",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Red Snapper Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Red Wine Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rennet",
+		"statuses": [
+			"Plant Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Haram Animal Source: Haram",
+			"Non-Zabiha Halal Animal Source: if extracted in a liquid or semi-liquid form (moderm production methods): Halal",
+			"Unknown Source: Halal"
+		],
+		"info": [
+			"Non-Zabiha Halal Animal Source: if extracted in a solid or semi-solid form (traditional production methods): Haram unless it is washed"
+		],
+		"otherNames": [
+			"Rennin"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Reptiles",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rice Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rice Wine",
+		"statuses": [
+			"Ay. Sistani: Trace amounts as a product ingredient: Halal; Larger amounts: Haram All other Maraja: Najis and Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rice Wine Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Roach Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rodents",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"rats",
+			"mouse",
+			"hamster",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Rooibos Tea",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Rudd Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Ruffe Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Salmon Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Sander Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Sardine Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Scavenger Birds",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"vulture",
+			"crow",
+			"buzzard",
+			"condor",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Sea Bass Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Seaweed",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Shark",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Shellac",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Shellfish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Shortening",
+		"statuses": [
+			"‘Pure Vegetable Shortening’: Halal"
+		],
+		"info": [
+			"‘Vegetable Shortening’: Suspect. Labelling laws only require the predominant ingredient to be mentioned, even if animal sources are included."
+		],
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Shrimp",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Silver",
+		"statuses": [
+			"Silver Foil: Halal to consume in small amounts",
+			"Solid Silver Tableware: Haram to use to eat or drink. Includes spoons, forks, plates, cups, etc",
+			"Silver Plated Tableware: Halal to use to eat or drink."
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Skipjack Tuna Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Smelt Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Smoking",
+		"statuses": [
+			"Ay Makarim Shirazi: Haram"
+		],
+		"info": [
+			"Ay Khomeini: Those who are addicted may continue, non-smokers cannot start",
+			"All other Maraja: If one considers cigarettes harmful, then it’s haram (onus on the individual)"
+		],
+		"otherNames": [
+			"Same rulings apply to e-cigarettes (AKA e-cigs, vaping, vape, etc)"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Snail",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Snake",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"Viper",
+			"Rattlesnake",
+			"Cobra",
+			"Mamba",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Soda Pop",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Pepsi",
+			"Coca Cola",
+			"etc"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Soil",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": [
+			"dirt",
+			"earth"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Sole Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Soy Sauce",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Soya Sauce"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Spirit Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Squid",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Stearic Acid",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Halal but advisable to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Stingray",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Sugar Alcohol",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Swordfish",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Tapioca",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Tartar Sauce",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"(Different from Cream of Tartar)"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Tartrazine",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": [
+			"Yellow 5",
+			"E102",
+			"Yellow no. 5"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "Taurine",
+		"statuses": [
+			"Plant or Chemical Source: Halal",
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Dairy Source: Halal",
+			"Halal Fish Source: Halal",
+			"Haram Fish Source: Haram",
+			"Unknown: Better to avoid"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Tench Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Tilapia Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Topical Cream",
+		"statuses": [
+			"Plant Source: Halal to apply",
+			"Synthetic Source: Halal to apply",
+			"Zabiha Halal Animal Source: Halal to apply",
+			"Non-Zabiha Halal Animal Source: Halal to apply, but najis and must be washed off for wudhu/ghusl",
+			"Non-Zabiha Haram Animal Source: Halal to apply, but najis and must be washed off for wudhu/ghusl",
+			"Insect or insect biproduct Source: Halal to apply, but najis and must be washed off for wudhu/ghusl"
+		],
+		"info": null,
+		"otherNames": [
+			"Lotion",
+			"Ointment",
+			"Gel",
+			"Oil",
+			"Balm",
+			"etc"
+		],
+		"unknown": [
+			""
+		]
+	},
+	{
+		"ingredient": "Trout Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Truffle",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Tuna Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Turkey",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Turtle",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Vanilla Extract",
+		"statuses": [
+			"Natural Vanilla Extract: Haram",
+			"Artificial Vanilla Extract: Halal",
+			"Ay. Sistani: Trace Amounts of Natural Vanilla Extract as a product ingredient: Halal; Larger amounts: Haram "
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Vanillin",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Whale",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Whey",
+		"statuses": [
+			"Produced with Pepsin: Haram",
+			"Unknown production: Better to avoid"
+		],
+		"info": [
+			"Produced with Rennet: Refer to ‘Rennet’ section for more details"
+		],
+		"otherNames": [
+			"Whey Protein",
+			"Whey Powder"
+		],
+		"unknown": null
+	},
+	{
+		"ingredient": "White FIsh",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Wine Vinegar",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Worm",
+		"statuses": [
+			"Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Yak",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Zander Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Zebra",
+		"statuses": [
+			"Zabiha Animal Source: Halal",
+			"Non-Zabiha Animal Source: Haram",
+			"Unknown Source: Haram"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
+		"ingredient": "Zope Fish",
+		"statuses": [
+			"Halal"
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	}
+]

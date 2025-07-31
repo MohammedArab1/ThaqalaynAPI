@@ -11,6 +11,7 @@ type APIV2 struct {
 	Id                  int                 `json:"id"`
 	BookId              string              `json:"bookId"`
 	Book                string              `json:"book"`
+	Volume              int                 `json:"volume"`
 	Category            string              `json:"category"`
 	CategoryId          int                 `json:"categoryId"`
 	Chapter             string              `json:"chapter"`
@@ -40,4 +41,5 @@ type BookInfo struct {
 	Author          string `json:"author"`
 	IdRangeMin      int    `json:"idRangeMin"`
 	IdRangeMax      int    `json:"idRangeMax"`
+	Volume          int    `json:"volume"`
 }

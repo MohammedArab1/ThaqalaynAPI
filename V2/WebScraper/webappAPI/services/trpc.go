@@ -22,7 +22,7 @@ func NewTrpc(baseURL string) *Trpc {
 
 func (t *Trpc) FetchAllBookIds() (*webappAPI.Books, error) {
 	inputParam := "{}"
-	trpcUrl := t.getURL("/trpc/Book.allBookIds", inputParam)
+	trpcUrl := t.getURL("/trpc/hadith.getBookIds", inputParam)
 	data, err := makeRequest[webappAPI.Books](trpcUrl)
 	if err != nil {
 		return nil, err

@@ -145,13 +145,13 @@ func (h *Hadith) GetGradings() (behbudiGrading string, majlisiGrading string, mo
 	if len(h.Gradings) > 0 {
 		for _, grading := range h.Gradings {
 			if strings.Contains(*grading.Author.NameEn, "Behbudi") {
-				behbudiGrading = *grading.GradeAr
+				behbudiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
 			if strings.Contains(*grading.Author.NameEn, "Majlisi") {
-				majlisiGrading = *grading.GradeAr
+				majlisiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
 			if strings.Contains(*grading.Author.NameEn, "Mohseni") {
-				mohseniGrading = *grading.GradeAr
+				mohseniGrading = strings.TrimSpace(*grading.GradeAr)
 			}
 		}
 	}

@@ -14,7 +14,7 @@ const bookNameV2 = new mongoose.Schema({
   strict: false
 })
 
-bookNameV2.set('toJSON', {
+bookNameV2.set('toJson', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id

@@ -10,7 +10,7 @@ const ingredientSchemaV2 = new mongoose.Schema({
   strict: false,
 });
 
-ingredientSchemaV2.set('toJSON', {
+ingredientSchemaV2.set('toJson', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString();
     delete returnedObject._id;

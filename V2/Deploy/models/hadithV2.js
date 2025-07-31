@@ -22,7 +22,7 @@ const hadithSchemaV2 = new mongoose.Schema({
 
 hadithSchemaV2.plugin(random)
 
-hadithSchemaV2.set('toJSON', {
+hadithSchemaV2.set('toJson', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id.toString()
     delete returnedObject._id

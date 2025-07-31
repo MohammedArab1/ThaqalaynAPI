@@ -5,9 +5,9 @@ import express from 'express';
 import { expressMiddleware } from '@apollo/server/express4';
 import { connectRedis, getRedisClient } from './loaders/redis.js';
 import { createContext } from './api/graphql/resolvers/index.js';
-import hadithModelV2 from '../../V2/DB/models/hadithV2.js';
-import bookNameModelV2 from '../../V2/DB/models/bookNameV2.js';
-import ingredientsModelV2 from '../../V2/DB/models/ingredientsV2.js';
+import hadithModelV2 from '../../V2/Deploy/models/hadithV2.js';
+import bookNameModelV2 from '../../V2/Deploy/models/bookNameV2.js';
+import ingredientsModelV2 from '../../V2/Deploy/models/ingredientsV2.js';
 
 const startServer = async () => {
   const app = initializeExpress(express());

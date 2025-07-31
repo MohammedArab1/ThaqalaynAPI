@@ -1,8 +1,8 @@
 // api/rest/routes/v2/hadith.js
 import { Router } from 'express';
-import BookNamesModelV2 from '../../../../../../V2/DB/models/bookNameV2.js';
-import HadithModelV2 from '../../../../../../V2/DB/models/hadithV2.js';
-import IngredientModelV2 from '../../../../../../V2/DB/models/ingredientsV2.js';
+import BookNamesModelV2 from '../../../../../../V2/Deploy/models/bookNameV2.js';
+import HadithModelV2 from '../../../../../../V2/Deploy/models/hadithV2.js';
+import IngredientModelV2 from '../../../../../../V2/Deploy/models/ingredientsV2.js';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
 import HadithController from '../../controllers/hadithController.js';
 import IngredientController from '../../controllers/ingredientController.js';

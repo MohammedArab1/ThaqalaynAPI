@@ -3,6 +3,10 @@
 ![Weekly Data Update](https://github.com/mohammedarab1/ThaqalaynAPI/actions/workflows/main.yml/badge.svg)
 
 
+## 2025-07
+
+The API now provides more fine-grained volume and grading information for relevant hadiths.
+
 ## 2024-10
 
 The API now has a new endpoint that allows for the retrieval of some ingredients in foods and their Islamic rulings as fetched from [Al Maarif](https://al-m.ca/halalguide/). The endpoint can be reached at `.../api/v2/ingredients`

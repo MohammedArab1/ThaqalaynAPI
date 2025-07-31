@@ -29,18 +29,18 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 	rawIngredients := fetchAlmaarif()
 
 	// Check if we have existing local files of ingredients. If so we might not need to use gem API if nothing's changed since last scrape
-	rawIngredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/rawIngredients.json")
-	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/ingredients.json")
+	rawIngredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/Ingredients/rawIngredients.json")
+	ingredientsFileExists, _ := files.Exists(config.Flags.DataPath + "/Ingredients/ingredients.json")
 	var existingRawIngredients []IngredientStatus
 	var existingIngredients []HalalGuideItem
 	if rawIngredientsFileExists {
-		currentRawIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/rawIngredients.json")
+		currentRawIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/Ingredients/rawIngredients.json")
 		if err := json.Unmarshal(currentRawIngredientsFile, &existingRawIngredients); err != nil {
 			panic(err)
 		}
 	}
 	if ingredientsFileExists {
-		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/ingredients.json")
+		currentIngredientsFile, _ := os.ReadFile(config.Flags.DataPath + "/Ingredients/ingredients.json")
 		if err := json.Unmarshal(currentIngredientsFile, &existingIngredients); err != nil {
 			panic(err)
 		}
@@ -91,8 +91,8 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 	}
 
 	// Write the data to files.
-	files.WriteStructToFile(allItems, config.Flags.DataPath+"/Ingredients.json")
-	files.WriteStructToFile(rawIngredients, config.Flags.DataPath+"/rawIngredients.json")
+	files.WriteStructToFile(allItems, config.Flags.DataPath+"/Ingredients/Ingredients.json")
+	files.WriteStructToFile(rawIngredients, config.Flags.DataPath+"/Ingredients/rawIngredients.json")
 	fmt.Println("In fetch Ingredients goroutine, finished fetching ingredients")
 }
 

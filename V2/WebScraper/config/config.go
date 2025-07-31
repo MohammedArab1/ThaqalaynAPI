@@ -12,7 +12,6 @@ type Config struct {
 		SingleBook    int
 	}
 	WEBAPP_URL     string
-	WEBAPP_API_KEY string
 }
 
 var bookNamesOnlyString = `Flag represents whether only to create and deploy book names.
@@ -36,10 +35,6 @@ func (c *Config) ParseFlags() {
 	flag.StringVar(&c.WEBAPP_URL, "webapp-url", "", webAppUrlString)
 	if os.Getenv("WEBAPP_URL") != "" {
 		c.WEBAPP_URL = os.Getenv("WEBAPP_URL")
-	}
-	flag.StringVar(&c.WEBAPP_API_KEY, "webapp-api-key", "", webAppApiKeyString)
-	if os.Getenv("WEBAPP_API_KEY") != "" {
-		c.WEBAPP_API_KEY = os.Getenv("WEBAPP_API_KEY")
 	}
 	flag.Parse()
 }

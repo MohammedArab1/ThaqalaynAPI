@@ -11,7 +11,6 @@ jobs:
 
     env: # Define environment variables here
       WEBAPP_URL: ${{ secrets.WEBAPP_URL }}
-      WEBAPP_API_KEY: ${{ secrets.WEBAPP_API_KEY }}
       MONGODB_URI: ${{ secrets.MONGODB_URI }}
       GEMINI_API_KEY: ${{secrets.GEMINI_API_KEY}}
 
@@ -31,8 +30,8 @@ jobs:
 
       - name: Run Make Command
         run: |
-          cd ${{github.workspace}}/V2/Deploy/
-          make scrape_all datapath=../ThaqalaynData
+          cd ${{github.workspace}}/V2/
+          make scrape_all datapath=./ThaqalaynData
 
       - name: Commit and Push new data
         run: |

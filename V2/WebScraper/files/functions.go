@@ -38,7 +38,10 @@ func Find(root, ext string) []string {
 		if e != nil {
 			return e
 		}
-		if filepath.Ext(d.Name()) == ext {
+		if d.IsDir() && s != root {
+			return fs.SkipDir
+		}
+		if !d.IsDir() && filepath.Ext(d.Name()) == ext {
 			a = append(a, s)
 		}
 		return nil

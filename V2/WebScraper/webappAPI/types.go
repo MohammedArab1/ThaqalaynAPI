@@ -4,6 +4,7 @@
 package webappAPI
 
 import (
+	"encoding/json"
 	"regexp"
 	"strings"
 
@@ -12,74 +13,39 @@ import (
 )
 
 // ThaqalaynTopLevel is the top level field returned from the webapp API
-type ThaqalaynTopLevel struct {
-	Data Data `json:"data"`
+type APIResponse struct {
+	Result struct {
+		Data struct {
+			Data json.RawMessage `json:"data"` // Keep as raw JSON for later parsing
+		} `json:"data"`
+	} `json:"result"`
 }
 
-// Data is the field storing the book
-type Data struct {
-	Book Book `json:"book"`
+type Book struct {
+	Book *BookItem `json:"book"`
 }
 
 // Book represents a single Book returned from the webapp API
-type Book struct {
-	AuthorName   *string       `json:"authorName"`
-	Translator   *string       `json:"translator"`
-	EnglishName  *string       `json:"englishName"`
-	Id           *int          `json:"id"`
-	BookSections []BookSection `json:"bookSections"`
-	Name         *string       `json:"name"`
-	Volume       *int          `json:"volume"`
-	Blurb        *string       `json:"blurb"`
-}
-
-// BookSection represents a single BookSection returned from the webapp API
-type BookSection struct {
-	Id            *int      `json:"id"`
-	Name          *string   `json:"name"`
-	SectionNumber *int      `json:"sectionNumber"`
-	Chapters      []Chapter `json:"chapters"`
-}
-
-type Sections struct {
-	Sections []BookSection `json:"sections"`
-}
-
-// Chapter represents a single chapter returned from the webapp API
-type Chapter struct {
-	Id   *int    `json:"id"`
-	Name *string `json:"name"`
-	// NumHadiths *int     `json:"numHadiths"`
-	BookSection *int     `json:"bookSection"`
-	BookNumber  *int     `json:"bookNumber"`
-	Number      *int     `json:"number"`
-	Hadiths     []Hadith `json:"hadiths"`
-}
-
-// Hadith represents a single hadith returned from the webapp API
-type Hadith struct {
-	Content               *string `json:"content"`
-	Id                    *int    `json:"id"`
-	Language              *string `json:"language"`
-	Number                *int    `json:"number"`
-	JsonChains            *string `json:"jsonChains"`
-	GradingWithReferences *string `json:"gradingWithReferences"`
-	CreatedAt             *string `json:"createdAt"`
-	UpdatedAt             *string `json:"updatedAt"`
-	StartingIndex         *int    `json:"startingIndex"`
-}
-
-// AllBookIds stores results from fetching all book Ids
-type AllBookIds struct {
-	AllBookIds *[]string `json:"allBookIds"`
+type BookItem struct {
+	Number        *int          `json:"number"`
+	Translator    *Author       `json:"translator"`
+	NameEnTl      *string       `json:"name_en_tl"`
+	NameEn        *string       `json:"name_en"`
+	Id            *int          `json:"id"`
+	BookSections  []BookSection `json:"book_sections"`
+	VolumeCount   *int          `json:"volumeCount"`
+	CurrentVolume *int          `json:"currentVolume"`
+	BlurbEn       *string       `json:"blurb_en"`
+	Volumes       []Volume      `json:"volumes"`
+	Author        Author        `json:"author"`
 }
 
 // GetAuthorLastName gets the Author last name from the full Author string
 // ex. Shaykh Muḥammad b. Yaʿqūb al-Kulaynī (d. 329 AH) -> Kulayni
-func (b *Book) GetAuthorLastName() string {
+func (b *BookItem) GetAuthorLastName() string {
 	authorLastNameFinal := ""
 	authorNameDecoded := ""
-	authorNameSplit := strings.Split(*b.AuthorName, "(")[0]
+	authorNameSplit := strings.Split(*b.Author.NameEn, "(")[0]
 	authorLastNameArray := strings.Split(authorNameSplit, " ")
 	if authorLastNameArray[len(authorLastNameArray)-1] == "" {
 		authorNameDecoded = stringsLocal.NormalizeString(authorLastNameArray[len(authorLastNameArray)-2])
@@ -90,6 +56,74 @@ func (b *Book) GetAuthorLastName() string {
 	reg, _ := regexp.Compile("[^A-Za-z0-9]+")
 	authorLastNameFinal = reg.ReplaceAllString(authorNameDecoded, "")
 	return authorLastNameFinal
+}
+
+type Volume struct {
+	Id         *int    `json:"id"`
+	Number     *int    `json:"number"`
+	UrlPointer *string `json:"url_pointer"`
+}
+
+type Author struct {
+	NameEn    *string `json:"name_en"`
+	NameAr    *string `json:"name_ar"`
+	Link      *string `json:"link"`
+	DeathDate *string `json:"death_date"`
+}
+
+// BookSection represents a single BookSection returned from the webapp API
+type BookSection struct {
+	Id            *int      `json:"id"`
+	Name          *string   `json:"name_en"`
+	SectionNumber *int      `json:"number"`
+	Chapters      []Chapter `json:"chapters"`
+}
+
+type Sections struct {
+	Sections []BookSection `json:"sections"`
+}
+
+// Chapter represents a single chapter returned from the webapp API
+type Chapter struct {
+	Id          *int    `json:"id"`
+	Name        *string `json:"name_en"`
+	BookSection *int    `json:"book_section_id"`
+	Number      *int    `json:"number"`
+	NumHadiths  *int    `json:"num_hadiths"`
+}
+
+type Hadiths struct {
+	Hadiths []Hadith `json:"hadiths"`
+}
+
+// Hadith represents a single hadith returned from the webapp API
+type Hadith struct {
+	Id          *int      `json:"id"`
+	Number      *int      `json:"number"`
+	MatnIndexEn *int      `json:"matn_index_en"`
+	MatnIndexAr *int      `json:"matn_index_ar"`
+	TextEn      *string   `json:"text_en"`
+	TextAr      *string   `json:"text_ar"`
+	Gradings    []Grading `json:"gradings"`
+	CreatedAt   *string   `json:"createdAt"`
+	UpdatedAt   *string   `json:"updatedAt"`
+}
+
+type Grading struct {
+	GradeEn     *string `json:"grade_en"`
+	GradeAr     *string `json:"grade_ar"`
+	ReferenceEn *string `json:"reference_en"`
+	Author      *Author `json:"author"`
+}
+
+// AllBookIds stores results from fetching all book Ids
+type Books struct {
+	Books []BookId `json:"books"`
+}
+
+type BookId struct {
+	ID     *int `json:"id"`
+	Number *int `json:"number"`
 }
 
 type WebAppGqlClient struct {
@@ -108,18 +142,16 @@ func NewWebAppGqlClient(webAppUrl string, webAppApiKey string) WebAppGqlClient {
 // gradings come as one string separated by "<>" from the webapp api.
 // Split the string then return each appropriate one.
 func (h *Hadith) GetGradings() (behbudiGrading string, majlisiGrading string, mohseniGrading string) {
-	if h.GradingWithReferences != nil {
-		gradings := strings.Split(*h.GradingWithReferences, "<>")
-		for _, grading := range gradings {
-			//use switch statement ?
-			if strings.Contains(grading, "Behbudi") {
-				behbudiGrading = grading
+	if len(h.Gradings) > 0 {
+		for _, grading := range h.Gradings {
+			if strings.Contains(*grading.Author.NameEn, "Behbudi") {
+				behbudiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
-			if strings.Contains(grading, "Majlisi") {
-				majlisiGrading = grading
+			if strings.Contains(*grading.Author.NameEn, "Majlisi") {
+				majlisiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
-			if strings.Contains(grading, "Mohseni") {
-				mohseniGrading = grading
+			if strings.Contains(*grading.Author.NameEn, "Mohseni") {
+				mohseniGrading = strings.TrimSpace(*grading.GradeAr)
 			}
 		}
 	}

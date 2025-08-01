@@ -1,4 +1,4 @@
-include .env
+-include .env
 export MONGODB_URI
 export WEBAPP_URL
 

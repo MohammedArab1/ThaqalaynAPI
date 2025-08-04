@@ -5,7 +5,10 @@
 
 ## 2025-07
 
-The API now provides more fine-grained volume and grading information for relevant hadiths.
+The API now provides more fine-grained volume and grading information for relevant hadiths. This came as a result of Thaqalayn team updating their API. Changes include:
+- Volume count in the `/allBooks` endpoint
+- More detailed gradings under each individual hadith with the `gradingsFull` field
+As a result of this API change, the `BookName` field in the `/allBooks` endpoint lost volume information, now being stored in the `volume` field. 
 
 ## 2024-10
 

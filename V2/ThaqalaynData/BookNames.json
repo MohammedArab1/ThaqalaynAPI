@@ -12,6 +12,18 @@
 		"volume": 1
 	},
 	{
+		"bookId": "Mujam-al-Ahadith-al-Mutabara-Muhsini",
+		"bookDescription": "\"Muʿjam al-Aḥādīth al-Muʿtabara\" by Shaykh Muḥammad Āṣif Muḥsinī is a monumental work which fills a significant gap in the realm of the works of Ḥadīth. The aim of this comprehensive compilation is to provide people with a dependable resource, countering the long-standing misconception about the perceived insufficiencies in the body of Ḥadīth possessed by the Shīʿa. As such, this project marks a pivotal contribution to the field, providing someone with access to reliable, authentic material. The book showcases Shaykh Muḥsinī’s ambition to assemble a collection of Muʿtabar (reliable) Ḥadīth, thus facilitating the work of jurists, researchers, lecturers, and any layperson interested in gaining knowledge. Despite his busy schedule, Shaykh Muḥsinī committed himself to this colossal task, motivated by a desire to preserve and make accessible the authentic teachings of the Shīʿī faith. In creating this work, Shaykh Muḥsinī was guided by a set of principles. First, the Ḥadīth should have a reliable chain and not contradict the Qurʾān, the established Sunnah, or the intellect. Second, while the book aims to be comprehensive, it may not include every narration with a reliable chain, since the Shaykh had mentioned that he may have accidentally overlooked some narrations. However, it does provide an overwhelming majority of reliable traditions. Shaykh Muḥsinī’s stringent criteria and rigorous application make this work an invaluable resource in Ḥadīth. While some scholars may differ with his judgments, the work aims to provide a universally acceptable core of irreproachable narrations, with the potential to serve as a basis for consensus among scholars and researchers. In summary, \"Muʿjam al-Aḥādīth al-Muʿtabara\" is a milestone in Ḥadīth studies, providing a reliable reference point for those interested in authentic Shia narrations. Its meticulous assembly and rigorous criteria set it apart as a work of significant value and authority.",
+		"bookCover": "https://thaqalayn.net/css/images/9-round.jpeg",
+		"englishName": "Compilation of Authenticated Narrations",
+		"translator": "Ammaar Muslim",
+		"BookName": "Muʿjam al-Aḥādīth al-Muʿtabara",
+		"author": "Shaykh Muḥammad Āṣif al-Muḥsinī",
+		"idRangeMin": 1,
+		"idRangeMax": 555,
+		"volume": 1
+	},
+	{
 		"bookId": "Al-Khisal-Saduq",
 		"bookDescription": "al-Khiṣāl is a unique work in the realm of Shīʿī Ḥadīths. Authored by Shaykh al-Ṣadūq, the book focuses on exploring traditions by categorising them on the basis of the numbers mentioned in the traditions, which is similar to what can be found in the book al-Maḥāsin for al-Barqī. Each section of the book is dedicated to a specific number, starting from one and extending up to one million. In the course of gathering these Ḥadīths, one will find traditions dealing with history, doctrine, ethics, jurisprudence and a large variety of genres.",
 		"bookCover": "https://thaqalayn.net/css/images/10-round.jpeg",
@@ -34,18 +46,6 @@
 		"idRangeMin": 1,
 		"idRangeMax": 347,
 		"volume": 1
-	},
-	{
-		"bookId": "Uyun-akhbar-al-Rida-Volume-2-Saduq",
-		"bookDescription": "ʿUyūn Akhbār al-Riḍā, also known as ʿUyūn al-Akhbār is a comprehensive Ḥadīth collection focusing on Imam al-Riḍā (as), which is compiled by the renowned Shīʿī scholar, al-Shaykh al-Ṣadūq. The work contains a plethora of Ḥadīths that are either the direct sayings of Imam al-Riḍā (as) or the wisdom he imparted from his forefathers. As one of the references within Shīʿī scholarship, this collection covers an array of subjects, including history, jurisprudence, ethics, and theology. al-Shaykh al-Ṣadūq may have written ʿUyūn Akhbār al-Riḍā after the death of Rukn al-Dawla al-Buwayhī in 366 AH. The writing of this work was inspired by a unique exchange. Sāḥib b. ʿAbbād al-Daylamī, a prominent Shīʿī minister and ruler of the time, penned a poem extolling ʿAlī b. Mūsā al-Riḍā (as) and dedicated it to al-Shaykh al-Ṣadūq. In response, the work was compiled as a reciprocal gift. al-Shaykh al-Ṣadūq stated in his introduction, \"I found no other better gift than this book which is about the infinite knowledge of Imam al-Riḍā (as) to send in return to the two odes of Ibn ʿAbbād.”\nThis text provides readers with a deep understanding of the life and teachings of Imam al-Riḍā, illuminating the comprehensive scope of his wisdom and his contributions to Islamic thought and practice.",
-		"bookCover": "https://thaqalayn.net/css/images/11-round.jpeg",
-		"englishName": "The Source of Traditions on Imam al-Riḍā",
-		"translator": "Dr. Ali Peiravi",
-		"BookName": "ʿUyūn akhbār al-Riḍā",
-		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
-		"idRangeMin": 1,
-		"idRangeMax": 607,
-		"volume": 2
 	},
 	{
 		"bookId": "Al-Amali-Mufid",
@@ -82,18 +82,6 @@
 		"idRangeMin": 1,
 		"idRangeMax": 226,
 		"volume": 1
-	},
-	{
-		"bookId": "Al-Kafi-Volume-2-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 2343,
-		"volume": 2
 	},
 	{
 		"bookId": "Kitab-al-Ghayba-Numani",
@@ -192,18 +180,6 @@
 		"volume": 1
 	},
 	{
-		"bookId": "Al-Kafi-Volume-3-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 2178,
-		"volume": 3
-	},
-	{
 		"bookId": "Kitab-al-Mumin-Ahwazi",
 		"bookDescription": "Kitab al-Muʾmin authored by the distinguished 3rd century Shīʿī scholar and narrator, al-Ḥusayn b. Saʿīd al-Ahwāzī, is an influential text within Shīʿī literature. Comprising 201 traditions, this book offers detailed insights into the nature of Belief (Īmān) and the Believers (Muʾminūn), drawing upon the teachings and traditions of the Ahl al-Bayt (as). The most significant feature of this work is its earliness, considering the fact that al-Ḥusayn b. Saʿīd was from amongst the companions of the Imams al-Riḍā, al-Jawād and al-Hādī (as). The central themes the book explores include the understanding of the afflictions a believer endures, the unique honours that Allah bestows upon the believers, and the special bond that exists among the faithful. Furthermore, it discusses the rights that believers hold over each other and the spiritual rewards that accompany acts of kindness towards fellow believers. It also emphasises the importance of social interaction among believers, such as paying visits during illness or in a social context, and the virtues of helping a believer in need, be it by providing food, clothing, or assistance with debts. In summary, Kitab al-Muʾmin is a vital resource for understanding the principles of Iman, the characteristics of a believer (Muʾmin), and the intricacies of interactions within the Muslim community based on the traditions of the Ahl al-Bayt (as).",
 		"bookCover": "https://thaqalayn.net/css/images/30-round.jpeg",
@@ -264,6 +240,102 @@
 		"volume": 1
 	},
 	{
+		"bookId": "Al-Kafi-Volume-8-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 597,
+		"volume": 8
+	},
+	{
+		"bookId": "Al-Kafi-Volume-7-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 891,
+		"volume": 7
+	},
+	{
+		"bookId": "Al-Kafi-Volume-6-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 2509,
+		"volume": 6
+	},
+	{
+		"bookId": "Al-Kafi-Volume-5-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 2088,
+		"volume": 5
+	},
+	{
+		"bookId": "Al-Kafi-Volume-4-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 2190,
+		"volume": 4
+	},
+	{
+		"bookId": "Al-Kafi-Volume-3-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 2178,
+		"volume": 3
+	},
+	{
+		"bookId": "Al-Kafi-Volume-2-Kulayni",
+		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
+		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
+		"englishName": "The Sufficient",
+		"translator": "Muhammad Sarwar",
+		"BookName": "Al-Kāfi",
+		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
+		"idRangeMin": 1,
+		"idRangeMax": 2343,
+		"volume": 2
+	},
+	{
+		"bookId": "Uyun-akhbar-al-Rida-Volume-2-Saduq",
+		"bookDescription": "ʿUyūn Akhbār al-Riḍā, also known as ʿUyūn al-Akhbār is a comprehensive Ḥadīth collection focusing on Imam al-Riḍā (as), which is compiled by the renowned Shīʿī scholar, al-Shaykh al-Ṣadūq. The work contains a plethora of Ḥadīths that are either the direct sayings of Imam al-Riḍā (as) or the wisdom he imparted from his forefathers. As one of the references within Shīʿī scholarship, this collection covers an array of subjects, including history, jurisprudence, ethics, and theology. al-Shaykh al-Ṣadūq may have written ʿUyūn Akhbār al-Riḍā after the death of Rukn al-Dawla al-Buwayhī in 366 AH. The writing of this work was inspired by a unique exchange. Sāḥib b. ʿAbbād al-Daylamī, a prominent Shīʿī minister and ruler of the time, penned a poem extolling ʿAlī b. Mūsā al-Riḍā (as) and dedicated it to al-Shaykh al-Ṣadūq. In response, the work was compiled as a reciprocal gift. al-Shaykh al-Ṣadūq stated in his introduction, \"I found no other better gift than this book which is about the infinite knowledge of Imam al-Riḍā (as) to send in return to the two odes of Ibn ʿAbbād.”\nThis text provides readers with a deep understanding of the life and teachings of Imam al-Riḍā, illuminating the comprehensive scope of his wisdom and his contributions to Islamic thought and practice.",
+		"bookCover": "https://thaqalayn.net/css/images/11-round.jpeg",
+		"englishName": "The Source of Traditions on Imam al-Riḍā",
+		"translator": "Dr. Ali Peiravi",
+		"BookName": "ʿUyūn akhbār al-Riḍā",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
+		"idRangeMin": 1,
+		"idRangeMax": 607,
+		"volume": 2
+	},
+	{
 		"bookId": "Man-La-Yahduruh-al-Faqih-Volume-2-Saduq",
 		"bookDescription": "Man Lā Yaḥḍuruhū al-Faqīh, compiled by Shaykh al-Ṣadūq (Ibn Baḅawayh, d. 381 AH), is the second of the Four Main Shīʿī Ḥadīth collections and was expressly assembled as a practical handbook for any believer “who has no access to a jurist.” Unlike larger compendia, it presents each tradition succinctly—often omitting full chains of transmission—to focus squarely on the legal rulings and devotional practices essential to daily life. In its classical form it is a single work; modern printed editions typically span four volumes, comprising just under a thousand chapters arranged by topic.",
 		"bookCover": "https://thaqalayn.net/css/images/34-round.jpeg",
@@ -310,77 +382,5 @@
 		"idRangeMin": 1,
 		"idRangeMax": 395,
 		"volume": 5
-	},
-	{
-		"bookId": "Al-Kafi-Volume-4-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 2190,
-		"volume": 4
-	},
-	{
-		"bookId": "Al-Kafi-Volume-5-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 2088,
-		"volume": 5
-	},
-	{
-		"bookId": "Al-Kafi-Volume-6-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 2509,
-		"volume": 6
-	},
-	{
-		"bookId": "Al-Kafi-Volume-7-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 891,
-		"volume": 7
-	},
-	{
-		"bookId": "Al-Kafi-Volume-8-Kulayni",
-		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
-		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",
-		"englishName": "The Sufficient",
-		"translator": "Muhammad Sarwar",
-		"BookName": "Al-Kāfi",
-		"author": "Shaykh Muḥammad b. Yaʿqūb al-Kulaynī",
-		"idRangeMin": 1,
-		"idRangeMax": 597,
-		"volume": 8
-	},
-	{
-		"bookId": "Mujam-al-Ahadith-al-Mutabara-Muhsini",
-		"bookDescription": "\"Muʿjam al-Aḥādīth al-Muʿtabara\" by Shaykh Muḥammad Āṣif Muḥsinī is a monumental work which fills a significant gap in the realm of the works of Ḥadīth. The aim of this comprehensive compilation is to provide people with a dependable resource, countering the long-standing misconception about the perceived insufficiencies in the body of Ḥadīth possessed by the Shīʿa. As such, this project marks a pivotal contribution to the field, providing someone with access to reliable, authentic material. The book showcases Shaykh Muḥsinī’s ambition to assemble a collection of Muʿtabar (reliable) Ḥadīth, thus facilitating the work of jurists, researchers, lecturers, and any layperson interested in gaining knowledge. Despite his busy schedule, Shaykh Muḥsinī committed himself to this colossal task, motivated by a desire to preserve and make accessible the authentic teachings of the Shīʿī faith. In creating this work, Shaykh Muḥsinī was guided by a set of principles. First, the Ḥadīth should have a reliable chain and not contradict the Qurʾān, the established Sunnah, or the intellect. Second, while the book aims to be comprehensive, it may not include every narration with a reliable chain, since the Shaykh had mentioned that he may have accidentally overlooked some narrations. However, it does provide an overwhelming majority of reliable traditions. Shaykh Muḥsinī’s stringent criteria and rigorous application make this work an invaluable resource in Ḥadīth. While some scholars may differ with his judgments, the work aims to provide a universally acceptable core of irreproachable narrations, with the potential to serve as a basis for consensus among scholars and researchers. In summary, \"Muʿjam al-Aḥādīth al-Muʿtabara\" is a milestone in Ḥadīth studies, providing a reliable reference point for those interested in authentic Shia narrations. Its meticulous assembly and rigorous criteria set it apart as a work of significant value and authority.",
-		"bookCover": "https://thaqalayn.net/css/images/9-round.jpeg",
-		"englishName": "Compilation of Authenticated Narrations",
-		"translator": "Ammaar Muslim",
-		"BookName": "Muʿjam al-Aḥādīth al-Muʿtabara",
-		"author": "Shaykh Muḥammad Āṣif al-Muḥsinī",
-		"idRangeMin": 1,
-		"idRangeMax": 555,
-		"volume": 1
 	}
 ]

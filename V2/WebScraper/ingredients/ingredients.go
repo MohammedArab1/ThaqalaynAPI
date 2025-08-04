@@ -91,7 +91,7 @@ func FetchIngredientsAlMaarif(config *config.Config) {
 	}
 
 	// Write the data to files.
-	files.WriteStructToFile(allItems, config.Flags.DataPath+"/Ingredients/Ingredients.json")
+	files.WriteStructToFile(allItems, config.Flags.DataPath+"/Ingredients/ingredients.json")
 	files.WriteStructToFile(rawIngredients, config.Flags.DataPath+"/Ingredients/rawIngredients.json")
 	fmt.Println("In fetch Ingredients goroutine, finished fetching ingredients")
 }

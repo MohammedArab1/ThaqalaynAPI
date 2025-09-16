@@ -69,6 +69,26 @@ router.get('/random', controller.randomHadithHandler);
  */
 router.get('/query', cacheMiddleware(60), controller.queryHandler);
 
+
+/**
+ * @openapi
+ * /api/v2/ingredients:
+ *   get:
+ *     tags:
+ *       - V2
+ *     summary: Fetch haram / halal ingredients
+ *     description: Fetches haram / halal ingredients as retrieved from Al Maarif (al-m.ca).
+ *     responses:
+ *       200:
+ *         description: Returns haram / halal ingredients.
+ */
+router.get(
+	'/ingredients',
+	cacheMiddleware(600),
+	ingredientController.getAllIngredients
+);
+
+
 /**
  * @openapi
  * /api/v2/query/{bookId}:
@@ -171,22 +191,5 @@ router.get('/:bookId/:id', cacheMiddleware(600), controller.oneHadithHandler);
 
 // V2 specific endpoints
 
-/**
- * @openapi
- * /api/v2/ingredients:
- *   get:
- *     tags:
- *       - V2
- *     summary: Fetch haram / halal ingredients
- *     description: Fetches haram / halal ingredients as retrieved from Al Maarif (al-m.ca).
- *     responses:
- *       200:
- *         description: Returns haram / halal ingredients.
- */
-router.get(
-	'/ingredients',
-	cacheMiddleware(600),
-	ingredientController.getAllIngredients
-);
 
 export default router;

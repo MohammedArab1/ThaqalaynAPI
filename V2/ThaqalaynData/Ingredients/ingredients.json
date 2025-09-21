@@ -367,7 +367,7 @@
 		"ingredient": "Carmine",
 		"statuses": [
 			"Raw or unprocessed form: Haram",
-			"Istihala (transformation) takes place during production, and it loses it\u0026#39;s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
+			"Istihala (transformation) takes place during production, and it loses it’s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
 		],
 		"info": [
 			"Ingredient made from haram insects"
@@ -444,7 +444,7 @@
 		"statuses": null,
 		"info": [
 			"Cheese contains enzymes and/or rennet",
-			"Refer to \u0026#39;Rennet\u0026#39; and \u0026#39;Enzymes\u0026#39; sections for more details"
+			"Refer to ‘Rennet’ and ‘Enzymes’ sections for more details"
 		],
 		"otherNames": null,
 		"unknown": null
@@ -466,7 +466,7 @@
 			"Haram"
 		],
 		"info": [
-			"(Different from \u0026#39;Chocolate Liquor\u0026#39; which is Halal)"
+			"(Different from ‘Chocolate Liquor’ which is Halal)"
 		],
 		"otherNames": null,
 		"unknown": null
@@ -477,7 +477,7 @@
 			"Halal"
 		],
 		"info": [
-			"(Different from \u0026#39;Chocolate Liquer\u0026#39; which is Haram)"
+			"(Different from ‘Chocolate Liquer’ which is Haram)"
 		],
 		"otherNames": null,
 		"unknown": null
@@ -542,14 +542,14 @@
 		"unknown": null
 	},
 	{
-		"ingredient": "Confectioner's Glaze",
+		"ingredient": "Confectioner’s Glaze",
 		"statuses": [
 			"Plant or Vegetable Source: Halal",
 			"Shellac Source: Haram",
 			"Unknown Source: Haram"
 		],
 		"info": [
-			"Confectioner\u0026#39;s Glaze is primarily produced from Shellac, which is haram.",
+			"Confectioner’s Glaze is primarily produced from Shellac, which is haram.",
 			"Not necessarily the same as doughnut glaze"
 		],
 		"otherNames": [
@@ -834,10 +834,10 @@
 		"unknown": null
 	},
 	{
-		"ingredient": "Food from those who don't pay khums",
+		"ingredient": "Food from those who don’t pay khums",
 		"statuses": null,
 		"info": [
-			"Not a valid judgement to make.  A person\u0026#39;s food is not deemed impermissible solely upon this criteria, and you are not allowed to ask."
+			"Not a valid judgement to make.  A person’s food is not deemed impermissible solely upon this criteria, and you are not allowed to ask."
 		],
 		"otherNames": null,
 		"unknown": null
@@ -1105,7 +1105,7 @@
 		"ingredient": "Insects",
 		"statuses": [
 			"Raw or unprocessed form: Haram",
-			"Istihala (transformation) takes place during production, and it loses it\u0026#39;s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
+			"Istihala (transformation) takes place during production, and it loses it’s original form in the eyes of the people, \u003cem\u003eOR\u003c/em\u003e it is added in a minimal amount that is absorbed into the food: Halal"
 		],
 		"info": [
 			"Excludes Locusts, halal as an exception"
@@ -1366,7 +1366,7 @@
 		"ingredient": "Marshmallow",
 		"statuses": null,
 		"info": [
-			"Usually contains gelatin. See \u0026#39;Gelatin\u0026#39; section for guidelines on permissibility"
+			"Usually contains gelatin. See ‘Gelatin’ section for guidelines on permissibility"
 		],
 		"otherNames": null,
 		"unknown": null
@@ -1972,10 +1972,10 @@
 	{
 		"ingredient": "Shortening",
 		"statuses": [
-			"\u0026#39;Pure Vegetable Shortening\u0026#39;: Halal"
+			"‘Pure Vegetable Shortening’: Halal"
 		],
 		"info": [
-			"\u0026#39;Vegetable Shortening\u0026#39;: Suspect. Labelling laws only require the predominant ingredient to be mentioned, even if animal sources are included."
+			"‘Vegetable Shortening’: Suspect. Labelling laws only require the predominant ingredient to be mentioned, even if animal sources are included."
 		],
 		"otherNames": null,
 		"unknown": null
@@ -2021,11 +2021,11 @@
 	{
 		"ingredient": "Smoking",
 		"statuses": [
-			"Ay Makarim Shirazi: Haram",
-			"All other Maraja: If one considers cigarettes harmful, then it\u0026#39;s haram (onus on the individual)"
+			"Ay Makarim Shirazi: Haram"
 		],
 		"info": [
-			"Ay Khomeini: Those who are addicted may continue, non-smokers cannot start"
+			"Ay Khomeini: Those who are addicted may continue, non-smokers cannot start",
+			"All other Maraja: If one considers cigarettes harmful, then it’s haram (onus on the individual)"
 		],
 		"otherNames": [
 			"Same rulings apply to e-cigarettes (AKA e-cigs, vaping, vape, etc)"
@@ -2306,6 +2306,18 @@
 		"unknown": null
 	},
 	{
+		"ingredient": "Vanilla Flavor",
+		"statuses": [
+			"Natural Vanilla Flavor: Haram",
+			"Natural Vanilla Pods Without Alcohol: Halal",
+			"Artificial Vanilla Flavour: Halal",
+			"Ay. Sistani: Trace Amounts of Natural Vanilla Extract as a product ingredient: Halal; Larger amounts: Haram "
+		],
+		"info": null,
+		"otherNames": null,
+		"unknown": null
+	},
+	{
 		"ingredient": "Vanillin",
 		"statuses": [
 			"Halal"
@@ -2330,7 +2342,7 @@
 			"Unknown production: Better to avoid"
 		],
 		"info": [
-			"Produced with Rennet: Refer to \u0026#39;Rennet\u0026#39; section for more details"
+			"Produced with Rennet: Refer to ‘Rennet’ section for more details"
 		],
 		"otherNames": [
 			"Whey Protein",

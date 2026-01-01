@@ -28,7 +28,7 @@ type Book struct {
 // Book represents a single Book returned from the webapp API
 type BookItem struct {
 	Number        *int          `json:"number"`
-	Translator    *Author       `json:"translator"`
+	Translator    Author        `json:"translator"`
 	NameEnTl      *string       `json:"name_en_tl"`
 	NameEn        *string       `json:"name_en"`
 	Id            *int          `json:"id"`
@@ -45,7 +45,7 @@ type BookItem struct {
 func (b *BookItem) GetAuthorLastName() string {
 	authorLastNameFinal := ""
 	authorNameDecoded := ""
-	authorNameSplit := strings.Split(*b.Author.NameEn, "(")[0]
+	authorNameSplit := strings.Split(b.Author.NameEn, "(")[0]
 	authorLastNameArray := strings.Split(authorNameSplit, " ")
 	if authorLastNameArray[len(authorLastNameArray)-1] == "" {
 		authorNameDecoded = stringsLocal.NormalizeString(authorLastNameArray[len(authorLastNameArray)-2])
@@ -65,7 +65,7 @@ type Volume struct {
 }
 
 type Author struct {
-	NameEn    *string `json:"name_en"`
+	NameEn    string  `json:"name_en"`
 	NameAr    *string `json:"name_ar"`
 	Link      *string `json:"link"`
 	DeathDate *string `json:"death_date"`
@@ -144,13 +144,13 @@ func NewWebAppGqlClient(webAppUrl string, webAppApiKey string) WebAppGqlClient {
 func (h *Hadith) GetGradings() (behbudiGrading string, majlisiGrading string, mohseniGrading string) {
 	if len(h.Gradings) > 0 {
 		for _, grading := range h.Gradings {
-			if strings.Contains(*grading.Author.NameEn, "Behbudi") {
+			if strings.Contains(grading.Author.NameEn, "Behbudi") {
 				behbudiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
-			if strings.Contains(*grading.Author.NameEn, "Majlisi") {
+			if strings.Contains(grading.Author.NameEn, "Majlisi") {
 				majlisiGrading = strings.TrimSpace(*grading.GradeAr)
 			}
-			if strings.Contains(*grading.Author.NameEn, "Mohseni") {
+			if strings.Contains(grading.Author.NameEn, "Mohseni") {
 				mohseniGrading = strings.TrimSpace(*grading.GradeAr)
 			}
 		}

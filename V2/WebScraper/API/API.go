@@ -214,7 +214,7 @@ func ScrapeAll(config *config.Config) error {
 		allBookNamesArray = append(allBookNamesArray, *bookInfo)
 		time.Sleep(10 * time.Second)
 	}
-	files.WriteStructToFile(allHadithsArray, config.Flags.DataPath+"/allBooks.json")
+	// files.WriteStructToFile(allHadithsArray, config.Flags.DataPath+"/allBooks.json")
 	files.WriteStructToFile(allBookNamesArray, config.Flags.DataPath+"/BookNames.json")
 	fmt.Println("Finished fetching Thaqalayn hadiths, time taken: ", time.Since(start))
 	return nil

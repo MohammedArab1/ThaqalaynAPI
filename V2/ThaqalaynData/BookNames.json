@@ -240,6 +240,18 @@
 		"volume": 1
 	},
 	{
+		"bookId": "Kamal-al-Din-wa-Tamam-al-Nima-Saduq",
+		"bookDescription": "Kamāl al-Dīn wa Tamām al-Niʿma (The Perfection of Religion and the End of Divine Favor), compiled by the great Shīʿī scholar al-Shaykh al-Ṣadūq (d. 381 AH/991 CE), is a seminal theological and historical work written during the formative period following the Major Occultation (al-Ghayba al-Kubrā) of the Twelfth Imam, Muhammad al-Mahdi (a). Its primary subject is a systematic and comprehensive defense of the doctrine of occultation and the imamate of the Hidden Imam, making it the oldest and most authoritative Ḥadīth reference on this central tenet of Twelver Shīʿī belief.",
+		"bookCover": "https://thaqalayn.net/css/images/39-round.jpeg",
+		"englishName": "The Perfection of the Religion",
+		"translator": "",
+		"BookName": "Kamāl al-Dīn wa Tamām al-Niʿma",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
+		"idRangeMin": 1,
+		"idRangeMax": 659,
+		"volume": 1
+	},
+	{
 		"bookId": "Al-Kafi-Volume-8-Kulayni",
 		"bookDescription": "al-Kāfī, compiled by Shaykh al-Kulaynī, is a monumental work belonging to a number of books belonging to the Shīʿī Ḥadīth literature. It comprises of eight volumes and took twenty years to compile, making it an extensive collection of wisdom and guidance for adherents of the faith. The eight volumes are divided into three main parts: al-Uṣūl (Roots), al-Furūʿ (Branches), and al-Rawḍa (the Garden).\n\nPart 1 (Volumes 1 \u0026 2): al-Uṣūl (Roots)\n\nThis portion delves into the principles of beliefs, containing eight books that discuss topics such as the intellect and ignorance, the virtues of knowledge, Divine Unity, Divine Authority, Belief and Disbelief, Suppications, the Virtues of the Holy Qurʾān, in addition to Ethics and Morals.\n\nPart 2 (Volumes 3 to 7): al-Furūʿ (Branches)\n\nThis portion comprises of Ḥadīths related to Islamic jurisprudence, including acts of worship, business transactions, and judicial laws. It covers a vast array of topics in 26 books, ranging from the laws of cleanliness and menstruation to those of wills, inheritance, and legal penalties.\n\nPart 3 (Volume 8): al-Rawḍa (the Garden)\n\nal-Rawḍa encompasses a collection of miscellaneous Ḥadīths, which cover topics that had already been glazed over in prior two portions of the book. Many a time, long Ḥadīths will be included from written letters, wills of the Imams and historical narrations that didn’t necessarily fit in chapter headings that were made in the first seven volumes.  The Ḥadīths are not organised in a specific way, but its diversity adds depth to the understanding of the faith.",
 		"bookCover": "https://thaqalayn.net/css/images/1-round.jpeg",

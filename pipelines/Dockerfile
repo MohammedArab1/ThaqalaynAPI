@@ -55,7 +55,8 @@ RUN chmod +x /app/pipelines/cron.sh
 # Cron job definition
 # -------------------------
 # Runs every Sunday at 00:00
-RUN echo "0 0 * * 0 /app/pipelines/cron.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/weekly-job \
+RUN echo 'PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' > /etc/cron.d/weekly-job \
+    && echo "0 0 * * 0 /app/pipelines/cron.sh >> /var/log/cron.log 2>&1" >> /etc/cron.d/weekly-job \
     && chmod 0644 /etc/cron.d/weekly-job \
     && crontab /etc/cron.d/weekly-job
 

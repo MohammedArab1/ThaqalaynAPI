@@ -4,7 +4,13 @@ set -e
 # Cron runs with a minimal environment. Pull runtime env injected by Docker
 # from PID 1 (cron daemon), then export only what this pipeline needs.
 if [ -r /proc/1/environ ]; then
-	eval "$(tr '\0' '\n' < /proc/1/environ | grep -E '^(WEBAPP_URL|MONGODB_URI|GEMINI_API_KEY)=' | sed 's/^/export /')"
+	while IFS= read -r -d '' entry; do
+		case "$entry" in
+			WEBAPP_URL=*|MONGODB_URI=*|GEMINI_API_KEY=*)
+				export "$entry"
+				;;
+		esac
+	done < /proc/1/environ
 fi
 
 cd /app/V2

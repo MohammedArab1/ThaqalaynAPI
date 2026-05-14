@@ -1,0 +1,39 @@
+- name: Deploy to Hetzner VPS
+  hosts: hetzner-vps
+  become: true
+
+  tasks:
+    - name: Pull latest changes from Git
+      ansible.builtin.git:
+        repo: 'https://github.com/MohammedArab1/ThaqalaynAPI.git'
+        dest: /root/ThaqalaynAPI
+        update: yes
+
+    - name: Stop and remove the container
+      community.docker.docker_container:
+        name: pipelines-cron-test
+        state: absent
+
+    - name: Remove the Docker image
+      community.docker.docker_image:
+        name: pipelines-cron
+        tag: latest
+        state: absent
+        force_absent: true 
+
+    - name: Create the Docker image
+      community.docker.docker_image:
+        name: pipelines-cron
+        tag: latest
+        build:
+          path: /root/ThaqalaynAPI
+          dockerfile: ./pipelines/Dockerfile
+        source: build
+        state: present
+
+    - name: Run container with remote env file
+      community.docker.docker_container:
+        name: pipelines-cron-test
+        image: pipelines-cron:latest
+        state: started
+        env_file: /root/ThaqalaynAPI/.env

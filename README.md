@@ -88,12 +88,38 @@ Feel free to use any part of this project and modify as you'd like.
 
 ## Developer Setup
 
-### Scraper Setup
+### This is a monorepo composed of a couple of different related projects:
+
+#### Web Scraper
+
+The scraper fetches the data and converts it to the appropriate format. It finishes by updating the data in the database. Lives under [V2](./V2/). [V1](./V1/) is an older, deprecated version of the scraper.
+
+You will find all the data in json format at [ThaqalaynData](./V2/ThaqalaynData/) But this is outdated and no longer maintained.
+
+
+##### Scraper Setup
 1. Clone the repository
 2. Make sure Thaqalayn API credentials are set. This can be done by setting the `WEBAPP_URL` and `WEBAPP_API_KEY` environment variables or by using the -webapp-api-key and -webapp-url flags when running the script. Environment variables take precedence. If you want to use environment variables, copy the .env.example file to V2/WebScraper/cmd folder, rename to .env and fill in the values 2 api values.
 3. `cd V2/WebScraper/cmd`
 4. To scrape all the books: `go run main.go -datapath=../../ThaqalaynData`. Add the `-webapp-api-key` and `-webapp-url` flags if you haven't set the environment variables.
 5. To scrape a single book: `go run main.go -datapath=../../ThaqalaynData -singlebook=17`. Add the `-webapp-api-key` and `-webapp-url` flags if you haven't set the environment variables. Replace 17 with the book ID you want to scrape.
+
+#### Data Sync Cron
+This is a cron job that is set to run on a weekly basis. It runs the Web Scraper to update the data in the database.
+
+##### Deployment
+
+The Cron job runs on a VPS hosted on Hetzner. Deployment is made through Ansible. Ansible deployments must be made from a machine that has ansible installed and can access, via SSH, the VPS. to deploy, run the following command from such machine, in the root project directory: `ansible-playbook -i inventory.yaml pipelines/cron-playbook.yaml`
+
+Ansible logs into the VPS server on your behalf and completes the following steps (playbook.yaml):
+1. Pulls changes from git
+2. Stop the currently running container and remove image
+3. Build a new image and run container.
+
+It is also possible, in the future, to add this service as part of the docker compose and have it run when we deploy the API.
+
+#### API
+This is the actual REST and GQL backend that calls the database.
 
 ### API Setup
 1. Clone the repository
@@ -101,9 +127,9 @@ Feel free to use any part of this project and modify as you'd like.
 3. Using the .env.example file, create a .env file at the root of the directory. You will need a value for `MONGODB_URI`. This is the URI of your mongoDB atlas instance that stores the data. This uses models found in /v1/models and /v2/models.
 4. run `npm start`
 
-## Deployment
+#### API Deployment
 
-The application runs on a VPS hosted on Hetzner. Deployment is made through Ansible. Ansible deployments must be made from a machine that has ansible installed and can access, via SSH, the VPS. to deploy, run the following command from such machine, in the root project directory: `ansible-playbook -i inventory.yaml playbook.yaml`
+The application runs on a VPS hosted on Hetzner. Deployment is made through Ansible. To deploy, run the following command from such machine, in the root project directory: `ansible-playbook -i inventory.yaml playbook.yaml`
 
 Ansible logs into the VPS server on your behalf and completes the following steps (playbook.yaml):
 1. Pulls changes from git

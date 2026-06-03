@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Thaqalayn API</title>
+		<style>
+			:root {
+				--bg: #f6f8fb;
+				--card: #ffffff;
+				--muted: #64748b;
+				--accent: #4f46e5;
+			}
+			body {
+				font-family:
+					Inter,
+					system-ui,
+					-apple-system,
+					'Segoe UI',
+					Roboto,
+					'Helvetica Neue',
+					Arial;
+				background: var(--bg);
+				color: #0f172a;
+				margin: 0;
+			}
+			.container {
+				max-width: 960px;
+				margin: 6vh auto;
+				padding: 28px;
+				background: var(--card);
+				border-radius: 12px;
+				box-shadow: 0 8px 30px rgba(11, 27, 57, 0.06);
+			}
+			h1 {
+				margin: 0 0 6px;
+				font-size: 28px;
+			}
+			p.lead {
+				margin: 0;
+				color: var(--muted);
+			}
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 12px;
+				margin-top: 20px;
+			}
+			a.card {
+				display: block;
+				padding: 14px;
+				border-radius: 10px;
+				border: 1px solid #eef2ff;
+				text-decoration: none;
+				color: inherit;
+				background: linear-gradient(
+					180deg,
+					rgba(255, 255, 255, 0.6),
+					transparent
+				);
+			}
+			a.card h3 {
+				margin: 0;
+				font-size: 16px;
+			}
+			a.card p {
+				margin: 6px 0 0;
+				color: var(--muted);
+				font-size: 13px;
+			}
+			a.card:hover {
+				box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+				transform: translateY(-3px);
+			}
+			footer {
+				margin-top: 18px;
+				color: #94a3b8;
+				font-size: 13px;
+			}
+			code {
+				background: #f1f5f9;
+				padding: 2px 6px;
+				border-radius: 6px;
+				font-size: 13px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Thaqalayn API</h1>
+			<p class="lead">
+				REST and GraphQL endpoints for Thaqalayn content — simple, fast, and
+				open.
+			</p>
+
+			<div class="grid">
+				<a
+					class="card"
+					href="https://github.com/MohammedArab1/ThaqalaynAPI"
+					target="_blank"
+					rel="noopener"
+				>
+					<h3>Repository & Docs</h3>
+					<p>Source, setup instructions, and contribution details on GitHub.</p>
+				</a>
+
+				<a class="card" href="/api-docs" target="_blank" rel="noopener">
+					<h3>Swagger UI</h3>
+					<p>Interactive API docs for all REST endpoints.</p>
+				</a>
+
+				<a class="card" href="/graphql" target="_blank" rel="noopener">
+					<h3>GraphQL</h3>
+					<p>Explore the GraphQL endpoint and try queries.</p>
+				</a>
+
+				<a class="card" href="/api/v2/allbooks" target="_blank" rel="noopener">
+					<h3>Books (v2)</h3>
+					<p>List of available books for the v2 endpoints.</p>
+				</a>
+
+				<a class="card" href="/api/allbooks" target="_blank" rel="noopener">
+					<h3>Books (v1)</h3>
+					<p>Legacy v1 list of books (kept for compatibility).</p>
+				</a>
+
+				<a
+					class="card"
+					href="/api/v2/ingredients"
+					target="_blank"
+					rel="noopener"
+				>
+					<h3>Ingredients (v2)</h3>
+					<p>Halal/haram ingredient data fetched from external sources.</p>
+				</a>
+			</div>
+
+			<footer>Made with care • Root served at <code>/</code></footer>
+		</div>
+	</body>
+</html>

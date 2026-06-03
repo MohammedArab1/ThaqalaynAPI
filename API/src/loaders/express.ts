@@ -1,14 +1,13 @@
 import cors from 'cors';
-import express from 'express';
+import express, { type Express } from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import restRouter from '../api/rest/routes/index.js';
+import restRouter from '../api/rest/routes/index';
 
-const initializeExpress = (app) => {
+const initializeExpress = (app: Express): Express => {
 	app.use(express.json());
 	app.use(cors());
 
-	// Swagger setup
 	const openapiSpecification = swaggerJsdoc({
 		definition: {
 			openapi: '3.0.0',
@@ -17,12 +16,10 @@ const initializeExpress = (app) => {
 				version: '1.0.0',
 			},
 		},
-		apis: ['API/src/api/rest/routes/**/*.js'],
+		apis: ['API/src/api/rest/routes/**/*.{js,ts}'],
 	});
 
 	app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));
-
-	// Apply routes
 	app.use('/', restRouter);
 
 	return app;

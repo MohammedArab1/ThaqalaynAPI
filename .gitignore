@@ -4,3 +4,4 @@ node_modules
 developerNotes.txt
 .DS_Store
 .vscode
+dist

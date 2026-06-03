@@ -1,18 +1,13 @@
-// api/graphql/schemas/index.js
-
 const typeDefs = `#graphql
-    # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+    enum CacheControlScope {
+        PUBLIC
+        PRIVATE
+    }
+    directive @cacheControl(
+        maxAge: Int
+        inheritMaxAge: Boolean
+    ) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
 
-	enum CacheControlScope {
-		PUBLIC
-		PRIVATE
-	}
-	directive @cacheControl(
-		maxAge: Int
-		inheritMaxAge: Boolean
-	) on FIELD_DEFINITION | OBJECT | INTERFACE | UNION
-	
-    # This "Book" type defines the queryable fields for every book in our data source.
     type Book {
         bookId: String
         BookName: String
@@ -25,7 +20,7 @@ const typeDefs = `#graphql
         translator: String
     }
 
-	type Ingredient {
+    type Ingredient {
         ingredient: String
         statuses: [String]
         info: [String]
@@ -52,14 +47,11 @@ const typeDefs = `#graphql
 
     }
 
-    # The "Query" type is special: it lists all of the available queries that
-    # clients can execute, along with the return type for each. In this
-    # case, the "books" query returns an array of zero or more Books (defined above).
     type Query {
         allBooks: [Book]
-		ingredients: [Ingredient]
+        ingredients: [Ingredient]
         random(bookId: String): Hadith  @cacheControl(maxAge: 0)
-        query(query:String!, bookId: String): [Hadith] 
+        query(query:String!, bookId: String): [Hadith]
         book(bookId: String!): [Hadith]
         hadith(bookId: String!, hadithId: Int! ): Hadith
     }

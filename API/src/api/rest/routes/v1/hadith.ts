@@ -1,16 +1,13 @@
-// api/rest/routes/v1/hadith.js
 import { Router } from 'express';
-import BookNamesModel from '../../../../../../V1/DB/models/bookName.js';
-import HadithModel from '../../../../../../V1/DB/models/hadith.js';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
+import BookNamesModel from '../../../../models/bookName.js';
+import HadithModel from '../../../../models/hadith.js';
 import HadithController from '../../controllers/hadithController.js';
 import HadithService from '../../services/hadithService.js';
 
 const router = Router();
 const hadithService = new HadithService(HadithModel, BookNamesModel);
 const controller = new HadithController(hadithService);
-
-// Common endpoints
 
 /**
  * @openapi

@@ -1,6 +1,25 @@
-// api/rest/controllers/hadithController.js
+import type { Request, Response } from 'express';
+import HadithService from '../services/hadithService.js';
+
+type QueryParams = {
+	q?: string;
+};
+
+type BookParams = {
+	bookId: string;
+};
+
+type HadithParams = {
+	bookId: string;
+	id: string;
+};
+
 export default class HadithController {
-	constructor(hadithService) {
+	private service: HadithService;
+	private invalidIdMessage: string;
+	private invalidBookMessage: string;
+
+	constructor(hadithService: HadithService) {
 		this.service = hadithService;
 		this.invalidIdMessage =
 			'No hadith with given ID. Please check the ID range using /api/allbooks';
@@ -8,27 +27,36 @@ export default class HadithController {
 			'Invalid book ID. Please use /api/v2/allbooks for valid book IDs';
 	}
 
-	allBooksHandler = async (req, res) => {
+	allBooksHandler = async (
+		_req: Request,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const books = await this.service.getAllBooks();
-			res.json(books);
+			return res.json(books);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	randomHadithHandler = async (req, res) => {
+	randomHadithHandler = async (
+		_req: Request,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const randomHadith = await this.service.getRandomHadith();
-			res.json(randomHadith);
+			return res.json(randomHadith);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	queryHandler = async (req, res) => {
+	queryHandler = async (
+		req: Request<Record<string, never>, unknown, unknown, QueryParams>,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
-			const { q: query } = req.query;
+			const query = req.query.q;
 			if (!query) {
 				return res.status(400).json({
 					error: 'Missing query parameter',
@@ -37,29 +65,42 @@ export default class HadithController {
 			}
 
 			const results = await this.service.searchHadith(query);
-			res.json(results);
+			return res.json(results);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	queryPerBookHandler = async (req, res) => {
+	queryPerBookHandler = async (
+		req: Request<BookParams, unknown, unknown, QueryParams>,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const { bookId } = req.params;
-			const { q: query } = req.query;
+			const query = req.query.q;
 
 			if (!(await this.service.validateBookExists(bookId))) {
 				return res.status(400).json({ error: this.invalidBookMessage });
 			}
 
+			if (!query) {
+				return res.status(400).json({
+					error: 'Missing query parameter',
+					example: `/api/query/${bookId}?q=your+search+terms`,
+				});
+			}
+
 			const results = await this.service.searchHadith(query, bookId);
-			res.json(results);
+			return res.json(results);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	bookHandler = async (req, res) => {
+	bookHandler = async (
+		req: Request<BookParams>,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const { bookId } = req.params;
 
@@ -68,13 +109,16 @@ export default class HadithController {
 			}
 
 			const hadiths = await this.service.getHadithsByBook(bookId);
-			res.json(hadiths);
+			return res.json(hadiths);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	randomBookHadithHandler = async (req, res) => {
+	randomBookHadithHandler = async (
+		req: Request<BookParams>,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const { bookId } = req.params;
 
@@ -83,34 +127,41 @@ export default class HadithController {
 			}
 
 			const randomHadith = await this.service.getRandomHadith(bookId);
-			res.json(randomHadith || { error: 'No hadiths found in this book' });
+			return res.json(
+				randomHadith || { error: 'No hadiths found in this book' },
+			);
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	oneHadithHandler = async (req, res) => {
+	oneHadithHandler = async (
+		req: Request<HadithParams>,
+		res: Response,
+	): Promise<Response | void> => {
 		try {
 			const { bookId, id } = req.params;
-			const hadithId = parseInt(id, 10);
+			const hadithId = Number.parseInt(id, 10);
 
-			if (isNaN(hadithId)) {
+			if (Number.isNaN(hadithId)) {
 				return res.status(400).json({ error: 'Invalid hadith ID format' });
 			}
 
 			const hadith = await this.service.getHadithById(bookId, hadithId);
-			res.json(hadith || { error: this.invalidIdMessage });
+			return res.json(hadith || { error: this.invalidIdMessage });
 		} catch (error) {
 			this.handleError(res, error);
 		}
 	};
 
-	handleError = (res, error) => {
+	private handleError(res: Response, error: unknown): Response {
 		console.error('Controller Error:', error);
-		res.status(500).json({
+		return res.status(500).json({
 			error: 'Internal server error',
 			details:
-				process.env.NODE_ENV === 'development' ? error.message : undefined,
+				process.env.NODE_ENV === 'development' && error instanceof Error
+					? error.message
+					: undefined,
 		});
-	};
+	}
 }

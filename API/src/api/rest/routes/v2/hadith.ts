@@ -1,9 +1,8 @@
-// api/rest/routes/v2/hadith.js
 import { Router } from 'express';
-import BookNamesModelV2 from '../../../../../../V2/Deploy/models/bookNameV2.js';
-import HadithModelV2 from '../../../../../../V2/Deploy/models/hadithV2.js';
-import IngredientModelV2 from '../../../../../../V2/Deploy/models/ingredientsV2.js';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
+import BookNamesModelV2 from '../../../../models/bookNameV2.js';
+import HadithModelV2 from '../../../../models/hadithV2.js';
+import IngredientModelV2 from '../../../../models/ingredientsV2.js';
 import HadithController from '../../controllers/hadithController.js';
 import IngredientController from '../../controllers/ingredientController.js';
 import HadithService from '../../services/hadithService.js';
@@ -11,11 +10,9 @@ import IngredientService from '../../services/ingredientService.js';
 
 const router = Router();
 
-// Initialize services
 const hadithService = new HadithService(HadithModelV2, BookNamesModelV2);
 const ingredientService = new IngredientService(IngredientModelV2);
 
-// Initialize controllers
 const controller = new HadithController(hadithService);
 const ingredientController = new IngredientController(ingredientService);
 
@@ -188,8 +185,5 @@ router.get('/:bookId/random', controller.randomBookHadithHandler);
  *           type: string
  */
 router.get('/:bookId/:id', cacheMiddleware(600), controller.oneHadithHandler);
-
-// V2 specific endpoints
-
 
 export default router;

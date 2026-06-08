@@ -1,5 +1,4 @@
 import dotenv from 'dotenv';
-import { StringValueNode } from 'graphql';
 
 dotenv.config();
 
@@ -7,6 +6,8 @@ type AppConfig = {
 	port: number | string;
 	cacheEnabled: boolean;
 	databaseUrl: string;
+	plausibleApiUrl?: string;
+	plausibleDomain?: string;
 };
 
 type RedisConfig = {
@@ -23,8 +24,9 @@ const config: Config = {
 	app: {
 		port: process.env.PORT || 3001,
 		cacheEnabled: process.env.CACHE?.toLowerCase() === 'true',
-		databaseUrl: process.env.MONGODB_URI || ""
-
+		databaseUrl: process.env.MONGODB_URI || '',
+		plausibleApiUrl: process.env.PLAUSIBLE_API_URL,
+		plausibleDomain: process.env.PLAUSIBLE_DOMAIN,
 	},
 	redis: {
 		url: process.env.REDIS_URL,
@@ -34,12 +36,12 @@ const config: Config = {
 
 const validateConfig = () => {
 	if (!config.app.databaseUrl) {
-		throw new Error("Malformed config: no database URL provided.")
+		throw new Error('Malformed config: no database URL provided.');
 	}
-}
+};
 
 //application cannot run without proper validation
-validateConfig()
+validateConfig();
 
 // const getConfig = (): Config => {
 // 	validateConfig()

@@ -1,4 +1,4 @@
-FROM node:22.15.1-alpine3.20
+FROM node:22.15.1-alpine3.20 AS builder
 
 WORKDIR /app
 
@@ -8,8 +8,18 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3001
-
 RUN [ "npm", "run", "build:api" ]
 
-CMD [ "npm", "run", "start:prod" ]
+FROM node:22.15.1-alpine3.20
+
+WORKDIR /app
+
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/API/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/API/src/api/rest/public ./API/src/api/rest/public
+
+
+EXPOSE 3001
+
+CMD [ "node", "./dist/index.js" ]

@@ -18,7 +18,10 @@ const initializeExpress = (app: Express): Express => {
 				version: '1.0.0',
 			},
 		},
-		apis: ['API/src/api/rest/routes/**/*.{js,ts}'],
+		apis: [
+			'API/src/api/rest/routes/**/*.{js,ts}',
+			'dist/api/rest/routes/**/*.{js,ts}',
+		],
 	});
 
 	app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openapiSpecification));

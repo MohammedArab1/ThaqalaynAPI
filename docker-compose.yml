@@ -13,6 +13,8 @@ services:
       PORT: ${PORT}
       CACHE: ${CACHE}
       REDIS_URL: ${REDIS_URL}
+      PLAUSIBLE_API_URL: ${PLAUSIBLE_API_URL}
+      PLAUSIBLE_DOMAIN: ${PLAUSIBLE_DOMAIN}
     depends_on:
       - redis
   # caddy:

@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import HadithService from '../services/hadithService.js';
+import type { IHadithService } from '../services/interfaces.js';
 
 type QueryParams = {
 	q?: string;
@@ -15,11 +15,11 @@ type HadithParams = {
 };
 
 export default class HadithController {
-	private service: HadithService;
+	private service: IHadithService;
 	private invalidIdMessage: string;
 	private invalidBookMessage: string;
 
-	constructor(hadithService: HadithService) {
+	constructor(hadithService: IHadithService) {
 		this.service = hadithService;
 		this.invalidIdMessage =
 			'No hadith with given ID. Please check the ID range using /api/allbooks';

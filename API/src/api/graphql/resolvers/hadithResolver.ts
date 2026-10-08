@@ -1,9 +1,9 @@
+import { BookRepository } from '../../../db/repositories/bookRepository.js';
+import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
-	BookModelLike,
 	BookNameRecord,
-	HadithModelLike,
 	HadithRecord,
-} from '../../../models/contracts.js';
+} from '../../rest/services/interfaces.js';
 import type {
 	GraphQLBookArgs,
 	GraphQLHadithArgs,
@@ -11,65 +11,50 @@ import type {
 } from '../contracts.js';
 
 export class HadithResolver {
-	private hadithModel: HadithModelLike;
-	private bookModel: BookModelLike;
+	private bookRepo: BookRepository;
+	private hadithRepo: HadithRepository;
 
-	constructor(hadithModel: HadithModelLike, bookModel: BookModelLike) {
-		this.hadithModel = hadithModel;
-		this.bookModel = bookModel;
+	constructor() {
+		this.bookRepo = new BookRepository();
+		this.hadithRepo = new HadithRepository();
 	}
 
 	async allBooks(): Promise<BookNameRecord[]> {
-		return this.bookModel.find({}).sort({ bookId: 1 }).select('-_id -__v');
+		const books = await this.bookRepo.listBooks();
+		return books.sort((a, b) =>
+			String(a.bookId).localeCompare(String(b.bookId), undefined, {
+				sensitivity: 'base',
+			}),
+		);
 	}
 
 	async random({
 		bookId,
 	}: { bookId?: string } = {}): Promise<HadithRecord | null> {
-		const filter = bookId ? { bookId } : {};
-		return new Promise((resolve, reject) => {
-			this.hadithModel.findOneRandom(
-				filter,
-				(err: unknown, result: HadithRecord | null) => {
-					err ? reject(err) : resolve(result);
-				},
-			);
-		});
+		return this.hadithRepo.randomHadith(bookId);
 	}
 
 	async query({
 		query,
 		bookId,
 	}: GraphQLQueryArgs): Promise<HadithRecord[] | { error: string }> {
-		const $regex = new RegExp(this.escapeRegex(query), 'i');
-		const filter = bookId ? { bookId } : {};
+		const results = await this.hadithRepo.searchHadiths(query, bookId);
 
-		const [english, arabic] = await Promise.all([
-			this.hadithModel.find({ ...filter, englishText: $regex }),
-			this.hadithModel.find({ ...filter, arabicText: $regex }),
-		]);
-
-		return english.length > 0 ? english : arabic;
+		if (results.length === 0) {
+			return { error: 'No matches found' };
+		}
+		return results;
 	}
 
 	async book({ bookId }: GraphQLBookArgs): Promise<HadithRecord[]> {
-		return this.hadithModel
-			.find({ bookId })
-			.sort({ id: 1 })
-			.select('-_id -__v');
+		return this.hadithRepo.listHadithsByBook(bookId);
 	}
 
 	async hadith({
 		bookId,
 		hadithId,
 	}: GraphQLHadithArgs): Promise<HadithRecord | null> {
-		return this.hadithModel
-			.findOne({ bookId, id: hadithId })
-			.select('-_id -__v');
-	}
-
-	escapeRegex(text: string) {
-		return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+		return this.hadithRepo.getHadithById(bookId, hadithId);
 	}
 }
 

@@ -43,7 +43,7 @@ const typeDefs = `#graphql
         URL: String
         mohseniGrading: String
         behbudiGrading: String
-        chapterInCategoryId: Int
+        chapterInCategoryId: String
 
     }
 

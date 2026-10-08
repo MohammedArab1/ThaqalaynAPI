@@ -1,18 +1,18 @@
-import { BookRepository } from '../../../db/repositories/bookRepository.js';
-import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
+import { BookV1Repository } from '../../../db/repositories/bookV1Repository.js';
+import { HadithV1Repository } from '../../../db/repositories/hadithV1Repository.js';
 import type {
 	BookNameRecord,
 	HadithRecord,
 	IHadithService,
 } from './interfaces.js';
 
-export default class HadithService implements IHadithService {
-	private bookRepo: BookRepository;
-	private hadithRepo: HadithRepository;
+export default class HadithV1Service implements IHadithService {
+	private bookRepo: BookV1Repository;
+	private hadithRepo: HadithV1Repository;
 
 	constructor() {
-		this.bookRepo = new BookRepository();
-		this.hadithRepo = new HadithRepository();
+		this.bookRepo = new BookV1Repository();
+		this.hadithRepo = new HadithV1Repository();
 	}
 
 	async getAllBooks(): Promise<BookNameRecord[]> {

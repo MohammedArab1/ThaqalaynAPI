@@ -1,12 +1,10 @@
 import { Router } from 'express';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
-import BookNamesModel from '../../../../models/bookName.js';
-import HadithModel from '../../../../models/hadith.js';
 import HadithController from '../../controllers/hadithController.js';
-import HadithService from '../../services/hadithService.js';
+import HadithV1Service from '../../services/hadithV1Service.js';
 
 const router = Router();
-const hadithService = new HadithService(HadithModel, BookNamesModel);
+const hadithService = new HadithV1Service();
 const controller = new HadithController(hadithService);
 
 /**
@@ -86,7 +84,7 @@ router.get('/query', cacheMiddleware(60), controller.queryHandler);
 router.get(
 	'/query/:bookId',
 	cacheMiddleware(60),
-	controller.queryPerBookHandler
+	controller.queryPerBookHandler,
 );
 
 /**

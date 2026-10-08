@@ -10,7 +10,11 @@
 		"build:api": "tsc -p API/tsconfig.json",
 		"typecheck:api": "tsc -p API/tsconfig.json --noEmit",
 		"dev:api:ts": "tsx watch API/src/index.ts",
-		"start:api:ts": "tsx API/src/index.ts"
+		"start:api:ts": "tsx API/src/index.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:push": "drizzle-kit push",
+		"db:studio": "drizzle-kit studio"
 	},
 	"author": "Mohammed Arab",
 	"license": "GNU GPLv3",
@@ -24,11 +28,13 @@
 		"cross-var": "^1.1.0",
 		"dotenv": "^16.0.3",
 		"dotenv-cli": "^6.0.0",
+		"drizzle-orm": "^0.45.3",
 		"express": "^4.18.1",
 		"graphql": "^16.8.1",
 		"keyv": "^5.3.3",
 		"mongoose": "^6.6.2",
 		"mongoose-simple-random": "^0.4.1",
+		"pg": "^8.23.1",
 		"redis": "^4.6.15",
 		"run-func": "^3.0.0",
 		"swagger-jsdoc": "^6.2.8",
@@ -39,8 +45,10 @@
 		"@types/cors": "^2.8.19",
 		"@types/express": "^5.0.6",
 		"@types/node": "^25.8.0",
+		"@types/pg": "^8.23.1",
 		"@types/swagger-jsdoc": "^6.0.4",
 		"@types/swagger-ui-express": "^4.1.8",
+		"drizzle-kit": "^0.31.11",
 		"tsx": "^4.22.0",
 		"typescript": "^6.0.3"
 	}

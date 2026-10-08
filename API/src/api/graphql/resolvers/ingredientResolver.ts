@@ -1,20 +1,20 @@
-import type {
-	IngredientModelLike,
-	IngredientRecord,
-} from '../../../models/contracts.js';
+import { IngredientRepository } from '../../../db/repositories/ingredientRepository.js';
+import type { IngredientRecord } from '../../rest/services/interfaces.js';
 
 export class IngredientResolver {
-	private ingredientModel: IngredientModelLike;
+	private ingredientRepo: IngredientRepository;
 
-	constructor(ingredientModel: IngredientModelLike) {
-		this.ingredientModel = ingredientModel;
+	constructor() {
+		this.ingredientRepo = new IngredientRepository();
 	}
 
 	async ingredients(): Promise<IngredientRecord[]> {
-		return this.ingredientModel
-			.find({})
-			.sort({ ingredient: 1 })
-			.select('-_id -__v');
+		const ingredients = await this.ingredientRepo.listIngredients();
+		return ingredients.sort((a, b) =>
+			String(a.ingredient).localeCompare(String(b.ingredient), undefined, {
+				sensitivity: 'base',
+			}),
+		);
 	}
 }
 

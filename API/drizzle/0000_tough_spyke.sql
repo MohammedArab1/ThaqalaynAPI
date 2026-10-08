@@ -3,13 +3,7 @@ CREATE TABLE "books_v1" (
 	"book_name" text NOT NULL,
 	"author" text NOT NULL,
 	"id_range_min" integer NOT NULL,
-	"id_range_max" integer NOT NULL,
-	"book_description" text,
-	"book_cover" text,
-	"english_name" text,
-	"translator" text,
-	"volume" integer,
-	"raw" jsonb
+	"id_range_max" integer NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE "books_v2" (
@@ -29,7 +23,6 @@ CREATE TABLE "hadiths_v1" (
 	"book_id" text NOT NULL,
 	"id" integer NOT NULL,
 	"book" text,
-	"volume" integer,
 	"category" text,
 	"category_id" text,
 	"chapter" text,
@@ -37,16 +30,10 @@ CREATE TABLE "hadiths_v1" (
 	"translator" text,
 	"english_text" text,
 	"arabic_text" text,
-	"french_text" text,
 	"majlisi_grading" text,
-	"behbudi_grading" text,
+	"behdudi_grading" text,
 	"mohseni_grading" text,
-	"url" text,
-	"chapter_in_category_id" integer,
-	"thaqalayn_sanad" text,
-	"thaqalayn_matn" text,
-	"gradings_full" jsonb DEFAULT '[]'::jsonb,
-	"raw" jsonb
+	"url" text
 );
 --> statement-breakpoint
 CREATE TABLE "hadiths_v2" (
@@ -63,10 +50,10 @@ CREATE TABLE "hadiths_v2" (
 	"arabic_text" text,
 	"french_text" text,
 	"majlisi_grading" text,
-	"behbudi_grading" text,
+	"behdudi_grading" text,
 	"mohseni_grading" text,
 	"url" text,
-	"chapter_in_category_id" integer,
+	"chapter_in_category_id" text,
 	"thaqalayn_sanad" text,
 	"thaqalayn_matn" text,
 	"gradings_full" jsonb DEFAULT '[]'::jsonb
@@ -74,10 +61,10 @@ CREATE TABLE "hadiths_v2" (
 --> statement-breakpoint
 CREATE TABLE "ingredients_v2" (
 	"ingredient" text PRIMARY KEY NOT NULL,
-	"statuses" jsonb DEFAULT '[]'::jsonb,
-	"info" jsonb,
-	"other_names" jsonb,
-	"unknown" jsonb
+	"statuses" text[] DEFAULT '{}' NOT NULL,
+	"info" text[],
+	"other_names" text[],
+	"unknown" text[]
 );
 --> statement-breakpoint
 ALTER TABLE "hadiths_v2" ADD CONSTRAINT "hadiths_v2_book_id_books_v2_book_id_fk" FOREIGN KEY ("book_id") REFERENCES "public"."books_v2"("book_id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint

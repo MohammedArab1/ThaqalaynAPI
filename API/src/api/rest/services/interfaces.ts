@@ -1,3 +1,5 @@
+import type { HadithGrading } from '../../../db/schema.js';
+
 export interface BookNameRecord {
 	bookId?: string;
 	BookName?: string;
@@ -31,7 +33,7 @@ export interface HadithRecord {
 	chapterInCategoryId?: string | null;
 	thaqalaynSanad?: string | null;
 	thaqalaynMatn?: string | null;
-	gradingsFull?: any[] | null;
+	gradingsFull?: HadithGrading[] | null;
 }
 
 export interface IngredientRecord {

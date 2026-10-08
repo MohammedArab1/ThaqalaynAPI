@@ -1,5 +1,5 @@
 {
-  "id": "94373af3-6b7d-4db0-b51c-5fe4f71bfa87",
+  "id": "48b098bf-2b45-442e-8238-5d9244e82074",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -37,42 +37,6 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": true
-        },
-        "book_description": {
-          "name": "book_description",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "book_cover": {
-          "name": "book_cover",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "english_name": {
-          "name": "english_name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "translator": {
-          "name": "translator",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "volume": {
-          "name": "volume",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "raw": {
-          "name": "raw",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {
@@ -210,12 +174,6 @@
           "primaryKey": false,
           "notNull": false
         },
-        "volume": {
-          "name": "volume",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
         "category": {
           "name": "category",
           "type": "text",
@@ -258,20 +216,14 @@
           "primaryKey": false,
           "notNull": false
         },
-        "french_text": {
-          "name": "french_text",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
         "majlisi_grading": {
           "name": "majlisi_grading",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "behbudi_grading": {
-          "name": "behbudi_grading",
+        "behdudi_grading": {
+          "name": "behdudi_grading",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -285,37 +237,6 @@
         "url": {
           "name": "url",
           "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "chapter_in_category_id": {
-          "name": "chapter_in_category_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "thaqalayn_sanad": {
-          "name": "thaqalayn_sanad",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "thaqalayn_matn": {
-          "name": "thaqalayn_matn",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "gradings_full": {
-          "name": "gradings_full",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false,
-          "default": "'[]'::jsonb"
-        },
-        "raw": {
-          "name": "raw",
-          "type": "jsonb",
           "primaryKey": false,
           "notNull": false
         }
@@ -447,8 +368,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "behbudi_grading": {
-          "name": "behbudi_grading",
+        "behdudi_grading": {
+          "name": "behdudi_grading",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -467,7 +388,7 @@
         },
         "chapter_in_category_id": {
           "name": "chapter_in_category_id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -562,26 +483,26 @@
         },
         "statuses": {
           "name": "statuses",
-          "type": "jsonb",
+          "type": "text[]",
           "primaryKey": false,
-          "notNull": false,
-          "default": "'[]'::jsonb"
+          "notNull": true,
+          "default": "'{}'"
         },
         "info": {
           "name": "info",
-          "type": "jsonb",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": false
         },
         "other_names": {
           "name": "other_names",
-          "type": "jsonb",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": false
         },
         "unknown": {
           "name": "unknown",
-          "type": "jsonb",
+          "type": "text[]",
           "primaryKey": false,
           "notNull": false
         }

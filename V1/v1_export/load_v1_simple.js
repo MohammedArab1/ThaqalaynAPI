@@ -72,8 +72,8 @@ async function loadV1Data() {
 				await client.query('BEGIN');
 				for (const h of batch) {
 					await client.query(
-						`INSERT INTO hadiths_v1 (book_id, id, book, category, category_id, chapter, author, translator, english_text, arabic_text, majlisi_grading, behdudi_grading, mohseni_grading, url)
-						VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)`,
+						`INSERT INTO hadiths_v1 (book_id, id, book, category, category_id, chapter, author, translator, english_text, arabic_text, majlisi_grading, behdudi_grading, mohseni_grading, url, chapter_in_category_id)
+						VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)`,
 						[
 							h.bookId,
 							h.id,
@@ -86,9 +86,10 @@ async function loadV1Data() {
 							h.englishText,
 							h.arabicText,
 							h.majlisiGrading,
-							h.behbudiGrading || h.BehdudiGrading,
-							h.mohseniGrading || h.MohseniGrading,
+							h.behdudiGrading ?? h.BehdudiGrading ?? '',
+							h.mohseniGrading ?? h.MohseniGrading ?? '',
 							h.URL,
+							h.chapterInCategoryId ?? null,
 						],
 					);
 				}

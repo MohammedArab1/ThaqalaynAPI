@@ -6,7 +6,7 @@ set -e
 if [ -r /proc/1/environ ]; then
 	while IFS= read -r -d '' entry; do
 		case "$entry" in
-			WEBAPP_URL=*|MONGODB_URI=*|GEMINI_API_KEY=*)
+			WEBAPP_URL=*|DATABASE_URL=*|GEMINI_API_KEY=*)
 				export "$entry"
 				;;
 		esac

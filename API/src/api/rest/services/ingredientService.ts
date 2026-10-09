@@ -1,17 +1,15 @@
-import type {
-	IngredientModelLike,
-	IngredientRecord,
-} from '../../../models/contracts.js';
+import { IngredientRepository } from '../../../db/repositories/ingredientRepository.js';
+import type { IngredientRecord } from './interfaces.js';
 
 export default class IngredientService {
-	private ingredientModel: IngredientModelLike;
+	private ingredientRepo: IngredientRepository;
 
-	constructor(ingredientModel: IngredientModelLike) {
-		this.ingredientModel = ingredientModel;
+	constructor() {
+		this.ingredientRepo = new IngredientRepository();
 	}
 
 	async getAllIngredients(): Promise<IngredientRecord[]> {
-		const ingredients = await this.ingredientModel.find({}, { _id: 0, __v: 0 });
+		const ingredients = await this.ingredientRepo.listIngredients();
 		return ingredients.sort((left, right) =>
 			String(left.ingredient ?? '').localeCompare(
 				String(right.ingredient ?? ''),

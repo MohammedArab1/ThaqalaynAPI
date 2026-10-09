@@ -1,8 +1,5 @@
 import { Router } from 'express';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
-import BookNamesModelV2 from '../../../../models/bookNameV2.js';
-import HadithModelV2 from '../../../../models/hadithV2.js';
-import IngredientModelV2 from '../../../../models/ingredientsV2.js';
 import HadithController from '../../controllers/hadithController.js';
 import IngredientController from '../../controllers/ingredientController.js';
 import HadithService from '../../services/hadithService.js';
@@ -10,8 +7,8 @@ import IngredientService from '../../services/ingredientService.js';
 
 const router = Router();
 
-const hadithService = new HadithService(HadithModelV2, BookNamesModelV2);
-const ingredientService = new IngredientService(IngredientModelV2);
+const hadithService = new HadithService();
+const ingredientService = new IngredientService();
 
 const controller = new HadithController(hadithService);
 const ingredientController = new IngredientController(ingredientService);
@@ -66,7 +63,6 @@ router.get('/random', controller.randomHadithHandler);
  */
 router.get('/query', cacheMiddleware(60), controller.queryHandler);
 
-
 /**
  * @openapi
  * /api/v2/ingredients:
@@ -82,9 +78,8 @@ router.get('/query', cacheMiddleware(60), controller.queryHandler);
 router.get(
 	'/ingredients',
 	cacheMiddleware(600),
-	ingredientController.getAllIngredients
+	ingredientController.getAllIngredients,
 );
-
 
 /**
  * @openapi
@@ -114,7 +109,7 @@ router.get(
 router.get(
 	'/query/:bookId',
 	cacheMiddleware(60),
-	controller.queryPerBookHandler
+	controller.queryPerBookHandler,
 );
 
 /**

@@ -1,11 +1,8 @@
 import type {
-	BookModelLike,
-	BookNameRecord,
-	HadithModelLike,
-	HadithRecord,
-	IngredientModelLike,
+	BookV2Record,
+	HadithV2Record,
 	IngredientRecord,
-} from '../../models/contracts.js';
+} from '../../api/rest/services/interfaces.js';
 
 export type GraphQLQueryArgs = {
 	query: string;
@@ -28,20 +25,14 @@ export interface GraphQLResolverContext {
 	};
 }
 
-export interface GraphQLModelContext {
-	Hadith: HadithModelLike;
-	Book: BookModelLike;
-	Ingredient: IngredientModelLike;
-}
-
 export interface HadithResolverLike {
-	allBooks: () => PromiseLike<BookNameRecord[]>;
-	random: (args?: { bookId?: string }) => PromiseLike<HadithRecord | null>;
+	allBooks: () => PromiseLike<BookV2Record[]>;
+	random: (args?: { bookId?: string }) => PromiseLike<HadithV2Record | null>;
 	query: (
 		args: GraphQLQueryArgs,
-	) => PromiseLike<HadithRecord[] | { error: string }>;
-	book: (args: GraphQLBookArgs) => PromiseLike<HadithRecord[]>;
-	hadith: (args: GraphQLHadithArgs) => PromiseLike<HadithRecord | null>;
+	) => PromiseLike<HadithV2Record[] | { error: string }>;
+	book: (args: GraphQLBookArgs) => PromiseLike<HadithV2Record[]>;
+	hadith: (args: GraphQLHadithArgs) => PromiseLike<HadithV2Record | null>;
 }
 
 export interface IngredientResolverLike {

@@ -1,98 +1,62 @@
+import { BookRepository } from '../../../db/repositories/bookRepository.js';
+import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
-	BookModelLike,
-	BookNameRecord,
-	HadithModelLike,
-	HadithRecord,
-} from '../../../models/contracts.js';
+	BookV2Record,
+	HadithV2Record,
+	IHadithService,
+} from './interfaces.js';
 
-export default class HadithService {
-	private hadithModel: HadithModelLike;
-	private bookModel: BookModelLike;
+export default class HadithService
+	implements IHadithService<BookV2Record, HadithV2Record>
+{
+	private bookRepo: BookRepository;
+	private hadithRepo: HadithRepository;
 
-	constructor(hadithModel: HadithModelLike, bookModel: BookModelLike) {
-		this.hadithModel = hadithModel;
-		this.bookModel = bookModel;
+	constructor() {
+		this.bookRepo = new BookRepository();
+		this.hadithRepo = new HadithRepository();
 	}
 
-	async getAllBooks(): Promise<BookNameRecord[]> {
-		const books = await this.bookModel.find({}, { _id: 0, __v: 0 });
+	async getAllBooks(): Promise<BookV2Record[]> {
+		const books = await this.bookRepo.listBooks();
 		return books.sort(this.compareAlphabetically('bookId'));
 	}
 
-	async validateBookExists(bookId: string): Promise<unknown> {
-		return this.bookModel.exists({ bookId });
+	async validateBookExists(bookId: string): Promise<boolean> {
+		return this.bookRepo.bookExists(bookId);
 	}
 
 	async getRandomHadith(
 		bookId: string | null = null,
-	): Promise<HadithRecord | null> {
-		const filter = bookId ? { bookId } : {};
-		return new Promise((resolve, reject) => {
-			this.hadithModel.findOneRandom(filter, (error, result) => {
-				error ? reject(error) : resolve(result);
-			});
-		});
+	): Promise<HadithV2Record | null> {
+		return this.hadithRepo.randomHadith(bookId);
 	}
 
 	async searchHadith(
 		query: string,
 		bookId: string | null = null,
-	): Promise<HadithRecord[] | { error: string }> {
-		const escapedQuery = this.escapeRegExp(query);
-		const $regex = new RegExp(escapedQuery, 'i');
-		const baseFilter = bookId ? { bookId } : {};
+	): Promise<HadithV2Record[] | { error: string }> {
+		const results = await this.hadithRepo.searchHadiths(query, bookId);
 
-		const [englishResults, arabicResults] = await Promise.all([
-			this.hadithModel.find(
-				{
-					...baseFilter,
-					englishText: { $regex },
-				},
-				{ _id: 0, __v: 0 },
-			),
-			this.hadithModel.find(
-				{
-					...baseFilter,
-					arabicText: { $regex },
-				},
-				{ _id: 0, __v: 0 },
-			),
-		]);
-
-		return this.processResults(englishResults, arabicResults);
+		if (results.length === 0) {
+			return { error: 'No matches found' };
+		}
+		return results;
 	}
 
-	async getHadithsByBook(bookId: string): Promise<HadithRecord[]> {
-		const hadiths = await this.hadithModel.find({ bookId }, { _id: 0, __v: 0 });
-		return hadiths.sort((left, right) => (left.id ?? 0) - (right.id ?? 0));
+	async getHadithsByBook(bookId: string): Promise<HadithV2Record[]> {
+		return this.hadithRepo.listHadithsByBook(bookId);
 	}
 
 	async getHadithById(
 		bookId: string,
 		hadithId: number,
-	): Promise<HadithRecord | null> {
-		return this.hadithModel.findOne(
-			{ bookId, id: hadithId },
-			{ _id: 0, __v: 0 },
-		);
+	): Promise<HadithV2Record | null> {
+		return this.hadithRepo.getHadithById(bookId, hadithId);
 	}
 
-	private processResults(
-		englishResults: HadithRecord[],
-		arabicResults: HadithRecord[],
-	): HadithRecord[] | { error: string } {
-		if (englishResults.length === 0 && arabicResults.length === 0) {
-			return { error: 'No matches found' };
-		}
-		return englishResults.length > 0 ? englishResults : arabicResults;
-	}
-
-	private escapeRegExp(value: string): string {
-		return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-	}
-
-	private compareAlphabetically(field: keyof BookNameRecord) {
-		return (left: BookNameRecord, right: BookNameRecord) =>
+	private compareAlphabetically(field: keyof BookV2Record) {
+		return (left: BookV2Record, right: BookV2Record) =>
 			String(left[field]).localeCompare(String(right[field]), undefined, {
 				sensitivity: 'base',
 			});

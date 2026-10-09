@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     git \
     make \
     cron \
+    jq \
+    postgresql-client \
     ca-certificates \
     gnupg \
     && rm -rf /var/lib/apt/lists/*
@@ -64,7 +66,7 @@ RUN echo 'PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/b
 # Environment variables (runtime-provided)
 # -------------------------
 ENV WEBAPP_URL=""
-ENV MONGODB_URI=""
+ENV DATABASE_URL=""
 ENV GEMINI_API_KEY=""
 
 # -------------------------

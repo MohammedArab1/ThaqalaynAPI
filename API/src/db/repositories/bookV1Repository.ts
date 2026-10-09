@@ -1,12 +1,12 @@
 import { eq } from 'drizzle-orm';
-import type { BookNameRecord } from '../../api/rest/services/interfaces.js';
+import type { BookV1Record } from '../../api/rest/services/interfaces.js';
 import { getDb } from '../client.js';
 import { booksV1 } from '../schema.js';
 
 type BookV1Row = typeof booksV1.$inferSelect;
 
 export class BookV1Repository {
-	async listBooks(): Promise<BookNameRecord[]> {
+	async listBooks(): Promise<BookV1Record[]> {
 		const db = getDb();
 		const books: BookV1Row[] = await db.select().from(booksV1);
 		return books;

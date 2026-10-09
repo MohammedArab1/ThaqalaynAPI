@@ -1,8 +1,8 @@
 import { BookRepository } from '../../../db/repositories/bookRepository.js';
 import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
-	BookNameRecord,
-	HadithRecord,
+	BookV2Record,
+	HadithV2Record,
 } from '../../rest/services/interfaces.js';
 import type {
 	GraphQLBookArgs,
@@ -19,7 +19,7 @@ export class HadithResolver {
 		this.hadithRepo = new HadithRepository();
 	}
 
-	async allBooks(): Promise<BookNameRecord[]> {
+	async allBooks(): Promise<BookV2Record[]> {
 		const books = await this.bookRepo.listBooks();
 		return books.sort((a, b) =>
 			String(a.bookId).localeCompare(String(b.bookId), undefined, {
@@ -30,14 +30,14 @@ export class HadithResolver {
 
 	async random({
 		bookId,
-	}: { bookId?: string } = {}): Promise<HadithRecord | null> {
+	}: { bookId?: string } = {}): Promise<HadithV2Record | null> {
 		return this.hadithRepo.randomHadith(bookId);
 	}
 
 	async query({
 		query,
 		bookId,
-	}: GraphQLQueryArgs): Promise<HadithRecord[] | { error: string }> {
+	}: GraphQLQueryArgs): Promise<HadithV2Record[] | { error: string }> {
 		const results = await this.hadithRepo.searchHadiths(query, bookId);
 
 		if (results.length === 0) {
@@ -46,14 +46,14 @@ export class HadithResolver {
 		return results;
 	}
 
-	async book({ bookId }: GraphQLBookArgs): Promise<HadithRecord[]> {
+	async book({ bookId }: GraphQLBookArgs): Promise<HadithV2Record[]> {
 		return this.hadithRepo.listHadithsByBook(bookId);
 	}
 
 	async hadith({
 		bookId,
 		hadithId,
-	}: GraphQLHadithArgs): Promise<HadithRecord | null> {
+	}: GraphQLHadithArgs): Promise<HadithV2Record | null> {
 		return this.hadithRepo.getHadithById(bookId, hadithId);
 	}
 }

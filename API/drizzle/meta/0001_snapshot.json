@@ -1,6 +1,6 @@
 {
-  "id": "94e73e09-826f-47cf-8952-ab22d56d5668",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "ae6af87a-76e8-4079-934f-5b6ad399bb03",
+  "prevId": "94e73e09-826f-47cf-8952-ab22d56d5668",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -96,6 +96,36 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": true
+        },
+        "book_description": {
+          "name": "book_description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "book_cover": {
+          "name": "book_cover",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "english_name": {
+          "name": "english_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "translator": {
+          "name": "translator",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "volume": {
+          "name": "volume",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
         }
       },
       "indexes": {

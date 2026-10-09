@@ -1,5 +1,9 @@
 import type { Request, Response } from 'express';
-import type { IHadithService } from '../services/interfaces.js';
+import type {
+	BaseHadithRecord,
+	BookRecord,
+	IHadithService,
+} from '../services/interfaces.js';
 
 type QueryParams = {
 	q?: string;
@@ -14,12 +18,15 @@ type HadithParams = {
 	id: string;
 };
 
-export default class HadithController {
-	private service: IHadithService;
+export default class HadithController<
+	TBook extends BookRecord,
+	THadith extends BaseHadithRecord,
+> {
+	private service: IHadithService<TBook, THadith>;
 	private invalidIdMessage: string;
 	private invalidBookMessage: string;
 
-	constructor(hadithService: IHadithService) {
+	constructor(hadithService: IHadithService<TBook, THadith>) {
 		this.service = hadithService;
 		this.invalidIdMessage =
 			'No hadith with given ID. Please check the ID range using /api/allbooks';

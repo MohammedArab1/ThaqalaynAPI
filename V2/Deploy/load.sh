@@ -55,7 +55,7 @@ SELECT
 	doc->>'behdudiGrading' AS behdudi_grading,
 	doc->>'mohseniGrading' AS mohseni_grading,
 	doc->>'URL' AS url,
-	doc->>'chapterInCategoryId' AS chapter_in_category_id,
+	(doc->>'chapterInCategoryId')::integer AS chapter_in_category_id,
 	doc->>'thaqalaynSanad' AS thaqalayn_sanad,
 	doc->>'thaqalaynMatn' AS thaqalayn_matn,
 	COALESCE(doc->'gradingsFull', '[]'::jsonb) AS gradings_full
@@ -69,7 +69,7 @@ SELECT
 			THEN ARRAY(SELECT jsonb_array_elements_text(doc->'statuses'))
 		WHEN jsonb_typeof(doc->'statuses') = 'string'
 			THEN ARRAY[doc->>'statuses']
-		ELSE '{}'
+		ELSE NULL
 	END AS statuses,
 	CASE
 		WHEN jsonb_typeof(doc->'info') = 'array'
@@ -95,7 +95,10 @@ SELECT
 FROM ingredients_staging_raw;
 
 TRUNCATE hadiths_v2, books_v2, ingredients_v2;
-INSERT INTO books_v2 SELECT * FROM books_loaded;
+INSERT INTO books_v2 (
+	book_id, book_name, author, id_range_min, id_range_max,
+	book_description, book_cover, english_name, translator, volume
+) SELECT * FROM books_loaded;
 INSERT INTO hadiths_v2 SELECT * FROM hadiths_loaded;
 INSERT INTO ingredients_v2 SELECT * FROM ingredients_loaded;
 SQL

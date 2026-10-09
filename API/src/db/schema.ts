@@ -52,7 +52,7 @@ export const hadithsV2 = pgTable(
 		behbudiGrading: text('behdudi_grading'),
 		mohseniGrading: text('mohseni_grading'),
 		URL: text('url'),
-		chapterInCategoryId: text('chapter_in_category_id'),
+		chapterInCategoryId: integer('chapter_in_category_id'),
 		thaqalaynSanad: text('thaqalayn_sanad'),
 		thaqalaynMatn: text('thaqalayn_matn'),
 		gradingsFull: jsonb('gradings_full')
@@ -69,7 +69,7 @@ export const ingredientsV2 = pgTable(
 	'ingredients_v2',
 	{
 		ingredient: text('ingredient').primaryKey(),
-		statuses: text('statuses').array().notNull().default([]),
+		statuses: text('statuses').array(),
 		info: text('info').array(),
 		otherNames: text('other_names').array(),
 		unknown: text('unknown').array(),
@@ -108,6 +108,7 @@ export const hadithsV1 = pgTable(
 		behdudiGrading: text('behdudi_grading'),
 		mohseniGrading: text('mohseni_grading'),
 		URL: text('url'),
+		chapterInCategoryId: text('chapter_in_category_id'),
 	},
 	(table) => [
 		index('idx_hadiths_v1_book_id').on(table.bookId),

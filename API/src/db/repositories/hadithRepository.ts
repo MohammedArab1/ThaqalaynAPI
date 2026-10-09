@@ -1,12 +1,12 @@
 import { and, eq, ilike, or, sql } from 'drizzle-orm';
-import type { HadithRecord } from '../../api/rest/services/interfaces.js';
+import type { HadithV2Record } from '../../api/rest/services/interfaces.js';
 import { getDb } from '../client.js';
 import { hadithsV2 } from '../schema.js';
 
-export type { HadithRecord };
+export type { HadithV2Record };
 
 export class HadithRepository {
-	async randomHadith(bookId?: string | null): Promise<HadithRecord | null> {
+	async randomHadith(bookId?: string | null): Promise<HadithV2Record | null> {
 		const db = getDb();
 		const result = bookId
 			? await db
@@ -28,7 +28,7 @@ export class HadithRepository {
 	async searchHadiths(
 		query: string,
 		bookId?: string | null,
-	): Promise<HadithRecord[]> {
+	): Promise<HadithV2Record[]> {
 		const db = getDb();
 		const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 		const pattern = `%${escapedQuery}%`;
@@ -50,7 +50,7 @@ export class HadithRepository {
 		return results;
 	}
 
-	async listHadithsByBook(bookId: string): Promise<HadithRecord[]> {
+	async listHadithsByBook(bookId: string): Promise<HadithV2Record[]> {
 		const db = getDb();
 		const results = await db
 			.select()
@@ -64,7 +64,7 @@ export class HadithRepository {
 	async getHadithById(
 		bookId: string,
 		hadithId: number,
-	): Promise<HadithRecord | null> {
+	): Promise<HadithV2Record | null> {
 		const db = getDb();
 		const result = await db
 			.select()

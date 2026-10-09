@@ -1,12 +1,14 @@
 import { BookRepository } from '../../../db/repositories/bookRepository.js';
 import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
-	BookNameRecord,
-	HadithRecord,
+	BookV2Record,
+	HadithV2Record,
 	IHadithService,
 } from './interfaces.js';
 
-export default class HadithService implements IHadithService {
+export default class HadithService
+	implements IHadithService<BookV2Record, HadithV2Record>
+{
 	private bookRepo: BookRepository;
 	private hadithRepo: HadithRepository;
 
@@ -15,7 +17,7 @@ export default class HadithService implements IHadithService {
 		this.hadithRepo = new HadithRepository();
 	}
 
-	async getAllBooks(): Promise<BookNameRecord[]> {
+	async getAllBooks(): Promise<BookV2Record[]> {
 		const books = await this.bookRepo.listBooks();
 		return books.sort(this.compareAlphabetically('bookId'));
 	}
@@ -26,14 +28,14 @@ export default class HadithService implements IHadithService {
 
 	async getRandomHadith(
 		bookId: string | null = null,
-	): Promise<HadithRecord | null> {
+	): Promise<HadithV2Record | null> {
 		return this.hadithRepo.randomHadith(bookId);
 	}
 
 	async searchHadith(
 		query: string,
 		bookId: string | null = null,
-	): Promise<HadithRecord[] | { error: string }> {
+	): Promise<HadithV2Record[] | { error: string }> {
 		const results = await this.hadithRepo.searchHadiths(query, bookId);
 
 		if (results.length === 0) {
@@ -42,19 +44,19 @@ export default class HadithService implements IHadithService {
 		return results;
 	}
 
-	async getHadithsByBook(bookId: string): Promise<HadithRecord[]> {
+	async getHadithsByBook(bookId: string): Promise<HadithV2Record[]> {
 		return this.hadithRepo.listHadithsByBook(bookId);
 	}
 
 	async getHadithById(
 		bookId: string,
 		hadithId: number,
-	): Promise<HadithRecord | null> {
+	): Promise<HadithV2Record | null> {
 		return this.hadithRepo.getHadithById(bookId, hadithId);
 	}
 
-	private compareAlphabetically(field: keyof BookNameRecord) {
-		return (left: BookNameRecord, right: BookNameRecord) =>
+	private compareAlphabetically(field: keyof BookV2Record) {
+		return (left: BookV2Record, right: BookV2Record) =>
 			String(left[field]).localeCompare(String(right[field]), undefined, {
 				sensitivity: 'base',
 			});

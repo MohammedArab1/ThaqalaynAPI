@@ -11,12 +11,7 @@ CREATE TABLE "books_v2" (
 	"book_name" text NOT NULL,
 	"author" text NOT NULL,
 	"id_range_min" integer NOT NULL,
-	"id_range_max" integer NOT NULL,
-	"book_description" text,
-	"book_cover" text,
-	"english_name" text,
-	"translator" text,
-	"volume" integer
+	"id_range_max" integer NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE "hadiths_v1" (
@@ -33,7 +28,8 @@ CREATE TABLE "hadiths_v1" (
 	"majlisi_grading" text,
 	"behdudi_grading" text,
 	"mohseni_grading" text,
-	"url" text
+	"url" text,
+	"chapter_in_category_id" text
 );
 --> statement-breakpoint
 CREATE TABLE "hadiths_v2" (
@@ -53,7 +49,7 @@ CREATE TABLE "hadiths_v2" (
 	"behdudi_grading" text,
 	"mohseni_grading" text,
 	"url" text,
-	"chapter_in_category_id" text,
+	"chapter_in_category_id" integer,
 	"thaqalayn_sanad" text,
 	"thaqalayn_matn" text,
 	"gradings_full" jsonb DEFAULT '[]'::jsonb
@@ -61,7 +57,7 @@ CREATE TABLE "hadiths_v2" (
 --> statement-breakpoint
 CREATE TABLE "ingredients_v2" (
 	"ingredient" text PRIMARY KEY NOT NULL,
-	"statuses" text[] DEFAULT '{}' NOT NULL,
+	"statuses" text[],
 	"info" text[],
 	"other_names" text[],
 	"unknown" text[]

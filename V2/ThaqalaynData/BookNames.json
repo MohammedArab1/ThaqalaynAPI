@@ -92,7 +92,7 @@
 		"BookName": "Kitāb al-Ghayba",
 		"author": "Abū ʿAbd Allah Muḥammad b. Ibrāhīm al-Nuʿmānī",
 		"idRangeMin": 1,
-		"idRangeMax": 468,
+		"idRangeMax": 469,
 		"volume": 1
 	},
 	{
@@ -236,7 +236,7 @@
 		"BookName": "Man Lā Yaḥḍuruh al-Faqīh",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
 		"idRangeMin": 1,
-		"idRangeMax": 1569,
+		"idRangeMax": 1574,
 		"volume": 1
 	},
 	{
@@ -244,11 +244,47 @@
 		"bookDescription": "Kamāl al-Dīn wa Tamām al-Niʿma (The Perfection of Religion and the End of Divine Favor), compiled by the great Shīʿī scholar al-Shaykh al-Ṣadūq (d. 381 AH/991 CE), is a seminal theological and historical work written during the formative period following the Major Occultation (al-Ghayba al-Kubrā) of the Twelfth Imam, Muhammad al-Mahdi (a). Its primary subject is a systematic and comprehensive defense of the doctrine of occultation and the imamate of the Hidden Imam, making it the oldest and most authoritative Ḥadīth reference on this central tenet of Twelver Shīʿī belief.",
 		"bookCover": "https://thaqalayn.net/css/images/39-round.jpeg",
 		"englishName": "The Perfection of the Religion",
-		"translator": "",
+		"translator": "Sayyid Athar Husain S. H. Rizvi",
 		"BookName": "Kamāl al-Dīn wa Tamām al-Niʿma",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
 		"idRangeMin": 1,
 		"idRangeMax": 659,
+		"volume": 1
+	},
+	{
+		"bookId": "Fadail-al-Ashhur-al-Thalatha-Saduq",
+		"bookDescription": "Authored by the prominent 4th-century AH/10th-century CE Shīʿī scholar Shaykh al-Ṣadūq (Abū Jaʿfar Muḥammad b. ʿAlī b. al-Ḥusayn b. Mūsā b. Bābuwayh al-Qummī), the book Faḍāʾil al-Ashhur al-Thalātha (“Merits of the Three Months”) is a compilation of reports and traditions dedicated to detailing the spiritual significance, rewards, and recommended acts of worship associated with the sacred lunar months of Rajab, Shaʿbān, and Ramaḍān.\n\nThe book consists of three sections entitled Kitāb Faḍāʾil Shahr Rajab, Kitāb Faḍāʾil Shaʿbān, and Kitāb Faḍāʾil Shahr Ramaḍān, with the first and third sections containing additional chapters beyond listing the merits of the month that forms the theme of that section. Kitāb Faḍāʾil Shahr Rajab has an additional chapter on Umm Dāwūd and her deed of worship, while Kitāb Faḍāʾil Shahr Ramaḍān has two additional chapters, one on the prayers to be performed on the last night of the month of Ramaḍān, while the other is about deeds of worshipping Allāh that constitute “farewelling” the month of Ramaḍān.",
+		"bookCover": "https://thaqalayn.net/css/images/40-round.jpeg",
+		"englishName": "Merits of the Three Months",
+		"translator": "Haseeb Hassan",
+		"BookName": "Faḍāʾil al-Ashhur al-Thalātha",
+		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
+		"idRangeMin": 1,
+		"idRangeMax": 157,
+		"volume": 1
+	},
+	{
+		"bookId": "Tahdhib-al-Ahkam-Volume-1-Tusi",
+		"bookDescription": "Tahdhīb al-Aḥkām, compiled by Shaykh al-Ṭūsī (d. 460 AH), is the third of the Four Main Shīʿī Ḥadīth collections. Conceived as a Ḥadīth-based commentary on al-Muqniʿa, the legal work of his teacher Shaykh al-Mufīd, it concentrates on al-furūʿ—the practical rulings of Islamic law—rather than questions of doctrine.\n\nBeginning with ritual purity, it proceeds through prayer, alms, fasting, pilgrimage, commerce, marriage, divorce, inheritance, legal penalties, and related subjects; modern editions are generally printed in ten volumes. Its importance lies not only in the breadth of the reports it preserves, but also in al-Ṭūsī’s method: he places narrations within juristic discussions, examines their evidence, and seeks to reconcile reports that appear to conflict. Tahdhīb is therefore both a major repository of Imāmī Ḥadīth and a foundational work in the development of Shīʿī jurisprudence.",
+		"bookCover": "https://thaqalayn.net/css/images/41-round.jpeg",
+		"englishName": "The Refinement of Laws",
+		"translator": "Haydar Ali Shaykh ibn Muhammad",
+		"BookName": "Tahdhīb al-Aḥkām",
+		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī",
+		"idRangeMin": 1,
+		"idRangeMax": 1541,
+		"volume": 1
+	},
+	{
+		"bookId": "Al-Imama-wa’l-Tabsira-min-al-Hayra-Babawayh",
+		"bookDescription": "Al-Imāma wa’l-Tabṣira min al-Ḥayra (Divine Leadership \u0026 Insight amidst Confusion), compiled by ʿAlī ibn Bābawayh (d. 329 AH), the father of Shaykh al-Ṣadūq, is an early Imāmī Ḥadīth collection on Divine leadership and the continuity of the Imamate. Written during the Minor Occultation, it addresses the uncertainty experienced by believers in the absence of the Twelfth Imam. The author explains that he gathered these reports to dispel confusion, clarify the identity and number of the Imams, and strengthen believers through a prolonged period of waiting.\n\nThe introductory material presents traditions on the Imams alongside the author’s preface and a discussion of differences in transmitted reports. It connects recognition of the Imam with understanding and practising the religion, establishing the concerns that guide the work as a whole.\n\nThe main body moves from the continuity of Divine guidance and the principle that the earth is never without a Divine Authority to the appointment and succession of individual Imams. Its chapters examine the transmission of the Imamate within the Prophet’s family, address rival claims to leadership, and explain the responsibilities of believers when an Imam passes away.\n\nThis edition also includes an editorial addendum drawn from reports that Shaykh al-Ṣadūq transmitted from his father. It extends the discussion to the later Imams and the Mahdī, covering his birth, the signs by which he is recognised, his occultation and reappearance, and the duties of those awaiting him. Together, these materials present an early account of Imāmī belief and the questions of guidance, succession, and steadfastness that shaped the community during the occultation.",
+		"bookCover": "https://thaqalayn.net/css/images/45-round.jpeg",
+		"englishName": "Divine Leadership \u0026 Insight amidst Confusion",
+		"translator": "Haseeb Hassan",
+		"BookName": "Al-Imāma wa’l-Tabṣira min al-Ḥayra",
+		"author": "ʿAlī ibn Bābawayh",
+		"idRangeMin": 1,
+		"idRangeMax": 190,
 		"volume": 1
 	},
 	{
@@ -356,7 +392,7 @@
 		"BookName": "Man Lā Yaḥḍuruh al-Faqīh",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
 		"idRangeMin": 1,
-		"idRangeMax": 1696,
+		"idRangeMax": 1647,
 		"volume": 2
 	},
 	{
@@ -368,7 +404,7 @@
 		"BookName": "Man Lā Yaḥḍuruh al-Faqīh",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
 		"idRangeMin": 1,
-		"idRangeMax": 1758,
+		"idRangeMax": 1753,
 		"volume": 3
 	},
 	{
@@ -380,7 +416,7 @@
 		"BookName": "Man Lā Yaḥḍuruh al-Faqīh",
 		"author": "Shaykh Muḥammad b. ʿAlī al-Ṣaduq",
 		"idRangeMin": 1,
-		"idRangeMax": 964,
+		"idRangeMax": 954,
 		"volume": 4
 	},
 	{
@@ -394,5 +430,41 @@
 		"idRangeMin": 1,
 		"idRangeMax": 395,
 		"volume": 5
+	},
+	{
+		"bookId": "Tahdhib-al-Ahkam-Volume-2-Tusi",
+		"bookDescription": "Tahdhīb al-Aḥkām, compiled by Shaykh al-Ṭūsī (d. 460 AH), is the third of the Four Main Shīʿī Ḥadīth collections. Conceived as a Ḥadīth-based commentary on al-Muqniʿa, the legal work of his teacher Shaykh al-Mufīd, it concentrates on al-furūʿ—the practical rulings of Islamic law—rather than questions of doctrine.\n\nBeginning with ritual purity, it proceeds through prayer, alms, fasting, pilgrimage, commerce, marriage, divorce, inheritance, legal penalties, and related subjects; modern editions are generally printed in ten volumes. Its importance lies not only in the breadth of the reports it preserves, but also in al-Ṭūsī’s method: he places narrations within juristic discussions, examines their evidence, and seeks to reconcile reports that appear to conflict. Tahdhīb is therefore both a major repository of Imāmī Ḥadīth and a foundational work in the development of Shīʿī jurisprudence.",
+		"bookCover": "https://thaqalayn.net/css/images/41-round.jpeg",
+		"englishName": "The Refinement of Laws",
+		"translator": "Haydar Ali Shaykh ibn Muhammad",
+		"BookName": "Tahdhīb al-Aḥkām",
+		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī",
+		"idRangeMin": 1,
+		"idRangeMax": 1598,
+		"volume": 2
+	},
+	{
+		"bookId": "Tahdhib-al-Ahkam-Volume-3-Tusi",
+		"bookDescription": "Tahdhīb al-Aḥkām, compiled by Shaykh al-Ṭūsī (d. 460 AH), is the third of the Four Main Shīʿī Ḥadīth collections. Conceived as a Ḥadīth-based commentary on al-Muqniʿa, the legal work of his teacher Shaykh al-Mufīd, it concentrates on al-furūʿ—the practical rulings of Islamic law—rather than questions of doctrine.\n\nBeginning with ritual purity, it proceeds through prayer, alms, fasting, pilgrimage, commerce, marriage, divorce, inheritance, legal penalties, and related subjects; modern editions are generally printed in ten volumes. Its importance lies not only in the breadth of the reports it preserves, but also in al-Ṭūsī’s method: he places narrations within juristic discussions, examines their evidence, and seeks to reconcile reports that appear to conflict. Tahdhīb is therefore both a major repository of Imāmī Ḥadīth and a foundational work in the development of Shīʿī jurisprudence.",
+		"bookCover": "https://thaqalayn.net/css/images/41-round.jpeg",
+		"englishName": "The Refinement of Laws",
+		"translator": "Haydar Ali Shaykh ibn Muhammad",
+		"BookName": "Tahdhīb al-Aḥkām",
+		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī",
+		"idRangeMin": 1,
+		"idRangeMax": 1047,
+		"volume": 3
+	},
+	{
+		"bookId": "Tahdhib-al-Ahkam-Volume-4-Tusi",
+		"bookDescription": "Tahdhīb al-Aḥkām, compiled by Shaykh al-Ṭūsī (d. 460 AH), is the third of the Four Main Shīʿī Ḥadīth collections. Conceived as a Ḥadīth-based commentary on al-Muqniʿa, the legal work of his teacher Shaykh al-Mufīd, it concentrates on al-furūʿ—the practical rulings of Islamic law—rather than questions of doctrine.\n\nBeginning with ritual purity, it proceeds through prayer, alms, fasting, pilgrimage, commerce, marriage, divorce, inheritance, legal penalties, and related subjects; modern editions are generally printed in ten volumes. Its importance lies not only in the breadth of the reports it preserves, but also in al-Ṭūsī’s method: he places narrations within juristic discussions, examines their evidence, and seeks to reconcile reports that appear to conflict. Tahdhīb is therefore both a major repository of Imāmī Ḥadīth and a foundational work in the development of Shīʿī jurisprudence.",
+		"bookCover": "https://thaqalayn.net/css/images/41-round.jpeg",
+		"englishName": "The Refinement of Laws",
+		"translator": "Haydar Ali Shaykh ibn Muhammad",
+		"BookName": "Tahdhīb al-Aḥkām",
+		"author": "Shaykh Muḥammad b. al-Ḥasan al-Ṭūsī",
+		"idRangeMin": 1,
+		"idRangeMax": 1051,
+		"volume": 4
 	}
 ]

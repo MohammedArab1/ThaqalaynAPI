@@ -9,7 +9,7 @@ Replace MongoDB Atlas with Neon (cloud PostgreSQL), using Drizzle ORM. V2 data i
 - [ ] Replace mongoose models/contracts with repositories; rewrite HadithService, IngredientService, GraphQL resolvers, and API bootstrap
 - [ ] Update `.env.example` and all environment configs to use `DATABASE_URL` for Neon
 - [x] Replace `modifyDB.js` with bash + `psql` `COPY` from per-book JSON into staging tables, then atomic swap; both GitHub Actions and VPS cron can now load to Neon
-- [ ] One-time Atlas dump + load into `books_v1` / `hadiths_v1`; V1 routes read snapshot tables only
+- [x] One-time Atlas dump + load into `books_v1` / `hadiths_v1`; V1 routes read snapshot tables only
 - [ ] Remove mongoose deps; update README, `.env.example`, `BACKEND_LEARNING.md`
 - [ ] Remove postgres service from docker-compose (no longer needed)
 

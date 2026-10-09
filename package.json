@@ -32,8 +32,6 @@
 		"express": "^4.18.1",
 		"graphql": "^16.8.1",
 		"keyv": "^5.3.3",
-		"mongoose": "^6.6.2",
-		"mongoose-simple-random": "^0.4.1",
 		"pg": "^8.23.1",
 		"redis": "^4.6.15",
 		"run-func": "^3.0.0",

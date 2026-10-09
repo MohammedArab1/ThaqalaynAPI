@@ -1,6 +1,5 @@
--include .env
-export DATABASE_URL
-export WEBAPP_URL
+-include ../.env
+export DATABASE_URL WEBAPP_URL WEBAPP_API_KEY GEMINI_API_KEY
 
 .PHONY: scrape_all scrape_one_book load_all load_books load_hadiths load_ingredients run_scraper_full run_scraper_one_book build_and_install
 

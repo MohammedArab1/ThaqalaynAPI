@@ -1,6 +1,6 @@
 # Backend learning features
 
-A backlog of features that fit this project and teach backend development. The API already has REST + GraphQL, MongoDB, Redis, a Go scraper, Docker, Ansible, and a weekly data sync. These items fill gaps rather than repeating more “get a hadith” endpoints.
+A backlog of features that fit this project and teach backend development. The API already has REST + GraphQL, PostgreSQL (Neon), Redis, a Go scraper, Docker, Ansible, and a weekly data sync. These items fill gaps rather than repeating more “get a hadith” endpoints.
 
 ## Suggested order
 
@@ -30,7 +30,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 ## 2. Real full-text search
 
-**Feature:** Replace regex `$regex` search with MongoDB Atlas Search or a text index. Add ranking, language (English vs Arabic), highlighting, and `limit`.
+**Feature:** Replace regex `$regex` search with PostgreSQL full-text search or a text index. Add ranking, language (English vs Arabic), highlighting, and `limit`.
 
 **Why:** Search is the weakest part of the API (README even calls it simplistic). This is one of the most useful backend skills.
 
@@ -40,7 +40,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 ## 3. Rate limiting and API keys
 
-**Feature:** Public anonymous quota (e.g. 60 req/min) plus optional API keys with higher limits. Store keys hashed in Mongo; return `429` with `Retry-After`.
+**Feature:** Public anonymous quota (e.g. 60 req/min) plus optional API keys with higher limits. Store keys hashed in PostgreSQL; return `429` with `Retry-After`.
 
 **Why:** This API is public and scrape-friendly. Keys also let you add write endpoints later without making everything open.
 
@@ -50,7 +50,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 ## 4. Automated tests
 
-**Feature:** Unit tests for `HadithService` (injected models you already have), plus integration tests that hit REST and GraphQL against a test DB or mongo-memory-server.
+**Feature:** Unit tests for `HadithService` (injected models you already have), plus integration tests that hit REST and GraphQL against a test PostgreSQL database.
 
 **Why:** There are no test scripts in `package.json`. Tests will teach more than another endpoint.
 
@@ -70,7 +70,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 ## 6. Health, readiness, and graceful shutdown
 
-**Feature:** `/health` (process up) and `/ready` (Mongo + Redis ping). Keep SIGINT/SIGTERM shutdown, but drain in-flight requests.
+**Feature:** `/health` (process up) and `/ready` (PostgreSQL + Redis ping). Keep SIGINT/SIGTERM shutdown, but drain in-flight requests.
 
 **Why:** The app already deploys with Docker/Ansible. Health checks are how that deploy actually becomes reliable.
 
@@ -80,7 +80,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 ## 7. Structured logging, request IDs, and metrics
 
-**Feature:** `pino`/`winston` JSON logs, `X-Request-Id`, and Prometheus metrics (latency, status codes, cache hit rate). Optional: OpenTelemetry traces through Express → Mongoose.
+**Feature:** `pino`/`winston` JSON logs, `X-Request-Id`, and Prometheus metrics (latency, status codes, cache hit rate). Optional: OpenTelemetry traces through Express → PostgreSQL.
 
 **Why:** Some traffic goes to Plausible, but that’s product analytics, not ops.
 
@@ -136,7 +136,7 @@ A strong first slice is **pagination + tests for existing endpoints**: small sur
 
 **You’ll learn:** authn vs authz, bcrypt/argon2, JWT vs sessions, CSRF if you use cookies.
 
-Keep this *user collections*, not edits to canonical hadiths, so scraped source data stays intact.
+Keep this _user collections_, not edits to canonical hadiths, so scraped source data stays intact.
 
 ---
 

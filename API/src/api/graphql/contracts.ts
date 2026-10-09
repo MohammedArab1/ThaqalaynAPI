@@ -1,11 +1,8 @@
 import type {
-	BookModelLike,
 	BookNameRecord,
-	HadithModelLike,
 	HadithRecord,
-	IngredientModelLike,
 	IngredientRecord,
-} from '../../models/contracts.js';
+} from '../../api/rest/services/interfaces.js';
 
 export type GraphQLQueryArgs = {
 	query: string;
@@ -26,12 +23,6 @@ export interface GraphQLResolverContext {
 		hadith: HadithResolverLike;
 		ingredient: IngredientResolverLike;
 	};
-}
-
-export interface GraphQLModelContext {
-	Hadith: HadithModelLike;
-	Book: BookModelLike;
-	Ingredient: IngredientModelLike;
 }
 
 export interface HadithResolverLike {

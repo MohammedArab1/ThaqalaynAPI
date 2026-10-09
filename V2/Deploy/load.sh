@@ -64,10 +64,34 @@ FROM hadiths_staging_raw;
 CREATE TEMP TABLE ingredients_loaded AS
 SELECT
 	doc->>'ingredient' AS ingredient,
-	ARRAY(SELECT jsonb_array_elements_text(COALESCE(doc->'statuses', '[]'::jsonb))) AS statuses,
-	CASE WHEN doc ? 'info' THEN ARRAY(SELECT jsonb_array_elements_text(doc->'info')) END AS info,
-	CASE WHEN doc ? 'otherNames' THEN ARRAY(SELECT jsonb_array_elements_text(doc->'otherNames')) END AS other_names,
-	CASE WHEN doc ? 'unknown' THEN ARRAY(SELECT jsonb_array_elements_text(doc->'unknown')) END AS unknown
+	CASE
+		WHEN jsonb_typeof(doc->'statuses') = 'array'
+			THEN ARRAY(SELECT jsonb_array_elements_text(doc->'statuses'))
+		WHEN jsonb_typeof(doc->'statuses') = 'string'
+			THEN ARRAY[doc->>'statuses']
+		ELSE '{}'
+	END AS statuses,
+	CASE
+		WHEN jsonb_typeof(doc->'info') = 'array'
+			THEN ARRAY(SELECT jsonb_array_elements_text(doc->'info'))
+		WHEN jsonb_typeof(doc->'info') = 'string'
+			THEN ARRAY[doc->>'info']
+		ELSE NULL
+	END AS info,
+	CASE
+		WHEN jsonb_typeof(doc->'otherNames') = 'array'
+			THEN ARRAY(SELECT jsonb_array_elements_text(doc->'otherNames'))
+		WHEN jsonb_typeof(doc->'otherNames') = 'string'
+			THEN ARRAY[doc->>'otherNames']
+		ELSE NULL
+	END AS other_names,
+	CASE
+		WHEN jsonb_typeof(doc->'unknown') = 'array'
+			THEN ARRAY(SELECT jsonb_array_elements_text(doc->'unknown'))
+		WHEN jsonb_typeof(doc->'unknown') = 'string'
+			THEN ARRAY[doc->>'unknown']
+		ELSE NULL
+	END AS unknown
 FROM ingredients_staging_raw;
 
 TRUNCATE hadiths_v2, books_v2, ingredients_v2;

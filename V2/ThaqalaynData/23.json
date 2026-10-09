@@ -633,8 +633,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 10,
-		"thaqalaynSanad": "1.  Muḥammad, from ʿAbd al-Raḥmān ibn Abī Najrān, from ʿAbd al-ʿAzīz al-ʿUbaydī, from ʿUmar ibn Yazīd, from Abū ʿAbdullāh al-Sadiq (as), who said: ",
-		"thaqalaynMatn": "\"I heard him say: Whoever says in his day, 'I bear witness that there is no god but Allah, He is One, without partner, the One God, the Eternal, who has neither a companion nor a child,' Allah will record for him forty-five million good deeds, erase from him forty-five million sins, raise him forty-five million levels, and it will be as if he has recited the entire Qur'an twelve times in one day, and a house will be built for him in Paradise.\" \u003cbr\u003e (Ashhadu an lā ilāha illā Allāh, waḥdahu lā sharīka lahu, ilāhan wāḥidan aḥadan ṣamadan, lam yattakhidh ṣāḥibatan wa lā waladan)",
+		"thaqalaynSanad": "1.  Muḥammad, from ʿAbd al-Raḥmān ibn Abī Najrān, from ʿAbd al-ʿAzīz al-ʿUbaydī, from ʿUmar ibn Yazīd, from Abū ʿAbdullāh al-Sadiq (as), who said: \"I heard him say: ",
+		"thaqalaynMatn": "Whoever says in his day, 'I bear witness that there is no god but Allah, He is One, without partner, the One God, the Eternal, who has neither a companion nor a child,' Allah will record for him forty-five million good deeds, erase from him forty-five million sins, raise him forty-five million levels, and it will be as if he has recited the entire Qur'an twelve times in one day, and a house will be built for him in Paradise.\" \u003cbr\u003e (Ashhadu an lā ilāha illā Allāh, waḥdahu lā sharīka lahu, ilāhan wāḥidan aḥadan ṣamadan, lam yattakhidh ṣāḥibatan wa lā waladan)",
 		"gradingsFull": []
 	},
 	{
@@ -1293,8 +1293,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 34,
-		"thaqalaynSanad": "",
-		"thaqalaynMatn": "",
+		"thaqalaynSanad": "1.  Imam  Ridha  (a.s.)  says, ",
+		"thaqalaynMatn": " “Keep  your  eyes  open  while performing  ablution.  Perhaps  you  will  save  yourself  from seeing the fire of Hell by doing so.”",
 		"gradingsFull": []
 	},
 	{
@@ -1359,8 +1359,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 36,
-		"thaqalaynSanad": "1. My father (rah) said: it was narrated to us by Ahmad b. Idris who said it was narrated to me by Muhammad b. Ahmad who said it was narrated to me by Ibrahim b. Ishaq from Muhammad b. Isa from ’Ubayd-Allah al-Dahqan from Durust b. Mansur from Abdillah b. Sinan from Abi Abdillah (a.s.) who said: ",
-		"thaqalaynMatn": "“There are twelve virtues of doing Miswak – it is the Sunnah of the Holy Prophet (s.a.w.s.), it cleans the mouth, improves eyesight, Allah becomes pleased, teeth are cleansed, teeth are prevented from decay, jaws become stronger, it increases appetite, it removes phlegm, it improves memory, it doubles the good deeds of a person and angels become happy.”",
+		"thaqalaynSanad": "1. My father (rah) said: it was narrated to us by Ahmad b. Idris who said it was narrated to me by Muhammad b. Ahmad who said it was narrated to me by Ibrahim b. Ishaq from Muhammad b. Isa from ’Ubayd-",
+		"thaqalaynMatn": "Allah al-Dahqan from Durust b. Mansur from Abdillah b. Sinan from Abi Abdillah (a.s.) who said: “There are twelve virtues of doing Miswak – it is the Sunnah of the Holy Prophet (s.a.w.s.), it cleans the mouth, improves eyesight, Allah becomes pleased, teeth are cleansed, teeth are prevented from decay, jaws become stronger, it increases appetite, it removes phlegm, it improves memory, it doubles the good deeds of a person and angels become happy.”",
 		"gradingsFull": []
 	},
 	{
@@ -1909,8 +1909,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 48,
-		"thaqalaynSanad": "3. It was narrated to me by Ahmad b. Muhammad from his father from Muhammad b. Ahmad from Musa b. Ja’far from Musa b. ’Umayra from Hamzah b. Bazee’ from Ishaq b. ’Amir from Abi Abdillah (a.s.) who said: “",
-		"thaqalaynMatn": "Applying Antimony before going to bed stops watering of the eyes.”",
+		"thaqalaynSanad": "3. It was narrated to me by Ahmad b. Muhammad from his father from Muhammad b. Ahmad from Musa b. Ja’far from Musa b. ’Umayra from Hamzah b. Bazee’ from Ishaq b. ’Amir from Abi Abdillah (a.s.) who said: ",
+		"thaqalaynMatn": "“Applying Antimony before going to bed stops watering of the eyes.”",
 		"gradingsFull": []
 	},
 	{
@@ -1931,8 +1931,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 48,
-		"thaqalaynSanad": "4. It was narrated to me by al-Hassan b. Ahmad from his father from Muhammad b. Ahmad from Sahl b. Ziyad from Ibn Sinan from Hamad b. Uthman from Abi Abdillah (a.s.) who said: “",
-		"thaqalaynMatn": "Applying Antimony helps hair growth, tears dry up, spit thickens and eyesight improves.”",
+		"thaqalaynSanad": "4. It was narrated to me by al-Hassan b. Ahmad from his father from Muhammad b. Ahmad from Sahl b. Ziyad from Ibn Sinan from Hamad b. Uthman from Abi Abdillah (a.s.) who said: ",
+		"thaqalaynMatn": "“Applying Antimony helps hair growth, tears dry up, spit thickens and eyesight improves.”",
 		"gradingsFull": []
 	},
 	{
@@ -2129,8 +2129,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 51,
-		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan (rah) who said it was narrated to me by Muhammad b. Yahya al-’Attar who said it was narrated to me by Muhammad b. Ahmad from al-Sayyari from Abi Sulayman al-Khawwadh from Abi Na’im al-Fadhl b. Dukayn from Sadeer al-Sayrafi who said: “",
-		"thaqalaynMatn": "One who goes to market with an intention of buying white shoes and buys them; then before those shoes are worn out, that person gets such a wealth, which he would have never expected.” Abu Naeem says that Sudair informed him saying, “My shoes were not worn out yet and I received a hundred dirhams from somewhere I had never expected.”",
+		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan (rah) who said it was narrated to me by Muhammad b. Yahya al-’Attar who said it was narrated to me by Muhammad b. Ahmad from al-Sayyari from Abi Sulayman al-Khawwadh from Abi Na’im al-Fadhl b. Dukayn from Sadeer al-Sayrafi who said: ",
+		"thaqalaynMatn": "“One who goes to market with an intention of buying white shoes and buys them; then before those shoes are worn out, that person gets such a wealth, which he would have never expected.” Abu Naeem says that Sudair informed him saying, “My shoes were not worn out yet and I received a hundred dirhams from somewhere I had never expected.”",
 		"gradingsFull": []
 	},
 	{
@@ -2987,8 +2987,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 83,
-		"thaqalaynSanad": "1.  It  is  narrated  by  Imam  Ja’far  Sadiq  (a.s.)  from  his predecessors  from  Abu  Zar  (r.a.)  that  the  Holy  Prophet (s.a.w.s.) said, “",
-		"thaqalaynMatn": "The longer the Qunoot of a person in this world, the longer would be his peace in Mauqif (stages) on the Day of Judgment.”",
+		"thaqalaynSanad": "1.  It  is  narrated  by  Imam  Ja’far  Sadiq  (a.s.)  from  his predecessors  from  Abu  Zar  (r.a.)  that  the  Holy  Prophet (s.a.w.s.) said, ",
+		"thaqalaynMatn": "“The longer the Qunoot of a person in this world, the longer would be his peace in Mauqif (stages) on the Day of Judgment.”",
 		"gradingsFull": []
 	},
 	{
@@ -4615,8 +4615,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 120,
-		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan who said it was narrated to us by Muhammad b. al-Hassan al-Saffar from Ahmad b. Abi Abdillah al-Barqi from Yunis b. Ya’qub from al-Sadiq (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) says that Imam Zainul Abideen (a.s.) willed to Imam Muhammad Baqir (a.s.) at the time of his martyrdom, “I have performed twenty Hajjs on this she- camel and have not whipped it even once. When it dies, bury it, so that animals do not feed upon its flesh because I have heard the Holy Prophet (s.a.w.s.) say that there is no camel who halts at Arafah during Hajj for seven years except that Allah makes it a camel of Paradise and blesses its progeny.” When this she-camel died, Imam Muhammad Baqir (a.s.) buried it.",
+		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan who said it was narrated to us by Muhammad b. al-Hassan al-Saffar from Ahmad b. Abi Abdillah al-Barqi from Yunis b. Ya’qub from al-Sadiq (a.s.) who said: Imam Ja’far Sadiq (a.s.) says that ",
+		"thaqalaynMatn": "Imam Zainul Abideen (a.s.) willed to Imam Muhammad Baqir (a.s.) at the time of his martyrdom, “I have performed twenty Hajjs on this she- camel and have not whipped it even once. When it dies, bury it, so that animals do not feed upon its flesh because I have heard the Holy Prophet (s.a.w.s.) say that there is no camel who halts at Arafah during Hajj for seven years except that Allah makes it a camel of Paradise and blesses its progeny.” When this she-camel died, Imam Muhammad Baqir (a.s.) buried it.",
 		"gradingsFull": []
 	},
 	{
@@ -5583,8 +5583,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 130,
-		"thaqalaynSanad": "12. It was narrated to us by Muhammad b. Ibrahim who said it was narrated to us by Ahmad b. Hayyawayh al-Jurjani al-Mudhakkar who said it was narrated to us by Abu Ishaq Ibrahim b. Bilal who said it was narrated to us by Abu Muhammad who said it was narrated to us by Abu Abdillah Muhammad b. Karram who said it was narrated to us by Ahmad b. Abdillah who said it was narrated to us by Sufyan b. U’yaynah who said it was narrated to us by Muawiyah b. Abi Ishaq from Sa’eed b. Jubayr who said: “",
-		"thaqalaynMatn": "Listen carefully to what I say. I have heard the Holy Prophet (s.a.w.s.) say, ‘If you had known the reward in the month of Ramadan you would have thanked Allah much more. The Almighty Allah wipes out all the apparent and hidden sins of the people of my Ummah on the first night of Ramadan and increases the position of people by two hundred thousand levels and builds fifty cities in Paradise for them. He grants the reward of worship of one year, the reward of a prophet and the reward of fasting of one year for each step taken on the next day.” “On the third day, domes decorated with pearls and rubies are made in Paradise for you equaling the number of hair on your body. There will be twelve thousand illuminated houses in it – below and above. There will be twelve thousand beds in each house and a Hoor would be seated on each bed. One thousand Angels would come to you with gifts daily. The Almighty Allah would grant you seventy thousand palaces in Paradise on the fourth day. Every house will have fifty thousand beds and a Hoor would be sitting on each bed and thousand maid-servants of Hoor would stand in front of her and their dresses will be better than this world and anything in it. Allah would grant you seventy palaces in Paradise on the fifth day. Every city will have seventy thousand houses and every house will have seventy thousand tables and every table will have seventy thousand dishes and every dish will have sixty thousand distinct types of cuisines. On the sixth day, Allah would grant you a hundred thousand cities in Darus Salaam. Every house will have a hundred thousand golden beds seventy thousand spans wide and a Hoorul Ein would be seated on every bed, who would already be married to you. She would have thirty thousand locks of hair on their heads decorated with pearls and rubies and every lock would be held by a hundred maids. The Almighty Allah would grant you the reward of forty thousand martyrs and truthful ones in Paradise on the seventh day. The Almighty Allah would give you the reward of sixty thousand worshippers and sixty thousand repenters on the eighth day. On the ninth day, Allah would grant you the reward of one thousand scholars, those who go for Etekaf and for battle. Allah would fulfill your seventy thousand wishes on the tenth day. Every thing including the sun, moon, stars, animals, birds, pebbles, flowers, every dry and wet object, fishes, sea and trees will repent for you. He would note down the reward of four Hajjs performed along with the Holy Prophet (s.a.w.s.) and reward of four Umrahs performed by a martyr or a truthful person. The twelfth day would convert your sins to good deeds, double your good deeds and further multiply them a hundred thousand times. Allah would offer reward equal to the worship of all the people of Mecca and Medina on the thirteenth day and you will get intercession equal to the number of pebbles and grains of sand between Mecca and Medina. On the fourteenth day, you would be offered the reward of meeting Adam, Nuh, Ibrahim, Musa, Dawood, Sulaiman and worshipping Allah for two thousand years with each prophet. Allah would fulfill all your wishes – worldly and that of hereafter. He would grant you all those things, which he had given to Ayyub. He would accept your supplications, the people of heavens would repent for you and you would be given forty lights (Nur) on the Day of Judgment, which would surround you from all four sides, each side having ten of them. For sixteenth day, Allah would grant you sixty dresses when you are resurrected. You would be made to mount a camel and a cloud of Mercy would protect you from the hot sun of that day. On the seventeenth day, Allah would say that surely He has forgiven you and your parents. He would take away the difficulties of the Day of Judgment from you. On the eighteenth day, the Almighty Allah would order Jibraeel, Mikaeel, Israfeel and the people of heaven to repent for the Ummah of Muhammad (s.a.w.s.) till the next year. And Allah would give you the reward of the people of Badr on the Day of Judgment. The reward of the nineteenth day is that all the angels of earth and heaven would come to your grave taking permission from Allah and every angel would be carrying gifts and drinks for you. On the twentieth day, Allah would appoint seventy thousand angels for you who would save you from the mischief of Satan and they would write the reward of the fasts of a hundred years for each fast. Allah would make a barrier between you and Hell, note down the reward of those who recited the Old Testament, New Testament and the Holy Quran. He would note down the reward of worship of one year for each feather of Jibraeel. He would grant you the reward of Tasbeeh of Arsh and Kursi; grant you Hoorul Ein equal to the number of verses in the Holy Quran. The reward of the twenty-first day is that Allah would expand your grave by a thousand parasangs and keep darkness and fear away from it. He would include your grave among those of the martyrs and your face would resemble Yusuf bin Yaqoob (a.s.). The reward of the twenty-second day is that Allah would send the Angel of death to you in the same way as He sends him to the prophets. He would take away the fear of Munkir and Nakir from you and keep away the sorrow of this world and the chastisement of the grave. The reward of the twenty- third day is that you will pass through the Sirat Bridge along with prophets, truthful ones, martyrs and the virtuous. You will be rewarded as if you have fed every orphan and dressed every naked of my Ummah. The reward of the twenty-fourth day is that no person among you would go from this world until he sees his place in Paradise. You would be given the reward of a thousand sick persons and that of a traveler who started from his home in the way of Allah. You would be granted the reward of freeing one thousand slaves from the progeny of Ismail (a.s.). On the twenty-fifth day, Allah would make a thousand domes under the Divine throne and there would be a tent of a Hoor at the end of each dome. The Almighty Allah will say, ‘O Ummah of Muhammad (s.a.w.s.)! I am your Lord and you are My slaves. Sit in the domes constructed under the shade of My throne. Eat and drink for there is no fear or sorrow for you. O Ummah of Muhammad (s.a.w.s.)! I swear by My Honor that I would surely send you to Paradise. The first and last communities would be surprised on seeing you and you would be given an illuminated crown and you would be made to ride a camel created from light, whose bridles will be of light. There will be a thousand circles on it and an angel would be standing on each circle holding a pillar of light in his hand and you will be made to enter Paradise without any accounting of deeds. Allah would look upon you with mercy on the twenty-sixth day; He would forgive all your sins except that of murdering or usurping property and purify your house seventy times a day from backbiting and imputation. On the twenty-seventh day, you will be granted the reward of helping all the believers, men as well as women, and the reward of dressing seventy thousand naked persons, helping one thousand soldiers and reciting the Holy Scriptures revealed on all prophets. On the twenty- eighth day, the Almighty Allah would build a hundred thousand houses of light in Behisht-e-Javed for you. He would reward you a hundred thousand houses made of silver in Jannat-e-Maawa and a hundred thousand houses made of pure amber in Jannat-e-Naeem. He would reward you a hundred thousand cities in Jannat-e-Firdaus, each city having a thousand rooms. He would reward you a hundred thousand pulpits of musk in Jannat-e-Khuld and there would be a thousand houses made of saffron in the boundaries of each pulpit and each house will have a thousand beds made of pearls and rubies and a Hoorul Ein would be sitting on each bed who would be your wife. On the twenty-ninth day, He would reward you a hundred thousand localities and each locality will have an illuminated dome and every dome will have a bed made of white camphor, every bed will have one thousand carpets of green brocade and a Hoorul Ein would be sitting on each carpet having seventy thousand high quality dresses and they would have eighty thousand hairs on their heads decorated with pearls and rubies. When thirty days are over, the Almighty Allah would grant you the reward of a thousand martyrs, a thousand truthful ones and the worship of fifty years for each day passed. He would note down the reward of two thousand fasts for every single fast. He would increase your position by levels equal to the number of things grown by the water of river Nile. You would be given freedom from Hell, permit to pass through the Sirat Bridge and protection from chastisement. The door of Paradise named Rayyaan, which will not open till Qiyamat would be opened for the men and women of the Ummah of Muhammad (s.a.w.s.) who observe fast and Rizwan, the treasurer of Paradise would give a call, ‘O Ummah of Muhammad! Move towards Rayyan.’ Then my people will enter this door into Paradise. Thus one who could not be forgiven in this month will not be forgiven in any other month. There is no power or strength except with the Greatest Lord!’",
+		"thaqalaynSanad": "12. It was narrated to us by Muhammad b. Ibrahim who said it was narrated to us by Ahmad b. Hayyawayh al-Jurjani al-Mudhakkar who said it was narrated to us by Abu Ishaq Ibrahim b. Bilal who said it was narrated to us by Abu Muhammad who said it was narrated to us by Abu Abdillah Muhammad b. Karram who said it was narrated to us by Ahmad b. Abdillah who said it was narrated to us by Sufyan b. U’yaynah who said it was narrated to us by Muawiyah b. Abi Ishaq from Sa’eed b. Jubayr who said: ",
+		"thaqalaynMatn": "“Listen carefully to what I say. I have heard the Holy Prophet (s.a.w.s.) say, ‘If you had known the reward in the month of Ramadan you would have thanked Allah much more. The Almighty Allah wipes out all the apparent and hidden sins of the people of my Ummah on the first night of Ramadan and increases the position of people by two hundred thousand levels and builds fifty cities in Paradise for them. He grants the reward of worship of one year, the reward of a prophet and the reward of fasting of one year for each step taken on the next day.” “On the third day, domes decorated with pearls and rubies are made in Paradise for you equaling the number of hair on your body. There will be twelve thousand illuminated houses in it – below and above. There will be twelve thousand beds in each house and a Hoor would be seated on each bed. One thousand Angels would come to you with gifts daily. The Almighty Allah would grant you seventy thousand palaces in Paradise on the fourth day. Every house will have fifty thousand beds and a Hoor would be sitting on each bed and thousand maid-servants of Hoor would stand in front of her and their dresses will be better than this world and anything in it. Allah would grant you seventy palaces in Paradise on the fifth day. Every city will have seventy thousand houses and every house will have seventy thousand tables and every table will have seventy thousand dishes and every dish will have sixty thousand distinct types of cuisines. On the sixth day, Allah would grant you a hundred thousand cities in Darus Salaam. Every house will have a hundred thousand golden beds seventy thousand spans wide and a Hoorul Ein would be seated on every bed, who would already be married to you. She would have thirty thousand locks of hair on their heads decorated with pearls and rubies and every lock would be held by a hundred maids. The Almighty Allah would grant you the reward of forty thousand martyrs and truthful ones in Paradise on the seventh day. The Almighty Allah would give you the reward of sixty thousand worshippers and sixty thousand repenters on the eighth day. On the ninth day, Allah would grant you the reward of one thousand scholars, those who go for Etekaf and for battle. Allah would fulfill your seventy thousand wishes on the tenth day. Every thing including the sun, moon, stars, animals, birds, pebbles, flowers, every dry and wet object, fishes, sea and trees will repent for you. He would note down the reward of four Hajjs performed along with the Holy Prophet (s.a.w.s.) and reward of four Umrahs performed by a martyr or a truthful person. The twelfth day would convert your sins to good deeds, double your good deeds and further multiply them a hundred thousand times. Allah would offer reward equal to the worship of all the people of Mecca and Medina on the thirteenth day and you will get intercession equal to the number of pebbles and grains of sand between Mecca and Medina. On the fourteenth day, you would be offered the reward of meeting Adam, Nuh, Ibrahim, Musa, Dawood, Sulaiman and worshipping Allah for two thousand years with each prophet. Allah would fulfill all your wishes – worldly and that of hereafter. He would grant you all those things, which he had given to Ayyub. He would accept your supplications, the people of heavens would repent for you and you would be given forty lights (Nur) on the Day of Judgment, which would surround you from all four sides, each side having ten of them. For sixteenth day, Allah would grant you sixty dresses when you are resurrected. You would be made to mount a camel and a cloud of Mercy would protect you from the hot sun of that day. On the seventeenth day, Allah would say that surely He has forgiven you and your parents. He would take away the difficulties of the Day of Judgment from you. On the eighteenth day, the Almighty Allah would order Jibraeel, Mikaeel, Israfeel and the people of heaven to repent for the Ummah of Muhammad (s.a.w.s.) till the next year. And Allah would give you the reward of the people of Badr on the Day of Judgment. The reward of the nineteenth day is that all the angels of earth and heaven would come to your grave taking permission from Allah and every angel would be carrying gifts and drinks for you. On the twentieth day, Allah would appoint seventy thousand angels for you who would save you from the mischief of Satan and they would write the reward of the fasts of a hundred years for each fast. Allah would make a barrier between you and Hell, note down the reward of those who recited the Old Testament, New Testament and the Holy Quran. He would note down the reward of worship of one year for each feather of Jibraeel. He would grant you the reward of Tasbeeh of Arsh and Kursi; grant you Hoorul Ein equal to the number of verses in the Holy Quran. The reward of the twenty-first day is that Allah would expand your grave by a thousand parasangs and keep darkness and fear away from it. He would include your grave among those of the martyrs and your face would resemble Yusuf bin Yaqoob (a.s.). The reward of the twenty-second day is that Allah would send the Angel of death to you in the same way as He sends him to the prophets. He would take away the fear of Munkir and Nakir from you and keep away the sorrow of this world and the chastisement of the grave. The reward of the twenty- third day is that you will pass through the Sirat Bridge along with prophets, truthful ones, martyrs and the virtuous. You will be rewarded as if you have fed every orphan and dressed every naked of my Ummah. The reward of the twenty-fourth day is that no person among you would go from this world until he sees his place in Paradise. You would be given the reward of a thousand sick persons and that of a traveler who started from his home in the way of Allah. You would be granted the reward of freeing one thousand slaves from the progeny of Ismail (a.s.). On the twenty-fifth day, Allah would make a thousand domes under the Divine throne and there would be a tent of a Hoor at the end of each dome. The Almighty Allah will say, ‘O Ummah of Muhammad (s.a.w.s.)! I am your Lord and you are My slaves. Sit in the domes constructed under the shade of My throne. Eat and drink for there is no fear or sorrow for you. O Ummah of Muhammad (s.a.w.s.)! I swear by My Honor that I would surely send you to Paradise. The first and last communities would be surprised on seeing you and you would be given an illuminated crown and you would be made to ride a camel created from light, whose bridles will be of light. There will be a thousand circles on it and an angel would be standing on each circle holding a pillar of light in his hand and you will be made to enter Paradise without any accounting of deeds. Allah would look upon you with mercy on the twenty-sixth day; He would forgive all your sins except that of murdering or usurping property and purify your house seventy times a day from backbiting and imputation. On the twenty-seventh day, you will be granted the reward of helping all the believers, men as well as women, and the reward of dressing seventy thousand naked persons, helping one thousand soldiers and reciting the Holy Scriptures revealed on all prophets. On the twenty- eighth day, the Almighty Allah would build a hundred thousand houses of light in Behisht-e-Javed for you. He would reward you a hundred thousand houses made of silver in Jannat-e-Maawa and a hundred thousand houses made of pure amber in Jannat-e-Naeem. He would reward you a hundred thousand cities in Jannat-e-Firdaus, each city having a thousand rooms. He would reward you a hundred thousand pulpits of musk in Jannat-e-Khuld and there would be a thousand houses made of saffron in the boundaries of each pulpit and each house will have a thousand beds made of pearls and rubies and a Hoorul Ein would be sitting on each bed who would be your wife. On the twenty-ninth day, He would reward you a hundred thousand localities and each locality will have an illuminated dome and every dome will have a bed made of white camphor, every bed will have one thousand carpets of green brocade and a Hoorul Ein would be sitting on each carpet having seventy thousand high quality dresses and they would have eighty thousand hairs on their heads decorated with pearls and rubies. When thirty days are over, the Almighty Allah would grant you the reward of a thousand martyrs, a thousand truthful ones and the worship of fifty years for each day passed. He would note down the reward of two thousand fasts for every single fast. He would increase your position by levels equal to the number of things grown by the water of river Nile. You would be given freedom from Hell, permit to pass through the Sirat Bridge and protection from chastisement. The door of Paradise named Rayyaan, which will not open till Qiyamat would be opened for the men and women of the Ummah of Muhammad (s.a.w.s.) who observe fast and Rizwan, the treasurer of Paradise would give a call, ‘O Ummah of Muhammad! Move towards Rayyan.’ Then my people will enter this door into Paradise. Thus one who could not be forgiven in this month will not be forgiven in any other month. There is no power or strength except with the Greatest Lord!’",
 		"gradingsFull": []
 	},
 	{
@@ -5605,8 +5605,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 130,
-		"thaqalaynSanad": "13. It was narrated to me by Muhammad b. Ibrahim who said it was narrated to us by Ali b. Sa’eed al-’Askari who said it was narrated to us by al-Hussain b. Ali b. al-Aswad al-’Ijli who said it was narrated to us by Abdul-Hameed b. Yahya al-Jani [al-Hamani] who said it was narrated to us by Abu Bakr al-Hudhali from al-Zubayri from ’Ubayd-Allah b. Abdillah b. Abbas who said:",
-		"thaqalaynMatn": " It is narrated from Ibne Abbas that the Holy Prophet (s.a.w.s.) used to free every prisoner and give (material help) to every beggar as soon as the month of Ramadan approached.",
+		"thaqalaynSanad": "13. It was narrated to me by Muhammad b. Ibrahim who said it was narrated to us by Ali b. Sa’eed al-’Askari who said it was narrated to us by al-Hussain b. Ali b. al-Aswad al-’Ijli who said it was narrated to us by Abdul-Hameed b. Yahya al-Jani [al-Hamani] who said it was narrated to us by Abu Bakr al-Hudhali from al-Zubayri from ’Ubayd-",
+		"thaqalaynMatn": "Allah b. Abdillah b. Abbas who said: It is narrated from Ibne Abbas that the Holy Prophet (s.a.w.s.) used to free every prisoner and give (material help) to every beggar as soon as the month of Ramadan approached.",
 		"gradingsFull": []
 	},
 	{
@@ -5781,8 +5781,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 134,
-		"thaqalaynSanad": "1. It was narrated to us by Muhammad b. Ibrahim who said it was narrated to us by Ibn Sahl Harun b. Muhammad Zanjalah who said it was narrated to us by Abu al-Abbas Ahmad b. Hameed who said it was narrated to us by Abu Salih from Sa’d b. Sa’eed from Abi Tayyibah from Nur b. Wabarah from al-Rabee’ b. Khatheem from Abdillah b. Mas’ud from The Prophet (s.a.w.s.) from Jibra’il from Israfeel from His Lord May He be glorified and exalted that he said: ",
-		"thaqalaynMatn": "‘and ask His forgiveness; surely He is oft-returning (to mercy).’ This gift is special to me and my Ummah. The prophets and their people before me did not get this gift.”",
+		"thaqalaynSanad": "1. It was narrated to us by Muhammad b. Ibrahim who said it was narrated to us by Ibn Sahl Harun b. Muhammad Zanjalah who said it was narrated to us by Abu al-Abbas Ahmad b. Hameed who said it was narrated to us by Abu Salih from Sa’d b. Sa’eed from Abi Tayyibah from Nur b. Wabarah from al-Rabee’ b. Khatheem from Abdillah b. Mas’ud from The Prophet (s.a.w.s.) from ",
+		"thaqalaynMatn": "Jibra’il from Israfeel from His Lord May He be glorified and exalted that he said: ‘and ask His forgiveness; surely He is oft-returning (to mercy).’ This gift is special to me and my Ummah. The prophets and their people before me did not get this gift.”",
 		"gradingsFull": []
 	},
 	{
@@ -7365,8 +7365,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 147,
-		"thaqalaynSanad": "39. And from the previous chain from Muhammad b. Sadaqah from Malik b. ’Atiyyah from Abi Abdillah (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) says that if a person does the Ziyarat of Imam Husain (a.s.) once knowing his right the Almighty Allah would note down a reward of an accepted Hajj.",
+		"thaqalaynSanad": "39. And from the previous chain from Muhammad b. Sadaqah from Malik b. ’Atiyyah from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) says that ",
+		"thaqalaynMatn": "if a person does the Ziyarat of Imam Husain (a.s.) once knowing his right the Almighty Allah would note down a reward of an accepted Hajj.",
 		"gradingsFull": []
 	},
 	{
@@ -7541,8 +7541,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 147,
-		"thaqalaynSanad": "47. My father (rah) said: it was narrated to me by Ahmad b. Idris from Muhammad b. Ahmad from al-Hassan b. Ali b. Abi Uthman from Muhammad b. Fudhayl from Ishaq b. Ammar from Abi Abdillah (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) says that angels continuously move to and fro the grave of Imam Husain (a.s.) and all the seven heavens.",
+		"thaqalaynSanad": "47. My father (rah) said: it was narrated to me by Ahmad b. Idris from Muhammad b. Ahmad from al-Hassan b. Ali b. Abi Uthman from Muhammad b. Fudhayl from Ishaq b. Ammar from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) says that ",
+		"thaqalaynMatn": "angels continuously move to and fro the grave of Imam Husain (a.s.) and all the seven heavens.",
 		"gradingsFull": []
 	},
 	{
@@ -7629,8 +7629,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 147,
-		"thaqalaynSanad": "51.  Umme Saeed Hamsiya says that she was present near Imam  Ja’far  Sadiq  (a.s.)  when  her  maid  came  to  her  and said, ",
-		"thaqalaynMatn": "“I have brought the mount.” Imam (a.s.) asked, “What is that mount for? Where are you going?” She replied, “I am going for Ziyarat of the graves of the  martyrs.”  Imam  (a.s.)  said,  “I  am  surprised  that  you people of Iraq travel long distances and perform Ziyarat of the  martyrs  but  don’t  go  for  the  Ziyarat  of  the  chief  of martyrs.  Why  don’t  you  go  for  his  Ziyarat?”  She  asked, “Who is the chief of martyrs?” Imam (a.s.) replied, “Imam Husain (a.s.).” She said, “But I am a woman.” Imam (a.s.) said, “Other  women like  you should also go for Ziyarat.” She asked, “What is the reward of his Ziyarat?” Imam (a.s.) replied, “The reward of this Ziyarat is equal to that of a Hajj, Umrah, performing  Etekaf in Masjid-e-Haraam  and fasting for two months.”",
+		"thaqalaynSanad": "51.  Umme Saeed Hamsiya says that she was present near Imam  Ja’far  Sadiq  (a.s.)  ",
+		"thaqalaynMatn": "when  her  maid  came  to  her  and said, “I have brought the mount.” Imam (a.s.) asked, “What is that mount for? Where are you going?” She replied, “I am going for Ziyarat of the graves of the  martyrs.”  Imam  (a.s.)  said,  “I  am  surprised  that  you people of Iraq travel long distances and perform Ziyarat of the  martyrs  but  don’t  go  for  the  Ziyarat  of  the  chief  of martyrs.  Why  don’t  you  go  for  his  Ziyarat?”  She  asked, “Who is the chief of martyrs?” Imam (a.s.) replied, “Imam Husain (a.s.).” She said, “But I am a woman.” Imam (a.s.) said, “Other  women like  you should also go for Ziyarat.” She asked, “What is the reward of his Ziyarat?” Imam (a.s.) replied, “The reward of this Ziyarat is equal to that of a Hajj, Umrah, performing  Etekaf in Masjid-e-Haraam  and fasting for two months.”",
 		"gradingsFull": []
 	},
 	{
@@ -7761,8 +7761,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 150,
-		"thaqalaynSanad": "1.  The narrator says that a person from the people of Rayy went to Imam Ali Naqi (a.s.). Imam (a.s.) asked him, “Where are  you  coming  from?”  He  replied,  “I  am  coming  after performing  the  Ziyarat  of  Imam  Husain  (a.s.).”  The  Imam said: ",
-		"thaqalaynMatn": "However if you perform the Ziyarat of Abdul Azim in the city of Rayy it is as if you have performed the Ziyarat of Imam Husain bin Ali (a.s.).”",
+		"thaqalaynSanad": "1.  The narrator says that ",
+		"thaqalaynMatn": "a person from the people of Rayy went to Imam Ali Naqi (a.s.). Imam (a.s.) asked him, “Where are  you  coming  from?”  He  replied,  “I  am  coming  after performing  the  Ziyarat  of  Imam  Husain  (a.s.).”  The  Imam said: However if you perform the Ziyarat of Abdul Azim in the city of Rayy it is as if you have performed the Ziyarat of Imam Husain bin Ali (a.s.).”",
 		"gradingsFull": []
 	},
 	{
@@ -8003,8 +8003,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 161,
-		"thaqalaynSanad": "1. My father (rah) said: it was narrated to us by Sa’d b. Abdillah from Ahmad b. Abi Abdillah al-Barqi who said it was narrated to me by al-Hussain b. Yazid al-Nawfali from al-Sakuni from Abi Abdillah who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) says that the Holy Prophet (s.a.w.s.) was asked, “Who is the best of men?” The Holy Prophet (s.a.w.s.) replied, “One who comes and goes.” He was again asked, “What is meant by one who comes and goes?” He replied, “One who starts and ends. One who starts reciting the Holy Quran and ends it. There is no one nearer to Allah than him and his supplications are accepted.”",
+		"thaqalaynSanad": "1. My father (rah) said: it was narrated to us by Sa’d b. Abdillah from Ahmad b. Abi Abdillah al-Barqi who said it was narrated to me by al-Hussain b. Yazid al-Nawfali from al-Sakuni from Abi Abdillah who said: Imam Ja’far Sadiq (a.s.) says that ",
+		"thaqalaynMatn": "the Holy Prophet (s.a.w.s.) was asked, “Who is the best of men?” The Holy Prophet (s.a.w.s.) replied, “One who comes and goes.” He was again asked, “What is meant by one who comes and goes?” He replied, “One who starts and ends. One who starts reciting the Holy Quran and ends it. There is no one nearer to Allah than him and his supplications are accepted.”",
 		"gradingsFull": []
 	},
 	{
@@ -11303,8 +11303,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 286,
-		"thaqalaynSanad": "1. It was narrated to me by Ja’far b. Muhammad from ’Ubayd-Allah from Abdillah b. Maymun al-Qadah from Abi Abdillah (a.s.) who said: ",
-		"thaqalaynMatn": "“Nothing in this universe except Allah, knows the reward of feeding a Muslim to satiation. Feeding a Muslim is one of the deeds of being forgiven of one’s sins.” Imam recited the verse: ‘…Or the giving of food in a day of hunger to an orphan, having relationship, or to the poor man lying in the dust.”13",
+		"thaqalaynSanad": "1. It was narrated to me by Ja’far b. Muhammad from ’Ubayd-",
+		"thaqalaynMatn": "Allah from Abdillah b. Maymun al-Qadah from Abi Abdillah (a.s.) who said: “Nothing in this universe except Allah, knows the reward of feeding a Muslim to satiation. Feeding a Muslim is one of the deeds of being forgiven of one’s sins.” Imam recited the verse: ‘…Or the giving of food in a day of hunger to an orphan, having relationship, or to the poor man lying in the dust.”13",
 		"gradingsFull": []
 	},
 	{
@@ -11721,8 +11721,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 293,
-		"thaqalaynSanad": "9.  Imam Ja’far Sadiq (a.s.) narrates from his predecessors that the Holy Prophet (s.a.w.s.) said, “",
-		"thaqalaynMatn": "The ground of Qiyamat is fire  except  the  shade  of  a  believer.  Indeed  his  Sadaqah shades him.”",
+		"thaqalaynSanad": "9.  Imam Ja’far Sadiq (a.s.) narrates from his predecessors that the Holy Prophet (s.a.w.s.) said, ",
+		"thaqalaynMatn": "“The ground of Qiyamat is fire  except  the  shade  of  a  believer.  Indeed  his  Sadaqah shades him.”",
 		"gradingsFull": []
 	},
 	{
@@ -14295,8 +14295,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 377,
-		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Muhammad b. al-Hussain b. Abi al-Khattab from al-Abbas b. Ma’ruf from Sa’d b. Muslim from Abdillah b. Sinan from Abi Abdillah (a.s.) who said: “",
-		"thaqalaynMatn": "The Messenger of Allah (sw) said: 'Shall I not inform you about the one whom the Fire will be forbidden for him tomorrow?' They said: 'Yes, oh Messenger of Allah!' He said: 'The one who does not expect, has good character, soft behavior and simple nature.'”",
+		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Muhammad b. al-Hussain b. Abi al-Khattab from al-Abbas b. Ma’ruf from Sa’d b. Muslim from Abdillah b. Sinan from Abi Abdillah (a.s.) who said: ",
+		"thaqalaynMatn": "“The Messenger of Allah (sw) said: 'Shall I not inform you about the one whom the Fire will be forbidden for him tomorrow?' They said: 'Yes, oh Messenger of Allah!' He said: 'The one who does not expect, has good character, soft behavior and simple nature.'”",
 		"gradingsFull": []
 	},
 	{
@@ -15351,8 +15351,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 410,
-		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Muhammad b. al-Hassan who said it was narrated to me by Muhammad b. al-Hassan al-Saffar from Ya’qub b. Yazid from the one who mentioned it from Abi Abdillah (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) said that the Almighty Allah will order a caller on the Day of Judgment to call out for the poor ones. Some people will stand up and they will be ordered to go to Paradise. When they reach the door of Paradise, they will be asked, “Do you want to go to Paradise even before accounting of deeds?” They will reply, “Were we given something whose account we should give?” Almighty Allah will say, “My servants! You are right. I didn’t give you poverty to disgrace you but for this day. Go among the people and see. Whoever did good to you, hold his hand and make him enter Paradise along with you.”",
+		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Muhammad b. al-Hassan who said it was narrated to me by Muhammad b. al-Hassan al-Saffar from Ya’qub b. Yazid from the one who mentioned it from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) said that ",
+		"thaqalaynMatn": "the Almighty Allah will order a caller on the Day of Judgment to call out for the poor ones. Some people will stand up and they will be ordered to go to Paradise. When they reach the door of Paradise, they will be asked, “Do you want to go to Paradise even before accounting of deeds?” They will reply, “Were we given something whose account we should give?” Almighty Allah will say, “My servants! You are right. I didn’t give you poverty to disgrace you but for this day. Go among the people and see. Whoever did good to you, hold his hand and make him enter Paradise along with you.”",
 		"gradingsFull": []
 	},
 	{
@@ -16451,8 +16451,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 445,
-		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. Musa who said it was narrated to me by Abdillah b. Ja’far who said it was narrated to me by Ahmad b. Abdillah from Abi al-Jawzaa’ al-Munabih b. ’Ubayd-Allah from al-Hussain b. Alwan from Umar b. Khalid from Zayd b. Ali from his father from his grandfather from Ameer al-Mumineen (a.s.) who said: ",
-		"thaqalaynMatn": "“If you turn his face towards qiblah, angels and God look at him till his soul is captured.”",
+		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. Musa who said it was narrated to me by Abdillah b. Ja’far who said it was narrated to me by Ahmad b. Abdillah from Abi al-Jawzaa’ al-Munabih b. ’Ubayd-",
+		"thaqalaynMatn": "Allah from al-Hussain b. Alwan from Umar b. Khalid from Zayd b. Ali from his father from his grandfather from Ameer al-Mumineen (a.s.) who said: “If you turn his face towards qiblah, angels and God look at him till his soul is captured.”",
 		"gradingsFull": []
 	},
 	{
@@ -17133,8 +17133,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 1,
-		"thaqalaynSanad": "1. Muhammad b. Ali b. al-Hussain b. Musa b. Babawayh al-Faqih al-Qummi the author of this book (rah) who said it was narrated to me by my father (rah) said: it was narrated to me by Sa’d b. Abdillah from Muhammad b. al-Hassan b. Abi al-Khattab from Safwan b. Yahya from Ishaq b. Ghalib from Abi Abdillah (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) said that a monk from Bani Israel worshipped Allah so much that he become like a dry stick. Allah, the Mighty and Sublime revealed to His prophet of that time to go and say to him that (Allah says), “By My Greatness, Might and Power, even if you worship Me till you melt like something in the cooking pot, also, I will not accept it from you until you come to Me from the door I have ordered for you.”",
+		"thaqalaynSanad": "1. Muhammad b. Ali b. al-Hussain b. Musa b. Babawayh al-Faqih al-Qummi the author of this book (rah) who said it was narrated to me by my father (rah) said: it was narrated to me by Sa’d b. Abdillah from Muhammad b. al-Hassan b. Abi al-Khattab from Safwan b. Yahya from Ishaq b. Ghalib from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) said that ",
+		"thaqalaynMatn": "a monk from Bani Israel worshipped Allah so much that he become like a dry stick. Allah, the Mighty and Sublime revealed to His prophet of that time to go and say to him that (Allah says), “By My Greatness, Might and Power, even if you worship Me till you melt like something in the cooking pot, also, I will not accept it from you until you come to Me from the door I have ordered for you.”",
 		"gradingsFull": []
 	},
 	{
@@ -17155,8 +17155,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 2,
-		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ja’far b. Muhammad b. ’Ubayd-Allah from Abdillah b. Maymun from Abi Abdillah (a.s.) who said: ",
-		"thaqalaynMatn": "“Keep away from carelessness because a careless person is careless about himself. Do not underestimate the command of Allah, the Mighty and Sublime because Allah will disgrace such persons on the Day of Judgment.”",
+		"thaqalaynSanad": "1. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ja’far b. Muhammad b. ’Ubayd-",
+		"thaqalaynMatn": "Allah from Abdillah b. Maymun from Abi Abdillah (a.s.) who said: “Keep away from carelessness because a careless person is careless about himself. Do not underestimate the command of Allah, the Mighty and Sublime because Allah will disgrace such persons on the Day of Judgment.”",
 		"gradingsFull": []
 	},
 	{
@@ -19245,8 +19245,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 26,
-		"thaqalaynSanad": "5. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ahmad b. Abi Abdillah from his father from Safwan from al-’Ala from Muhammad b. Muslim from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) was asked how a false testifier should repent. He replied, “",
-		"thaqalaynMatn": "The person should recompense the loss of wealth because of his false testimony. If the victim has lost one third of his wealth, it should be repaid. If he has lost half of his wealth, the same should be repaid and if the loss is due to testimony of two persons, they both should repay it together.”",
+		"thaqalaynSanad": "5. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ahmad b. ",
+		"thaqalaynMatn": "Abi Abdillah from his father from Safwan from al-’Ala from Muhammad b. Muslim from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) was asked how a false testifier should repent. He replied, “The person should recompense the loss of wealth because of his false testimony. If the victim has lost one third of his wealth, it should be repaid. If he has lost half of his wealth, the same should be repaid and if the loss is due to testimony of two persons, they both should repay it together.”",
 		"gradingsFull": []
 	},
 	{
@@ -19861,8 +19861,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 38,
-		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan who said it was narrated to me by al-Hussain b. al-Hassan b. Aban from al-Hussain b. Sa’eed from al-Nadhr b. Suwayd from Musa b. Bakr from Zurarah from Abi Ja’far (a.s.) who said: “",
-		"thaqalaynMatn": "The appointed angel calls out: May Allah not give sleep to the eyes of those who go to bed without offering Isha Prayer by midnight.”",
+		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. al-Hassan who said it was narrated to me by al-Hussain b. al-Hassan b. Aban from al-Hussain b. Sa’eed from al-Nadhr b. Suwayd from Musa b. Bakr from Zurarah from Abi Ja’far (a.s.) who said: ",
+		"thaqalaynMatn": "“The appointed angel calls out: May Allah not give sleep to the eyes of those who go to bed without offering Isha Prayer by midnight.”",
 		"gradingsFull": []
 	},
 	{
@@ -20477,8 +20477,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 52,
-		"thaqalaynSanad": "1.  It  is  narrated  that  Imam  Ja’far  Sadiq  (a.s.)  said  that  the Almighty Allah has said, ",
-		"thaqalaynMatn": "“He has waged a war against Me that insults My believing servant. And he is safe from My anger that respects My believing servant.”",
+		"thaqalaynSanad": "1.  It  is  narrated  that  Imam  Ja’far  Sadiq  (a.s.)  said  that  the Almighty ",
+		"thaqalaynMatn": "Allah has said, “He has waged a war against Me that insults My believing servant. And he is safe from My anger that respects My believing servant.”",
 		"gradingsFull": []
 	},
 	{
@@ -21643,8 +21643,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 81,
-		"thaqalaynSanad": "2.  Imam  Ja’far  Sadiq  (a.s.)  narrates  that  the  Holy  Prophet (s.a.w.s.) said that the Almighty Allah said, ",
-		"thaqalaynMatn": "“One who sleeps after  having  his  fill  while  there  is  a  hungry  believer  near him, the former has no faith on Me.”",
+		"thaqalaynSanad": "2.  Imam  Ja’far  Sadiq  (a.s.)  narrates  that  the  Holy  Prophet (s.a.w.s.) said that the Almighty ",
+		"thaqalaynMatn": "Allah said, “One who sleeps after  having  his  fill  while  there  is  a  hungry  believer  near him, the former has no faith on Me.”",
 		"gradingsFull": []
 	},
 	{
@@ -21951,8 +21951,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 90,
-		"thaqalaynSanad": "1.  Imam Ja’far Sadiq (a.s.) narrates from his ancestors that the  Holy  Prophet  (s.a.w.s.)  was  asked,  “What  will  have salvation  on  the  Day  of  Judgment?”  The  Holy  Prophet (s.a.w.s.) replied, “Salvation is only and only in not cheating Allah so that He also doesn’t cheat you. Surely Allah cheats a person who cheats Him and takes faith away from him. A person should know that he has cheated himself.”",
-		"thaqalaynMatn": " The Holy Prophet  (s.a.w.s.)  was  asked,  “How  does  a  person  cheat Allah?” He answered, “By obeying the order of Allah but for the sake of someone else. Keep away from showoff because it is polytheism. Surely, a person who does showoff will be called  with  four  names  on  the  Day  of  Judgment  viz.  O disbeliever, O mischief-monger, O cunning, O loser! Your deeds are wasted. Your reward was reduced continuously and there is nothing left for you today. Go and ask for the reward from one for whom you performed good deeds.”",
+		"thaqalaynSanad": "1.  Imam Ja’far Sadiq (a.s.) narrates from his ancestors that the  Holy  Prophet  (s.a.w.s.)  was  asked,  “What  will  have salvation  on  the  Day  of  Judgment?”  The  Holy  Prophet (s.a.w.s.) replied, “Salvation is only and only in not cheating Allah so that He also doesn’t cheat you. Surely Allah cheats a person who cheats Him and takes faith away from him. A person should know that he has cheated himself.",
+		"thaqalaynMatn": "” The Holy Prophet  (s.a.w.s.)  was  asked,  “How  does  a  person  cheat Allah?” He answered, “By obeying the order of Allah but for the sake of someone else. Keep away from showoff because it is polytheism. Surely, a person who does showoff will be called  with  four  names  on  the  Day  of  Judgment  viz.  O disbeliever, O mischief-monger, O cunning, O loser! Your deeds are wasted. Your reward was reduced continuously and there is nothing left for you today. Go and ask for the reward from one for whom you performed good deeds.”",
 		"gradingsFull": []
 	},
 	{
@@ -22589,8 +22589,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 110,
-		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. Ali Majluwayh from his uncle Muhammad b. Ali al-Kufi from Ibn Fadhal from Abdillah b. Maymun from Abi Abdillah from his father (a.s.) who said: ",
-		"thaqalaynMatn": "that there are six kinds of punishments for an adulterer. Three are related to this world and three to the hereafter. The punishments of this world are that the person will continue to lose the brilliance of his face; he will face poverty and die soon. The punishments of hereafter include displeasure of Allah on the Day of judgment, bad accounting of deeds and living in Hell forever.",
+		"thaqalaynSanad": "1. It was narrated to me by Muhammad b. Ali Majluwayh from his uncle Muhammad b. Ali al-Kufi from Ibn Fadhal from Abdillah b. Maymun from Abi Abdillah from his father (a.s.) who said: that ",
+		"thaqalaynMatn": "there are six kinds of punishments for an adulterer. Three are related to this world and three to the hereafter. The punishments of this world are that the person will continue to lose the brilliance of his face; he will face poverty and die soon. The punishments of hereafter include displeasure of Allah on the Day of judgment, bad accounting of deeds and living in Hell forever.",
 		"gradingsFull": []
 	},
 	{
@@ -22985,8 +22985,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 112,
-		"thaqalaynSanad": "8. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ahmad b. Abi Abdillah from Ali b. Abdillah from Abdulrahman b. Muhammad from Abi Hudhayfa from Abi Abdillah (a.s.) who said:",
-		"thaqalaynMatn": " Imam Ja’far Sadiq (a.s.) said that the Holy Prophet (s.a.w.s.) has cursed those men who dress up as women and those women who dress up as men. These are same people who are involved in homosexual relations. Surely the women of the community of Prophet Lut (a.s.) was also involved in homosexual relations when chastisement befell the community.",
+		"thaqalaynSanad": "8. My father (rah) said: it was narrated to me by Sa’d b. Abdillah from Ahmad b. Abi Abdillah from Ali b. Abdillah from Abdulrahman b. Muhammad from Abi Hudhayfa from Abi Abdillah (a.s.) who said: Imam Ja’far Sadiq (a.s.) said that ",
+		"thaqalaynMatn": "the Holy Prophet (s.a.w.s.) has cursed those men who dress up as women and those women who dress up as men. These are same people who are involved in homosexual relations. Surely the women of the community of Prophet Lut (a.s.) was also involved in homosexual relations when chastisement befell the community.",
 		"gradingsFull": []
 	},
 	{
@@ -23381,8 +23381,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 118,
-		"thaqalaynSanad": "3.  It  is  narrated  that  Imam  Ja’far  Sadiq  (a.s.)  said  that  the Almighty Allah says: ",
-		"thaqalaynMatn": "“I swear by My honor that I will not accept the prayer of an oppressed for an injustice which he has also done to others.”",
+		"thaqalaynSanad": "3.  It  is  narrated  that  Imam  Ja’far  Sadiq  (a.s.)  said  that  the Almighty ",
+		"thaqalaynMatn": "Allah says: “I swear by My honor that I will not accept the prayer of an oppressed for an injustice which he has also done to others.”",
 		"gradingsFull": []
 	},
 	{
@@ -24261,8 +24261,8 @@
 		"behbudiGrading": "",
 		"majlisiGrading": "",
 		"chapterInCategoryId": 129,
-		"thaqalaynSanad": "1. It was narrated to me by Hamzah b. Muhammad al-Alawi who said I was informed by Ali b. Ibrahim from his father from al-Nawfali from al-Sakuni from Ja’far b. Muhammad from his father from his forefathers (a.s.) who said: ",
-		"thaqalaynMatn": "that one who recites the Holy Quran for making money, will have no flesh on his face when he comes on the Day of Judgment.",
+		"thaqalaynSanad": "1. It was narrated to me by Hamzah b. Muhammad al-Alawi who said I was informed by Ali b. Ibrahim from his father from al-Nawfali from al-Sakuni from Ja’far b. Muhammad from his father from his forefathers (a.s.) who said: that ",
+		"thaqalaynMatn": "one who recites the Holy Quran for making money, will have no flesh on his face when he comes on the Day of Judgment.",
 		"gradingsFull": []
 	},
 	{

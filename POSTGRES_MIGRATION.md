@@ -8,18 +8,18 @@ Replace MongoDB Atlas with Neon (cloud PostgreSQL), using Drizzle ORM. V2 data i
 - [ ] Add Drizzle schema, client, drizzle-kit config, and SQL migrations for V2 + V1 snapshot tables
 - [ ] Replace mongoose models/contracts with repositories; rewrite HadithService, IngredientService, GraphQL resolvers, and API bootstrap
 - [ ] Update `.env.example` and all environment configs to use `DATABASE_URL` for Neon
-- [ ] Replace `modifyDB.js` with bash + `psql` `COPY` from per-book JSON into staging tables, then atomic swap; both GitHub Actions and VPS cron can now load to Neon
+- [x] Replace `modifyDB.js` with bash + `psql` `COPY` from per-book JSON into staging tables, then atomic swap; both GitHub Actions and VPS cron can now load to Neon
 - [ ] One-time Atlas dump + load into `books_v1` / `hadiths_v1`; V1 routes read snapshot tables only
 - [ ] Remove mongoose deps; update README, `.env.example`, `BACKEND_LEARNING.md`
 - [ ] Remove postgres service from docker-compose (no longer needed)
 
 ## Current state
 
-- The API connects with `mongoose.connect(config.app.databaseUrl)` in [`API/src/index.ts`](API/src/index.ts) (`MONGODB_URI`).
+- The API connects with `mongoose.connect(config.app.databaseUrl)` in [`API/src/index.ts`](API/src/index.ts) (`DATABASE_URL`).
 - V2 REST/GraphQL use [`hadithV2.ts`](API/src/models/hadithV2.ts), [`bookNameV2.ts`](API/src/models/bookNameV2.ts), [`ingredientsV2.ts`](API/src/models/ingredientsV2.ts) (`strict: false`, so extra JSON fields like `volume` and `gradingsFull` already leak into REST responses).
 - V1 `/api` uses separate collections `AllBooks` / `bookNames` via [`API/src/api/rest/routes/v1/hadith.ts`](API/src/api/rest/routes/v1/hadith.ts).
 - Services talk to a mongoose-shaped [`HadithModelLike`](API/src/models/contracts.ts) (`find`, `findOne`, `findOneRandom`).
-- Ingest is [`V2/Deploy/modifyDB.js`](V2/Deploy/modifyDB.js) (`deleteMany` + `insertMany`), invoked by [`V2/Makefile`](V2/Makefile) `push_*`. Both GitHub Actions and the VPS cron run `make scrape_all`, which pushes to Atlas.
+- Ingest is [`V2/Deploy/load.sh`](V2/Deploy/load.sh), invoked by [`V2/Makefile`](V2/Makefile). Both GitHub Actions and the VPS cron run `make scrape_all`, which loads to Neon.
 - Compose today: API + Redis only ([`docker-compose.yml`](docker-compose.yml)). Neon will replace the self-hosted postgres container, so compose will remain API + Redis only.
 
 ## Target architecture
@@ -85,7 +85,7 @@ Rewrite [`HadithService`](API/src/api/rest/services/hadithService.ts) / [`Ingred
 
 [`API/src/index.ts`](API/src/index.ts): connect via `DATABASE_URL`, run pending Drizzle migrations on boot (or a one-shot migrate before `listen`), close the pool on SIGINT/SIGTERM.
 
-Config: replace `MONGODB_URI` with `DATABASE_URL` in [`API/src/config/index.ts`](API/src/config/index.ts), [`.env.example`](.env.example), compose, and the cron image.
+Config: use `DATABASE_URL` in [`API/src/config/index.ts`](API/src/config/index.ts), [`.env.example`](.env.example), compose, and the cron image.
 
 Remove `mongoose` and `mongoose-simple-random` from [`package.json`](package.json). Add `drizzle-orm`, `postgres`, `drizzle-kit` (dev).
 
@@ -99,7 +99,7 @@ Update [`docker-compose.yml`](docker-compose.yml):
 - `api` service: `DATABASE_URL` environment variable for Neon connection string
 - Compose remains API + Redis only
 
-Update [`pipelines/Dockerfile`](pipelines/Dockerfile) / [`pipelines/cron.sh`](pipelines/cron.sh) to pass `DATABASE_URL` (Neon connection string) instead of `MONGODB_URI`.
+Update [`pipelines/Dockerfile`](pipelines/Dockerfile) / [`pipelines/cron.sh`](pipelines/cron.sh) to pass `DATABASE_URL` (Neon connection string).
 
 **GitHub Actions vs VPS:** Since Neon is cloud-hosted, both GitHub Actions and VPS cron can connect directly. Keep [`.github/workflows/main.yml`](.github/workflows/main.yml) running `make scrape_all` which now loads to Neon via `psql` using the `DATABASE_URL` secret.
 
@@ -115,7 +115,7 @@ Keep **scrape → versioned files → load into Postgres**. Do not have the scra
 
 **What is weak today (and we should drop)**
 
-- Node `deleteMany` + `insertMany` in [`V2/Deploy/modifyDB.js`](V2/Deploy/modifyDB.js) is a Mongo leftover, not idiomatic for Postgres, and it empties the live collection mid-load.
+- The old Node `deleteMany` + `insertMany` loader was a Mongo leftover, not idiomatic for Postgres, and emptied the live collection mid-load.
 - `allBooks.json` is a giant concatenated array (scraper even comments out writing it). Loading it as one JSON value is slow and memory-heavy. Per-book files (`1.json`, `2.json`, …) already exist and should be the ingest source.
 
 **Loader: bash + `psql` `COPY`, not JavaScript**
@@ -127,7 +127,7 @@ Bash/`psql` is the right tool once files are COPY-shaped. Nested JSON arrays are
 3. `INSERT INTO hadiths_staging SELECT ... FROM hadiths_staging_raw` mapping JSON keys → columns (`gradingsFull` stays jsonb).
 4. **Atomic swap** so the API does not see an empty table: in one transaction, `TRUNCATE hadiths` + `INSERT INTO hadiths SELECT * FROM hadiths_staging`, or `ALTER TABLE ... RENAME`. Weekly load never touches `*_v1` tables.
 
-Run via `psql` using the `DATABASE_URL` connection string from [`V2/Makefile`](V2/Makefile) (`load_books`, `load_hadiths`, `load_ingredients`, `load_all`). Delete `modifyDB.js`.
+Run via `psql` using the `DATABASE_URL` connection string from [`V2/Makefile`](V2/Makefile) (`load_books`, `load_hadiths`, `load_ingredients`, `load_all`). The loader lives in [`V2/Deploy/load.sh`](V2/Deploy/load.sh); the old `modifyDB.js` has been removed.
 
 **GitHub Actions:** Now runs full `make scrape_all` which loads to Neon via `psql` using the `DATABASE_URL` secret. VPS cron also runs `make scrape_all` to Neon.
 
@@ -135,7 +135,7 @@ Run via `psql` using the `DATABASE_URL` connection string from [`V2/Makefile`](V
 
 1. `mongoexport` from Atlas (`AllBooks`, `bookNames`) to NDJSON — no Node dump script.
 2. Same `COPY` + promote path into `hadiths_v1` / `books_v1`.
-3. After verified, Atlas and `MONGODB_URI` leave runtime config.
+3. After verified, Atlas leaves runtime config.
 
 First production cutover: set up Neon project → run Drizzle migrations → `load_all` from repo JSON → load V1 export → smoke REST/GraphQL.
 

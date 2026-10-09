@@ -1,7 +1,7 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 const random = require('mongoose-simple-random')
-const url = process.env.MONGODB_URI
+const url = process.env.DATABASE_URL
 
 mongoose.connect(url)
   .then(result => {

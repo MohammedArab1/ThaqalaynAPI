@@ -78,9 +78,9 @@ In the V2 directory, you'll find of relevance:
 
 To do any scraping, the `WEBAPP_URL` and `WEBAPP_API_KEY` env variables need to be set.
 
-A developer can also use `push_books` and `push_hadiths` (or to combine the two, `push_all`) to push data into their mongoDB atlas instance if they want to create one and have the data stored in their themselves. They will need the `MONGODB_URI` env variable set to their mongoDB atlas URI (can use .env file). If that's all done, A developer can follow the steps below to publish the data in the /V2/ThaqalaynData directory to their mongoDB atlas instance:
-1. `cd V2/Deploy`
-2. `make push_all` or `make push_books` (pushes the booknames.json) or `make push_hadiths` (pushes the allBooks.json)
+A developer can use `make load_all` to publish the per-book JSON files and ingredient data from `/V2/ThaqalaynData` to PostgreSQL. The `DATABASE_URL` environment variable must contain the database connection string (it can be provided through a `.env` file). The loader uses `jq` and `psql` to stage the data and atomically replace the live V2 tables:
+1. `cd V2`
+2. `make load_all`
 
 
 Feel free to use any part of this project and modify as you'd like.
@@ -124,7 +124,7 @@ This is the actual REST and GQL backend that calls the database.
 ### API Setup
 1. Clone the repository
 2. run `npm install`
-3. Using the .env.example file, create a .env file at the root of the directory. You will need a value for `MONGODB_URI`. This is the URI of your mongoDB atlas instance that stores the data. This uses models found in /v1/models and /v2/models.
+3. Using the `.env.example` file, create a `.env` file at the root of the directory. You will need a value for `DATABASE_URL`, which is the connection string for the database that stores the data.
 4. run `npm start`
 
 #### API Deployment

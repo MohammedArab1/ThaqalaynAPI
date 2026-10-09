@@ -9,7 +9,7 @@ services:
     networks:
       - apinetwork
     environment:
-      MONGODB_URI: ${MONGODB_URI}
+      DATABASE_URL: ${DATABASE_URL}
       PORT: ${PORT}
       CACHE: ${CACHE}
       REDIS_URL: ${REDIS_URL}

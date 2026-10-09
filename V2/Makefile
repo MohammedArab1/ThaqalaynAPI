@@ -1,25 +1,24 @@
 -include .env
-export MONGODB_URI
+export DATABASE_URL
 export WEBAPP_URL
 
-scrape_all:run_scraper_full push_all
+.PHONY: scrape_all scrape_one_book load_all load_books load_hadiths load_ingredients run_scraper_full run_scraper_one_book build_and_install
 
-scrape_one_book: run_scraper_one_book push_all
+scrape_all: run_scraper_full load_all
+
+scrape_one_book: run_scraper_one_book load_all
 
 build_and_install:
 	(cd ./WebScraper/cmd; go build -o main)
-	npm install
 
-push_hadiths:
-	(cd ./Deploy; node modifyDB.js --path ../ThaqalaynData/allBooks.json --model HadithModel)
+load_all:
+	(cd ./Deploy; bash ./load.sh all)
 
-push_books:
-	(cd ./Deploy; node modifyDB.js --path ../ThaqalaynData/BookNames.json --model BookNamesModel)
+load_books: load_all
 
-push_ingredients:
-	(cd ./Deploy; node modifyDB.js --path ../ThaqalaynData/Ingredients/ingredients.json --model IngredientModel)
+load_hadiths: load_all
 
-push_all: push_books push_hadiths push_ingredients
+load_ingredients: load_all
 
 run_scraper_full: build_and_install
 	./WebScraper/cmd/main -datapath=$(datapath)

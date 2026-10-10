@@ -17,6 +17,7 @@ WORKDIR /app
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/API/dist ./dist
 COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/API/drizzle ./API/drizzle
 COPY --from=builder /app/API/src/api/rest/public ./API/src/api/rest/public
 
 

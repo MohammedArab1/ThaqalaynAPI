@@ -7,6 +7,7 @@ import {
 import path from 'path';
 import v1Router from './v1/hadith.js';
 import v2Router from './v2/hadith.js';
+import v3Router from './v3/hadith.js';
 
 const router = Router();
 
@@ -30,6 +31,7 @@ router.get('/', (_req: Request, res: Response) => {
 });
 
 router.use('/api/v2', v2Router);
+router.use('/api/v3', v3Router);
 router.use('/api', v1Router);
 
 router.use(

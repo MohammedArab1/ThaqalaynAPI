@@ -1,9 +1,12 @@
 import { BookRepository } from '../../../db/repositories/bookRepository.js';
 import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
+	BookFilters,
 	BookV2Record,
 	HadithV2Record,
 	IHadithService,
+	PaginatedResult,
+	PaginationOptions,
 } from './interfaces.js';
 
 export default class HadithService
@@ -53,6 +56,25 @@ export default class HadithService
 		hadithId: number,
 	): Promise<HadithV2Record | null> {
 		return this.hadithRepo.getHadithById(bookId, hadithId);
+	}
+
+	async getHadithsByBookPaginated(
+		bookId: string,
+		pagination: PaginationOptions,
+		filters: BookFilters = {},
+	): Promise<PaginatedResult<HadithV2Record>> {
+		return this.hadithRepo.listHadithsByBookPaginated(bookId, {
+			...pagination,
+			...filters,
+		});
+	}
+
+	async searchHadithPaginated(
+		query: string,
+		bookId: string | null,
+		pagination: PaginationOptions,
+	): Promise<PaginatedResult<HadithV2Record>> {
+		return this.hadithRepo.searchHadithsPaginated(query, bookId, pagination);
 	}
 
 	private compareAlphabetically(field: keyof BookV2Record) {

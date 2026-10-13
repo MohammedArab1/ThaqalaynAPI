@@ -30,9 +30,13 @@ export const cacheMiddleware = (ttl = 60) => {
 			}
 
 			res.json = ((body: unknown) => {
-				redisClient
-					?.set(cacheKey, JSON.stringify(body), { EX: ttl })
-					.catch((error: unknown) => console.error('Cache set error:', error));
+				if (res.statusCode >= 200 && res.statusCode < 300) {
+					redisClient
+						?.set(cacheKey, JSON.stringify(body), { EX: ttl })
+						.catch((error: unknown) =>
+							console.error('Cache set error:', error),
+						);
+				}
 				return originalJson(body as never);
 			}) as Response['json'];
 

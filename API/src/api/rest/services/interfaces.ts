@@ -56,6 +56,22 @@ export interface IngredientRecord {
 	unknown?: string[] | null;
 }
 
+export interface PaginationOptions {
+	limit: number;
+	offset: number;
+}
+
+export interface PaginatedResult<T> {
+	rows: T[];
+	total: number;
+}
+
+export interface BookFilters {
+	chapter?: string;
+	category?: string;
+	grading?: string;
+}
+
 export interface IHadithService<TBook extends BookRecord, THadith extends BaseHadithRecord> {
 	getAllBooks(): Promise<TBook[]>;
 	validateBookExists(bookId: string): Promise<boolean>;

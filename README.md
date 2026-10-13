@@ -66,6 +66,49 @@ A list of endpoints can be found on the Swagger UI page: https://www.thaqalayn-a
 
 <br>
 
+## V3 API (Beta)
+
+> ⚠️ **This is in beta and subject to change.** The V3 contract is not yet stable — response shapes and query parameters may change without notice.
+
+V3 introduces pagination, filtering, and input validation. It reads the same data as V2 but returns a structured `{ data, pagination }` envelope for list endpoints.
+
+### Endpoints
+
+1. List a book's hadiths with pagination and filters:
+   - `https://www.thaqalayn-api.net/api/v3/[bookId]?page=1&limit=50`
+   - Optional filters: `chapter`, `category`, `grading` (matches `grade_en` or `grade_ar`, case-insensitive)
+2. Search all books (paginated):
+   - `https://www.thaqalayn-api.net/api/v3/query?q=[query]&page=1&limit=50`
+3. Search a specific book (paginated):
+   - `https://www.thaqalayn-api.net/api/v3/query/[bookId]?q=[query]&page=1&limit=50`
+4. Get a specific hadith (validated integer id):
+   - `https://www.thaqalayn-api.net/api/v3/[bookId]/[id]`
+
+### Pagination parameters
+
+- `page` — page number (default `1`, minimum `1`)
+- `limit` — results per page (default `50`, maximum `100`)
+
+### Response shape
+
+Paginated endpoints return:
+
+```json
+{
+  "data": [ ... ],
+  "pagination": {
+    "page": 1,
+    "limit": 50,
+    "total": 1234,
+    "totalPages": 25,
+    "hasNext": true,
+    "hasPrev": false
+  }
+}
+```
+
+Invalid input returns HTTP `400` with a `{ code, message, details }` body.
+
 ## Extra info
 
 Most folders in the V1 directory are no longer used (except for the /V1/DB/models).

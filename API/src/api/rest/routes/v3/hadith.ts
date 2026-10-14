@@ -58,14 +58,29 @@ router.get('/random', controller.randomHadithHandler);
  *     tags:
  *       - V3 (beta)
  *     summary: Search hadiths across all books (paginated)
- *     description: Fetches hadith(s) matching a query, wrapped in a { data, pagination } envelope.
+ *     description: Full-text search over hadiths, wrapped in a { data, pagination } envelope. Results are ranked by relevance (each item includes a `score`) and sorted best-first. Use the pipe character ('|') to separate queries in an OR fashion.
  *     parameters:
  *       - name: q
  *         in: query
- *         description: "The query you're searching against"
+ *         description: "The query you're searching against. Words are matched as normalized word forms, not substrings."
  *         required: true
  *         schema:
  *           type: string
+ *       - name: lang
+ *         in: query
+ *         description: "Language to search in: en (english only), ar (arabic only), or any (default, both)."
+ *         required: false
+ *         schema:
+ *           type: string
+ *           enum: [en, ar, any]
+ *           default: any
+ *       - name: highlight
+ *         in: query
+ *         description: "When true, each result includes a `highlight` object with snippets where matched words are wrapped in <b> tags."
+ *         required: false
+ *         schema:
+ *           type: boolean
+ *           default: false
  *       - name: page
  *         in: query
  *         required: false
@@ -83,7 +98,7 @@ router.get('/random', controller.randomHadithHandler);
  *           default: 50
  *     responses:
  *       200:
- *         description: Paginated search results wrapped in { data, pagination }.
+ *         description: Paginated search results wrapped in { data, pagination }. Each item includes a relevance `score` and is ordered best-first.
  *       400:
  *         description: Validation error.
  */
@@ -119,7 +134,7 @@ router.get(
  *     tags:
  *       - V3 (beta)
  *     summary: Search hadiths in a specific book (paginated)
- *     description: Fetches hadith(s) matching a query in a specific book, wrapped in a { data, pagination } envelope.
+ *     description: Full-text search over a single book's hadiths, wrapped in a { data, pagination } envelope. Results are ranked by relevance (each item includes a `score`) and sorted best-first. Use the pipe character ('|') to separate queries in an OR fashion.
  *     parameters:
  *       - name: bookId
  *         in: path
@@ -129,10 +144,25 @@ router.get(
  *           type: string
  *       - name: q
  *         in: query
- *         description: "The query you're searching against"
+ *         description: "The query you're searching against. Words are matched as normalized word forms, not substrings."
  *         required: true
  *         schema:
  *           type: string
+ *       - name: lang
+ *         in: query
+ *         description: "Language to search in: en (english only), ar (arabic only), or any (default, both)."
+ *         required: false
+ *         schema:
+ *           type: string
+ *           enum: [en, ar, any]
+ *           default: any
+ *       - name: highlight
+ *         in: query
+ *         description: "When true, each result includes a `highlight` object with snippets where matched words are wrapped in <b> tags."
+ *         required: false
+ *         schema:
+ *           type: boolean
+ *           default: false
  *       - name: page
  *         in: query
  *         required: false
@@ -150,7 +180,7 @@ router.get(
  *           default: 50
  *     responses:
  *       200:
- *         description: Paginated search results wrapped in { data, pagination }.
+ *         description: Paginated search results wrapped in { data, pagination }. Each item includes a relevance `score` and is ordered best-first.
  *       400:
  *         description: Validation error.
  *       404:

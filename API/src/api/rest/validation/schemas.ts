@@ -13,6 +13,15 @@ export const bookListQuerySchema = paginationQuerySchema.extend({
 
 export const searchQuerySchema = paginationQuerySchema.extend({
 	q: z.string().trim().min(1).max(500),
+	lang: z.enum(['en', 'ar', 'any']).default('any'),
+	// Strict two-value enum + transform, NOT z.coerce.boolean():
+	// Boolean() coercion treats ANY non-empty string ("false", "0",
+	// "yes") as true, which would make the flag impossible to turn off
+	// and would accept garbage instead of failing closed.
+	highlight: z
+		.enum(['true', 'false'])
+		.default('false')
+		.transform((value) => value === 'true'),
 });
 
 export const bookParamsSchema = z.object({

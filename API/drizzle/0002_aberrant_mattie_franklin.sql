@@ -1,0 +1,2 @@
+CREATE INDEX "idx_hadiths_v2_fts_en" ON "hadiths_v2" USING gin (to_tsvector('english', coalesce(english_text, '')));--> statement-breakpoint
+CREATE INDEX "idx_hadiths_v2_fts_ar" ON "hadiths_v2" USING gin (to_tsvector('simple', coalesce(arabic_text, '')));

@@ -1,4 +1,11 @@
-import { pgTable, text, integer, jsonb, index } from 'drizzle-orm/pg-core';
+import {
+	pgTable,
+	text,
+	integer,
+	jsonb,
+	index,
+} from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
 
 export type HadithGradingAuthor = {
 	name_en: string | null;
@@ -62,6 +69,14 @@ export const hadithsV2 = pgTable(
 	(table) => [
 		index('idx_hadiths_v2_book_id').on(table.bookId),
 		index('idx_hadiths_v2_book_id_id').on(table.bookId, table.id),
+		index('idx_hadiths_v2_fts_en').using(
+			'gin',
+			sql`to_tsvector('english', coalesce(english_text, ''))`,
+		),
+		index('idx_hadiths_v2_fts_ar').using(
+			'gin',
+			sql`to_tsvector('simple', coalesce(arabic_text, ''))`,
+		),
 	],
 );
 

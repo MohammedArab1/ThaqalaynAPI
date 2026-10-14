@@ -37,7 +37,7 @@ A list of endpoints can be found on the Swagger UI page: https://www.thaqalayn-a
    - `https://www.thaqalayn-api.net/api/v2/random`
 3. Retrieve a random hadith from a given book:
    - `https://www.thaqalayn-api.net/api/v2/[bookId]/random`
-4. Make a query throughout the entire database. This is a very simplistic case-insensitive search mechanism that accepts both english and arabic and searches for any hadith with an exact match. Use it with query `q`. Use the pipe character `|` to separate multiple queries (where all matches that contain either query 1 OR query 2 are retrieved):
+4. Make a query throughout the entire database. This is a full-text search that accepts both english and arabic: words are matched as normalized word forms (english is stemmed, e.g. `running` matches `run`) rather than substrings, and results are ranked by relevance. Use it with query `q`. Use the pipe character `|` to separate multiple queries (matches containing query 1 OR query 2 are retrieved):
    - `https://www.thaqalayn-api.net/api/v2/query?q=[query]`
    - `https://www.thaqalayn-api.net/api/v2/query?q=[query1]|[query2]`
 5. Make a query for a specific book. Same rules as above apply here:
@@ -88,6 +88,16 @@ V3 introduces pagination, filtering, and input validation. It reads the same dat
 
 - `page` — page number (default `1`, minimum `1`)
 - `limit` — results per page (default `50`, maximum `100`)
+
+### Search parameters
+
+Search endpoints (`/query` and `/query/[bookId]`) use PostgreSQL full-text search:
+
+- `q` — the query. Words are matched as word forms, not substrings (english is stemmed, so `running` matches `run`). Use `|` to separate multiple queries in an OR fashion.
+- `lang` — scope the search: `en` (english only), `ar` (arabic only), or `any` (default, both languages)
+- `highlight` — when `true`, each result includes a `highlight` object with snippets where matched words are wrapped in `<b>` tags (languages that didn't match are `null`)
+
+Search results are sorted by relevance and each item includes a `score` (higher is better).
 
 ### Response shape
 

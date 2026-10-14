@@ -15,6 +15,13 @@
       "when": 1791573015985,
       "tag": "0001_lively_whizzer",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792003771787,
+      "tag": "0002_aberrant_mattie_franklin",
+      "breakpoints": true
     }
   ]
 }

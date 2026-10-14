@@ -56,6 +56,21 @@ export interface IngredientRecord {
 	unknown?: string[] | null;
 }
 
+export type SearchLanguage = 'en' | 'ar' | 'any';
+
+export interface SearchOptions {
+	lang?: SearchLanguage;
+	highlight?: boolean;
+}
+
+export interface HadithSearchResult extends HadithV2Record {
+	score: number;
+	highlight?: {
+		english?: string | null;
+		arabic?: string | null;
+	};
+}
+
 export interface PaginationOptions {
 	limit: number;
 	offset: number;

@@ -3,10 +3,12 @@ import { HadithRepository } from '../../../db/repositories/hadithRepository.js';
 import type {
 	BookFilters,
 	BookV2Record,
+	HadithSearchResult,
 	HadithV2Record,
 	IHadithService,
 	PaginatedResult,
 	PaginationOptions,
+	SearchOptions,
 } from './interfaces.js';
 
 export default class HadithService
@@ -38,8 +40,13 @@ export default class HadithService
 	async searchHadith(
 		query: string,
 		bookId: string | null = null,
-	): Promise<HadithV2Record[] | { error: string }> {
-		const results = await this.hadithRepo.searchHadiths(query, bookId);
+		searchOptions?: SearchOptions,
+	): Promise<HadithSearchResult[] | { error: string }> {
+		const results = await this.hadithRepo.searchHadiths(
+			query,
+			bookId,
+			searchOptions,
+		);
 
 		if (results.length === 0) {
 			return { error: 'No matches found' };
@@ -73,8 +80,12 @@ export default class HadithService
 		query: string,
 		bookId: string | null,
 		pagination: PaginationOptions,
-	): Promise<PaginatedResult<HadithV2Record>> {
-		return this.hadithRepo.searchHadithsPaginated(query, bookId, pagination);
+		searchOptions: SearchOptions = {},
+	): Promise<PaginatedResult<HadithSearchResult>> {
+		return this.hadithRepo.searchHadithsPaginated(query, bookId, {
+			...pagination,
+			...searchOptions,
+		});
 	}
 
 	private compareAlphabetically(field: keyof BookV2Record) {

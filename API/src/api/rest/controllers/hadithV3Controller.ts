@@ -47,12 +47,13 @@ export default class HadithV3Controller {
 		res: Response,
 	): Promise<Response | void> => {
 		try {
-			const { q, page, limit } = res.locals.query as SearchQuery;
+			const { q, page, limit, lang, highlight } = res.locals.query as SearchQuery;
 
 			const { rows, total } = await this.service.searchHadithPaginated(
 				q,
 				null,
 				this.toPagination(page, limit),
+				{ lang, highlight },
 			);
 
 			return res.json({
@@ -70,7 +71,7 @@ export default class HadithV3Controller {
 	): Promise<Response | void> => {
 		try {
 			const { bookId } = res.locals.params as BookParams;
-			const { q, page, limit } = res.locals.query as SearchQuery;
+			const { q, page, limit, lang, highlight } = res.locals.query as SearchQuery;
 
 			if (!(await this.service.validateBookExists(bookId))) {
 				return res.status(404).json({
@@ -83,6 +84,7 @@ export default class HadithV3Controller {
 				q,
 				bookId,
 				this.toPagination(page, limit),
+				{ lang, highlight },
 			);
 
 			return res.json({

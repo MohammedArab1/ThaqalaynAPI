@@ -2,6 +2,14 @@
 
 ![Weekly Data Update](https://github.com/mohammedarab1/ThaqalaynAPI/actions/workflows/main.yml/badge.svg)
 
+## 2026-10
+
+Search now uses PostgreSQL full-text search instead of substring matching. Changes include:
+- Word-based matching with relevance ranking — results are sorted best-first and each item includes a `score`
+- New `lang` query parameter (`en`, `ar`, or `any`) on V3 search endpoints to scope a search to one language
+- Opt-in highlighting via `highlight=true`, returning `ts_headline` snippets with matched words wrapped in `<b>` tags
+- The pipe (`|`) separator in `q` now works as documented: an OR between multiple queries
+- V2, V3, and GraphQL search share the same full-text implementation, backed by new GIN indexes
 
 ## 2025-07
 

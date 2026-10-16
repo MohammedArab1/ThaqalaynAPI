@@ -1,15 +1,16 @@
 import { expressMiddleware } from '@apollo/server/express4';
 import { migrate } from 'drizzle-orm/node-postgres/migrator';
-import express from 'express';
+import type { RequestHandler } from 'express';
 import { resolvers } from './api/graphql/resolvers/index.js';
+import { createApp } from './app.js';
 import config from './config/index.js';
 import { closeDb, getDb } from './db/client.js';
 import createApolloServer from './loaders/apollo.js';
-import initializeExpress from './loaders/express.js';
 import { connectRedis, getRedisClient } from './loaders/redis.js';
 
+// Composition root: owns the process-level concerns (connections, migrations,
+// listening, shutdown). The app itself is built by createApp() and stays pure.
 const startServer = async () => {
-	const app = initializeExpress(express());
 	const redisClient = await connectRedis();
 
 	// Run Drizzle migrations
@@ -25,14 +26,11 @@ const startServer = async () => {
 	const graphqlMiddleware = expressMiddleware(apolloServer, {
 		context: async () => ({ resolvers }),
 	});
-	const graphqlMiddlewareHandler: express.RequestHandler = (req, res, next) => {
+	const graphqlMiddlewareHandler: RequestHandler = (req, res, next) => {
 		void graphqlMiddleware(req as never, res as never, next as never);
 	};
-	app.use('/graphql', graphqlMiddlewareHandler);
 
-	app.get('*', function (req, res) {
-		res.redirect('/');
-	});
+	const app = createApp({ graphqlMiddleware: graphqlMiddlewareHandler });
 
 	// Start server
 	app.listen(config.app.port, () => {

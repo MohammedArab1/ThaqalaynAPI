@@ -11,6 +11,9 @@
 		"typecheck:api": "tsc -p API/tsconfig.json --noEmit",
 		"dev:api:ts": "tsx watch API/src/index.ts",
 		"start:api:ts": "tsx API/src/index.ts",
+		"test": "npm run test:db:up && dotenv -e .env.test -- node --import tsx --test --test-concurrency=1 \"API/tests/**/*.test.ts\"",
+		"test:db:up": "docker compose -f docker-compose.test.yml up -d --wait",
+		"test:db:down": "docker compose -f docker-compose.test.yml down -v",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
 		"db:push": "drizzle-kit push",
@@ -45,9 +48,11 @@
 		"@types/express": "^5.0.6",
 		"@types/node": "^25.8.0",
 		"@types/pg": "^8.23.1",
+		"@types/supertest": "^7.2.1",
 		"@types/swagger-jsdoc": "^6.0.4",
 		"@types/swagger-ui-express": "^4.1.8",
 		"drizzle-kit": "^0.31.11",
+		"supertest": "^7.3.1",
 		"tsx": "^4.22.0",
 		"typescript": "^6.0.3"
 	}

@@ -1,0 +1,21 @@
+# Local test infrastructure only. Production infra lives in docker-compose.yml.
+# Start:  docker compose -f docker-compose.test.yml up -d --wait
+# Stop:   docker compose -f docker-compose.test.yml down -v
+services:
+  postgres-test:
+    container_name: thaqalayn-postgres-test
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: thaqalayn_test
+    ports:
+      # 5433 to avoid colliding with a real Postgres on the default 5432
+      - "5433:5432"
+    # No volume on purpose: test data is disposable.
+    # `down` removes the container, so `up` gives a clean database when needed.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d thaqalayn_test"]
+      interval: 2s
+      timeout: 3s
+      retries: 15

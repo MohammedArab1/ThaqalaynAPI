@@ -4,6 +4,7 @@
 **/.env
 **/.env.*
 !**/.env.example
+!.env.test
 node_modules
 .serverless
 developerNotes.txt

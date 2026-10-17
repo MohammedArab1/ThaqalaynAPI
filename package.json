@@ -9,6 +9,7 @@
 		"dev": "tsx watch API/src/index.ts",
 		"build:api": "tsc -p API/tsconfig.json",
 		"typecheck:api": "tsc -p API/tsconfig.json --noEmit",
+		"typecheck:tests": "tsc -p API/tsconfig.tests.json",
 		"dev:api:ts": "tsx watch API/src/index.ts",
 		"start:api:ts": "tsx API/src/index.ts",
 		"test": "npm run test:db:up && dotenv -e .env.test -- node --import tsx --test --test-concurrency=1 \"API/tests/**/*.test.ts\"",

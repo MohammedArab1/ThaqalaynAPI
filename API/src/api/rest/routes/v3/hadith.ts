@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { cacheMiddleware } from '../../../../loaders/redis.js';
+import { asyncHandler } from '../../../../utils/asyncHandler.js';
 import HadithV3Controller from '../../controllers/hadithV3Controller.js';
 import IngredientController from '../../controllers/ingredientController.js';
 import HadithService from '../../services/hadithService.js';
@@ -35,7 +36,11 @@ const ingredientController = new IngredientController(ingredientService);
  *       200:
  *         description: Returns all book IDs. bookId field is used to query specific books
  */
-router.get('/allbooks', cacheMiddleware(600), controller.allBooksHandler);
+router.get(
+	'/allbooks',
+	cacheMiddleware(600),
+	asyncHandler(controller.allBooksHandler),
+);
 
 /**
  * @openapi
@@ -49,7 +54,7 @@ router.get('/allbooks', cacheMiddleware(600), controller.allBooksHandler);
  *       200:
  *         description: Random Hadith.
  */
-router.get('/random', controller.randomHadithHandler);
+router.get('/random', asyncHandler(controller.randomHadithHandler));
 
 /**
  * @openapi
@@ -106,7 +111,7 @@ router.get(
 	'/query',
 	cacheMiddleware(60),
 	validateQuery(searchQuerySchema),
-	controller.queryHandler,
+	asyncHandler(controller.queryHandler),
 );
 
 /**
@@ -191,7 +196,7 @@ router.get(
 	cacheMiddleware(60),
 	validateParams(bookParamsSchema),
 	validateQuery(searchQuerySchema),
-	controller.queryPerBookHandler,
+	asyncHandler(controller.queryPerBookHandler),
 );
 
 /**
@@ -253,7 +258,7 @@ router.get(
 	cacheMiddleware(3600),
 	validateParams(bookParamsSchema),
 	validateQuery(bookListQuerySchema),
-	controller.bookHandler,
+	asyncHandler(controller.bookHandler),
 );
 
 /**
@@ -280,7 +285,7 @@ router.get(
 router.get(
 	'/:bookId/random',
 	validateParams(bookParamsSchema),
-	controller.randomBookHadithHandler,
+	asyncHandler(controller.randomBookHadithHandler),
 );
 
 /**
@@ -316,7 +321,7 @@ router.get(
 	'/:bookId/:id',
 	cacheMiddleware(600),
 	validateParams(hadithParamsSchema),
-	controller.oneHadithHandler,
+	asyncHandler(controller.oneHadithHandler),
 );
 
 export default router;

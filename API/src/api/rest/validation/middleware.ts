@@ -1,5 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import type { ZodError, ZodTypeAny } from 'zod';
+import { ValidationError } from '../../../errors.js';
 
 const formatIssues = (error: ZodError) =>
 	error.issues.map((issue) => ({
@@ -7,17 +8,21 @@ const formatIssues = (error: ZodError) =>
 		message: issue.message,
 	}));
 
+/**
+ * These middlewares throw synchronously on purpose: Express catches
+ * synchronous throws from middleware and forwards them to the error
+ * middleware, where every error in the app is rendered
+ * (see api/rest/middleware/errorHandler.ts).
+ */
 export const validateQuery = (schema: ZodTypeAny) => {
 	return (req: Request, res: Response, next: NextFunction): void => {
 		const parsed = schema.safeParse(req.query);
 
 		if (!parsed.success) {
-			res.status(400).json({
-				code: 'VALIDATION_ERROR',
-				message: 'Invalid query parameters',
-				details: formatIssues(parsed.error),
-			});
-			return;
+			throw new ValidationError(
+				'Invalid query parameters',
+				formatIssues(parsed.error),
+			);
 		}
 
 		res.locals.query = parsed.data;
@@ -30,12 +35,10 @@ export const validateParams = (schema: ZodTypeAny) => {
 		const parsed = schema.safeParse(req.params);
 
 		if (!parsed.success) {
-			res.status(400).json({
-				code: 'VALIDATION_ERROR',
-				message: 'Invalid path parameters',
-				details: formatIssues(parsed.error),
-			});
-			return;
+			throw new ValidationError(
+				'Invalid path parameters',
+				formatIssues(parsed.error),
+			);
 		}
 
 		res.locals.params = parsed.data;

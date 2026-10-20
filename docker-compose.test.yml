@@ -19,3 +19,17 @@ services:
       interval: 2s
       timeout: 3s
       retries: 15
+
+  redis-test:
+    container_name: thaqalayn-redis-test
+    image: redis:7-alpine
+    ports:
+      # 6380 to avoid colliding with a real Redis on the default 6379.
+      # The integration test connects to redis://localhost:6380.
+      - "6380:6379"
+    # No volume: rate-limit keys are disposable and test-scoped.
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 15

@@ -15,11 +15,11 @@ https://www.thaqalayn-api.net/
 Here is a simple example of how to fetch one of the endpoints using axios. Change `url` to whatever endpoint you'd like.<br>
 
 ```javascript
-const url = 'https://www.thaqalayn-api.net/api/v2/random';
+const url = "https://www.thaqalayn-api.net/api/v2/random";
 
 request = axios.get(url).then((res) => {
-	console.log(res.data);
-	//...
+  console.log(res.data);
+  //...
 });
 ```
 
@@ -119,6 +119,32 @@ Paginated endpoints return:
 
 Invalid input returns HTTP `400` with a `{ code, message, details }` body.
 
+## Rate limiting
+
+Anonymous requests are limited per client IP using a fixed 60-second window. The default quota is **30 requests per minute**, covering `/api/*` and `/graphql`; the landing page (`/`) and `/api-docs` are exempt.
+
+Every limited response includes:
+
+- `X-RateLimit-Limit` — requests allowed per window
+- `X-RateLimit-Remaining` — requests left in the current window
+- `X-RateLimit-Reset` — when the window resets, in Unix epoch seconds
+
+When the quota is exceeded, the API returns `429 Too Many Requests` with `Retry-After` (seconds) and the uniform error body:
+
+```json
+{
+  "code": "RATE_LIMITED",
+  "message": "Too many requests",
+  "details": { "retryAfter": 12 }
+}
+```
+
+Rate limiting fails open: if Redis is unavailable, requests are served without a quota and the failure is logged. It is configured with:
+
+- `RATE_LIMIT_ENABLED` — default `true`; set to `false` to disable
+- `RATE_LIMIT_LIMIT` — default `30`
+- `RATE_LIMIT_WINDOW_MS` — default `60000`
+
 ## Extra info
 
 Most folders in the V1 directory are no longer used (except for the /V1/DB/models).
@@ -185,7 +211,7 @@ This is the actual REST and GQL backend that calls the database.
 1. Clone the repository
 2. run `npm install`
 3. Using the `.env.example` file, create a `.env` file at the root of the directory. You will need a value for `DATABASE_URL`, which is the Neon PostgreSQL connection string for the database that stores the data.
-4. run `npm start`
+4. run `npm run dev` (starts Redis with Docker Compose, then the API in watch mode)
 
 #### API Deployment
 

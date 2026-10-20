@@ -11,32 +11,40 @@
  * lives in tests and call sites, so keep the codes stable.
  */
 export class AppError extends Error {
-	readonly status: number;
-	readonly code: string;
-	readonly details?: unknown;
+  readonly status: number;
+  readonly code: string;
+  readonly details?: unknown;
 
-	constructor(
-		status: number,
-		code: string,
-		message: string,
-		details?: unknown,
-	) {
-		super(message);
-		this.name = new.target.name;
-		this.status = status;
-		this.code = code;
-		this.details = details;
-	}
+  constructor(
+    status: number,
+    code: string,
+    message: string,
+    details?: unknown,
+  ) {
+    super(message);
+    this.name = new.target.name;
+    this.status = status;
+    this.code = code;
+    this.details = details;
+  }
 }
 
 export class NotFoundError extends AppError {
-	constructor(message: string) {
-		super(404, 'NOT_FOUND', message);
-	}
+  constructor(message: string) {
+    super(404, "NOT_FOUND", message);
+  }
 }
 
 export class ValidationError extends AppError {
-	constructor(message: string, details?: unknown) {
-		super(400, 'VALIDATION_ERROR', message, details);
-	}
+  constructor(message: string, details?: unknown) {
+    super(400, "VALIDATION_ERROR", message, details);
+  }
+}
+
+export class TooManyRequestsError extends AppError {
+  constructor(retryAfterSeconds: number) {
+    super(429, "RATE_LIMITED", "Too many requests", {
+      retryAfter: retryAfterSeconds,
+    });
+  }
 }

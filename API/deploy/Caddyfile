@@ -1,6 +1,14 @@
 https://thaqalayn-api.net:443 {
-    reverse_proxy :3001
+    # Overwrite (rather than append to) any client-supplied X-Forwarded-For.
+    # Express trusts exactly one proxy hop (trust proxy: 1), so the backend
+    # must receive only the immediate peer's address. If Caddy is ever placed
+    # behind Cloudflare, switch to trusted_proxies + {client_ip}.
+    reverse_proxy :3001 {
+        header_up X-Forwarded-For {remote_host}
+    }
 }
 https://www.thaqalayn-api.net:443 {
-    reverse_proxy :3001
+    reverse_proxy :3001 {
+        header_up X-Forwarded-For {remote_host}
+    }
 }

@@ -5,18 +5,24 @@ services:
     build: .
     restart: always
     ports:
-      - 3001:3001
+      # Bind to loopback: the API must only be reachable through Caddy.
+      # The rate limiter trusts exactly one proxy hop, so exposing 3001
+      # directly would let clients spoof X-Forwarded-For.
+      - "127.0.0.1:3001:3001"
     networks:
       - apinetwork
     environment:
       DATABASE_URL: ${DATABASE_URL}
       PORT: ${PORT}
-      CACHE: ${CACHE}
       REDIS_URL: ${REDIS_URL}
       PLAUSIBLE_API_URL: ${PLAUSIBLE_API_URL}
       PLAUSIBLE_DOMAIN: ${PLAUSIBLE_DOMAIN}
+      RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+      RATE_LIMIT_LIMIT: ${RATE_LIMIT_LIMIT:-30}
+      RATE_LIMIT_WINDOW_MS: ${RATE_LIMIT_WINDOW_MS:-60000}
     depends_on:
-      - redis
+      redis:
+        condition: service_healthy
   # caddy:
   #   container_name: caddy
   #   image: caddy
@@ -29,8 +35,8 @@ services:
   #   - ./API/deploy/caddy_data:/data
   #   networks:
   #     - apinetwork
-    # labels:
-    #   - "com.centurylinklabs.watchtower.enable=false"
+  # labels:
+  #   - "com.centurylinklabs.watchtower.enable=false"
   # watchtower:
   #   container_name: watchtower
   #   image: containrrr/watchtower
@@ -43,6 +49,15 @@ services:
     container_name: redis
     image: redis/redis-stack-server
     restart: always
+    ports:
+      # Loopback only: local dev connects here; the API container uses
+      # redis:6379 over apinetwork.
+      - "127.0.0.1:6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
     networks:
       - apinetwork
     # labels:

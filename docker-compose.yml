@@ -4,11 +4,23 @@ services:
     # image: lovemonge3r3/thaqalayn-api:latest
     build: .
     restart: always
+    # Leave room for the 10s SHUTDOWN_TIMEOUT_MS default. Docker's default
+    # stop grace period is also 10s, so a forced shutdown would race SIGKILL.
+    stop_grace_period: 15s
     ports:
       # Bind to loopback: the API must only be reachable through Caddy.
       # The rate limiter trusts exactly one proxy hop, so exposing 3001
       # directly would let clients spoof X-Forwarded-For.
       - "127.0.0.1:3001:3001"
+    healthcheck:
+      # /ready checks PostgreSQL; the 5s timeout is longer than the 4s query
+      # budget inside the endpoint.
+      test:
+        ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3001/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
     networks:
       - apinetwork
     environment:

@@ -48,3 +48,14 @@ export class TooManyRequestsError extends AppError {
     });
   }
 }
+
+/**
+ * A dependency needed to serve traffic is unavailable. `/ready` uses this
+ * for a failed PostgreSQL check. It is an expected operational state, not a
+ * programming error, but it still uses the uniform error shape.
+ */
+export class ServiceUnavailableError extends AppError {
+  constructor(message: string, details?: unknown) {
+    super(503, "SERVICE_UNAVAILABLE", message, details);
+  }
+}

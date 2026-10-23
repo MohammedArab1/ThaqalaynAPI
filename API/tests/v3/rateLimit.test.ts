@@ -173,8 +173,10 @@ describe("rate limiting (contract)", () => {
     assert.equal(second.status, 429);
   });
 
-  it("exempts the landing page and API docs from the quota", () => {
+  it("exempts probes, the landing page, and API docs from the quota", () => {
     assert.equal(shouldSkipRateLimit({ path: "/" } as Request), true);
+    assert.equal(shouldSkipRateLimit({ path: "/health" } as Request), true);
+    assert.equal(shouldSkipRateLimit({ path: "/ready" } as Request), true);
     assert.equal(shouldSkipRateLimit({ path: "/api-docs/" } as Request), true);
     assert.equal(
       shouldSkipRateLimit({ path: "/api/v3/allbooks" } as Request),

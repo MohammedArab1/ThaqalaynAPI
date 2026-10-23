@@ -8,7 +8,7 @@ import {
 } from "./api/rest/middleware/rateLimit.js";
 import { createApp } from "./app.js";
 import config from "./config/index.js";
-import { closeDb, getDb } from "./db/client.js";
+import { checkDatabase, closeDb, getDb } from "./db/client.js";
 import createApolloServer from "./loaders/apollo.js";
 import { connectRedis, getRedisClient } from "./loaders/redis.js";
 import { createRedisRateLimitStore } from "./loaders/redisRateLimitStore.js";
@@ -61,31 +61,83 @@ const startServer = async () => {
   const app = createApp({
     graphqlMiddleware: graphqlMiddlewareHandler,
     rateLimiter,
+    readinessCheck: checkDatabase,
   });
 
-  // Start server
-  app.listen(config.app.port, () => {
+  // Start server. Keep the handle so shutdown can stop accepting connections
+  // and wait for in-flight requests.
+  const server = app.listen(config.app.port, () => {
     console.log(`Server running on port ${config.app.port}`);
   });
 
-  // Handle shutdown
-  const shutdown = async () => {
-    await apolloServer.stop();
+  let shuttingDown = false;
+  let forced = false;
+
+  const shutdown = async (signal: NodeJS.Signals): Promise<void> => {
+    if (shuttingDown) return;
+    shuttingDown = true;
+    console.log(`${signal} received; shutting down...`);
+
+    const forceTimer = setTimeout(() => {
+      forced = true;
+      console.error(
+        `Shutdown timed out after ${config.shutdown.timeoutMs}ms; forcing connections closed.`,
+      );
+      server.closeAllConnections();
+    }, config.shutdown.timeoutMs);
+    forceTimer.unref();
+
+    try {
+      await new Promise<void>((resolve, reject) => {
+        server.close((error) => {
+          if (error) reject(error);
+          else resolve();
+        });
+      });
+    } catch (error) {
+      console.error("Error while closing HTTP server:", error);
+    } finally {
+      clearTimeout(forceTimer);
+    }
+
+    // The HTTP server is closed, so every in-flight GraphQL request has
+    // finished. Stop Apollo before closing the cache/database it uses.
+    try {
+      await apolloServer.stop();
+    } catch (error) {
+      console.error("Error while stopping Apollo Server:", error);
+    }
+
     const client = getRedisClient();
     if (client) {
       try {
         if (client.isOpen) await client.quit();
         else await client.disconnect();
       } catch (error) {
-        await client.disconnect();
+        console.error("Error while closing Redis:", error);
+        try {
+          await client.disconnect();
+        } catch {
+          // Already closed; nothing left to release.
+        }
       }
     }
-    await closeDb();
-    process.exit(0);
+
+    try {
+      await closeDb();
+    } catch (error) {
+      console.error("Error while closing the database:", error);
+    }
+
+    process.exit(forced ? 1 : 0);
   };
 
-  process.on("SIGINT", shutdown);
-  process.on("SIGTERM", shutdown);
+  process.on("SIGINT", () => {
+    void shutdown("SIGINT");
+  });
+  process.on("SIGTERM", () => {
+    void shutdown("SIGTERM");
+  });
 };
 
 startServer().catch((error) => {

@@ -20,10 +20,15 @@ type RateLimitConfig = {
   windowMs: number;
 };
 
+type ShutdownConfig = {
+  timeoutMs: number;
+};
+
 type Config = {
   app: AppConfig;
   redis: RedisConfig;
   rateLimit: RateLimitConfig;
+  shutdown: ShutdownConfig;
 };
 
 const config: Config = {
@@ -46,6 +51,11 @@ const config: Config = {
     limit: Number.parseInt(process.env.RATE_LIMIT_LIMIT ?? "30", 10),
     windowMs: Number.parseInt(process.env.RATE_LIMIT_WINDOW_MS ?? "60000", 10),
   },
+  shutdown: {
+    // How long in-flight requests may finish before connections are forced
+    // closed. Kept below the deploy platform's stop grace period.
+    timeoutMs: Number.parseInt(process.env.SHUTDOWN_TIMEOUT_MS ?? "10000", 10),
+  },
 };
 
 const validateConfig = () => {
@@ -65,6 +75,15 @@ const validateConfig = () => {
   ) {
     throw new Error(
       "Malformed config: RATE_LIMIT_WINDOW_MS must be a positive integer.",
+    );
+  }
+
+  if (
+    !Number.isInteger(config.shutdown.timeoutMs) ||
+    config.shutdown.timeoutMs < 1
+  ) {
+    throw new Error(
+      "Malformed config: SHUTDOWN_TIMEOUT_MS must be a positive integer.",
     );
   }
 };

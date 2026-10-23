@@ -28,11 +28,13 @@ let lastStoreErrorLogAt = 0;
 
 /**
  * The limiter is an application-level middleware, so req.path is the full
- * path. Docs and the landing page are static/cheap and should not consume
- * the API quota.
+ * path. Operational probes, docs, and the landing page are not API traffic
+ * and should not consume the quota.
  */
 export const shouldSkipRateLimit = (req: Request): boolean =>
   req.path === "/" ||
+  req.path === "/health" ||
+  req.path === "/ready" ||
   req.path === "/api-docs" ||
   req.path.startsWith("/api-docs/");
 

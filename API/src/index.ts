@@ -12,6 +12,7 @@ import { checkDatabase, closeDb, getDb } from "./db/client.js";
 import createApolloServer from "./loaders/apollo.js";
 import { connectRedis, getRedisClient } from "./loaders/redis.js";
 import { createRedisRateLimitStore } from "./loaders/redisRateLimitStore.js";
+import { drainServer } from "./shutdown.js";
 
 // Composition root: owns the process-level concerns (connections, migrations,
 // listening, shutdown). The app itself is built by createApp() and stays pure.
@@ -71,33 +72,25 @@ const startServer = async () => {
   });
 
   let shuttingDown = false;
-  let forced = false;
 
   const shutdown = async (signal: NodeJS.Signals): Promise<void> => {
     if (shuttingDown) return;
     shuttingDown = true;
     console.log(`${signal} received; shutting down...`);
 
-    const forceTimer = setTimeout(() => {
-      forced = true;
-      console.error(
-        `Shutdown timed out after ${config.shutdown.timeoutMs}ms; forcing connections closed.`,
-      );
-      server.closeAllConnections();
-    }, config.shutdown.timeoutMs);
-    forceTimer.unref();
+    const { forced, error: closeError } = await drainServer(
+      server,
+      config.shutdown.timeoutMs,
+    );
 
-    try {
-      await new Promise<void>((resolve, reject) => {
-        server.close((error) => {
-          if (error) reject(error);
-          else resolve();
-        });
-      });
-    } catch (error) {
-      console.error("Error while closing HTTP server:", error);
-    } finally {
-      clearTimeout(forceTimer);
+    if (closeError) {
+      console.error("Error while closing HTTP server:", closeError);
+    }
+
+    if (forced) {
+      console.error(
+        `Shutdown timed out after ${config.shutdown.timeoutMs}ms; connections were forced closed.`,
+      );
     }
 
     // The HTTP server is closed, so every in-flight GraphQL request has

@@ -37,3 +37,7 @@
         image: pipelines-cron:latest
         state: started
         env_file: /root/ThaqalaynAPI/.env
+        # The database now lives in the ThaqalaynAPI compose network.
+        # DATABASE_URL in .env must use host `postgres`.
+        networks:
+          - name: thaqalayn_net

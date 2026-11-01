@@ -33,8 +33,34 @@ services:
       RATE_LIMIT_LIMIT: ${RATE_LIMIT_LIMIT:-30}
       RATE_LIMIT_WINDOW_MS: ${RATE_LIMIT_WINDOW_MS:-60000}
     depends_on:
+      postgres:
+        condition: service_healthy
       redis:
         condition: service_healthy
+  postgres:
+    container_name: thaqalayn-postgres
+    image: postgres:17-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-thaqalayn}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-thaqalayn}
+    ports:
+      # Loopback only. 5434 avoids the other Postgres on the host (5432)
+      # and the test stack (5433).
+      - "127.0.0.1:5434:5432"
+    volumes:
+      # Named volume: survives `docker compose down`.
+      # NEVER run `docker compose down -v`: it deletes this volume.
+      - thaqalayn_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks:
+      - apinetwork
   # caddy:
   #   container_name: caddy
   #   image: caddy
@@ -75,5 +101,10 @@ services:
     # labels:
     # - "com.centurylinklabs.watchtower.enable=false"
 
+volumes:
+  thaqalayn_pgdata:
+
 networks:
+  # Fixed name so the cron container can join it from outside compose.
   apinetwork:
+    name: thaqalayn_net

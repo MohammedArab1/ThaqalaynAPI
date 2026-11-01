@@ -161,10 +161,17 @@ In the V2 directory, you'll find of relevance:
 
 To do any scraping, the `WEBAPP_URL` and `WEBAPP_API_KEY` env variables need to be set.
 
-A developer can use `make load_all` to publish the per-book JSON files and ingredient data from `/V2/ThaqalaynData` to PostgreSQL (Neon). The `DATABASE_URL` environment variable must contain the Neon PostgreSQL connection string (it can be provided through a `.env` file). The loader uses `jq` and `psql` to stage the data and atomically replace the live V2 tables:
+A developer can use `make load_all` to publish the per-book JSON files and ingredient data from `/V2/ThaqalaynData` to PostgreSQL. The loader uses `jq` and `psql` to stage the data and atomically replace the live V2 tables.
 
-1. `cd V2`
-2. `make load_all`
+The database runs in the `postgres` service from `docker-compose.yml`. The data lives in the named volume `thaqalayn_pgdata`. Do not pass `-v` to `docker compose down`: it deletes the volume.
+
+On first setup, run the loader once with Docker:
+
+1. `docker build -t thaqalayn-db-load ./docker/db-load`
+2. `docker compose up -d --wait`
+3. `docker run --rm --network thaqalayn_net -e DATABASE_URL='postgresql://thaqalayn:PASSWORD@postgres:5432/thaqalayn' -v "$PWD/V2:/data:ro" thaqalayn-db-load bash Deploy/load.sh all`
+
+The API applies the Drizzle migrations on every start, so the tables exist before step 3.
 
 Feel free to use any part of this project and modify as you'd like.
 
@@ -210,7 +217,7 @@ This is the actual REST and GQL backend that calls the database.
 
 1. Clone the repository
 2. run `npm install`
-3. Using the `.env.example` file, create a `.env` file at the root of the directory. You will need a value for `DATABASE_URL`, which is the Neon PostgreSQL connection string for the database that stores the data.
+3. Using the `.env.example` file, create a `.env` file at the root of the directory. You need a value for `DATABASE_URL`, and the matching `POSTGRES_USER`, `POSTGRES_PASSWORD` and `POSTGRES_DB` values. Start the database with `docker compose up -d postgres redis`. For host access, use port 5434, for example `postgresql://thaqalayn:password@localhost:5434/thaqalayn`.
 4. run `npm run dev` (starts Redis with Docker Compose, then the API in watch mode)
 
 #### API Deployment

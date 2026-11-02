@@ -230,3 +230,4 @@ Ansible logs into the VPS server on your behalf and completes the following step
    - Changes are pulled via HTTPS. If the git pull step does not work, the git credential cache has expired and you'd need to ssh into the server and re-establish the cache or establish SSH connection to github
 2. `Docker compose down` to remove the current container running the application
 3. `Docker compose up` to rebuild the container and run it
+4. Drops Docker build cache older than one week

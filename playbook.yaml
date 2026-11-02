@@ -20,3 +20,17 @@
         project_src: /root/ThaqalaynAPI
         state: present
         build: always
+
+    # `build: always` reuses the layer cache, but old layers stay in the
+    # build cache until they are pruned. Drop cache older than one week so
+    # the last deploy stays fast and the disk stays bounded.
+    - name: Drop stale Docker build cache
+      ansible.builtin.command:
+        argv:
+          - docker
+          - builder
+          - prune
+          - --force
+          - --filter
+          - until=168h
+      changed_when: false

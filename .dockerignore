@@ -1,0 +1,14 @@
+# Shared by every build that uses the repository root as build context:
+# the API image (./Dockerfile) and the cron image (./pipelines/Dockerfile).
+# Do not exclude V2: the cron image needs V2/Deploy and V2/WebScraper.
+.git
+.github
+node_modules
+**/node_modules
+API/dist
+.env
+.env.*
+!.env.example
+.vscode
+.DS_Store
+*.md

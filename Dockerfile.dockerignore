@@ -1,0 +1,7 @@
+# BuildKit reads this file instead of .dockerignore for the root Dockerfile
+# only (the API image). These paths are not needed by the API build.
+# They add about 430 MB to the build context and to the build cache.
+V1
+V2
+pipelines
+docker

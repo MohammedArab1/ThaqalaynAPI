@@ -37,6 +37,12 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+    logging:
+      # Cap logs so they cannot fill the disk.
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
   postgres:
     container_name: thaqalayn-postgres
     image: postgres:17-alpine
@@ -61,6 +67,11 @@ services:
       retries: 10
     networks:
       - apinetwork
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
   # caddy:
   #   container_name: caddy
   #   image: caddy
@@ -98,6 +109,11 @@ services:
       retries: 15
     networks:
       - apinetwork
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     # labels:
     # - "com.centurylinklabs.watchtower.enable=false"
 

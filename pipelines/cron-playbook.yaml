@@ -1,12 +1,12 @@
 - name: Deploy to Hetzner VPS
-  hosts: hetzner-vps
+  hosts: home-vps
   become: true
 
   tasks:
     - name: Pull latest changes from Git
       ansible.builtin.git:
         repo: 'https://github.com/MohammedArab1/ThaqalaynAPI.git'
-        dest: /root/ThaqalaynAPI
+        dest: /home/mohammed-arab/Desktop/Programming/ThaqalaynAPI
         update: yes
 
     - name: Stop and remove the container
@@ -26,7 +26,7 @@
         name: pipelines-cron
         tag: latest
         build:
-          path: /root/ThaqalaynAPI
+          path: /home/mohammed-arab/Desktop/Programming/ThaqalaynAPI
           dockerfile: ./pipelines/Dockerfile
         source: build
         state: present
@@ -36,7 +36,7 @@
         name: pipelines-cron-test
         image: pipelines-cron:latest
         state: started
-        env_file: /root/ThaqalaynAPI/.env
+        env_file: /home/mohammed-arab/Desktop/Programming/ThaqalaynAPI/.env
         # The database now lives in the ThaqalaynAPI compose network.
         # DATABASE_URL in .env must use host `postgres`.
         networks:

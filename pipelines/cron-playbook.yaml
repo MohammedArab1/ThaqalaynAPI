@@ -1,4 +1,4 @@
-- name: Deploy to Hetzner VPS
+- name: Deploy to home VPS
   hosts: home-vps
   become: true
 
